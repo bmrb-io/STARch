@@ -169,7 +169,7 @@ class TableEdit( object ) :
 # wsgi starting point
 #
 
-application = TableEdit()
+application = TableEdit( CONFIG )
 
 #
 #
