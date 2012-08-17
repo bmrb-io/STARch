@@ -112,26 +112,37 @@ class EditForm( object ) :
         txt = self._header1
         txt += '<h2 style="margin-left: 80px; float: left">Edit %s in %s</h2>\n'  % (self._column,self._table)
         txt += self._header2
-        txt += """<p><form method="get" action="update" name="update" id="updatetable"">
+
+# insert constant
+        txt += """<div class="editbox"><form method="get" action="insert_constant" name="insert_constant" id="insconst">
 <input type="hidden" name="table" value="%s">
 <input type="hidden" name="column" value="%s">
 """ % (self._table,self._column)
-
-# insert constant
-        txt += """<div class="editbox">
-<p><label for="ins_const">Insert value:</label> <input type="text" size="10" name="const_val" id="ins_const">
+        txt += """<label for="ins_const">Insert value:</label> <input type="text" size="10" name="const_val" id="ins_const">
 (For example, Entry or Entity ID. Put in a dot (period) and tick the checkbox below to delete existing values.)
 <br><input type="checkbox" name="const_ovr" id="ovr_const"> <label for="ovr_const">overwrite existing values, if any</label>
 <br><input type="submit" value="Update table">
-</div>
+</form></div>
 """
 
 # insert sequence
+        txt += """<div class="editbox"><form method="get" action="insert_numbers" name="insert_numbers" id="insnum">
+<input type="hidden" name="table" value="%s">
+<input type="hidden" name="column" value="%s">
+""" % (self._table,self._column)
+        txt += """<label for="ins_nums">Insert sequence of numbers starting at:</label> 
+<input type="text" size="10" name="start_val" id="ins_nums"> (For example, row IDs. Starting number can be negative.)
+<br><input type="checkbox" name="nums_ovr" id="ovr_nums" checked> <label for="ovr_nums">overwrite existing values, if any</label>
+<br><input type="submit" value="Update table">
+</form></div>
+"""
 
 # copy to column
-        txt += """<div class="editbox">
-<p><label for="copy_col">Copy to column</label>
-"""
+        txt += """<div class="editbox"><form method="get" action="copy_column" name="copy_column" id="copycol">
+<input type="hidden" name="table" value="%s">
+<input type="hidden" name="column" value="%s">
+""" % (self._table,self._column)
+        txt += """<p><label for="copy_col">Copy to column</label> """
         sql = """select * from "%s" limit 1""" % (self._table)
         curs = self._conn.cursor()
         curs.execute( sql )
@@ -145,7 +156,7 @@ class EditForm( object ) :
 
         txt += """</select> (For example, copy Comp_index_ID to Seq_ID.)
 <br><input type="submit" value="Update table">
-</div>
+</form></div>
 """
 
         txt += self._footer

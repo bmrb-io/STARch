@@ -12,6 +12,8 @@ class ShowTable( object ) :
     _header_sent = None
     _footer_sent = None
 
+    _msg = None
+
     _header1 = """
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-US">
@@ -59,8 +61,9 @@ class ShowTable( object ) :
             <input type="submit" value="Make STAR">
         </form>
         <p><form method="get" action="edit" name="edit" id="editstar"> </form>
-        <table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">
 """
+#        <table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">
+#"""
 
     _footer = """
          </table>
@@ -88,6 +91,14 @@ class ShowTable( object ) :
     def _set_table( self, table ) :
         self._table = table
     table = property( _get_table, _set_table )
+
+    def _get_msg( self ) : 
+        """status message"""
+        return self._msg
+    def _set_msg( self, message ) :
+        self._msg = message
+    status_message = property( _get_msg, _set_msg )
+
 
     def __iter__( self ) :
         return self
@@ -124,6 +135,11 @@ class ShowTable( object ) :
         txt = self._header1
         txt += '<h2 style="margin-left: 80px; float: left">%s</h2>'  % (self._table)
         txt += self._header2
+        if self._msg != None :
+            txt += "<p>%s</p>" % (self._msg)
+            self._msg = None
+
+        txt += '<table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">'
         txt += '<tr style="background-color: #ccdeef;">'
         for col in self._curs.description :
             txt += """<th class="col" id="%s">%s</th>""" % (col[0],col[0].replace( "_", "<br>" ))

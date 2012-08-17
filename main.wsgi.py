@@ -46,10 +46,10 @@ class TableEdit( object ) :
             werkzeug.routing.Rule( "/", endpoint = "new" ),
             werkzeug.routing.Rule( "/upload", endpoint = "upload" ),
             werkzeug.routing.Rule( "/edit", endpoint = "edit" ),
-            werkzeug.routing.Rule( "/update", endpoint = "update" ),
             werkzeug.routing.Rule( "/print", endpoint = "print" ),
             werkzeug.routing.Rule( "/help", endpoint = "help" ),
-            werkzeug.routing.Rule( "/help/", endpoint = "help" )
+            werkzeug.routing.Rule( "/help/", endpoint = "help" ),
+            werkzeug.routing.Rule( "/<func>", endpoint = "update" ),
         ] )
 
 #
@@ -112,23 +112,39 @@ class TableEdit( object ) :
         s = edit_form.EditForm( connection = self._conn, table = self._table, column = request.args["column"] )
         return werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
 
-    def on_update( self, request ) :
+    def on_update( self, request, **values ) :
         """run editing function(s) and show table"""
 
         print request.args
+        print values
 
         e = TableEditor.edit( connection = self._conn, table = self._table, column = request.args["column"] )
-        if "const_val" in request.args.keys() :
+        rowcount = 0
+
+        if values["func"] == "insert_constant" : 
             ovr = False
             if ("const_ovr" in request.args.keys()) and (request.args["const_ovr"] == "on") : ovr = True
             val = request.args["const_val"].strip()
-            if len( val ) > 0 : e.insert_value( value = val, overwrite = ovr )
+            if len( val ) > 0 : rowcount = e.insert_value( value = val, overwrite = ovr )
 
-        if "col_copy" in request.args.keys() :
+        elif values["func"] == "insert_numbers" : 
+            ovr = False
+            if ("nums_ovr" in request.args.keys()) and (request.args["nums_ovr"] == "on") : ovr = True
+            val = request.args["start_val"].strip()
+            try :
+                int( val )
+                rowcount = e.insert_numbers( startat = val, overwrite = ovr )
+            except ValueError :
+                pass
+
+        elif values["func"] == "copy_column" :
             val = request.args["col_copy"].strip()
-            if len( val ) > 0 : e.copy_column( to_column = val )
+            if len( val ) > 0 : rowcount = e.copy_column( to_column = val )
+
+        else : return werkzeug.wrappers.Response( ["No such function: %s!" % values["func"]], status = 404 )
 
         s = show_table.ShowTable( connection = self._conn, table = self._table )
+        s.status_message = "%s row(s) updated" % (rowcount)
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
 

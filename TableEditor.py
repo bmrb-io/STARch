@@ -51,9 +51,36 @@ class edit( object ) :
         curs = self._conn.cursor()
         if value == "." : curs.execute( sql )
         else : curs.execute( sql, (value,) )
-        if self._verbose : print curs.rowcount
+        rc = curs.rowcount
+        if self._verbose : print rc
         curs.close()
         self._conn.commit()
+        return rc
+
+    def insert_numbers( self, startat = 1, overwrite = False ) :
+        """insert sequence of numbers"""
+        sql = """update "%s" set "%s"=?""" % (self._table,self._column)
+        sql += " where rowid=?"
+        if not overwrite :
+            sql += """ and ("%s" is null or "%s"='.' or "%s"='?')""" % (self._column,self._column,self._column)
+        if self._verbose : print sql,
+        curs = self._conn.cursor()
+        curs2 = self._conn.cursor()
+        curs2.execute( """select rowid from "%s" order by rowid""" % (self._table) )
+        i = int( startat )
+        cnt = 0
+        while True :
+            row = curs2.fetchone()
+            if row == None : break
+            curs.execute( sql, (i,row[0],) )
+            i += 1
+            cnt += 1
+        if self._verbose : print i
+        curs2.close()
+        curs.close()
+        self._conn.commit()
+        return cnt
+
 
     def copy_column( self, to_column = None, overwrite = True ) :
         """copy values to another column"""
@@ -70,9 +97,11 @@ class edit( object ) :
         sql = """update "%s" set "%s"="%s" """ % (self._table,to_column,self._column)
         if self._verbose : print sql,
         curs.execute( sql )
-        if self._verbose : print curs.rowcount
+        rc = curs.rowcount
+        if self._verbose : print rc
         curs.close()
         self._conn.commit()
+        return rc
 
 #
 #
