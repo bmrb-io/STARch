@@ -1,0 +1,145 @@
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+# The values other than 1 are used for those atoms with different #
+# chemical shifts that cannot be assigned to stereospecific atoms #
+# or to specific residues or chains.                              #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique (including isolated methyl protons,   #
+#                         geminal atoms, and geminal methyl       #
+#                         groups with identical chemical shifts)  #
+#                         (e.g. ILE HD11, HD12, HD13 protons)     #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups (e.g. ASP HB2 and HB3     #
+#                         protons, LEU CD1 and CD2 carbons, or    #
+#                         LEU HD11, HD12, HD13 and HD21, HD22,    #
+#                         HD23 methyl protons)                    #
+#      3             Aromatic atoms on opposite sides of          #
+#                         symmetrical rings (e.g. TYR HE1 and HE2 #
+#                         protons)                                #
+#      4             Intraresidue ambiguities (e.g. LYS HG and    #
+#                         HD protons or TRP HZ2 and HZ3 protons)  #
+#      5             Interresidue ambiguities (LYS 12 vs. LYS 27) #
+#      6             Intermolecular ambiguities (e.g. ASP 31 CA   #
+#                         in monomer 1 and ASP 31 CA in monomer 2 #
+#                         of an asymmetrical homodimer, duplex    #
+#                         DNA assignments, or other assignments   #
+#                         that may apply to atoms in one or more  #
+#                         molecule in the molecular assembly)     #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+loop_
+    _Heteronucl_NOE.ID
+    _Heteronucl_NOE.Entity_assembly_ID_1
+    _Heteronucl_NOE.Comp_index_ID_1
+    _Heteronucl_NOE.Comp_ID_1
+    _Heteronucl_NOE.Atom_ID_1
+    _Heteronucl_NOE.Atom_type_1
+    _Heteronucl_NOE.Atom_isotope_number_1
+    _Heteronucl_NOE.Entity_assembly_ID_2
+    _Heteronucl_NOE.Comp_index_ID_2
+    _Heteronucl_NOE.Comp_ID_2
+    _Heteronucl_NOE.Atom_ID_2
+    _Heteronucl_NOE.Atom_type_2
+    _Heteronucl_NOE.Atom_isotope_number_2
+    _Heteronucl_NOE.Val
+    _Heteronucl_NOE.Val_err
+
+    1   ?  3    SER  N  N  15  ?  3    SER  H  H  1  0.585  0.011  
+    2   ?  4    LEU  N  N  15  ?  4    LEU  H  H  1  0.812  0.002  
+    3   ?  5    TYR  N  N  15  ?  5    TYR  H  H  1  0.824  0.008  
+    4   ?  7    LYS  N  N  15  ?  7    LYS  H  H  1  0.833  0.012  
+    5   ?  8    LEU  N  N  15  ?  8    LEU  H  H  1  0.802  0.003  
+    6   ?  9    GLY  N  N  15  ?  9    GLY  H  H  1  0.815  0.008  
+    7   ?  10   GLY  N  N  15  ?  10   GLY  H  H  1  0.814  0.002  
+    8   ?  12   ALA  N  N  15  ?  12   ALA  H  H  1  0.822  0.003  
+    9   ?  15   ASP  N  N  15  ?  15   ASP  H  H  1  0.803  0.011  
+    10  ?  16   LEU  N  N  15  ?  16   LEU  H  H  1  0.812  0.009  
+    11  ?  17   ALA  N  N  15  ?  17   ALA  H  H  1  0.806  0.007  
+    12  ?  18   VAL  N  N  15  ?  18   VAL  H  H  1  0.816  0.009  
+    13  ?  19   GLU  N  N  15  ?  19   GLU  H  H  1  0.817  0.008  
+    14  ?  20   LYS  N  N  15  ?  20   LYS  H  H  1  0.819  0.004  
+    15  ?  21   PHE  N  N  15  ?  21   PHE  H  H  1  0.817  0.006  
+    16  ?  22   TYR  N  N  15  ?  22   TYR  H  H  1  0.828  0.002  
+    17  ?  23   GLY  N  N  15  ?  23   GLY  H  H  1  0.830  0.005  
+    18  ?  24   LYS  N  N  15  ?  24   LYS  H  H  1  0.820  0.003  
+    19  ?  25   VAL  N  N  15  ?  25   VAL  H  H  1  0.814  0.004  
+    20  ?  26   LEU  N  N  15  ?  26   LEU  H  H  1  0.826  0.006  
+    21  ?  27   ALA  N  N  15  ?  27   ALA  H  H  1  0.834  0.001  
+    22  ?  28   ASP  N  N  15  ?  28   ASP  H  H  1  0.811  0.009  
+    23  ?  29   GLU  N  N  15  ?  29   GLU  H  H  1  0.807  0.003  
+    24  ?  30   ARG  N  N  15  ?  30   ARG  H  H  1  0.827  0.007  
+    25  ?  31   VAL  N  N  15  ?  31   VAL  H  H  1  0.813  0.008  
+    26  ?  32   ASN  N  N  15  ?  32   ASN  H  H  1  0.821  0.002  
+    27  ?  33   ARG  N  N  15  ?  33   ARG  H  H  1  0.804  0.002  
+    28  ?  34   PHE  N  N  15  ?  34   PHE  H  H  1  0.814  0.010  
+    29  ?  35   PHE  N  N  15  ?  35   PHE  H  H  1  0.804  0.017  
+    30  ?  36   VAL  N  N  15  ?  36   VAL  H  H  1  0.795  0.002  
+    31  ?  40   MET  N  N  15  ?  40   MET  H  H  1  0.821  0.004  
+    32  ?  41   ALA  N  N  15  ?  41   ALA  H  H  1  0.816  0.005  
+    33  ?  44   LYS  N  N  15  ?  44   LYS  H  H  1  0.824  0.012  
+    34  ?  45   GLN  N  N  15  ?  45   GLN  H  H  1  0.824  0.007  
+    35  ?  46   HIS  N  N  15  ?  46   HIS  H  H  1  0.804  0.009  
+    36  ?  47   GLN  N  N  15  ?  47   GLN  H  H  1  0.813  0.001  
+    37  ?  48   LYS  N  N  15  ?  48   LYS  H  H  1  0.827  0.018  
+    38  ?  49   ASP  N  N  15  ?  49   ASP  H  H  1  0.825  0.009  
+    39  ?  50   PHE  N  N  15  ?  50   PHE  H  H  1  0.829  0.008  
+    40  ?  51   MET  N  N  15  ?  51   MET  H  H  1  0.819  0.002  
+    41  ?  52   THR  N  N  15  ?  52   THR  H  H  1  0.824  0.008  
+    42  ?  53   TYR  N  N  15  ?  53   TYR  H  H  1  0.814  0.007  
+    43  ?  54   ALA  N  N  15  ?  54   ALA  H  H  1  0.824  0.002  
+    44  ?  55   PHE  N  N  15  ?  55   PHE  H  H  1  0.810  0.004  
+    45  ?  56   GLY  N  N  15  ?  56   GLY  H  H  1  0.831  0.001  
+    46  ?  57   GLY  N  N  15  ?  57   GLY  H  H  1  0.825  0.006  
+    47  ?  58   THR  N  N  15  ?  58   THR  H  H  1  0.809  0.002  
+    48  ?  60   ARG  N  N  15  ?  60   ARG  H  H  1  0.690  0.002  
+    49  ?  61   PHE  N  N  15  ?  61   PHE  H  H  1  0.707  0.007  
+    50  ?  64   ARG  N  N  15  ?  64   ARG  H  H  1  0.763  0.006  
+    51  ?  65   SER  N  N  15  ?  65   SER  H  H  1  0.799  0.002  
+    52  ?  66   MET  N  N  15  ?  66   MET  H  H  1  0.820  0.006  
+    53  ?  67   ARG  N  N  15  ?  67   ARG  H  H  1  0.808  0.011  
+    54  ?  68   ALA  N  N  15  ?  68   ALA  H  H  1  0.801  0.006  
+    55  ?  69   ALA  N  N  15  ?  69   ALA  H  H  1  0.809  0.007  
+    56  ?  71   GLN  N  N  15  ?  71   GLN  H  H  1  0.805  0.006  
+    57  ?  72   ASP  N  N  15  ?  72   ASP  H  H  1  0.811  0.007  
+    58  ?  73   LEU  N  N  15  ?  73   LEU  H  H  1  0.800  0.002  
+    59  ?  74   VAL  N  N  15  ?  74   VAL  H  H  1  0.814  0.008  
+    60  ?  77   ALA  N  N  15  ?  77   ALA  H  H  1  0.813  0.006  
+    61  ?  78   GLY  N  N  15  ?  78   GLY  H  H  1  0.809  0.003  
+    62  ?  80   THR  N  N  15  ?  80   THR  H  H  1  0.819  0.004  
+    63  ?  81   ASP  N  N  15  ?  81   ASP  H  H  1  0.820  0.007  
+    64  ?  82   VAL  N  N  15  ?  82   VAL  H  H  1  0.803  0.003  
+    65  ?  83   HIS  N  N  15  ?  83   HIS  H  H  1  0.820  0.007  
+    66  ?  84   PHE  N  N  15  ?  84   PHE  H  H  1  0.806  0.029  
+    67  ?  85   ASP  N  N  15  ?  85   ASP  H  H  1  0.814  0.006  
+    68  ?  89   GLU  N  N  15  ?  89   GLU  H  H  1  0.821  0.008  
+    69  ?  90   ASN  N  N  15  ?  90   ASN  H  H  1  0.813  0.004  
+    70  ?  91   LEU  N  N  15  ?  91   LEU  H  H  1  0.821  0.001  
+    71  ?  92   VAL  N  N  15  ?  92   VAL  H  H  1  0.816  0.010  
+    72  ?  93   LEU  N  N  15  ?  93   LEU  H  H  1  0.816  0.010  
+    73  ?  94   THR  N  N  15  ?  94   THR  H  H  1  0.819  0.009  
+    74  ?  96   GLN  N  N  15  ?  96   GLN  H  H  1  0.810  0.001  
+    75  ?  97   GLU  N  N  15  ?  97   GLU  H  H  1  0.821  0.008  
+    76  ?  98   LEU  N  N  15  ?  98   LEU  H  H  1  0.798  0.009  
+    77  ?  99   ASN  N  N  15  ?  99   ASN  H  H  1  0.804  0.004  
+    78  ?  101  SER  N  N  15  ?  101  SER  H  H  1  0.790  0.004  
+    79  ?  102  GLN  N  N  15  ?  102  GLN  H  H  1  0.814  0.003  
+    80  ?  103  ASP  N  N  15  ?  103  ASP  H  H  1  0.809  0.003  
+    81  ?  105  ILE  N  N  15  ?  105  ILE  H  H  1  0.813  0.004  
+    82  ?  106  ASP  N  N  15  ?  106  ASP  H  H  1  0.810  0.004  
+    83  ?  108  VAL  N  N  15  ?  108  VAL  H  H  1  0.808  0.002  
+    84  ?  109  VAL  N  N  15  ?  109  VAL  H  H  1  0.812  0.007  
+    85  ?  110  THR  N  N  15  ?  110  THR  H  H  1  0.815  0.004  
+    86  ?  115  VAL  N  N  15  ?  115  VAL  H  H  1  0.768  0.008  
+    87  ?  116  GLN  N  N  15  ?  116  GLN  H  H  1  0.768  0.009  
+    88  ?  117  HIS  N  N  15  ?  117  HIS  H  H  1  0.816  0.004  
+    89  ?  118  ARG  N  N  15  ?  118  ARG  H  H  1  0.826  0.007  
+    90  ?  119  ASN  N  N  15  ?  119  ASN  H  H  1  0.816  0.006  
+    91  ?  120  ASP  N  N  15  ?  120  ASP  H  H  1  0.826  0.010  
+    92  ?  121  VAL  N  N  15  ?  121  VAL  H  H  1  0.845  0.015  
+    93  ?  124  ARG  N  N  15  ?  124  ARG  H  H  1  0.818  0.010  
+
+stop_

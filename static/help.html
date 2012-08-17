@@ -1,0 +1,50 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US">
+  <head>
+    <title>NMR-STAR table editor</title>
+<!--    <link rel="stylesheet" TYPE="text/css" href="/stylesheets/chem_comp.css" title="main stylesheet"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+  </head>
+  <body>
+    <div style="padding-left: 2em; padding-top: 2em;">
+      <a style="float: left; padding: 10px; vertical-align: top" href="http://www.bmrb.wisc.edu/">
+      <img src="http://www.bmrb.wisc.edu/images/logo.gif" style="border: 0;" height="60" width="56"></a>
+      <h2 style="margin-left: 80px; float: left">NMR-STAR 3.1 table editor</h2>
+    </div>
+    <div style="padding: 2em; float: left; clear: left; vertical-align: top; width: 50%;">
+        <h3>1. Upload an NMR-STAR 3.1 data table</h3>
+        <p>
+        The file should start with <em>loop_</em> and end with <em>stop_</em>.
+        <p>
+        Uploaded table or parser error messages (if the file was not valid) will be displayed.
+        <p>
+        <strong>Note</strong>: the table will include all NMR-STAR tags, not just those found
+        in the input file (including <tt>Sf_ID</tt>, though this one will be omitted when
+        printing the table out to NMR-STAR).
+
+
+        <h3>2. Click on a column header (tag name) to bring up the editing form.</h3>
+        <p>
+        Editing form lets you do something to the selected column, for example fill it with value
+        or copy its values to another column.
+
+        <h3>3. Choose an editing function and value and click on <em>update table</em>.</h3>
+        <p>
+        You will be returned to table display, with the update showing.
+        <p>
+        You can repeat this step as many times as you like.
+
+        <h3>4. When you're done, click on <em>Make STAR</em> button.</h3>
+        <p>
+        Updated table will be shown as NMR-STAR loop. Use your browser's <em>File - Save As</em>
+        menu to save it.
+        <p>
+        <strong>Note</strong>: when program generates NMR-STAR it deletes the uploaded table 
+        from its internal memory. You cannot use <em>back</em> button to return to table display
+        and do more editing, you need to restart from the beginning and re-upload the file.
+    </div>
+  </body>
+</html>

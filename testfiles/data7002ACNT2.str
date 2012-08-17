@@ -1,0 +1,149 @@
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+# The values other than 1 are used for those atoms with different #
+# chemical shifts that cannot be assigned to stereospecific atoms #
+# or to specific residues or chains.                              #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique (including isolated methyl protons,   #
+#                         geminal atoms, and geminal methyl       #
+#                         groups with identical chemical shifts)  #
+#                         (e.g. ILE HD11, HD12, HD13 protons)     #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups (e.g. ASP HB2 and HB3     #
+#                         protons, LEU CD1 and CD2 carbons, or    #
+#                         LEU HD11, HD12, HD13 and HD21, HD22,    #
+#                         HD23 methyl protons)                    #
+#      3             Aromatic atoms on opposite sides of          #
+#                         symmetrical rings (e.g. TYR HE1 and HE2 #
+#                         protons)                                #
+#      4             Intraresidue ambiguities (e.g. LYS HG and    #
+#                         HD protons or TRP HZ2 and HZ3 protons)  #
+#      5             Interresidue ambiguities (LYS 12 vs. LYS 27) #
+#      6             Intermolecular ambiguities (e.g. ASP 31 CA   #
+#                         in monomer 1 and ASP 31 CA in monomer 2 #
+#                         of an asymmetrical homodimer, duplex    #
+#                         DNA assignments, or other assignments   #
+#                         that may apply to atoms in one or more  #
+#                         molecule in the molecular assembly)     #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+loop_
+    _T2.ID
+    _T2.Entity_assembly_ID
+    _T2.Comp_index_ID
+    _T2.Comp_ID
+    _T2.Atom_ID
+    _T2.Atom_type
+    _T2.Atom_isotope_number
+    _T2.T2_val
+    _T2.T2_val_err
+    _T2.Rex_val
+    _T2.Rex_err
+
+    1    ?  3    SER  N  N  15  7.8739   0.2924  ?  ?  
+    2    ?  4    LEU  N  N  15  8.9898   0.1525  ?  ?  
+    3    ?  5    TYR  N  N  15  9.2919   0.1379  ?  ?  
+    4    ?  7    LYS  N  N  15  8.9655   0.139   ?  ?  
+    5    ?  8    LEU  N  N  15  9.5954   0.1233  ?  ?  
+    6    ?  9    GLY  N  N  15  8.8803   0.1143  ?  ?  
+    7    ?  10   GLY  N  N  15  9.0246   0.1723  ?  ?  
+    8    ?  12   ALA  N  N  15  9.7944   0.2649  ?  ?  
+    9    ?  13   ALA  N  N  15  9.307    0.2092  ?  ?  
+    10   ?  15   ASP  N  N  15  10.0159  0.1254  ?  ?  
+    11   ?  16   LEU  N  N  15  9.7027   0.1409  ?  ?  
+    12   ?  17   ALA  N  N  15  9.6216   0.1424  ?  ?  
+    13   ?  18   VAL  N  N  15  10.0892  0.1351  ?  ?  
+    14   ?  19   GLU  N  N  15  9.8423   0.1905  ?  ?  
+    15   ?  20   LYS  N  N  15  9.5455   0.138   ?  ?  
+    16   ?  21   PHE  N  N  15  9.3769   0.1687  ?  ?  
+    17   ?  22   TYR  N  N  15  9.9716   0.1447  ?  ?  
+    18   ?  23   GLY  N  N  15  9.4077   0.0998  ?  ?  
+    19   ?  24   LYS  N  N  15  9.2026   0.1931  ?  ?  
+    20   ?  25   VAL  N  N  15  9.2168   0.1624  ?  ?  
+    21   ?  26   LEU  N  N  15  9.9652   0.1301  ?  ?  
+    22   ?  27   ALA  N  N  15  9.6739   0.1153  ?  ?  
+    23   ?  28   ASP  N  N  15  8.5775   0.1836  ?  ?  
+    24   ?  29   GLU  N  N  15  9.0225   0.2983  ?  ?  
+    25   ?  30   ARG  N  N  15  10.0644  0.202   ?  ?  
+    26   ?  31   VAL  N  N  15  9.2769   0.2699  ?  ?  
+    27   ?  32   ASN  N  N  15  8.9582   0.2145  ?  ?  
+    28   ?  33   ARG  N  N  15  8.9576   0.1407  ?  ?  
+    29   ?  34   PHE  N  N  15  9.5498   0.1468  ?  ?  
+    30   ?  35   PHE  N  N  15  9.1375   0.1387  ?  ?  
+    31   ?  36   VAL  N  N  15  10.8815  0.1475  ?  ?  
+    32   ?  38   THR  N  N  15  8.98     0.2525  ?  ?  
+    33   ?  40   MET  N  N  15  9.2155   0.3419  ?  ?  
+    34   ?  41   ALA  N  N  15  8.9241   0.1689  ?  ?  
+    35   ?  44   LYS  N  N  15  9.4904   0.1214  ?  ?  
+    36   ?  45   GLN  N  N  15  9.3578   0.1113  ?  ?  
+    37   ?  46   HIS  N  N  15  9.8695   0.1406  ?  ?  
+    38   ?  47   GLN  N  N  15  9.5363   0.1762  ?  ?  
+    39   ?  49   ASP  N  N  15  9.277    0.2219  ?  ?  
+    40   ?  50   PHE  N  N  15  9.3531   0.1114  ?  ?  
+    41   ?  51   MET  N  N  15  9.568    0.1454  ?  ?  
+    42   ?  52   THR  N  N  15  9.4345   0.1406  ?  ?  
+    43   ?  53   TYR  N  N  15  9.3597   0.1571  ?  ?  
+    44   ?  54   ALA  N  N  15  9.6929   0.1239  ?  ?  
+    45   ?  55   PHE  N  N  15  8.9623   0.1579  ?  ?  
+    46   ?  56   GLY  N  N  15  9.8385   0.1856  ?  ?  
+    47   ?  57   GLY  N  N  15  9.6421   0.207   ?  ?  
+    48   ?  58   THR  N  N  15  8.4261   0.1621  ?  ?  
+    49   ?  60   ARG  N  N  15  8.0966   0.213   ?  ?  
+    50   ?  61   PHE  N  N  15  8.2677   0.1699  ?  ?  
+    51   ?  64   ARG  N  N  15  8.0947   0.2253  ?  ?  
+    52   ?  65   SER  N  N  15  8.9351   0.2087  ?  ?  
+    53   ?  66   MET  N  N  15  9.7251   0.194   ?  ?  
+    54   ?  68   ALA  N  N  15  9.03     0.1956  ?  ?  
+    55   ?  69   ALA  N  N  15  9.5733   0.1691  ?  ?  
+    56   ?  71   GLN  N  N  15  8.9222   0.1213  ?  ?  
+    57   ?  72   ASP  N  N  15  9.4866   0.1606  ?  ?  
+    58   ?  73   LEU  N  N  15  9.6166   0.1079  ?  ?  
+    59   ?  74   VAL  N  N  15  9.1002   0.2076  ?  ?  
+    60   ?  77   ALA  N  N  15  8.4905   0.1291  ?  ?  
+    61   ?  78   GLY  N  N  15  8.0974   0.1821  ?  ?  
+    62   ?  80   THR  N  N  15  9.2236   0.0905  ?  ?  
+    63   ?  81   ASP  N  N  15  9.4164   0.2876  ?  ?  
+    64   ?  82   VAL  N  N  15  9.7287   0.1569  ?  ?  
+    65   ?  83   HIS  N  N  15  9.3633   0.2673  ?  ?  
+    66   ?  84   PHE  N  N  15  9.4245   0.1859  ?  ?  
+    67   ?  85   ASP  N  N  15  9.6829   0.2045  ?  ?  
+    68   ?  86   ALA  N  N  15  9.3146   0.2198  ?  ?  
+    69   ?  87   ILE  N  N  15  9.0597   0.2699  ?  ?  
+    70   ?  88   ALA  N  N  15  9.3735   0.2927  ?  ?  
+    71   ?  89   GLU  N  N  15  9.9538   0.1546  ?  ?  
+    72   ?  90   ASN  N  N  15  9.8267   0.1519  ?  ?  
+    73   ?  91   LEU  N  N  15  9.6022   0.1046  ?  ?  
+    74   ?  92   VAL  N  N  15  9.4423   0.1486  ?  ?  
+    75   ?  93   LEU  N  N  15  9.9991   0.1124  ?  ?  
+    76   ?  94   THR  N  N  15  9.5865   0.1231  ?  ?  
+    77   ?  96   GLN  N  N  15  9.9565   0.1495  ?  ?  
+    78   ?  97   GLU  N  N  15  9.3353   0.1467  ?  ?  
+    79   ?  98   LEU  N  N  15  9.0322   0.1441  ?  ?  
+    80   ?  99   ASN  N  N  15  9.6048   0.1014  ?  ?  
+    81   ?  100  VAL  N  N  15  9.5507   0.1236  ?  ?  
+    82   ?  101  SER  N  N  15  8.4686   0.15    ?  ?  
+    83   ?  102  GLN  N  N  15  9.1068   0.1754  ?  ?  
+    84   ?  103  ASP  N  N  15  9.443    0.1596  ?  ?  
+    85   ?  105  ILE  N  N  15  9.1866   0.1395  ?  ?  
+    86   ?  106  ASP  N  N  15  9.6739   0.1703  ?  ?  
+    87   ?  108  VAL  N  N  15  9.47     0.1537  ?  ?  
+    88   ?  109  VAL  N  N  15  9.5544   0.1493  ?  ?  
+    89   ?  110  THR  N  N  15  10.2368  0.14    ?  ?  
+    90   ?  111  ILE  N  N  15  9.0726   0.225   ?  ?  
+    91   ?  113  GLY  N  N  15  9.0131   0.093   ?  ?  
+    92   ?  114  SER  N  N  15  8.6029   0.1178  ?  ?  
+    93   ?  115  VAL  N  N  15  9.1251   0.2244  ?  ?  
+    94   ?  116  GLN  N  N  15  9.5255   0.1672  ?  ?  
+    95   ?  117  HIS  N  N  15  9.4858   0.2301  ?  ?  
+    96   ?  118  ARG  N  N  15  9.6192   0.2073  ?  ?  
+    97   ?  119  ASN  N  N  15  9.8254   0.1398  ?  ?  
+    98   ?  120  ASP  N  N  15  9.3012   0.1847  ?  ?  
+    99   ?  121  VAL  N  N  15  9.2791   0.3062  ?  ?  
+    100  ?  122  LEU  N  N  15  9.6305   0.1383  ?  ?  
+    101  ?  124  ARG  N  N  15  9.1857   0.1438  ?  ?  
+
+stop_
