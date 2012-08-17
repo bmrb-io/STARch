@@ -35,6 +35,7 @@ class TableEdit( object ) :
     _props = None
     _dbfile = None
     _table = None
+    _urlbase = None
 
     def __init__( self, conffile = None ) :
         if conffile == None : raise UnboundLocalError( "Missing config file" )
@@ -42,15 +43,17 @@ class TableEdit( object ) :
         if not os.path.exists( conffile ) : raise UnboundLocalError( "Config file not found: %s" % (conffile) )
         self._props = ConfigParser.SafeConfigParser()
         self._props.read( conffile )
+        self._urlbase = self._props.get( "wsgi", "url_base" )
+        if self._urlbase == None : self._urlbase = ""
 
         self._map = werkzeug.routing.Map( [
-            werkzeug.routing.Rule( "/", endpoint = "new" ),
-            werkzeug.routing.Rule( "/upload", endpoint = "upload" ),
-            werkzeug.routing.Rule( "/edit", endpoint = "edit" ),
-            werkzeug.routing.Rule( "/print", endpoint = "print" ),
-            werkzeug.routing.Rule( "/help", endpoint = "help" ),
-            werkzeug.routing.Rule( "/help/", endpoint = "help" ),
-            werkzeug.routing.Rule( "/<func>", endpoint = "update" ),
+            werkzeug.routing.Rule( "%s/", endpoint = "new" ),
+            werkzeug.routing.Rule( "%s/upload", endpoint = "upload" ),
+            werkzeug.routing.Rule( "%s/edit", endpoint = "edit" ),
+            werkzeug.routing.Rule( "%s/print", endpoint = "print" ),
+            werkzeug.routing.Rule( "%s/help", endpoint = "help" ),
+            werkzeug.routing.Rule( "%s/help/", endpoint = "help" ),
+            werkzeug.routing.Rule( "%s/<func>", endpoint = "update" ),
         ] )
 
 #
