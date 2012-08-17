@@ -47,13 +47,13 @@ class TableEdit( object ) :
         if self._urlbase == None : self._urlbase = ""
 
         self._map = werkzeug.routing.Map( [
-            werkzeug.routing.Rule( "%s/", endpoint = "new" ),
-            werkzeug.routing.Rule( "%s/upload", endpoint = "upload" ),
-            werkzeug.routing.Rule( "%s/edit", endpoint = "edit" ),
-            werkzeug.routing.Rule( "%s/print", endpoint = "print" ),
-            werkzeug.routing.Rule( "%s/help", endpoint = "help" ),
-            werkzeug.routing.Rule( "%s/help/", endpoint = "help" ),
-            werkzeug.routing.Rule( "%s/<func>", endpoint = "update" ),
+            werkzeug.routing.Rule( "%s/" % (self._urlbase), endpoint = "new" ),
+            werkzeug.routing.Rule( "%s/upload" % (self._urlbase), endpoint = "upload" ),
+            werkzeug.routing.Rule( "%s/edit" % (self._urlbase), endpoint = "edit" ),
+            werkzeug.routing.Rule( "%s/print" % (self._urlbase), endpoint = "print" ),
+            werkzeug.routing.Rule( "%s/help" % (self._urlbase), endpoint = "help" ),
+            werkzeug.routing.Rule( "%s/help/" % (self._urlbase), endpoint = "help" ),
+            werkzeug.routing.Rule( "%s/<func>" % (self._urlbase), endpoint = "update" ),
         ] )
 
 #
