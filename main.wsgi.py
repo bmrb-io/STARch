@@ -17,7 +17,8 @@ sys.path.append( "/bmrb/lib/python" )
 from sans.lexer import STARLexer
 from sans.handlers import ErrorHandler, ContentHandler
 
-sys.path.append( os.path.realpath( os.path.split( __file__ )[0] ) )
+_HERE = os.path.realpath( os.path.split( __file__ )[0] )
+sys.path.append( _HERE )
 import LoopParser
 import TableEditor
 import send_file
@@ -25,8 +26,7 @@ import show_table
 import edit_form
 import print_star
 
-
-CONFIG = "tabedit.conf"
+CONFIG = "%s/tabedit.conf" % (_HERE)
 
 class TableEdit( object ) :
 
