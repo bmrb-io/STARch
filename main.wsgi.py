@@ -17,6 +17,7 @@ sys.path.append( "/bmrb/lib/python" )
 from sans.lexer import STARLexer
 from sans.handlers import ErrorHandler, ContentHandler
 
+sys.path.append( os.path.realpath( os.path.split( __file__ )[0] ) )
 import LoopParser
 import TableEditor
 import send_file
@@ -163,6 +164,12 @@ class TableEdit( object ) :
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
 #        return redirect( "http://www.bmrb.wisc.edu" )
+
+#
+# wsgi starting point
+#
+
+application = TableEdit()
 
 #
 #
