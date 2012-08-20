@@ -38,6 +38,7 @@ class TableEdit( object ) :
     _urlbase = None
 
     def __init__( self, conffile = None ) :
+
         if conffile == None : raise UnboundLocalError( "Missing config file" )
         if len( conffile.strip() ) < 1 : raise UnboundLocalError( "Missing config file" )
         if not os.path.exists( conffile ) : raise UnboundLocalError( "Config file not found: %s" % (conffile) )
@@ -45,6 +46,7 @@ class TableEdit( object ) :
         self._props.read( conffile )
         self._urlbase = self._props.get( "wsgi", "url_base" )
         if self._urlbase == None : self._urlbase = ""
+#        print "! >%s<" % (self._urlbase)
 
         self._map = werkzeug.routing.Map( [
             werkzeug.routing.Rule( "%s/" % (self._urlbase), endpoint = "new" ),
@@ -55,6 +57,9 @@ class TableEdit( object ) :
             werkzeug.routing.Rule( "%s/help/" % (self._urlbase), endpoint = "help" ),
             werkzeug.routing.Rule( "%s/<func>" % (self._urlbase), endpoint = "update" ),
         ] )
+
+#        print self._map
+#        raise Exception
 
 #
     def dispatch_request( self, request ) :
@@ -78,7 +83,7 @@ class TableEdit( object ) :
 #
 # url handlers
 #
-    def on_new( self, request ) :
+    def on_new( self, request, **values ) :
         """show file upload form"""
         s = send_file.SendFile();
         s.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/index.html" )
@@ -182,5 +187,4 @@ if __name__ == '__main__':
     from werkzeug.serving import run_simple
     from werkzeug.debug import DebuggedApplication
     app = TableEdit( CONFIG )
-#    run_simple( '127.0.0.1', 5000, app, use_debugger = True, use_reloader = True )
-    run_simple( '144.92.167.179', 5000, app, use_debugger = True, use_reloader = True )
+    run_simple( '127.0.0.1', 5000, app, use_debugger = True, use_reloader = True )
