@@ -8,6 +8,7 @@ import sqlite3
 class EditForm( object ) :
     """shows "edit table" form"""
 
+    _dbfile = None
     _conn = None
     _table = None
     _column = None
@@ -76,8 +77,7 @@ class EditForm( object ) :
 """
 
     def __init__( self, dbfile = None, table = None, column = None ) :
-        if dbfile != None :
-            self._conn = sqlite3.connect( dbfile )
+        self._dbfile - dbfile
         self._column = column
         self._table = table
 
@@ -147,7 +147,8 @@ class EditForm( object ) :
 """ % (self._table,self._column)
         txt += """<p><label for="copy_col">Copy to column</label> """
         sql = """select * from "%s" limit 1""" % (self._table)
-        curs = self._conn.cursor()
+        conn = sqlite3.connect( self._dbfile )
+        curs = conn.cursor()
         curs.execute( sql )
         if len( curs.description ) < 1 : raise Exception( "No columns!" )
         txt += """<select id="copy_col" name="col_copy">
@@ -157,6 +158,8 @@ class EditForm( object ) :
             if col == self._table : continue
             txt += """<option value="%s">%s</option>""" % (col[0],col[0])
 
+        curs.close()
+        conn.close()
         txt += """</select> (For example, copy Comp_index_ID to Seq_ID.)
 <br><input type="submit" value="Update table">
 </form></div>

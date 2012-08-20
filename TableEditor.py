@@ -1,27 +1,28 @@
 #!/usr/bin/python -u
 #
 #
+import sqlite3
 
 class edit( object ) :
     """editing functions"""
 
+    _dbfile = None
     _table = None
     _column = None
-    _conn = None
 
     _verbose = True
 
-    def __init__( self, connection = None, table = None, column = None ) :
-        self._conn = connection
+    def __init__( self, dbfile = None, table = None, column = None ) :
+        self._dbfile = dbfile
         self._column = column
         self._table = table
 
-    def _get_conn( self ) :
-        """sqlite3 db connection"""
-        return self._conn
-    def _set_conn( self, connection ) :
-        self._conn = connection
-    connection = property( _get_conn, _set_conn )
+    def _get_dbfile( self ) :
+        """sqlite3 db filename"""
+        return self._dbfile
+    def _set_dbfile( self, dbfile ) :
+        self._dbfile = dbfile
+    dbfile = property( _get_dbfile, _set_dbfile )
 
     def _get_col( self ) : 
         """column (tag) name"""
@@ -48,15 +49,18 @@ class edit( object ) :
         if not overwrite :
             sql += """ where ("%s" is null or "%s"='.' or "%s"='?')""" % (self._column,self._column,self._column)
         if self._verbose : print sql, value
-        curs = self._conn.cursor()
+        conn = sqlite3.connect( self._dbfile )
+        curs = conn.cursor()
         if value == "." : curs.execute( sql )
         else : curs.execute( sql, (value,) )
         rc = curs.rowcount
         if self._verbose : print rc
         curs.close()
-        self._conn.commit()
+        conn.commit()
+        conn.close()
         return rc
 
+#
     def insert_numbers( self, startat = 1, overwrite = False ) :
         """insert sequence of numbers"""
         sql = """update "%s" set "%s"=?""" % (self._table,self._column)
@@ -64,8 +68,9 @@ class edit( object ) :
         if not overwrite :
             sql += """ and ("%s" is null or "%s"='.' or "%s"='?')""" % (self._column,self._column,self._column)
         if self._verbose : print sql,
-        curs = self._conn.cursor()
-        curs2 = self._conn.cursor()
+        conn = sqlite3.connect( self._dbfile )
+        curs = conn.cursor()
+        curs2 = conn.cursor()
         curs2.execute( """select rowid from "%s" order by rowid""" % (self._table) )
         i = int( startat )
         cnt = 0
@@ -78,7 +83,8 @@ class edit( object ) :
         if self._verbose : print i
         curs2.close()
         curs.close()
-        self._conn.commit()
+        conn.commit()
+        conn.close()
         return cnt
 
 
@@ -86,7 +92,8 @@ class edit( object ) :
         """copy values to another column"""
         if to_column == None : raise UnboundLocalError( "copy_column called without argument" )
         sql = """select * from "%s" limit 1""" % (self._table)
-        curs = self._conn.cursor()
+        conn = sqlite3.connect( self._dbfile )
+        curs = conn.cursor()
         curs.execute( sql )
         found = False
         for col in curs.description :
@@ -100,7 +107,8 @@ class edit( object ) :
         rc = curs.rowcount
         if self._verbose : print rc
         curs.close()
-        self._conn.commit()
+        conn.commit()
+        conn.close()
         return rc
 
 #

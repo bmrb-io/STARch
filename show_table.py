@@ -1,9 +1,12 @@
 #!/usr/bin/python -u
 #
 
+import sqlite3
+
 class ShowTable( object ) :
     """shows sqlite3 table as html page, wrapped in iterable"""
 
+    _dbfile = None
     _conn = None
     _curs = None
     _row = 0
@@ -72,11 +75,18 @@ class ShowTable( object ) :
 </html>
 """
 
-    def __init__( self, connection = None, table = None ) :
-        self._conn = connection
+    def __init__( self, dbfile = None, table = None ) :
+        self._dbfile = dbfile
         self._table = table
         self._header_sent = False
         self._footer_sent = False
+
+    def _get_dbfile( self ) : 
+        """sqlite3 db file"""
+        return self._dbfile
+    def _set_dbfile( self, dbfile ) :
+        self._dbfile = dbfile
+    dbfile = property( _get_dbfile, _set_dbfile )
 
     def _get_conn( self ) : 
         """sqlite3 db connection"""
@@ -114,6 +124,7 @@ class ShowTable( object ) :
             self._row += 1
             if row == None :
                 self._curs.close()
+                self._conn.close()
                 self._footer_sent = True
                 return self._footer
 
@@ -130,6 +141,7 @@ class ShowTable( object ) :
             return txt
 
 # else send header & run query
+        self._conn = sqlite3.connect( self._dbfile )
         self._curs = self._conn.cursor()
         self._curs.execute( 'select * from "%s"' % (self._table) ) # not a parameter
         txt = self._header1

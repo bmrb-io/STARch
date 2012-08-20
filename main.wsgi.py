@@ -31,7 +31,6 @@ CONFIG = "%s/tabedit.conf" % (_HERE)
 class TableEdit( object ) :
 
     _map = None
-    _conn = None
     _props = None
     _dbfile = None
     _table = None
@@ -53,9 +52,6 @@ class TableEdit( object ) :
             werkzeug.routing.Rule( "/help/", endpoint = "help" ),
             werkzeug.routing.Rule( "/<func>", endpoint = "update" ),
         ] )
-
-#        print self._map
-#        raise Exception
 
 #
     def dispatch_request( self, request ) :
@@ -79,6 +75,8 @@ class TableEdit( object ) :
 #
 # url handlers
 #
+# index
+#
     def on_new( self, request, **values ) :
         """show file upload form"""
         s = send_file.SendFile();
@@ -86,6 +84,8 @@ class TableEdit( object ) :
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
 
+# upload
+#
     def on_upload( self, request ) :
         """read uploaded file into sqlite3 table and display it"""
         dictdsn = self._props.get( "main", "dictionary_dsn" )
@@ -93,8 +93,8 @@ class TableEdit( object ) :
         with warnings.catch_warnings() :
             warnings.simplefilter( "ignore", RuntimeWarning ) # yes I know about tempnam thankyouverymuch
             self._dbfile = os.tempnam( self._props.get( "main", "data_files" ) )
-        self._conn = sqlite3.connect( self._dbfile )
-        curs = self._conn.cursor()
+        conn = sqlite3.connect( self._dbfile )
+        curs = conn.cursor()
         curs.execute( "attach database '%s' as dict" % (dictdsn) )
         curs.close()
 
@@ -102,8 +102,8 @@ class TableEdit( object ) :
         h = LoopParser.handler( conn = self._conn )
         p = LoopParser.parser2( l, h, h )
         p.parse()
+        conn.close()
         if h.hasErrors() :
-            self._conn.close()
             os.unlink( self._dbfile )
             return werkzeug.wrappers.Response( h.errors, status = 200, content_type = "text/plain" )
 
@@ -112,18 +112,22 @@ class TableEdit( object ) :
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
 
+# edit form
+#
     def on_edit( self, request ) :
         """show edit form"""
         s = edit_form.EditForm( dbfile = self._dbfile, table = self._table, column = request.args["column"] )
         return werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
 
+# updater
+#
     def on_update( self, request, **values ) :
         """run editing function(s) and show table"""
 
         print request.args
         print values
 
-        e = TableEditor.edit( connection = self._conn, table = self._table, column = request.args["column"] )
+        e = TableEditor.edit( dbfile = self._dbfile, table = self._table, column = request.args["column"] )
         rowcount = 0
 
         if values["func"] == "insert_constant" : 
@@ -153,6 +157,8 @@ class TableEdit( object ) :
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
 
+#
+#
     def on_print( self, request ) :
         """unparse sqlite3 table to NMR-STAR and display as text/plain"""
         self._conn.close()
