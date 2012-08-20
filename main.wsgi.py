@@ -35,7 +35,6 @@ class TableEdit( object ) :
     _props = None
     _dbfile = None
     _table = None
-    _urlbase = None
 
     def __init__( self, conffile = None ) :
 
@@ -44,18 +43,16 @@ class TableEdit( object ) :
         if not os.path.exists( conffile ) : raise UnboundLocalError( "Config file not found: %s" % (conffile) )
         self._props = ConfigParser.SafeConfigParser()
         self._props.read( conffile )
-        self._urlbase = self._props.get( "wsgi", "url_base" )
-        if self._urlbase == None : self._urlbase = ""
-#        print "! >%s<" % (self._urlbase)
 
         self._map = werkzeug.routing.Map( [
-            werkzeug.routing.Rule( "%s/" % (self._urlbase), endpoint = "new" ),
-            werkzeug.routing.Rule( "%s/upload" % (self._urlbase), endpoint = "upload" ),
-            werkzeug.routing.Rule( "%s/edit" % (self._urlbase), endpoint = "edit" ),
-            werkzeug.routing.Rule( "%s/print" % (self._urlbase), endpoint = "print" ),
-            werkzeug.routing.Rule( "%s/help" % (self._urlbase), endpoint = "help" ),
-            werkzeug.routing.Rule( "%s/help/" % (self._urlbase), endpoint = "help" ),
-            werkzeug.routing.Rule( "%s/<func>" % (self._urlbase), endpoint = "update" ),
+            werkzeug.routing.Rule( "/table-editor", endpoint = "new" ),
+            werkzeug.routing.Rule( "/table-editor/", endpoint = "new" ),
+            werkzeug.routing.Rule( "/table-editor/upload", endpoint = "upload" ),
+            werkzeug.routing.Rule( "/table-editor/edit", endpoint = "edit" ),
+            werkzeug.routing.Rule( "/table-editor/print", endpoint = "print" ),
+            werkzeug.routing.Rule( "/table-editor/help", endpoint = "help" ),
+            werkzeug.routing.Rule( "/table-editor/help/", endpoint = "help" ),
+            werkzeug.routing.Rule( "/table-editor/<func>", endpoint = "update" ),
         ] )
 
 #        print self._map
