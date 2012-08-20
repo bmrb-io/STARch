@@ -45,14 +45,13 @@ class TableEdit( object ) :
         self._props.read( conffile )
 
         self._map = werkzeug.routing.Map( [
-            werkzeug.routing.Rule( "/table-editor", endpoint = "new" ),
-            werkzeug.routing.Rule( "/table-editor/", endpoint = "new" ),
-            werkzeug.routing.Rule( "/table-editor/upload", endpoint = "upload" ),
-            werkzeug.routing.Rule( "/table-editor/edit", endpoint = "edit" ),
-            werkzeug.routing.Rule( "/table-editor/print", endpoint = "print" ),
-            werkzeug.routing.Rule( "/table-editor/help", endpoint = "help" ),
-            werkzeug.routing.Rule( "/table-editor/help/", endpoint = "help" ),
-            werkzeug.routing.Rule( "/table-editor/<func>", endpoint = "update" ),
+            werkzeug.routing.Rule( "/", endpoint = "new" ),
+            werkzeug.routing.Rule( "/upload", endpoint = "upload" ),
+            werkzeug.routing.Rule( "/edit", endpoint = "edit" ),
+            werkzeug.routing.Rule( "/print", endpoint = "print" ),
+            werkzeug.routing.Rule( "/help", endpoint = "help" ),
+            werkzeug.routing.Rule( "/help/", endpoint = "help" ),
+            werkzeug.routing.Rule( "/<func>", endpoint = "update" ),
         ] )
 
 #        print self._map
@@ -115,7 +114,7 @@ class TableEdit( object ) :
 
     def on_edit( self, request ) :
         """show edit form"""
-        s = edit_form.EditForm( connection = self._conn, table = self._table, column = request.args["column"] )
+        s = edit_form.EditForm( dbfile = self._dbfile, table = self._table, column = request.args["column"] )
         return werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
 
     def on_update( self, request, **values ) :

@@ -3,6 +3,8 @@
 # the form is wrapped in an iterable like the rest of them
 #
 
+import sqlite3
+
 class EditForm( object ) :
     """shows "edit table" form"""
 
@@ -73,8 +75,9 @@ class EditForm( object ) :
 </html>
 """
 
-    def __init__( self, connection = None, table = None, column = None ) :
-        self._conn = connection 
+    def __init__( self, dbfile = None, table = None, column = None ) :
+        if dbfile != None :
+            self._conn = sqlite3.connect( dbfile )
         self._column = column
         self._table = table
 
