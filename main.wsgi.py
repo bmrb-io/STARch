@@ -99,7 +99,7 @@ class TableEdit( object ) :
         curs.close()
 
         l = STARLexer( request.files["filename"].stream )
-        h = LoopParser.handler( conn = self._conn )
+        h = LoopParser.handler( conn = conn )
         p = LoopParser.parser2( l, h, h )
         p.parse()
         conn.close()
@@ -108,7 +108,7 @@ class TableEdit( object ) :
             return werkzeug.wrappers.Response( h.errors, status = 200, content_type = "text/plain" )
 
         self._table = h.table
-        s = show_table.ShowTable( connection = self._conn, table = self._table )
+        s = show_table.ShowTable( dbfile = self._dbfile, table = self._table )
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
 
@@ -152,7 +152,7 @@ class TableEdit( object ) :
 
         else : return werkzeug.wrappers.Response( ["No such function: %s!" % values["func"]], status = 404 )
 
-        s = show_table.ShowTable( connection = self._conn, table = self._table )
+        s = show_table.ShowTable( dbfile = self._dbfile, table = self._table )
         s.status_message = "%s row(s) updated" % (rowcount)
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
@@ -161,7 +161,6 @@ class TableEdit( object ) :
 #
     def on_print( self, request ) :
         """unparse sqlite3 table to NMR-STAR and display as text/plain"""
-        self._conn.close()
         s = print_star.PrintStar( filename = self._dbfile, table = self._table )
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/plain" )
         return response

@@ -77,7 +77,7 @@ class EditForm( object ) :
 """
 
     def __init__( self, dbfile = None, table = None, column = None ) :
-        self._dbfile - dbfile
+        self._dbfile = dbfile
         self._column = column
         self._table = table
 
