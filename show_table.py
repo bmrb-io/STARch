@@ -1,6 +1,7 @@
 #!/usr/bin/python -u
 #
 
+import sys
 import sqlite3
 
 class ShowTable( object ) :
@@ -65,6 +66,17 @@ class ShowTable( object ) :
         </form>
         <p><form method="get" action="edit" name="edit" id="editstar"> </form>
 """
+#    _forms = """
+#        <p><form method="get" action="print" name="print" id="printstar">
+#            <input type="hidden" name="dbfile" value="%s">
+#            <input type="hidden" name="table" value="%s">
+#            <input type="submit" value="Make STAR">
+#        </form>
+#        <p><form method="get" action="edit" name="edit" id="editstar"> 
+#            <input type="hidden" name="dbfile" value="%s">
+#            <input type="hidden" name="table" value="%s">
+#        </form>
+#"""
 #        <table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">
 #"""
 
@@ -78,6 +90,7 @@ class ShowTable( object ) :
     def __init__( self, dbfile = None, table = None ) :
         self._dbfile = dbfile
         self._table = table
+        print >> sys.stderr, self._dbfile, self._table
         self._header_sent = False
         self._footer_sent = False
 
@@ -146,7 +159,8 @@ class ShowTable( object ) :
         self._curs.execute( 'select * from "%s"' % (self._table) ) # not a parameter
         txt = self._header1
         txt += '<h2 style="margin-left: 80px; float: left">%s</h2>'  % (self._table)
-        txt += self._header2
+        txt += self._header2 
+#        txt += self._forms % (self._dbfile, self._table, self._dbfile, self._table)
         if self._msg != None :
             txt += "<p>%s</p>" % (self._msg)
             self._msg = None

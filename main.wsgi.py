@@ -92,8 +92,9 @@ class TableEdit( object ) :
         if not os.path.exists( dictdsn ) : raise UnboundLocalError( "Dictionary missing" )
         with warnings.catch_warnings() :
             warnings.simplefilter( "ignore", RuntimeWarning ) # yes I know about tempnam thankyouverymuch
-            self._dbfile = os.tempnam( self._props.get( "main", "data_files" ) )
-        conn = sqlite3.connect( self._dbfile )
+            dbfile = os.tempnam( self._props.get( "main", "data_files" ) )
+        conn = sqlite3.connect( dbfile )
+        self._dbfile = os.path.realpath( dbfile )
         curs = conn.cursor()
         curs.execute( "attach database '%s' as dict" % (dictdsn) )
         curs.close()
