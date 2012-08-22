@@ -111,8 +111,8 @@ class TableEdit( object ) :
         with warnings.catch_warnings() :
             warnings.simplefilter( "ignore", RuntimeWarning ) # yes I know about tempnam thankyouverymuch
             dbfile = os.tempnam( self._props.get( "main", "data_files" ) )
-        self._dbfile = os.path.realpath( dbfile )
-        conn = sqlite3.connect( self._dbfile )
+        dbfile = os.path.realpath( dbfile )
+        conn = sqlite3.connect( dbfile )
         curs = conn.cursor()
         curs.execute( "attach database '%s' as dict" % (dictdsn) )
         curs.close()
@@ -123,7 +123,7 @@ class TableEdit( object ) :
         p.parse()
         conn.close()
         if h.hasErrors() :
-            os.unlink( self._dbfile )
+            os.unlink( dbfile )
             return werkzeug.wrappers.Response( h.errors, status = 200, content_type = "text/plain" )
 
         r = send_file.SendFile()
@@ -133,12 +133,12 @@ class TableEdit( object ) :
         else : baseurl = baseurl.rstrip( "/" )
         r.replace( "<!-- baseurl -->", baseurl )
         r.replace( "<!-- page title -->", h.table )
-        r.replace( "<!-- sqlite3 file -->", self._dbfile )
+        r.replace( "<!-- sqlite3 file -->", dbfile )
         r.replace( "<!-- sqlite3 table -->", h.table )
         r.replace( "<!-- status message -->", "" )
         r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/table.hdr" )
 
-        s = show_table.ShowTable( dbfile = self._dbfile, table = h.table )
+        s = show_table.ShowTable( dbfile = dbfile, table = h.table )
         response = werkzeug.wrappers.Response( itertools.chain( r, s ), status = 200, content_type = "text/html" )
         return response
 
@@ -161,7 +161,7 @@ class TableEdit( object ) :
         else : baseurl = baseurl.rstrip( "/" )
         r.replace( "<!-- baseurl -->", baseurl )
         r.replace( "<!-- page title -->", "Edit %s : %s" % (request.args["table"], request.args["column"]) )
-        r.replace( "<!-- sqlite3 file -->", self._dbfile )
+        r.replace( "<!-- sqlite3 file -->", request.args["dbfile"] )
         r.replace( "<!-- sqlite3 table -->", request.args["table"] )
         r.replace( "<!-- sqlite3 column -->", request.args["column"] )
         r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/edit.hdr" )
@@ -209,7 +209,7 @@ class TableEdit( object ) :
         else : baseurl = baseurl.rstrip( "/" )
         r.replace( "<!-- baseurl -->", baseurl )
         r.replace( "<!-- page title -->", request.args["table"] )
-        r.replace( "<!-- sqlite3 file -->", self._dbfile )
+        r.replace( "<!-- sqlite3 file -->", request.args["dbfile"] )
         r.replace( "<!-- sqlite3 table -->", request.args["table"] )
         r.replace( "<!-- status message -->", "%s: %s row(s) updated" % (request.args["column"], rowcount) )
         r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/table.hdr" )
