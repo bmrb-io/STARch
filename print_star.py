@@ -90,11 +90,14 @@ class PrintStar( object ) :
         self._curs.execute( 'select * from "%s"' % (self._table) ) # not a parameter
         txt = "loop_\n"
         for col in self._curs.description : 
-            txt += "    _%s.%s\n" % (self._table,col[0])
-            sql = 'select max(coalesce(length("%s"),1)) from %s' % (col[0],self._table)
-            curs.execute( sql )
-            row = curs.fetchone()
-            self._widths.append( 2 if (row[0] == 1) else (row[0] + 3) )
+            if col[0] == "Sf_ID" :
+                self._widths.append( 2 ) # only doing this to keep the field count right
+            else :
+                txt += "    _%s.%s\n" % (self._table,col[0])
+                sql = 'select max(coalesce(length("%s"),1)) from %s' % (col[0],self._table)
+                curs.execute( sql )
+                row = curs.fetchone()
+                self._widths.append( 2 if (row[0] == 1) else (row[0] + 3) )
 
         txt += "\n"
         self._header_sent = True
