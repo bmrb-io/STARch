@@ -214,7 +214,7 @@ class TableEdit( object ) :
         r.replace( "<!-- status message -->", "%s: %s row(s) updated" % (request.args["column"], rowcount) )
         r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/table.hdr" )
 
-        s = show_table.ShowTable( dbfile = self._dbfile, table = request.args["table"] )
+        s = show_table.ShowTable( request.args["dbfile"], table = request.args["table"] )
         response = werkzeug.wrappers.Response( itertools.chain( r, s ), status = 200, content_type = "text/html" )
         return response
 
