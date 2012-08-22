@@ -1,6 +1,8 @@
 #!/usr/bin/python -u
 #
 #
+
+import sys
 import sqlite3
 
 class edit( object ) :
@@ -10,7 +12,7 @@ class edit( object ) :
     _table = None
     _column = None
 
-    _verbose = True
+    _verbose = False
 
     def __init__( self, dbfile = None, table = None, column = None ) :
         self._dbfile = dbfile
@@ -48,13 +50,13 @@ class edit( object ) :
             sql = """update "%s" set "%s"=?""" % (self._table,self._column)
         if not overwrite :
             sql += """ where ("%s" is null or "%s"='.' or "%s"='?')""" % (self._column,self._column,self._column)
-        if self._verbose : print sql, value
+        if self._verbose : print >> sys.stderr, sql, value
         conn = sqlite3.connect( self._dbfile )
         curs = conn.cursor()
         if value == "." : curs.execute( sql )
         else : curs.execute( sql, (value,) )
         rc = curs.rowcount
-        if self._verbose : print rc
+        if self._verbose : print >> sys.stderr, rc
         curs.close()
         conn.commit()
         conn.close()
@@ -67,7 +69,7 @@ class edit( object ) :
         sql += " where rowid=?"
         if not overwrite :
             sql += """ and ("%s" is null or "%s"='.' or "%s"='?')""" % (self._column,self._column,self._column)
-        if self._verbose : print sql,
+        if self._verbose : print >> sys.stderr, sql,
         conn = sqlite3.connect( self._dbfile )
         curs = conn.cursor()
         curs2 = conn.cursor()
@@ -77,10 +79,11 @@ class edit( object ) :
         while True :
             row = curs2.fetchone()
             if row == None : break
+            if self._verbose : print >> sys.stderr, sql, i, row[0]
             curs.execute( sql, (i,row[0],) )
             i += 1
             cnt += 1
-        if self._verbose : print i
+        if self._verbose : print >> sys.stderr, i
         curs2.close()
         curs.close()
         conn.commit()
@@ -102,10 +105,10 @@ class edit( object ) :
                 break
         if not found : raise Exception( "Column not found: %s" % (to_column) )
         sql = """update "%s" set "%s"="%s" """ % (self._table,to_column,self._column)
-        if self._verbose : print sql,
+        if self._verbose : print >> sys.stderr, sql,
         curs.execute( sql )
         rc = curs.rowcount
-        if self._verbose : print rc
+        if self._verbose : print >> sys.stderr, rc
         curs.close()
         conn.commit()
         conn.close()

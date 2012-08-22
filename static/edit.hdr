@@ -1,0 +1,66 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US">
+    <head>
+     <title>NMR-STAR table editor</title>
+ <!--    <link rel="stylesheet" TYPE="text/css" href="/stylesheets/chem_comp.css" title="main stylesheet"> -->
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+     <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+     <meta http-equiv="PRAGMA" content="NO-CACHE">
+     <meta http-equiv="EXPIRES" content="0">
+        <style type="text/css">
+            .editbox {
+                margin: 1em;
+                padding: 2em; 
+                float: left; 
+                clear: left; 
+                vertical-align: top; 
+                border-radius: 5px; 
+                -moz-border-radius: 5px; 
+                border: thin solid #222266; 
+                background-color: #efefef;
+                width: 94%;
+            }
+        </style>
+<!--
+        <script type="text/javascript" src="http://www.bmrb.wisc.edu/includes/jquery.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready( function() {
+
+/* submit form when column header is clicked */
+            $( "th.col" ).click( function( event ) {
+                var input = $( "<input>" ).attr( "type", "hidden" ).attr( "name", "column" ).val( event.target.id );
+                $( "form#editstar" ).append( $( input ) );
+                $( "form#editstar" ).submit();
+            } );
+
+/* highlight selected Comp ID */
+            $( "th.col" ).hover( function() {
+                $( this ).addClass( "current" );
+            }, function() {
+                $( this ).removeClass( "current" );
+            } );
+        } );
+    </script>
+-->
+    </head>
+    <body>
+        <div style="padding-left: 2em; padding-top: 2em;">
+        <a style="float: left; padding: 10px; vertical-align: top" href="http://www.bmrb.wisc.edu/">
+        <img src="http://www.bmrb.wisc.edu/images/logo.gif" style="border: 0;" height="60" width="56"></a>
+
+        <h2 style="margin-left: 80px; float: left"><!-- page title --></h2>
+        </div>
+        <div><form method="get" action="<!-- baseurl -->/update" name="edit" id="editform">
+          <input type="hidden" name="dbfile" value="<!-- sqlite3 file -->">
+          <input type="hidden" name="table" value="<!-- sqlite3 table -->">
+          <input type="hidden" name="column" value="<!-- sqlite3 column -->">
+
+
+<!--
+    _footer = """
+    </form>
+    </div>
+    </body>
+</html>
+-->

@@ -3,83 +3,20 @@
 
 import sys
 import sqlite3
+import threading
 
 class ShowTable( object ) :
-    """shows sqlite3 table as html page, wrapped in iterable"""
+    """shows sqlite3 table as html snippet, wrapped in iterable"""
 
+    _lock = None
     _dbfile = None
     _conn = None
     _curs = None
     _row = 0
-
     _table = None
-    _header_sent = None
+    _query_ready = None
     _footer_sent = None
-
     _msg = None
-
-    _header1 = """
-<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en-US">
-    <head>
-     <title>NMR-STAR table editor</title>
- <!--    <link rel="stylesheet" TYPE="text/css" href="/stylesheets/chem_comp.css" title="main stylesheet"> -->
-     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-     <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-     <meta http-equiv="PRAGMA" content="NO-CACHE">
-     <meta http-equiv="EXPIRES" content="0">
-        <style type="text/css">
-            .current { font-weight: bold; text-decoration: underline; }
-            .col { text-align: left; vertical-align: top; }
-        </style>
-        <script type="text/javascript" src="http://www.bmrb.wisc.edu/includes/jquery.js"></script>
-        <script type="text/javascript">
-
-        $(document).ready( function() {
-
-/* submit form when column header is clicked */
-            $( "th.col" ).click( function( event ) {
-                var input = $( "<input>" ).attr( "type", "hidden" ).attr( "name", "column" ).val( event.target.id );
-                $( "form#editstar" ).append( $( input ) );
-                $( "form#editstar" ).submit();
-            } );
-
-/* highlight selected Comp ID */
-            $( "th.col" ).hover( function() {
-                $( this ).addClass( "current" );
-            }, function() {
-                $( this ).removeClass( "current" );
-            } );
-        } );
-    </script>
-    </head>
-    <body>
-        <div style="padding-left: 2em; padding-top: 2em;">
-        <a style="float: left; padding: 10px; vertical-align: top" href="http://www.bmrb.wisc.edu/">
-        <img src="http://www.bmrb.wisc.edu/images/logo.gif" style="border: 0;" height="60" width="56"></a>
-"""
-    _header2 = """
-        </div>
-        <div style="padding: 2em; float: left; clear: left; vertical-align: top; width: 50%;">
-        <p><form method="get" action="print" name="print" id="printstar">
-            <input type="submit" value="Make STAR">
-        </form>
-        <p><form method="get" action="edit" name="edit" id="editstar"> </form>
-"""
-#    _forms = """
-#        <p><form method="get" action="print" name="print" id="printstar">
-#            <input type="hidden" name="dbfile" value="%s">
-#            <input type="hidden" name="table" value="%s">
-#            <input type="submit" value="Make STAR">
-#        </form>
-#        <p><form method="get" action="edit" name="edit" id="editstar"> 
-#            <input type="hidden" name="dbfile" value="%s">
-#            <input type="hidden" name="table" value="%s">
-#        </form>
-#"""
-#        <table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">
-#"""
-
     _footer = """
          </table>
        </div>
@@ -88,11 +25,12 @@ class ShowTable( object ) :
 """
 
     def __init__( self, dbfile = None, table = None ) :
+        self._lock = threading.Lock()
         self._dbfile = dbfile
         self._table = table
-        print >> sys.stderr, self._dbfile, self._table
-        self._header_sent = False
+#        print >> sys.stderr, self._dbfile, self._table
         self._footer_sent = False
+        self._query_ready = False
 
     def _get_dbfile( self ) : 
         """sqlite3 db file"""
@@ -129,10 +67,11 @@ class ShowTable( object ) :
     def next( self ) :
 # endpoint
         if self._footer_sent :
+            self._lock.release()
             raise StopIteration
 
 # fetch & send rows
-        if self._header_sent :
+        if self._query_ready :
             row = self._curs.fetchone()
             self._row += 1
             if row == None :
@@ -154,25 +93,18 @@ class ShowTable( object ) :
             return txt
 
 # else send header & run query
+        self._lock.acquire()
         self._conn = sqlite3.connect( self._dbfile )
         self._curs = self._conn.cursor()
         self._curs.execute( 'select * from "%s"' % (self._table) ) # not a parameter
-        txt = self._header1
-        txt += '<h2 style="margin-left: 80px; float: left">%s</h2>'  % (self._table)
-        txt += self._header2 
-#        txt += self._forms % (self._dbfile, self._table, self._dbfile, self._table)
-        if self._msg != None :
-            txt += "<p>%s</p>" % (self._msg)
-            self._msg = None
-
-        txt += '<table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">'
-        txt += '<tr style="background-color: #ccdeef;">'
+        txt = """
+<table cellspacing="2" cellpadding="1" style="border-radius: 5px; -moz-border-radius: 5px; border: thin solid #222266; background-color: #cccccc;">
+<tr style="background-color: #ccdeef;">"""
         for col in self._curs.description :
             txt += """<th class="col" id="%s">%s</th>""" % (col[0],col[0].replace( "_", "<br>" ))
         txt += "</tr>"
-        self._header_sent = True
+        self._query_ready = True
         return txt
-
 
 #
 #

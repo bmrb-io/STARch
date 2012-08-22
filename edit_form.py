@@ -3,72 +3,19 @@
 # the form is wrapped in an iterable like the rest of them
 #
 
+import threading
 import sqlite3
 
 class EditForm( object ) :
     """shows "edit table" form"""
 
+    _lock = None
     _dbfile = None
     _conn = None
     _table = None
     _column = None
     _at_end = None
 
-    _header1 = """
-<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en-US">
-    <head>
-     <title>NMR-STAR table editor</title>
- <!--    <link rel="stylesheet" TYPE="text/css" href="/stylesheets/chem_comp.css" title="main stylesheet"> -->
-     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-     <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-     <meta http-equiv="PRAGMA" content="NO-CACHE">
-     <meta http-equiv="EXPIRES" content="0">
-        <style type="text/css">
-            .editbox {
-                margin: 1em;
-                padding: 2em; 
-                float: left; 
-                clear: left; 
-                vertical-align: top; 
-                border-radius: 5px; 
-                -moz-border-radius: 5px; 
-                border: thin solid #222266; 
-                background-color: #efefef;
-                width: 94%;
-            }
-        </style>
-<!--
-        <script type="text/javascript" src="http://www.bmrb.wisc.edu/includes/jquery.js"></script>
-        <script type="text/javascript">
-
-        $(document).ready( function() {
-
-/* submit form when column header is clicked */
-            $( "th.col" ).click( function( event ) {
-                var input = $( "<input>" ).attr( "type", "hidden" ).attr( "name", "column" ).val( event.target.id );
-                $( "form#editstar" ).append( $( input ) );
-                $( "form#editstar" ).submit();
-            } );
-
-/* highlight selected Comp ID */
-            $( "th.col" ).hover( function() {
-                $( this ).addClass( "current" );
-            }, function() {
-                $( this ).removeClass( "current" );
-            } );
-        } );
-    </script>
--->
-    </head>
-    <body>
-        <div style="padding-left: 2em; padding-top: 2em;">
-        <a style="float: left; padding: 10px; vertical-align: top" href="http://www.bmrb.wisc.edu/">
-        <img src="http://www.bmrb.wisc.edu/images/logo.gif" style="border: 0;" height="60" width="56"></a>
-"""
-    _header2 = """
-        </div>
-"""
 
     _footer = """
     </form>
@@ -78,8 +25,9 @@ class EditForm( object ) :
 
     def __init__( self, dbfile = None, table = None, column = None ) :
         self._dbfile = dbfile
-        self._column = column
         self._table = table
+        self._column = column
+        self._lock = threading.Lock()
 
     def _get_conn( self ) :
          """sqlite3 db connection"""
@@ -108,52 +56,42 @@ class EditForm( object ) :
     def next( self ) :
 # endpoint
         if self._at_end :
+            self._lock.release()
             raise StopIteration
 
+# this is probably an overkill
+        self._lock.acquire()
 # editing functions
 #
-        txt = self._header1
-        txt += '<h2 style="margin-left: 80px; float: left">Edit %s in %s</h2>\n'  % (self._column,self._table)
-        txt += self._header2
-
 # insert constant
-        txt += """<div class="editbox"><form method="get" action="insert_constant" name="insert_constant" id="insconst">
-<input type="hidden" name="table" value="%s">
-<input type="hidden" name="column" value="%s">
-""" % (self._table,self._column)
-        txt += """<label for="ins_const">Insert value:</label> <input type="text" size="10" name="const_val" id="ins_const">
+        txt = """<div class="editbox">
+<label for="ins_const">Insert value:</label> <input type="text" size="10" name="const_val" id="ins_const">
 (For example, Entry or Entity ID. Put in a dot (period) and tick the checkbox below to delete existing values.)
 <br><input type="checkbox" name="const_ovr" id="ovr_const"> <label for="ovr_const">overwrite existing values, if any</label>
-<br><input type="submit" value="Update table">
-</form></div>
+<br><input type="submit" name="insert_constant" value="Update table">
+</div>
 """
 
 # insert sequence
-        txt += """<div class="editbox"><form method="get" action="insert_numbers" name="insert_numbers" id="insnum">
-<input type="hidden" name="table" value="%s">
-<input type="hidden" name="column" value="%s">
-""" % (self._table,self._column)
-        txt += """<label for="ins_nums">Insert sequence of numbers starting at:</label> 
+        txt += """<div class="editbox">
+<label for="ins_nums">Insert sequence of numbers starting at:</label> 
 <input type="text" size="10" name="start_val" id="ins_nums"> (For example, row IDs. Starting number can be negative.)
 <br><input type="checkbox" name="nums_ovr" id="ovr_nums" checked> <label for="ovr_nums">overwrite existing values, if any</label>
-<br><input type="submit" value="Update table">
-</form></div>
+<br><input type="submit" name="insert_numbers" value="Update table">
+</div>
 """
 
 # copy to column
-        txt += """<div class="editbox"><form method="get" action="copy_column" name="copy_column" id="copycol">
-<input type="hidden" name="table" value="%s">
-<input type="hidden" name="column" value="%s">
-""" % (self._table,self._column)
-        txt += """<p><label for="copy_col">Copy to column</label> """
+        txt += """<div class="editbox">
+<p><label for="copy_col">Copy to column</label> """
         sql = """select * from "%s" limit 1""" % (self._table)
+
+
         conn = sqlite3.connect( self._dbfile )
         curs = conn.cursor()
         curs.execute( sql )
         if len( curs.description ) < 1 : raise Exception( "No columns!" )
-        txt += """<select id="copy_col" name="col_copy">
-<option value="">-</option>
-"""
+        txt += """<select id="copy_col" name="col_copy">"""
         for col in curs.description :
             if col == self._table : continue
             txt += """<option value="%s">%s</option>""" % (col[0],col[0])
@@ -161,7 +99,7 @@ class EditForm( object ) :
         curs.close()
         conn.close()
         txt += """</select> (For example, copy Comp_index_ID to Seq_ID.)
-<br><input type="submit" value="Update table">
+<br><input type="submit" name="copy_column" value="Update table">
 </form></div>
 """
 

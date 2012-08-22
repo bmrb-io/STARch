@@ -4,6 +4,7 @@
 import sys
 import os
 import sqlite3
+import threading
 
 sys.path.append( "/bmrb/lib/python/starobj" )
 import utils
@@ -12,6 +13,7 @@ import utils
 class PrintStar( object ) :
     """simplified version of NMR-STAR unparser: print data table aa single loop"""
 
+    _lock = None
     _dbfile = None
     _conn = None
     _curs = None
@@ -21,9 +23,12 @@ class PrintStar( object ) :
     _header_sent = None
     _footer_sent = None
 
+    _verbose = False
+
     def __init__( self, filename = None, table = None ) :
         self._dbfile = filename
         self._table = table
+        self._lock = threading.Lock()
         self._widths = []
         self._header_sent = False
         self._footer_sent = False
@@ -47,6 +52,7 @@ class PrintStar( object ) :
         if self._footer_sent :
             self._conn.close()
             os.unlink( self._dbfile )
+            self._lock.release()
             raise StopIteration
 
         if self._header_sent :
@@ -58,8 +64,11 @@ class PrintStar( object ) :
                 return "stop_"
 
             txt = "   "
-            i = 0
+            i = -1
+            if self._verbose : print >> sys.stderr, row
             for col in row :
+                i += 1
+                if self._verbose : print >> sys.stderr, "** %d : %s %s" % (i,str( col ),self._curs.description[i][0])
                 if self._curs.description[i][0] == "Sf_ID" : continue
                 val = utils.quote( col )
                 if val == "?" : val = "."
@@ -69,19 +78,18 @@ class PrintStar( object ) :
                     txt += "\n";
                 else :
                     txt += ("%" + str( self._widths[i] ) + "s") % (val)
-                i += 1
             txt += "\n"
             return txt
 
 # else send header & run query
         if not os.path.exists( self._dbfile ) : raise UnboundLocalError( "File not found: %s" % (self._dbfile) )
+        self._lock.acquire()
         self._conn = sqlite3.connect( self._dbfile )
         self._curs = self._conn.cursor()
         curs = self._conn.cursor()
         self._curs.execute( 'select * from "%s"' % (self._table) ) # not a parameter
         txt = "loop_\n"
         for col in self._curs.description : 
-            if col[0] == "Sf_ID" : continue
             txt += "    _%s.%s\n" % (self._table,col[0])
             sql = 'select max(coalesce(length("%s"),1)) from %s' % (col[0],self._table)
             curs.execute( sql )

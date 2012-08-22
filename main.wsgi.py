@@ -4,6 +4,7 @@
 
 import os
 import sys
+import itertools
 import warnings
 import werkzeug.routing
 import werkzeug.wrappers
@@ -32,8 +33,7 @@ class TableEdit( object ) :
 
     _map = None
     _props = None
-    _dbfile = None
-    _table = None
+    _verbose = False
 
     def __init__( self, conffile = None ) :
 
@@ -47,14 +47,15 @@ class TableEdit( object ) :
             werkzeug.routing.Rule( "/", endpoint = "new" ),
             werkzeug.routing.Rule( "/upload", endpoint = "upload" ),
             werkzeug.routing.Rule( "/edit", endpoint = "edit" ),
+            werkzeug.routing.Rule( "/update", endpoint = "update" ),
             werkzeug.routing.Rule( "/print", endpoint = "print" ),
             werkzeug.routing.Rule( "/help", endpoint = "help" ),
-            werkzeug.routing.Rule( "/help/", endpoint = "help" ),
-            werkzeug.routing.Rule( "/<func>", endpoint = "update" ),
+            werkzeug.routing.Rule( "/help/", endpoint = "help" )
         ] )
 
 #
     def dispatch_request( self, request ) :
+        if self._verbose : print >> sys.stderr, request.environ
         adapter = self._map.bind_to_environ( request.environ )
         try :
             endpoint, values = adapter.match()
@@ -75,11 +76,27 @@ class TableEdit( object ) :
 #
 # url handlers
 #
-# index
+
+# TFM: just a static file
+#
+    def on_help( self, request ) :
+        """show help file"""
+        s = send_file.SendFile()
+        s.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/help.html" )
+        return werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
+#        return redirect( "http://www.bmrb.wisc.edu" )
+
+
+# index: upload form
 #
     def on_new( self, request, **values ) :
         """show file upload form"""
-        s = send_file.SendFile();
+
+        s = send_file.SendFile()
+        baseurl = request.environ["PATH_INFO"]
+        if baseurl == "/" : baseurl = ""
+        else : baseurl = baseurl.rstrip( "/" )
+        s.replace( "<!-- baseurl -->", baseurl )
         s.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/index.html" )
         response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
         return response
@@ -88,13 +105,14 @@ class TableEdit( object ) :
 #
     def on_upload( self, request ) :
         """read uploaded file into sqlite3 table and display it"""
+#FIXME: read from ccdb if available
         dictdsn = self._props.get( "main", "dictionary_dsn" )
         if not os.path.exists( dictdsn ) : raise UnboundLocalError( "Dictionary missing" )
         with warnings.catch_warnings() :
             warnings.simplefilter( "ignore", RuntimeWarning ) # yes I know about tempnam thankyouverymuch
             dbfile = os.tempnam( self._props.get( "main", "data_files" ) )
-        conn = sqlite3.connect( dbfile )
         self._dbfile = os.path.realpath( dbfile )
+        conn = sqlite3.connect( self._dbfile )
         curs = conn.cursor()
         curs.execute( "attach database '%s' as dict" % (dictdsn) )
         curs.close()
@@ -108,36 +126,67 @@ class TableEdit( object ) :
             os.unlink( self._dbfile )
             return werkzeug.wrappers.Response( h.errors, status = 200, content_type = "text/plain" )
 
-        self._table = h.table
-        s = show_table.ShowTable( dbfile = self._dbfile, table = self._table )
-        response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
+        r = send_file.SendFile()
+        baseurl = request.environ["SCRIPT_NAME"]
+        if baseurl == None : baseurl = ""
+        elif baseurl == "/" : baseurl = ""
+        else : baseurl = baseurl.rstrip( "/" )
+        r.replace( "<!-- baseurl -->", baseurl )
+        r.replace( "<!-- page title -->", h.table )
+        r.replace( "<!-- sqlite3 file -->", self._dbfile )
+        r.replace( "<!-- sqlite3 table -->", h.table )
+        r.replace( "<!-- status message -->", "" )
+        r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/table.hdr" )
+
+        s = show_table.ShowTable( dbfile = self._dbfile, table = h.table )
+        response = werkzeug.wrappers.Response( itertools.chain( r, s ), status = 200, content_type = "text/html" )
+        return response
+
+#
+#
+    def on_print( self, request ) :
+        """unparse sqlite3 table to NMR-STAR and display as text/plain"""
+        s = print_star.PrintStar( filename = request.args["dbfile"], table = request.args["table"] )
+        response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/plain" )
         return response
 
 # edit form
 #
     def on_edit( self, request ) :
         """show edit form"""
-        s = edit_form.EditForm( dbfile = self._dbfile, table = self._table, column = request.args["column"] )
-        return werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
+        r = send_file.SendFile()
+        baseurl = request.environ["SCRIPT_NAME"]
+        if baseurl == None : baseurl = ""
+        elif baseurl == "/" : baseurl = ""
+        else : baseurl = baseurl.rstrip( "/" )
+        r.replace( "<!-- baseurl -->", baseurl )
+        r.replace( "<!-- page title -->", "Edit %s : %s" % (request.args["table"], request.args["column"]) )
+        r.replace( "<!-- sqlite3 file -->", self._dbfile )
+        r.replace( "<!-- sqlite3 table -->", request.args["table"] )
+        r.replace( "<!-- sqlite3 column -->", request.args["column"] )
+        r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/edit.hdr" )
+
+        s = edit_form.EditForm( dbfile = request.args["dbfile"], table = request.args["table"], column = request.args["column"] )
+        return werkzeug.wrappers.Response( itertools.chain( r, s ), status = 200, content_type = "text/html" )
 
 # updater
 #
     def on_update( self, request, **values ) :
         """run editing function(s) and show table"""
 
-        print request.args
-        print values
+        if self._verbose : print >> sys.stderr, "ARGS", request.args, "\n"
+        if self._verbose : print >> sys.stderr, "VALS", values, "\n"
 
-        e = TableEditor.edit( dbfile = self._dbfile, table = self._table, column = request.args["column"] )
+        e = TableEditor.edit( dbfile = request.args["dbfile"], table = request.args["table"], column = request.args["column"] )
         rowcount = 0
 
-        if values["func"] == "insert_constant" : 
+        if "insert_constant" in request.args.keys() : 
             ovr = False
             if ("const_ovr" in request.args.keys()) and (request.args["const_ovr"] == "on") : ovr = True
             val = request.args["const_val"].strip()
             if len( val ) > 0 : rowcount = e.insert_value( value = val, overwrite = ovr )
 
-        elif values["func"] == "insert_numbers" : 
+        elif "insert_numbers" in request.args.keys() : 
             ovr = False
             if ("nums_ovr" in request.args.keys()) and (request.args["nums_ovr"] == "on") : ovr = True
             val = request.args["start_val"].strip()
@@ -147,33 +196,28 @@ class TableEdit( object ) :
             except ValueError :
                 pass
 
-        elif values["func"] == "copy_column" :
+        elif "copy_column" in request.args.keys() :
             val = request.args["col_copy"].strip()
             if len( val ) > 0 : rowcount = e.copy_column( to_column = val )
 
-        else : return werkzeug.wrappers.Response( ["No such function: %s!" % values["func"]], status = 404 )
+        else : return werkzeug.wrappers.Response( ["No such function!"], status = 404 )
 
-        s = show_table.ShowTable( dbfile = self._dbfile, table = self._table )
-        s.status_message = "%s row(s) updated" % (rowcount)
-        response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
+        r = send_file.SendFile()
+        baseurl = request.environ["SCRIPT_NAME"]
+        if baseurl == None : baseurl = ""
+        elif baseurl == "/" : baseurl = ""
+        else : baseurl = baseurl.rstrip( "/" )
+        r.replace( "<!-- baseurl -->", baseurl )
+        r.replace( "<!-- page title -->", request.args["table"] )
+        r.replace( "<!-- sqlite3 file -->", self._dbfile )
+        r.replace( "<!-- sqlite3 table -->", request.args["table"] )
+        r.replace( "<!-- status message -->", "%s: %s row(s) updated" % (request.args["column"], rowcount) )
+        r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/table.hdr" )
+
+        s = show_table.ShowTable( dbfile = self._dbfile, table = request.args["table"] )
+        response = werkzeug.wrappers.Response( itertools.chain( r, s ), status = 200, content_type = "text/html" )
         return response
 
-#
-#
-    def on_print( self, request ) :
-        """unparse sqlite3 table to NMR-STAR and display as text/plain"""
-        s = print_star.PrintStar( filename = self._dbfile, table = self._table )
-        response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/plain" )
-        return response
-
-#
-    def on_help( self, request ) :
-        """show help file"""
-        s = send_file.SendFile();
-        s.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/help.html" )
-        response = werkzeug.wrappers.Response( s, status = 200, content_type = "text/html" )
-        return response
-#        return redirect( "http://www.bmrb.wisc.edu" )
 
 #
 # wsgi starting point
