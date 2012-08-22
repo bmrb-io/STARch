@@ -93,7 +93,7 @@ class TableEdit( object ) :
         """show file upload form"""
 
         s = send_file.SendFile()
-        baseurl = request.environ["PATH_INFO"]
+        baseurl = request.environ["SCRIPT_NAME"]
         if baseurl == "/" : baseurl = ""
         else : baseurl = baseurl.rstrip( "/" )
         s.replace( "<!-- baseurl -->", baseurl )
