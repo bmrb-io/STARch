@@ -33,7 +33,7 @@ class TableEdit( object ) :
 
     _map = None
     _props = None
-    _verbose = False
+    _verbose = True
 
     def __init__( self, conffile = None ) :
 
@@ -52,6 +52,7 @@ class TableEdit( object ) :
             werkzeug.routing.Rule( "/help", endpoint = "help" ),
             werkzeug.routing.Rule( "/help/", endpoint = "help" )
         ] )
+
 
 #
     def dispatch_request( self, request ) :
@@ -177,14 +178,18 @@ class TableEdit( object ) :
         if self._verbose : print >> sys.stderr, "ARGS", request.args, "\n"
         if self._verbose : print >> sys.stderr, "VALS", values, "\n"
 
+        if self._verbose : print >> sys.stderr, self._props.get( "main", "ccdb_dsn" )
+
         e = TableEditor.edit( dbfile = request.args["dbfile"], table = request.args["table"], column = request.args["column"] )
-        rowcount = 0
+        e.ccdb = self._props.get( "main", "ccdb_dsn" )
+        rc = None
 
         if "insert_constant" in request.args.keys() : 
             ovr = False
             if ("const_ovr" in request.args.keys()) and (request.args["const_ovr"] == "on") : ovr = True
             val = request.args["const_val"].strip()
-            if len( val ) > 0 : rowcount = e.insert_value( value = val, overwrite = ovr )
+            if len( val ) > 0 : rc = e.insert_value( value = val, overwrite = ovr )
+            else : rc = "Missing parameter"
 
         elif "insert_numbers" in request.args.keys() : 
             ovr = False
@@ -192,15 +197,28 @@ class TableEdit( object ) :
             val = request.args["start_val"].strip()
             try :
                 int( val )
-                rowcount = e.insert_numbers( startat = val, overwrite = ovr )
+                rc = e.insert_numbers( startat = val, overwrite = ovr )
             except ValueError :
-                pass
+                rc = "Not a number: %s" % (val)
 
         elif "copy_column" in request.args.keys() :
             val = request.args["col_copy"].strip()
-            if len( val ) > 0 : rowcount = e.copy_column( to_column = val )
+            if len( val ) > 0 : rc = e.copy_column( to_column = val )
+            else : rc = "Missing parameter"
 
-        else : return werkzeug.wrappers.Response( ["No such function!"], status = 404 )
+        elif "insert_sequence" in request.args.keys() :
+            seq = request.args["sequence"].strip().replace( "\n", "" )
+            if len( seq ) < 1 : rc = "Missing sequence"
+            else :
+                start = request.args["start_seq"].strip()
+                try :
+                    int( start )
+                    rc = e.insert_residues( sequence = seq, startat = start )
+                except ValueError :
+                    rc = "Not a number: %s" % (start)
+
+
+        else : rc = "No such function!"
 
         r = send_file.SendFile()
         baseurl = request.environ["SCRIPT_NAME"]
@@ -211,7 +229,8 @@ class TableEdit( object ) :
         r.replace( "<!-- page title -->", request.args["table"] )
         r.replace( "<!-- sqlite3 file -->", request.args["dbfile"] )
         r.replace( "<!-- sqlite3 table -->", request.args["table"] )
-        r.replace( "<!-- status message -->", "%s: %s row(s) updated" % (request.args["column"], rowcount) )
+        if rc != None :
+            r.replace( "<!-- status message -->", "%s: %s" % (request.args["column"], rc) )
         r.filename = os.path.realpath( self._props.get( "wsgi", "html_files" ) + "/table.hdr" )
 
         s = show_table.ShowTable( request.args["dbfile"], table = request.args["table"] )

@@ -75,7 +75,7 @@ class EditForm( object ) :
 # insert sequence
         txt += """<div class="editbox">
 <label for="ins_nums">Insert sequence of numbers starting at:</label> 
-<input type="text" size="10" name="start_val" id="ins_nums"> (For example, row IDs. Starting number can be negative.)
+<input type="text" size="10" name="start_val" id="ins_nums" value="1"> (For example, row IDs. Starting number can be negative.)
 <br><input type="checkbox" name="nums_ovr" id="ovr_nums" checked> <label for="ovr_nums">overwrite existing values, if any</label>
 <br><input type="submit" name="insert_numbers" value="Update table">
 </div>
@@ -100,7 +100,18 @@ class EditForm( object ) :
         conn.close()
         txt += """</select> (For example, copy Comp_index_ID to Seq_ID.)
 <br><input type="submit" name="copy_column" value="Update table">
-</form></div>
+</div>
+"""
+
+# insert residue sequence
+        txt += """<div class="editbox">
+<label for="res_seq">Insert residue codes from sequence string:</label> 
+<br><textarea rows="5" cols="80" name="sequence" id="res_seq"> </textarea> 
+<br><label for="seq_start">starting at:</label> 
+<input type="text" size="10" name="start_seq" id="seq_start" value="1"> 
+<br>Non-standard residue can be specified as <em>(ID)</em> (i.e. Comp_ID in parentheses), starting number can be negative.
+<br><input type="submit" name="insert_sequence" value="Update table">
+</div>
 """
 
         txt += self._footer

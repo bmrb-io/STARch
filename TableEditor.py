@@ -4,6 +4,7 @@
 
 import sys
 import sqlite3
+import psycopg2
 
 class edit( object ) :
     """editing functions"""
@@ -11,13 +12,15 @@ class edit( object ) :
     _dbfile = None
     _table = None
     _column = None
+    _ccdb = None
 
-    _verbose = False
+    _verbose = True
 
-    def __init__( self, dbfile = None, table = None, column = None ) :
+    def __init__( self, dbfile = None, table = None, column = None, ccdb = None ) :
         self._dbfile = dbfile
         self._column = column
         self._table = table
+        self._ccdb = ccdb
 
     def _get_dbfile( self ) :
         """sqlite3 db filename"""
@@ -40,6 +43,13 @@ class edit( object ) :
         self._table = table
     table = property( _get_table, _set_table )
 
+    def _get_ccdb( self ) : 
+        """chem comp database DSN (postgres)"""
+        return self._ccdb
+    def _set_ccdb( self, ccdb ) :
+        self._ccdb = ccdb
+    ccdb = property( _get_ccdb, _set_ccdb )
+
 # functions
     def insert_value( self, value = None, overwrite = False ) :
         """insert a constant"""
@@ -60,7 +70,7 @@ class edit( object ) :
         curs.close()
         conn.commit()
         conn.close()
-        return rc
+        return "%d rows updated" % (rc)
 
 #
     def insert_numbers( self, startat = 1, overwrite = False ) :
@@ -88,9 +98,9 @@ class edit( object ) :
         curs.close()
         conn.commit()
         conn.close()
-        return cnt
+        return "%d rows updated" % (cnt)
 
-
+#
     def copy_column( self, to_column = None, overwrite = True ) :
         """copy values to another column"""
         if to_column == None : raise UnboundLocalError( "copy_column called without argument" )
@@ -112,7 +122,43 @@ class edit( object ) :
         curs.close()
         conn.commit()
         conn.close()
-        return rc
+        return "%d rows updated" % (rc)
+
+#
+    def insert_residues( self, sequence = None, startat = 1 ) :
+        """insert residue codes from sequence string"""
+        if sequence == None : raise UnboundLocalError( "insert_residues called without argument" )
+
+        codes = []
+        while len( sequence ) > 0 :
+            if sequence[0] != "(" : 
+                codes.append( sequence[0].upper() )
+                sequence = sequence[1:]
+            else :
+                code = ""
+                sequence = sequence[1:] # pop "("
+                while sequence[0] != ")" :
+                    code += sequence[0]
+                    sequence = sequence[1:]
+                sequence = sequence[1:] # pop ")"
+                codes.append( code.upper() )
+
+
+        sql = """update "%s" set "Comp_ID"=? where "Comp_index_ID"=?""" % (self._table)
+
+        conn = sqlite3.connect( self._dbfile )
+        curs = conn.cursor()
+        cnt = 0
+        num = int( startat )
+        for code in codes :
+            if self._verbose : print >> sys.stderr, sql, code, num
+            curs.execute( sql, (code, num,) )
+            num += 1
+            cnt += 1
+        curs.close()
+        conn.commit()
+        conn.close()
+        return "%d rows updated" % (cnt)
 
 #
 #
