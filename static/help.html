@@ -33,7 +33,10 @@
 
         <h3>3. Choose an editing function and value and click on <em>update table</em>.</h3>
         <p>
-        You will be returned to table display, with the update showing.
+        You will be returned to (updated) table display.
+        <strong>Note:</strong> if you fill in values in one box and click the button for in another box,
+        table will not be changed and the status message above the table will say something like 
+        "Missing parameter" or "0 rows updated".
         <p>
         You can repeat this step as many times as you like.
 
@@ -45,6 +48,38 @@
         <strong>Note</strong>: when program generates NMR-STAR it deletes the uploaded table 
         from its internal memory. You cannot use <em>back</em> button to return to table display
         and do more editing, you need to restart from the beginning and re-upload the file.
+        <hr size="1">
+
+        <p>
+        When inserting residue codes you can use PDB convension to specify 3-letter <em>Comp_ID</em>s in parentheses:
+        <pre>
+        GIVEA(HEM)QC
+        </pre>
+        <p>
+        When dealing with gaps, any residue whose number doesn't match existing <em>Comp_index_ID</em> is ignored. 
+        E.g. if the table contains <em>Comp_index_ID</em>s 2, 3, 6, 8, the above sequence will be filled in as 
+        <pre>
+        2  I
+        3  V
+        6  HEM
+        8  C
+        </pre>
+        If you also specify the stating number, e.g. <tt>-2</tt>, the result will be 
+        <pre>
+        2  A
+        3  HEM
+        </pre> 
+        I.e.
+        <pre>
+        G I V E A (HEM) Q C
+        1 2 3 4 5   6   7 8
+        </pre>
+        and 
+        <pre>
+        G  I V E A (HEM) Q C
+       -2 -1 0 1 2   3   4 5
+        </pre>
+       resp.
     </div>
   </body>
 </html>
