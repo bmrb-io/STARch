@@ -5,5 +5,5 @@ This is the nomenclature conversion part of what was previously called
 workflow.
 
 Original version history is in `starch.svndump.gz`, GNU `getopt` and
-`sans` SAR perser classes are included for the build, older code is included
+`sans` STAR parser classes are included for the build, older code is included
 in `archive` subdirectory for posterity.
