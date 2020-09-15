@@ -1,0 +1,212 @@
+
+####################
+#  NMR parameters  #
+####################
+   
+       ########################
+       #  Coupling constants  #
+       ########################
+   
+save_3JHNHA
+   _Saveframe_category          coupling_constants
+   
+   loop_
+      _Sample_label
+   
+      $sample_1
+   
+   stop_
+   
+   
+   _Sample_conditions_label    $sample_conditions_1
+   _Spectrometer_frequency_1H   @
+   _Mol_system_component_name  "FDXN"
+   
+   
+    loop_
+       _Coupling_constant.ID
+       _Coupling_constant.Code
+       _Coupling_constant.Entity_assembly_ID_1
+       _Coupling_constant.Comp_index_ID_1
+       _Coupling_constant.Comp_ID_1
+       _Coupling_constant.Atom_ID_1
+       _Coupling_constant.Atom_type_1
+       _Coupling_constant.Atom_isotope_number_1
+       _Coupling_constant.Ambiguity_code_1
+       _Coupling_constant.Entity_assembly_ID_2
+       _Coupling_constant.Comp_index_ID_2
+       _Coupling_constant.Comp_ID_2
+       _Coupling_constant.Atom_ID_2
+       _Coupling_constant.Atom_type_2
+       _Coupling_constant.Atom_isotope_number_2
+       _Coupling_constant.Ambiguity_code_2
+       _Coupling_constant.Val
+       _Coupling_constant.Val_min
+       _Coupling_constant.Val_max
+       _Coupling_constant.Val_err
+       _Coupling_constant.Details
+   
+           1  3JHNHA    FDXN     3  Lys  HN   H   1  1    FDXN     3  Lys  HA   H   1  1     9.58   .     .    0.35    "phi-60"
+           2  3JHNHA    FDXN     4  Ala  HN   H   1  1    FDXN     4  Ala  HA   H   1  1     9.83   .     .    0.35    "phi-60"
+           3  3JHNHA    FDXN     5  Leu  HN   H   1  1    FDXN     5  Leu  HA   H   1  1     8.95   .     .    0.35    "phi-60"
+           4  3JHNHA    FDXN     6  Ile  HN   H   1  1    FDXN     6  Ile  HA   H   1  1     9.60   .     .    0.35    "phi-60"
+           5  3JHNHA    FDXN     7  Val  HN   H   1  1    FDXN     7  Val  HA   H   1  1     9.81   .     .    0.35    "phi-60"
+           6  3JHNHA    FDXN     8  Tyr  HN   H   1  1    FDXN     8  Tyr  HA   H   1  1     9.52   .     .    0.35    "phi-60"
+           7  3JHNHA    FDXN     9  Gly  HN   H   1  1    FDXN     9  Gly  HA2  H   1  1     7.84   .     .    0.35    "phi-60"
+           8  3JHNHA    FDXN     9  Gly  HN   H   1  1    FDXN     9  Gly  HA3  H   1  1     1.58   .     .    0.35    "phi+60"
+           9  3JHNHA    FDXN    10  Ser  HN   H   1  1    FDXN    10  Ser  HA   H   1  1     8.42   .     .    0.35    "phi-60"
+          10  3JHNHA    FDXN    11  Thr  HN   H   1  1    FDXN    11  Thr  HA   H   1  1     8.29   .     .    0.35    "phi-60"
+          11  3JHNHA    FDXN    12  Thr  HN   H   1  1    FDXN    12  Thr  HA   H   1  1     9.61   .     .    0.35    "phi-60"
+          12  3JHNHA    FDXN    13  Gly  HN   H   1  1    FDXN    13  Gly  HA2  H   1  1     7.94   .     .    0.35    "phi-60"
+          13  3JHNHA    FDXN    13  Gly  HN   H   1  1    FDXN    13  Gly  HA3  H   1  1     3.83   .     .    0.35    "phi+60"
+          14  3JHNHA    FDXN    14  Asn  HN   H   1  1    FDXN    14  Asn  HA   H   1  1     4.44   .     .    0.35    "phi-60"
+          15  3JHNHA    FDXN    15  Thr  HN   H   1  1    FDXN    15  Thr  HA   H   1  1     3.89   .     .    0.35    "phi-60"
+          16  3JHNHA    FDXN    16  Glu  HN   H   1  1    FDXN    16  Glu  HA   H   1  1     5.34   .     .    0.35    "phi-60"
+          17  3JHNHA    FDXN    17  Tyr  HN   H   1  1    FDXN    17  Tyr  HA   H   1  1     3.48   .     .    0.35    "phi-60"
+          18  3JHNHA    FDXN    19  Ala  HN   H   1  1    FDXN    19  Ala  HA   H   1  1     4.27   .     .    0.35    "phi-60"
+          19  3JHNHA    FDXN    20  Glu  HN   H   1  1    FDXN    20  Glu  HA   H   1  1     4.17   .     .    0.35    "phi-60"
+          20  3JHNHA    FDXN    21  Thr  HN   H   1  1    FDXN    21  Thr  HA   H   1  1     4.94   .     .    0.35    "phi-60"
+          21  3JHNHA    FDXN    22  Ile  HN   H   1  1    FDXN    22  Ile  HA   H   1  1     5.39   .     .    0.35    "phi-60"
+          22  3JHNHA    FDXN    23  Ala  HN   H   1  1    FDXN    23  Ala  HA   H   1  1     3.39   .     .    0.35    "phi-60"
+          23  3JHNHA    FDXN    24  Arg  HN   H   1  1    FDXN    24  Arg  HA   H   1  1     4.53   .     .    0.35    "phi-60"
+          24  3JHNHA    FDXN    25  Glu  HN   H   1  1    FDXN    25  Glu  HA   H   1  1     4.96   .     .    0.35    "phi-60"
+          25  3JHNHA    FDXN    26  Leu  HN   H   1  1    FDXN    26  Leu  HA   H   1  1     5.23   .     .    0.35    "phi-60"
+          26  3JHNHA    FDXN    27  Ala  HN   H   1  1    FDXN    27  Ala  HA   H   1  1     3.67   .     .    0.35    "phi-60"
+          27  3JHNHA    FDXN    28  Asp  HN   H   1  1    FDXN    28  Asp  HA   H   1  1     4.53   .     .    0.35    "phi-60"
+          28  3JHNHA    FDXN    29  Ala  HN   H   1  1    FDXN    29  Ala  HA   H   1  1     7.91   .     .    0.35    "phi-60"
+          29  3JHNHA    FDXN    30  Gly  HN   H   1  1    FDXN    30  Gly  HA2  H   1  1     7.27   .     .    0.35    "phi-60"
+          30  3JHNHA    FDXN    30  Gly  HN   H   1  1    FDXN    30  Gly  HA3  H   1  1     4.71   .     .    0.35    "phi+60"
+          31  3JHNHA    FDXN    31  Tyr  HN   H   1  1    FDXN    31  Tyr  HA   H   1  1     6.97   .     .    0.35    "phi-60"
+          32  3JHNHA    FDXN    32  Glu  HN   H   1  1    FDXN    32  Glu  HA   H   1  1     8.77   .     .    0.35    "phi-60"
+          33  3JHNHA    FDXN    33  Val  HN   H   1  1    FDXN    33  Val  HA   H   1  1     9.29   .     .    0.35    "phi-60"
+          34  3JHNHA    FDXN    34  Asp  HN   H   1  1    FDXN    34  Asp  HA   H   1  1     9.49   .     .    0.35    "phi-60"
+          35  3JHNHA    FDXN    35  Ser  HN   H   1  1    FDXN    35  Ser  HA   H   1  1     9.45   .     .    0.35    "phi-60"
+          36  3JHNHA    FDXN    36  Arg  HN   H   1  1    FDXN    36  Arg  HA   H   1  1     9.03   .     .    0.35    "phi-60"
+          37  3JHNHA    FDXN    37  Asp  HN   H   1  1    FDXN    37  Asp  HA   H   1  1     6.72   .     .    0.35    "phi-60"
+          38  3JHNHA    FDXN    38  Ala  HN   H   1  1    FDXN    38  Ala  HA   H   1  1     3.27   .     .    0.35    "phi-60"
+          39  3JHNHA    FDXN    39  Ala  HN   H   1  1    FDXN    39  Ala  HA   H   1  1     4.50   .     .    0.35    "phi-60"
+          40  3JHNHA    FDXN    40  Ser  HN   H   1  1    FDXN    40  Ser  HA   H   1  1     8.99   .     .    0.35    "phi-60"
+          41  3JHNHA    FDXN    41  Val  HN   H   1  1    FDXN    41  Val  HA   H   1  1     8.87   .     .    0.35    "phi-60"
+          42  3JHNHA    FDXN    42  Glu  HN   H   1  1    FDXN    42  Glu  HA   H   1  1     8.73   .     .    0.35    "phi-60"
+          43  3JHNHA    FDXN    43  Ala  HN   H   1  1    FDXN    43  Ala  HA   H   1  1     3.59   .     .    0.35    "phi-60"
+          44  3JHNHA    FDXN    44  Gly  HN   H   1  1    FDXN    44  Gly  HA2  H   1  1     2.44   .     .    0.35    "phi-60"
+          45  3JHNHA    FDXN    44  Gly  HN   H   1  1    FDXN    44  Gly  HA3  H   1  1     5.76   .     .    0.35    "phi+60"
+          46  3JHNHA    FDXN    45  Gly  HN   H   1  1    FDXN    45  Gly  HA2  H   1  1     5.84   .     .    0.35    "phi-60"
+          47  3JHNHA    FDXN    45  Gly  HN   H   1  1    FDXN    45  Gly  HA3  H   1  1     5.48   .     .    0.35    "phi+60"
+          48  3JHNHA    FDXN    46  Leu  HN   H   1  1    FDXN    46  Leu  HA   H   1  1     2.60   .     .    0.35    "phi-60"
+          49  3JHNHA    FDXN    47  Phe  HN   H   1  1    FDXN    47  Phe  HA   H   1  1     6.73   .     .    0.35    "phi-60"
+          50  3JHNHA    FDXN    48  Glu  HN   H   1  1    FDXN    48  Glu  HA   H   1  1     3.80   .     .    0.35    "phi-60"
+          51  3JHNHA    FDXN    49  Gly  HN   H   1  1    FDXN    49  Gly  HA2  H   1  1     6.54   .     .    0.35    "phi-60"
+          52  3JHNHA    FDXN    49  Gly  HN   H   1  1    FDXN    49  Gly  HA3  H   1  1     4.59   .     .    0.35    "phi+60"
+          53  3JHNHA    FDXN    50  Phe  HN   H   1  1    FDXN    50  Phe  HA   H   1  1     8.67   .     .    0.35    "phi-60"
+          54  3JHNHA    FDXN    51  Asp  HN   H   1  1    FDXN    51  Asp  HA   H   1  1     6.67   .     .    0.35    "phi-60"
+          55  3JHNHA    FDXN    52  Leu  HN   H   1  1    FDXN    52  Leu  HA   H   1  1     6.80   .     .    0.35    "phi-60"
+          56  3JHNHA    FDXN    53  Val  HN   H   1  1    FDXN    53  Val  HA   H   1  1     9.00   .     .    0.35    "phi-60"
+          57  3JHNHA    FDXN    54  Leu  HN   H   1  1    FDXN    54  Leu  HA   H   1  1     9.91   .     .    0.35    "phi-60"
+          58  3JHNHA    FDXN    55  Leu  HN   H   1  1    FDXN    55  Leu  HA   H   1  1     9.12   .     .    0.35    "phi-60"
+          59  3JHNHA    FDXN    56  Gly  HN   H   1  1    FDXN    56  Gly  HA2  H   1  1     8.64   .     .    0.35    "phi-60"
+          60  3JHNHA    FDXN    56  Gly  HN   H   1  1    FDXN    56  Gly  HA3  H   1  1     2.99   .     .    0.35    "phi+60"
+          61  3JHNHA    FDXN    57  Cys  HN   H   1  1    FDXN    57  Cys  HA   H   1  1     6.75   .     .    0.35    "phi-60"
+          62  3JHNHA    FDXN    58  Ser  HN   H   1  1    FDXN    58  Ser  HA   H   1  1     7.52   .     .    0.35    "phi-60"
+          63  3JHNHA    FDXN    59  Thr  HN   H   1  1    FDXN    59  Thr  HA   H   1  1     9.84   .     .    0.35    "phi-60"
+          64  3JHNHA    FDXN    60  Trp  HN   H   1  1    FDXN    60  Trp  HA   H   1  1     9.64   .     .    0.35    "phi-60"
+          65  3JHNHA    FDXN    61  Gly  HN   H   1  1    FDXN    61  Gly  HA2  H   1  1     6.58   .     .    0.35    "phi-60"
+          66  3JHNHA    FDXN    61  Gly  HN   H   1  1    FDXN    61  Gly  HA3  H   1  1     2.50   .     .    0.35    "phi+60"
+          67  3JHNHA    FDXN    62  Asp  HN   H   1  1    FDXN    62  Asp  HA   H   1  1     7.42   .     .    0.35    "phi-60"
+          68  3JHNHA    FDXN    63  Asp  HN   H   1  1    FDXN    63  Asp  HA   H   1  1     6.96   .     .    0.35    "phi-60"
+          69  3JHNHA    FDXN    64  Ser  HN   H   1  1    FDXN    64  Ser  HA   H   1  1     6.55   .     .    0.35    "phi-60"
+          70  3JHNHA    FDXN    65  Ile  HN   H   1  1    FDXN    65  Ile  HA   H   1  1     6.80   .     .    0.35    "phi-60"
+          71  3JHNHA    FDXN    66  Glu  HN   H   1  1    FDXN    66  Glu  HA   H   1  1     9.79   .     .    0.35    "phi-60"
+          72  3JHNHA    FDXN    67  Leu  HN   H   1  1    FDXN    67  Leu  HA   H   1  1     5.60   .     .    0.35    "phi-60"
+          73  3JHNHA    FDXN    68  Gln  HN   H   1  1    FDXN    68  Gln  HA   H   1  1     3.01   .     .    0.35    "phi-60"
+          74  3JHNHA    FDXN    69  Asp  HN   H   1  1    FDXN    69  Asp  HA   H   1  1     2.33   .     .    0.35    "phi-60"
+          75  3JHNHA    FDXN    70  Asp  HN   H   1  1    FDXN    70  Asp  HA   H   1  1     5.74   .     .    0.35    "phi-60"
+          76  3JHNHA    FDXN    71  Phe  HN   H   1  1    FDXN    71  Phe  HA   H   1  1     6.76   .     .    0.35    "phi-60"
+          77  3JHNHA    FDXN    72  Ile  HN   H   1  1    FDXN    72  Ile  HA   H   1  1     2.49   .     .    0.35    "phi-60"
+          78  3JHNHA    FDXN    74  Leu  HN   H   1  1    FDXN    74  Leu  HA   H   1  1     6.29   .     .    0.35    "phi-60"
+          79  3JHNHA    FDXN    75  Phe  HN   H   1  1    FDXN    75  Phe  HA   H   1  1     4.17   .     .    0.35    "phi-60"
+          80  3JHNHA    FDXN    76  Asp  HN   H   1  1    FDXN    76  Asp  HA   H   1  1     3.74   .     .    0.35    "phi-60"
+          81  3JHNHA    FDXN    77  Ser  HN   H   1  1    FDXN    77  Ser  HA   H   1  1     9.59   .     .    0.35    "phi-60"
+          82  3JHNHA    FDXN    78  Leu  HN   H   1  1    FDXN    78  Leu  HA   H   1  1     1.21   .     .    0.35    "phi-60"
+          83  3JHNHA    FDXN    79  Glu  HN   H   1  1    FDXN    79  Glu  HA   H   1  1     3.33   .     .    0.35    "phi-60"
+          84  3JHNHA    FDXN    80  Glu  HN   H   1  1    FDXN    80  Glu  HA   H   1  1     7.05   .     .    0.35    "phi-60"
+          85  3JHNHA    FDXN    81  Thr  HN   H   1  1    FDXN    81  Thr  HA   H   1  1     5.64   .     .    0.35    "phi-60"
+          86  3JHNHA    FDXN    82  Gly  HN   H   1  1    FDXN    82  Gly  HA2  H   1  1     7.01   .     .    0.35    "phi-60"
+          87  3JHNHA    FDXN    82  Gly  HN   H   1  1    FDXN    82  Gly  HA3  H   1  1     4.43   .     .    0.35    "phi+60"
+          88  3JHNHA    FDXN    83  Ala  HN   H   1  1    FDXN    83  Ala  HA   H   1  1     5.98   .     .    0.35    "phi-60"
+          89  3JHNHA    FDXN    84  Gln  HN   H   1  1    FDXN    84  Gln  HA   H   1  1     3.26   .     .    0.35    "phi-60"
+          90  3JHNHA    FDXN    85  Gly  HN   H   1  1    FDXN    85  Gly  HA2  H   1  1     6.02   .     .    0.35    "phi-60"
+          91  3JHNHA    FDXN    85  Gly  HN   H   1  1    FDXN    85  Gly  HA3  H   1  1     5.14   .     .    0.35    "phi+60"
+          92  3JHNHA    FDXN    86  Arg  HN   H   1  1    FDXN    86  Arg  HA   H   1  1     6.87   .     .    0.35    "phi-60"
+          93  3JHNHA    FDXN    87  Lys  HN   H   1  1    FDXN    87  Lys  HA   H   1  1     6.86   .     .    0.35    "phi-60"
+          94  3JHNHA    FDXN    88  Val  HN   H   1  1    FDXN    88  Val  HA   H   1  1     9.70   .     .    0.35    "phi-60"
+          95  3JHNHA    FDXN    89  Ala  HN   H   1  1    FDXN    89  Ala  HA   H   1  1     6.23   .     .    0.35    "phi-60"
+          96  3JHNHA    FDXN    90  Cys  HN   H   1  1    FDXN    90  Cys  HA   H   1  1     9.73   .     .    0.35    "phi-60"
+          97  3JHNHA    FDXN    91  Phe  HN   H   1  1    FDXN    91  Phe  HA   H   1  1     8.35   .     .    0.35    "phi-60"
+          98  3JHNHA    FDXN    92  Gly  HN   H   1  1    FDXN    92  Gly  HA2  H   1  1     2.02   .     .    0.35    "phi-60"
+          99  3JHNHA    FDXN    92  Gly  HN   H   1  1    FDXN    92  Gly  HA3  H   1  1     4.78   .     .    0.35    "phi+60"
+         100  3JHNHA    FDXN    93  Cys  HN   H   1  1    FDXN    93  Cys  HA   H   1  1     9.60   .     .    0.35    "phi-60"
+         101  3JHNHA    FDXN    94  Gly  HN   H   1  1    FDXN    94  Gly  HA2  H   1  1     7.04   .     .    0.35    "phi-60"
+         102  3JHNHA    FDXN    94  Gly  HN   H   1  1    FDXN    94  Gly  HA3  H   1  1     1.26   .     .    0.35    "phi+60"
+         103  3JHNHA    FDXN    95  Asp  HN   H   1  1    FDXN    95  Asp  HA   H   1  1     8.01   .     .    0.35    "phi-60"
+         104  3JHNHA    FDXN    96  Ser  HN   H   1  1    FDXN    96  Ser  HA   H   1  1     4.75   .     .    0.35    "phi-60"
+         105  3JHNHA    FDXN    97  Ser  HN   H   1  1    FDXN    97  Ser  HA   H   1  1     7.03   .     .    0.35    "phi-60"
+         106  3JHNHA    FDXN    98  Tyr  HN   H   1  1    FDXN    98  Tyr  HA   H   1  1     8.90   .     .    0.35    "phi-60"
+         107  3JHNHA    FDXN    99  Glu  HN   H   1  1    FDXN    99  Glu  HA   H   1  1     4.51   .     .    0.35    "phi-60"
+         108  3JHNHA    FDXN   100  Tyr  HN   H   1  1    FDXN   100  Tyr  HA   H   1  1     8.00   .     .    0.35    "phi-60"
+         109  3JHNHA    FDXN   101  Phe  HN   H   1  1    FDXN   101  Phe  HA   H   1  1     3.00   .     .    0.35    "phi-60"
+         110  3JHNHA    FDXN   102  Cys  HN   H   1  1    FDXN   102  Cys  HA   H   1  1     7.06   .     .    0.35    "phi-60"
+         111  3JHNHA    FDXN   103  Gly  HN   H   1  1    FDXN   103  Gly  HA2  H   1  1     2.81   .     .    0.35    "phi-60"
+         112  3JHNHA    FDXN   103  Gly  HN   H   1  1    FDXN   103  Gly  HA3  H   1  1     6.05   .     .    0.35    "phi+60"
+         113  3JHNHA    FDXN   104  Ala  HN   H   1  1    FDXN   104  Ala  HA   H   1  1     5.59   .     .    0.35    "phi-60"
+         114  3JHNHA    FDXN   105  Val  HN   H   1  1    FDXN   105  Val  HA   H   1  1     4.42   .     .    0.35    "phi-60"
+         115  3JHNHA    FDXN   106  Asp  HN   H   1  1    FDXN   106  Asp  HA   H   1  1     3.86   .     .    0.35    "phi-60"
+         116  3JHNHA    FDXN   107  Ala  HN   H   1  1    FDXN   107  Ala  HA   H   1  1     2.88   .     .    0.35    "phi-60"
+         117  3JHNHA    FDXN   108  Ile  HN   H   1  1    FDXN   108  Ile  HA   H   1  1     6.20   .     .    0.35    "phi-60"
+         118  3JHNHA    FDXN   109  Glu  HN   H   1  1    FDXN   109  Glu  HA   H   1  1     3.28   .     .    0.35    "phi-60"
+         119  3JHNHA    FDXN   110  Glu  HN   H   1  1    FDXN   110  Glu  HA   H   1  1     3.63   .     .    0.35    "phi-60"
+         120  3JHNHA    FDXN   111  Lys  HN   H   1  1    FDXN   111  Lys  HA   H   1  1     5.20   .     .    0.35    "phi-60"
+         121  3JHNHA    FDXN   113  Lys  HN   H   1  1    FDXN   113  Lys  HA   H   1  1     4.06   .     .    0.35    "phi-60"
+         122  3JHNHA    FDXN   114  Asn  HN   H   1  1    FDXN   114  Asn  HA   H   1  1     4.50   .     .    0.35    "phi-60"
+         123  3JHNHA    FDXN   115  Leu  HN   H   1  1    FDXN   115  Leu  HA   H   1  1     7.82   .     .    0.35    "phi-60"
+         124  3JHNHA    FDXN   116  Gly  HN   H   1  1    FDXN   116  Gly  HA2  H   1  1     6.65   .     .    0.35    "phi-60"
+         125  3JHNHA    FDXN   116  Gly  HN   H   1  1    FDXN   116  Gly  HA3  H   1  1     4.57   .     .    0.35    "phi+60"
+         126  3JHNHA    FDXN   117  Ala  HN   H   1  1    FDXN   117  Ala  HA   H   1  1     6.05   .     .    0.35    "phi-60"
+         127  3JHNHA    FDXN   118  Glu  HN   H   1  1    FDXN   118  Glu  HA   H   1  1     7.25   .     .    0.35    "phi-60"
+         128  3JHNHA    FDXN   119  Ile  HN   H   1  1    FDXN   119  Ile  HA   H   1  1     6.44   .     .    0.35    "phi-60"
+         129  3JHNHA    FDXN   120  Val  HN   H   1  1    FDXN   120  Val  HA   H   1  1     5.71   .     .    0.35    "phi-60"
+         130  3JHNHA    FDXN   121  Gln  HN   H   1  1    FDXN   121  Gln  HA   H   1  1     6.30   .     .    0.35    "phi-60"
+         131  3JHNHA    FDXN   122  Asp  HN   H   1  1    FDXN   122  Asp  HA   H   1  1     4.60   .     .    0.35    "phi-60"
+         132  3JHNHA    FDXN   123  Gly  HN   H   1  1    FDXN   123  Gly  HA2  H   1  1     1.87   .     .    0.35    "phi-60"
+         133  3JHNHA    FDXN   123  Gly  HN   H   1  1    FDXN   123  Gly  HA3  H   1  1     5.12   .     .    0.35    "phi+60"
+         134  3JHNHA    FDXN   124  Leu  HN   H   1  1    FDXN   124  Leu  HA   H   1  1     7.81   .     .    0.35    "phi-60"
+         135  3JHNHA    FDXN   125  Arg  HN   H   1  1    FDXN   125  Arg  HA   H   1  1     9.10   .     .    0.35    "phi-60"
+         136  3JHNHA    FDXN   126  Ile  HN   H   1  1    FDXN   126  Ile  HA   H   1  1     8.80   .     .    0.35    "phi-60"
+         137  3JHNHA    FDXN   127  Asp  HN   H   1  1    FDXN   127  Asp  HA   H   1  1     9.04   .     .    0.35    "phi-60"
+         138  3JHNHA    FDXN   128  Gly  HN   H   1  1    FDXN   128  Gly  HA2  H   1  1     5.52   .     .    0.35    "phi-60"
+         139  3JHNHA    FDXN   128  Gly  HN   H   1  1    FDXN   128  Gly  HA3  H   1  1     5.73   .     .    0.35    "phi+60"
+         140  3JHNHA    FDXN   129  Asp  HN   H   1  1    FDXN   129  Asp  HA   H   1  1     3.70   .     .    0.35    "phi-60"
+         141  3JHNHA    FDXN   131  Arg  HN   H   1  1    FDXN   131  Arg  HA   H   1  1     5.84   .     .    0.35    "phi-60"
+         142  3JHNHA    FDXN   132  Ala  HN   H   1  1    FDXN   132  Ala  HA   H   1  1     8.04   .     .    0.35    "phi-60"
+         143  3JHNHA    FDXN   133  Ala  HN   H   1  1    FDXN   133  Ala  HA   H   1  1     9.35   .     .    0.35    "phi-60"
+         144  3JHNHA    FDXN   134  Arg  HN   H   1  1    FDXN   134  Arg  HA   H   1  1     1.04   .     .    0.35    "phi-60"
+         145  3JHNHA    FDXN   135  Asp  HN   H   1  1    FDXN   135  Asp  HA   H   1  1     4.18   .     .    0.35    "phi-60"
+         146  3JHNHA    FDXN   136  Asp  HN   H   1  1    FDXN   136  Asp  HA   H   1  1     6.00   .     .    0.35    "phi-60"
+         147  3JHNHA    FDXN   137  Ile  HN   H   1  1    FDXN   137  Ile  HA   H   1  1     5.40   .     .    0.35    "phi-60"
+         148  3JHNHA    FDXN   138  Val  HN   H   1  1    FDXN   138  Val  HA   H   1  1     4.34   .     .    0.35    "phi-60"
+         149  3JHNHA    FDXN   139  Gly  HN   H   1  1    FDXN   139  Gly  HA2  H   1  1     5.89   .     .    0.35    "phi-60"
+         150  3JHNHA    FDXN   139  Gly  HN   H   1  1    FDXN   139  Gly  HA3  H   1  1     3.71   .     .    0.35    "phi+60"
+         151  3JHNHA    FDXN   140  Trp  HN   H   1  1    FDXN   140  Trp  HA   H   1  1     4.96   .     .    0.35    "phi-60"
+         152  3JHNHA    FDXN   141  Ala  HN   H   1  1    FDXN   141  Ala  HA   H   1  1     4.24   .     .    0.35    "phi-60"
+         153  3JHNHA    FDXN   142  His  HN   H   1  1    FDXN   142  His  HA   H   1  1     4.60   .     .    0.35    "phi-60"
+         154  3JHNHA    FDXN   143  Asp  HN   H   1  1    FDXN   143  Asp  HA   H   1  1     5.69   .     .    0.35    "phi-60"
+         155  3JHNHA    FDXN   144  Val  HN   H   1  1    FDXN   144  Val  HA   H   1  1     4.58   .     .    0.35    "phi-60"
+         156  3JHNHA    FDXN   145  Arg  HN   H   1  1    FDXN   145  Arg  HA   H   1  1     6.19   .     .    0.35    "phi-60"
+         157  3JHNHA    FDXN   146  Gly  HN   H   1  1    FDXN   146  Gly  HA2  H   1  1     5.71   .     .    0.35    "phi-60"
+         158  3JHNHA    FDXN   146  Gly  HN   H   1  1    FDXN   146  Gly  HA3  H   1  1     4.93   .     .    0.35    "phi+60"
+         159  3JHNHA    FDXN   147  Ala  HN   H   1  1    FDXN   147  Ala  HA   H   1  1     7.35   .     .    0.35    "phi-60"
+         160  3JHNHA    FDXN   148  Ile  HN   H   1  1    FDXN   148  Ile  HA   H   1  1     8.95   .     .    0.35    "phi-60"
+   
+   stop_
+
+save_

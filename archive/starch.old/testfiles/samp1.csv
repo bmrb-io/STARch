@@ -1,0 +1,10 @@
+"_Atom_shift_assign_ID","_Residue_seq_code","_Residue_label","_Atom_name","_Atom_type","_Chem_shift_value","_Chem_shift_value_error","_Chem_shift_ambiguity_code"
+1,1,GLU,"NN",,120.20,.01,, XYZ
+2,1,GLU,"CA",,57.19,,,shift err. = .
+3,1,GLU,"CB",,28.16,,,shift err. = null
+4,1,GLU,"CG",,34.23,,,shift err. = null
+5,1,GLU,"HN",,,,,shift val. = n/a shift err. = null
+6,1,GLU,"HA",,3.82,,,shift err. = null
+7,1,GLU,"QB",,2.06,,,shift err. = null
+8,1,GLU,"HG+",,2.41,,,shift err. = n/a  comment
+9,1,GLU,"HG-",,2.34,,,shift err. = null

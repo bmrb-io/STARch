@@ -1,0 +1,29 @@
+
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	8	HIS	C	.	174.6470	.	?
+2	8	HIS	CA	.	56.1576	.	?
+3	8	HIS	CB	.	30.0005	.	?
+4	8	HIS	HA	.	4.5816	.	?
+5	8	HIS	HB#	.	3.1022	.	?
+6	9	LEU	CA	.	55.1854	.	?
+7	9	LEU	CB	.	42.2793	.	?
+8	9	LEU	CD1|CD2|CG	.	24.8033	.	?
+9	9	LEU	CD2|CD1|CG	.	23.4863	.	?
+10	9	LEU	CG|CD1|CD2	.	26.8035	.	?
+11	9	LEU	HA	.	4.2778	.	?
+12	9	LEU	HB#	.	1.5474	.	?
+13	9	LEU	HD1#|HD2#|HG	.	0.8663	.	?
+14	9	LEU	HD2#|HD1#|HG	.	0.8252	.	?
+15	9	LEU	HG|HD1#|HD2#	.	1.4198	.	?
+16	9	LEU	HN	.	8.2726	.	?
+17	9	LEU	N	.	123.6330	.	?
+stop_

@@ -1,0 +1,24 @@
+Development version of STAR forat conversion software.
+
+Requirements:
+ 1. Validator database (refdb).
+ 2. ~/validator.properties file -- for accessing the database.
+ 3. ~/starch.properties -- icons for toolbar buttons (optional).
+
+Usage:
+ runstarch.sh .
+ 1. Click on "Read File", select NMR-STAR 2.1 format and file "testfile.in.21",
+    click on Open.
+    
+ 2. Click on "Run all conversions". Answer "Yes" when asked if author data
+    contains 3-letter residue labels. Select "testfile.str" when program asks
+    for metadata file.
+ 
+ 3. Examine error messages in the bottom pane (you may have to move the
+    divider bar up to see it).
+
+ 4. You can edit atom names (cells), delete selected row(s) via "Selected"
+    menu, renumber rows vis "Convert" menu, etc.
+
+ 5. Save table -- you can choose between NMR-STAR 3.0 (default), XEASY,
+    Garrett and PPM formats.

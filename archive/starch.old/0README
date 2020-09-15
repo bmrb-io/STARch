@@ -1,0 +1,30 @@
+STARch: STAR conversion handling tool.
+
+FILES
+-----
+
+Java sources are in EDU/bmrb/starch/.
+Documentation is in doc, javadoc is in doc/javadoc/.
+Test files are in testfiles/.
+
+CGI interface:
+    index.html -- web form.
+    starch.pl  -- Perl 5 script that uses CGI module.
+    starch.oldperl.pl and cgi-lib2.pl -- Perl 4 scripts,
+                  if you don't have Perl 5.
+
+INSTALL
+-------
+
+Edit the Makefile, run make.
+
+"make install-starch" installs Java class files.
+"make install-cgi" installs HTML form, CGI script, and HTML documentation (Perl 5)
+"make install" does both of the above
+"make install-oldcgi" installs HTML form, CGI scripts, and HTML documentation (Perl 4)
+"make javadoc" creates javadoc documentation.
+"make javadoc-install" installs it.
+      Note that last two are not done by default, and javadoc-install does not run
+      "make javadoc".
+
+      

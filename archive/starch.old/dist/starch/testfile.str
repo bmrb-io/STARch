@@ -1,0 +1,814 @@
+data_6583
+
+
+save_entry_interview
+    _Entry_interview.Sf_category                    entry_interview 
+    _Entry_interview.Sf_framecode                   entry_interview 
+    _Entry_interview.Entry_ID                       6583 
+    _Entry_interview.ID                             1 
+    _Entry_interview.Assembly_type                 "Protein multimer" 
+    _Entry_interview.Ligands                        yes 
+    _Entry_interview.Non_standard_residues          no 
+    _Entry_interview.Structural_genomics            no 
+    _Entry_interview.Assigned_chem_shifts           yes 
+    _Entry_interview.Spectral_peak_lists            no 
+    _Entry_interview.Coupling_constants             no 
+    _Entry_interview.Residual_dipolar_couplings     no 
+    _Entry_interview.Homonucl_NOEs                  no 
+    _Entry_interview.Heteronucl_NOEs                no 
+    _Entry_interview.Heteronucl_T1_relaxation       no 
+    _Entry_interview.Heteronucl_T2_relaxation       no 
+    _Entry_interview.Heteronucl_T1rho_relaxation    no 
+    _Entry_interview.Order_parameters               no 
+    _Entry_interview.Dipole_dipole_relaxation       no 
+    _Entry_interview.Cross_correlation              no 
+    _Entry_interview.H_exchange_rate                no 
+    _Entry_interview.H_exchange_protection_factors  no 
+    _Entry_interview.PKa_value_data_set             no 
+    _Entry_interview.Theoretical_chem_shifts        no 
+    _Entry_interview.Spectral_density_values        no 
+    _Entry_interview.Timedomain_data                no 
+    _Entry_interview.New_kind_of_data               no 
+    _Entry_interview.D/H_fractionation_factors      no 
+save_
+
+
+save_deposited_data_files
+    _Deposited_data_files.Sf_category   deposited_data_files 
+    _Deposited_data_files.Sf_framecode  deposited_data_files 
+    _Deposited_data_files.Entry_ID      6583 
+    _Deposited_data_files.ID            1 
+
+    loop_
+        _Upload_data.Data_file_ID 
+        _Upload_data.Data_file_name 
+        _Upload_data.Data_file_Sf_category 
+        _Upload_data.Data_file_syntax 
+        _Upload_data.Entry_ID 
+        _Upload_data.Deposited_data_files_ID 
+
+         1  Ca-S100A1  "Assigned chemical shifts"  "NMR-STAR 2.1"   6583  1 
+    stop_
+
+save_
+
+
+#######################
+#  Entry information  #
+#######################
+
+
+
+save_entry_information
+    _Entry.Sf_category            entry_information 
+    _Entry.Sf_framecode           entry_information 
+    _Entry.ID                     6583 
+    _Entry.Title                 
+;
+1H, 13C, and 15N NMR Sequence-specific Resonance Assignments for Rat Ca2+-S100A1
+;
+
+    _Entry.Version_type           new 
+    _Entry.Submission_date        2005-04-07 
+    _Entry.Accession_date         2005-04-07 
+    _Entry.Last_release_date      ? 
+    _Entry.Original_release_date  ? 
+    _Entry.Origination            author 
+    _Entry.NMR_STAR_version       production.3.0.2.2 
+    _Entry.Experimental_method    NMR 
+    _Entry.Release_request       "On publication" 
+
+    loop_
+        _Entry_author.Ordinal 
+        _Entry_author.Family_name 
+        _Entry_author.Given_name 
+        _Entry_author.First_initial 
+        _Entry_author.Middle_initials 
+        _Entry_author.Family_title 
+        _Entry_author.Entry_ID 
+
+         1  Doe   John     ?   T   ?   6583 
+    stop_
+
+
+    loop_
+        _Data_set.Type 
+        _Data_set.Count 
+        _Data_set.Entry_ID 
+
+         assigned_chemical_shifts   1  6583 
+    stop_
+
+
+    loop_
+        _Datum.Type 
+        _Datum.Count 
+        _Datum.Entry_ID 
+
+        "1H chemical shifts"    531  6583 
+        "13C chemical shifts"   285  6583 
+        "15N chemical shifts"    93  6583 
+    stop_
+
+
+    loop_
+        _Release.Number 
+        _Release.Date 
+        _Release.Submission_date 
+        _Release.Type 
+        _Release.Author 
+        _Release.Detail 
+        _Release.Entry_ID 
+
+         ?   ?   ?   ?   ?   ?   6583 
+    stop_
+
+
+    loop_
+        _Related_entries.BMRB_accession_code 
+        _Related_entries.Relationship 
+        _Related_entries.Entry_ID 
+
+         4285 "chemical shifts for the apo form of the protein"   6583 
+    stop_
+
+
+save_
+
+
+###############
+#  Citations  #
+###############
+
+
+
+save_entry_citation
+    _Citation.Sf_category           citations 
+    _Citation.Sf_framecode          entry_citation 
+    _Citation.Entry_ID              6583 
+    _Citation.ID                    1 
+    _Citation.Class                "entry citation" 
+    _Citation.Title                
+;
+Characterization of the calcium-dependent conformational change in S100A1
+required for binding a peptide derived from CapZ (TRTK-12)
+;
+
+    _Citation.Status               "in preparation" 
+    _Citation.Type                  journal 
+    _Citation.Journal_abbreviation "Protein Sci." 
+    _Citation.Journal_volume        ? 
+    _Citation.Journal_issue         ? 
+    _Citation.Page_first            ? 
+    _Citation.Page_last             ? 
+    _Citation.Year                  ? 
+
+    loop_
+        _Citation_author.Ordinal 
+        _Citation_author.Family_name 
+        _Citation_author.Given_name 
+        _Citation_author.First_initial 
+        _Citation_author.Middle_initials 
+        _Citation_author.Family_title 
+        _Citation_author.Entry_ID 
+        _Citation_author.Citation_ID 
+        
+         1  Doe   John     ?   T   ?   6583  1 
+ 
+    stop_
+
+
+    loop_
+        _Citation_keyword.Keyword 
+        _Citation_keyword.Entry_ID 
+        _Citation_keyword.Citation_ID 
+
+        "calcium binding protein"   6583  1 
+    stop_
+
+save_
+
+
+#############################################
+#  Molecular system (assembly) description  #
+#############################################
+
+
+
+save_assembly
+    _Assembly.Sf_category                      assembly 
+    _Assembly.Sf_framecode                     assembly 
+    _Assembly.Entry_ID                         6583 
+    _Assembly.ID                               1 
+    _Assembly.Name                            "S100A1 dimer" 
+    _Assembly.Number_of_components             2 
+    _Assembly.Organic_ligands                  0 
+    _Assembly.Metal_ions                       4 
+    _Assembly.Ambiguous_conformational_states  no 
+    _Assembly.Ambiguous_chem_comp_sites        no 
+    _Assembly.Molecules_in_chemical_exchange   no 
+    _Assembly.Paramagnetic                     no 
+    _Assembly.Thiol_state                     "all free" 
+
+    loop_
+        _Assembly_systematic_name.Name 
+        _Assembly_systematic_name.Naming_system 
+        _Assembly_systematic_name.Entry_ID 
+        _Assembly_systematic_name.Assembly_ID 
+
+         Ca2+-S100A1   ?   6583  1 
+    stop_
+
+
+    loop_
+        _Assembly_type.Type 
+        _Assembly_type.Entry_ID 
+        _Assembly_type.Assembly_ID 
+
+         protein   6583  1 
+    stop_
+
+
+    loop_
+        _Entity_assembly.ID 
+        _Entity_assembly.Entity_ID 
+        _Entity_assembly.Entity_assembly_name 
+        _Entity_assembly.Entity_label 
+        _Entity_assembly.Magnetic_equivalence_group_code 
+        _Entity_assembly.Role 
+        _Entity_assembly.Experimental_data_reported 
+        _Entity_assembly.Physical_state 
+        _Entity_assembly.Conformational_isomer 
+        _Entity_assembly.Chemical_exchange_state 
+        _Entity_assembly.Details 
+        _Entity_assembly.Entry_ID 
+        _Entity_assembly.Assembly_ID 
+
+         1  1 "S100A1, chain 1"  $S100A1   ?   ?   yes   native   no   no   ?   6583  1 
+    stop_
+
+
+    loop_
+        _Assembly_bio_function.Biological_function 
+        _Assembly_bio_function.Entry_ID 
+        _Assembly_bio_function.Assembly_ID 
+
+        "may regulate cytoskeleton"                6583  1 
+        "implicated in caclium release in heart"   6583  1 
+    stop_
+
+save_
+
+
+    ####################################
+    #  Biological polymers and ligands #
+    ####################################
+
+
+
+save_S100A1
+    _Entity.Sf_category                      entity 
+    _Entity.Sf_framecode                     S100A1 
+    _Entity.Entry_ID                         6583 
+    _Entity.ID                               1 
+    _Entity.Name                             S100A1 
+    _Entity.Type                             polymer 
+    _Entity.Polymer_type                     polypeptide(L) 
+    _Entity.Polymer_seq_one_letter_code_can  ? 
+    _Entity.Polymer_seq_one_letter_code     
+;
+MGSELETAMETLINVFHAHSGKEG
+DKYKLSKKELKELLQTDLSGFKDV
+QKDADAVDKIMKELDENGDGEVDF
+QEFVVLVAALTVACNNFFWENS
+;
+
+    _Entity.Ambiguous_conformational_states  no 
+    _Entity.Ambiguous_chem_comp_sites        no 
+    _Entity.Nstd_monomer                     no 
+    _Entity.Nstd_chirality                   no 
+    _Entity.Nstd_linkage                     no 
+    _Entity.Number_of_monomers               93 
+    _Entity.Formula_weight                   10545 
+    _Entity.Paramagnetic                     no 
+    _Entity.Thiol_state                     "all free" 
+
+    loop_
+        _Entity_poly_seq.Num 
+        _Entity_poly_seq.Comp_index_ID 
+        _Entity_poly_seq.Mon_ID 
+        _Entity_poly_seq.Chem_comp_label 
+        _Entity_poly_seq.Entry_ID 
+        _Entity_poly_seq.Entity_ID 
+
+          1   1  MET   .   6583  1 
+          2   2  GLY   .   6583  1 
+          3   3  SER   .   6583  1 
+          4   4  GLU   .   6583  1 
+          5   5  LEU   .   6583  1 
+          6   6  GLU   .   6583  1 
+          7   7  THR   .   6583  1 
+          8   8  ALA   .   6583  1 
+          9   9  MET   .   6583  1 
+         10  10  GLU   .   6583  1 
+         11  11  THR   .   6583  1 
+         12  12  LEU   .   6583  1 
+         13  13  ILE   .   6583  1 
+         14  14  ASN   .   6583  1 
+         15  15  VAL   .   6583  1 
+         16  16  PHE   .   6583  1 
+         17  17  HIS   .   6583  1 
+         18  18  ALA   .   6583  1 
+         19  19  HIS   .   6583  1 
+         20  20  SER   .   6583  1 
+         21  21  GLY   .   6583  1 
+         22  22  LYS   .   6583  1 
+         23  23  GLU   .   6583  1 
+         24  24  GLY   .   6583  1 
+         25  25  ASP   .   6583  1 
+         26  26  LYS   .   6583  1 
+         27  27  TYR   .   6583  1 
+         28  28  LYS   .   6583  1 
+         29  29  LEU   .   6583  1 
+         30  30  SER   .   6583  1 
+         31  31  LYS   .   6583  1 
+         32  32  LYS   .   6583  1 
+         33  33  GLU   .   6583  1 
+         34  34  LEU   .   6583  1 
+         35  35  LYS   .   6583  1 
+         36  36  ASP   .   6583  1 
+         37  37  LEU   .   6583  1 
+         38  38  LEU   .   6583  1 
+         39  39  GLN   .   6583  1 
+         40  40  THR   .   6583  1 
+         41  41  GLU   .   6583  1 
+         42  42  LEU   .   6583  1 
+         43  43  SER   .   6583  1 
+         44  44  GLY   .   6583  1 
+         45  45  PHE   .   6583  1 
+         46  46  LYS   .   6583  1 
+         47  47  ASP   .   6583  1 
+         48  48  VAL   .   6583  1 
+         49  49  GLN   .   6583  1 
+         50  50  LYS   .   6583  1 
+         51  51  ASP   .   6583  1 
+         52  52  ALA   .   6583  1 
+         53  53  ASP   .   6583  1 
+         54  54  ALA   .   6583  1 
+         55  55  VAL   .   6583  1 
+         56  56  ASP   .   6583  1 
+         57  57  LYS   .   6583  1 
+         58  58  ILE   .   6583  1 
+         59  59  MET   .   6583  1 
+         60  60  LYS   .   6583  1 
+         61  61  GLU   .   6583  1 
+         62  62  LEU   .   6583  1 
+         63  63  ASP   .   6583  1 
+         64  64  GLU   .   6583  1 
+         65  65  ASN   .   6583  1 
+         66  66  GLY   .   6583  1 
+         67  67  ASP   .   6583  1 
+         68  68  GLY   .   6583  1 
+         69  69  GLU   .   6583  1 
+         70  70  VAL   .   6583  1 
+         71  71  ASP   .   6583  1 
+         72  72  PHE   .   6583  1 
+         73  73  GLN   .   6583  1 
+         74  74  GLU   .   6583  1 
+         75  75  PHE   .   6583  1 
+         76  76  VAL   .   6583  1 
+         77  77  VAL   .   6583  1 
+         78  78  LEU   .   6583  1 
+         79  79  VAL   .   6583  1 
+         80  80  ALA   .   6583  1 
+         81  81  ALA   .   6583  1 
+         82  82  LEU   .   6583  1 
+         83  83  THR   .   6583  1 
+         84  84  VAL   .   6583  1 
+         85  85  ALA   .   6583  1 
+         86  86  CYS   .   6583  1 
+         87  87  ASN   .   6583  1 
+         88  88  ASN   .   6583  1 
+         89  89  PHE   .   6583  1 
+         90  90  PHE   .   6583  1 
+         91  91  TRP   .   6583  1 
+         92  92  GLU   .   6583  1 
+         93  93  ASN   .   6583  1 
+         94  94  SER   .   6583  1 
+    stop_
+
+
+    loop_
+        _Entity_comp_index.ID 
+        _Entity_comp_index.Author_seq_code 
+        _Entity_comp_index.Comp_ID 
+        _Entity_comp_index.Chem_comp_label 
+        _Entity_comp_index.Entry_ID 
+        _Entity_comp_index.Entity_ID 
+
+          1   0   MET   .   6583  1 
+          2   1   GLY   .   6583  1 
+          3   2   SER   .   6583  1 
+          4   3   GLU   .   6583  1 
+          5   4   LEU   .   6583  1 
+          6   5   GLU   .   6583  1 
+          7   6   THR   .   6583  1 
+          8   7   ALA   .   6583  1 
+          9   8   MET   .   6583  1 
+         10   9   GLU   .   6583  1 
+         11  10   THR   .   6583  1 
+         12  11   LEU   .   6583  1 
+         13  12   ILE   .   6583  1 
+         14  13   ASN   .   6583  1 
+         15  14   VAL   .   6583  1 
+         16  15   PHE   .   6583  1 
+         17  16   HIS   .   6583  1 
+         18  17   ALA   .   6583  1 
+         19  18   HIS   .   6583  1 
+         20  19   SER   .   6583  1 
+         21  20   GLY   .   6583  1 
+         22  21   LYS   .   6583  1 
+         23  22   GLU   .   6583  1 
+         24  23   GLY   .   6583  1 
+         25  24   ASP   .   6583  1 
+         26  25   LYS   .   6583  1 
+         27  26   TYR   .   6583  1 
+         28  27   LYS   .   6583  1 
+         29  28   LEU   .   6583  1 
+         30  29   SER   .   6583  1 
+         31  30   LYS   .   6583  1 
+         32  31   LYS   .   6583  1 
+         33  32   GLU   .   6583  1 
+         34  33   LEU   .   6583  1 
+         35  34   LYS   .   6583  1 
+         36  35   ASP   .   6583  1 
+         37  36   LEU   .   6583  1 
+         38  37   LEU   .   6583  1 
+         39  38   GLN   .   6583  1 
+         40  39   THR   .   6583  1 
+         41  40   GLU   .   6583  1 
+         42  41   LEU   .   6583  1 
+         43  42   SER   .   6583  1 
+         44  43   GLY   .   6583  1 
+         45  44   PHE   .   6583  1 
+         46  45   LYS   .   6583  1 
+         47  46   ASP   .   6583  1 
+         48  47   VAL   .   6583  1 
+         49  48   GLN   .   6583  1 
+         50  49   LYS   .   6583  1 
+         51  50   ASP   .   6583  1 
+         52  51   ALA   .   6583  1 
+         53  52   ASP   .   6583  1 
+         54  53   ALA   .   6583  1 
+         55  54   VAL   .   6583  1 
+         56  55   ASP   .   6583  1 
+         57  56   LYS   .   6583  1 
+         58  57   ILE   .   6583  1 
+         59  58   MET   .   6583  1 
+         60  59   LYS   .   6583  1 
+         61  60   GLU   .   6583  1 
+         62  61   LEU   .   6583  1 
+         63  62   ASP   .   6583  1 
+         64  63   GLU   .   6583  1 
+         65  64   ASN   .   6583  1 
+         66  65   GLY   .   6583  1 
+         67  66   ASP   .   6583  1 
+         68  67   GLY   .   6583  1 
+         69  68   GLU   .   6583  1 
+         70  69   VAL   .   6583  1 
+         71  70   ASP   .   6583  1 
+         72  71   PHE   .   6583  1 
+         73  72   GLN   .   6583  1 
+         74  73   GLU   .   6583  1 
+         75  74   PHE   .   6583  1 
+         76  75   VAL   .   6583  1 
+         77  76   VAL   .   6583  1 
+         78  77   LEU   .   6583  1 
+         79  78   VAL   .   6583  1 
+         80  79   ALA   .   6583  1 
+         81  80   ALA   .   6583  1 
+         82  81   LEU   .   6583  1 
+         83  82   THR   .   6583  1 
+         84  83   VAL   .   6583  1 
+         85  84   ALA   .   6583  1 
+         86  85   CYS   .   6583  1 
+         87  86   ASN   .   6583  1 
+         88  87   ASN   .   6583  1 
+         89  88   PHE   .   6583  1 
+         90  89   PHE   .   6583  1 
+         91  90   TRP   .   6583  1 
+         92  91   GLU   .   6583  1 
+         93  92   ASN   .   6583  1 
+         94  93   SER   .   6583  1 
+    stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+
+
+save_natural_source
+    _Entity_natural_src_list.Sf_category   natural_source 
+    _Entity_natural_src_list.Sf_framecode  natural_source 
+    _Entity_natural_src_list.Entry_ID      6583 
+    _Entity_natural_src_list.ID            1 
+
+    loop_
+        _Entity_natural_src.ID 
+        _Entity_natural_src.Entity_ID 
+        _Entity_natural_src.Entity_label 
+        _Entity_natural_src.Entity_fragment_ID 
+        _Entity_natural_src.Nonexistent 
+        _Entity_natural_src.Common 
+        _Entity_natural_src.Organism_name_common 
+        _Entity_natural_src.Organism_acronym 
+        _Entity_natural_src.NCBI_taxonomy_ID 
+        _Entity_natural_src.Superkingdom 
+        _Entity_natural_src.Kingdom 
+        _Entity_natural_src.Genus 
+        _Entity_natural_src.Species 
+        _Entity_natural_src.Strain 
+        _Entity_natural_src.Entry_ID 
+        _Entity_natural_src.Entity_natural_src_list_ID 
+
+         1  1 $S100A1   ?   no   no   Rat   ?   10116  Eukaryota   Metazoa   Rattus   norvegicus   ?   6583  1 
+    stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+
+
+save_experimental_source
+    _Entity_experimental_src_list.Sf_category   experimental_source 
+    _Entity_experimental_src_list.Sf_framecode  experimental_source 
+    _Entity_experimental_src_list.Entry_ID      6583 
+    _Entity_experimental_src_list.ID            1 
+
+    loop_
+        _Entity_experimental_src.ID 
+        _Entity_experimental_src.Entity_ID 
+        _Entity_experimental_src.Entity_label 
+        _Entity_experimental_src.Production_method 
+        _Entity_experimental_src.Host_organism_name_common 
+        _Entity_experimental_src.Genus 
+        _Entity_experimental_src.Species 
+        _Entity_experimental_src.Strain 
+        _Entity_experimental_src.Variant 
+        _Entity_experimental_src.Vector_type 
+        _Entity_experimental_src.Entry_ID 
+        _Entity_experimental_src.Entity_experimental_src_list_ID 
+
+         1  1 $S100A1  "recombinant technology"   ?   ?   ?   ?   ?   plasmid   6583  1 
+    stop_
+
+save_
+
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+
+
+save_sample_1
+    _Sample.Sf_category   sample 
+    _Sample.Sf_framecode  sample_1 
+    _Sample.Entry_ID      6583 
+    _Sample.ID            1 
+    _Sample.Type          solution 
+    _Sample.Details      
+;
+0.5-3 mM S100A1, either 15N labeled or 13C, 15N labeled, prepared in H2O with 10% D2O
+;
+
+
+    loop_
+        _Sample_component.ID 
+        _Sample_component.Mol_common_name 
+        _Sample_component.Assembly_ID 
+        _Sample_component.Assembly_label 
+        _Sample_component.Entity_ID 
+        _Sample_component.Entity_label 
+        _Sample_component.Concentration_val 
+        _Sample_component.Concentration_val_err 
+        _Sample_component.Concentration_val_units 
+        _Sample_component.Concentration_min_val 
+        _Sample_component.Concentration_max_val 
+        _Sample_component.Isotopic_labeling 
+        _Sample_component.Entry_ID 
+        _Sample_component.Sample_ID 
+
+         1  S100A1      1 $assembly    1 $S100A1   ?      ?   mM    0.5   3 "[U-13C; U-15N]"   6583  1 
+    stop_
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+
+
+save_conditions_1
+    _Sample_condition_list.Sf_category   sample_conditions 
+    _Sample_condition_list.Sf_framecode  conditions_1 
+    _Sample_condition_list.Entry_ID      6583 
+    _Sample_condition_list.ID            1 
+    _Sample_condition_list.Details      
+;
+0.5-3 mM 15N-labeled S100A1, d11-Tris (20-40 mM), CaCl2 (20 mM), NaN3 (0.35
+mM), NaCl (15-18 mM), DTT (20-35 mM), and D20 (10%), pH 7.2
+;
+
+
+    loop_
+        _Sample_condition_variable.Type 
+        _Sample_condition_variable.Val 
+        _Sample_condition_variable.Val_err 
+        _Sample_condition_variable.Val_units 
+        _Sample_condition_variable.Entry_ID 
+        _Sample_condition_variable.Sample_condition_list_ID 
+
+         pH             7.2   0  pH   6583  1 
+         temperature   37    ?   C    6583  1 
+    stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+
+
+save_chemical_shift_referencing
+    _Chem_shift_reference.Sf_category   chem_shift_reference 
+    _Chem_shift_reference.Sf_framecode  chemical_shift_referencing 
+    _Chem_shift_reference.Entry_ID      6583 
+    _Chem_shift_reference.ID            1 
+
+    loop_
+        _Chem_shift_ref.Mol_common_name 
+        _Chem_shift_ref.Atom_type 
+        _Chem_shift_ref.Atom_isotope 
+        _Chem_shift_ref.Atom_group 
+        _Chem_shift_ref.Chem_shift_units 
+        _Chem_shift_ref.Chem_shift_val 
+        _Chem_shift_ref.Ref_method 
+        _Chem_shift_ref.Ref_type 
+        _Chem_shift_ref.Indirect_shift_ratio 
+        _Chem_shift_ref.Entry_ID 
+        _Chem_shift_ref.Chem_shift_reference_ID 
+
+         DSS   H    1 "methyl protons"   ppm   0.0  internal   direct     1.0          6583  1 
+         DSS   C   13 "methyl protons"   ppm   0.0  .          indirect   0.251449530  6583  1 
+         DSS   N   15 "methyl protons"   ppm   0.0  .          indirect   0.101329118  6583  1 
+    stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique (geminal atoms and geminal methyl     #
+#                         groups with identical chemical shifts   #
+#                         are assumed to be assigned to           #
+#                         stereospecific atoms)                   #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of          #
+#                         symmetrical rings (e.g. Tyr HE1 and HE2 #
+#                         protons)                                #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons or Trp HZ2 and HZ3 protons)  #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+
+
+save_chem_shift_list_1
+    _Assigned_chem_shift_list.Sf_category                  assigned_chemical_shifts 
+    _Assigned_chem_shift_list.Sf_framecode                 chem_shift_list_1 
+    _Assigned_chem_shift_list.Entry_ID                     6583 
+    _Assigned_chem_shift_list.ID                           1 
+    _Assigned_chem_shift_list.Sample_condition_list_ID     1 
+    _Assigned_chem_shift_list.Sample_condition_list_label $conditions_1 
+    _Assigned_chem_shift_list.Chem_shift_reference_ID      1 
+    _Assigned_chem_shift_list.Chem_shift_reference_label  $chemical_shift_referencing 
+    _Assigned_chem_shift_list.Data_file_name               testfile.in.21 
+
+    loop_
+        _Chem_shift_experiment.NMR_spec_expt_ID 
+        _Chem_shift_experiment.NMR_spec_expt_label 
+        _Chem_shift_experiment.Sample_ID 
+        _Chem_shift_experiment.Sample_label 
+        _Chem_shift_experiment.Sample_state 
+        _Chem_shift_experiment.Entry_ID 
+        _Chem_shift_experiment.Assigned_chem_shift_list_ID 
+
+         ?   ?   1 $sample_1   isotropic   6583  1 
+    stop_
+
+
+    
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+
+
+save_NMR_experiment_list
+    _NMR_spec_expt_list.Sf_category   NMR_spectrometer_expt_list 
+    _NMR_spec_expt_list.Sf_framecode  NMR_experiment_list 
+    _NMR_spec_expt_list.Entry_ID      6583 
+    _NMR_spec_expt_list.ID            1 
+
+    loop_
+        _NMR_spec_expt_list_item.Name 
+        _NMR_spec_expt_list_item.Timedomain_data_flag 
+        _NMR_spec_expt_list_item.Entry_ID 
+        _NMR_spec_expt_list_item.NMR_spec_expt_list_ID 
+
+         1H15N_HSQC                       no   6583  1 
+    stop_
+
+save_
+
+
+save_1H15N_HSQC
+    _NMR_spec_expt.Sf_category                   NMR_spectrometer_expt 
+    _NMR_spec_expt.Sf_framecode                  1H15N_HSQC 
+    _NMR_spec_expt.Entry_ID                      6583 
+    _NMR_spec_expt.ID                            1 
+    _NMR_spec_expt.Name                          1H15N_HSQC 
+    _NMR_spec_expt.Sample_ID                     ? 
+    _NMR_spec_expt.Sample_label                  ? 
+    _NMR_spec_expt.Sample_state                  isotropic 
+    _NMR_spec_expt.Sample_condition_list_ID      ? 
+    _NMR_spec_expt.Sample_condition_list_label   ? 
+    _NMR_spec_expt.NMR_spectrometer_ID           ? 
+    _NMR_spec_expt.NMR_spectrometer_label        ? 
+    _NMR_spec_expt.NMR_spectrometer_probe_ID     ? 
+    _NMR_spec_expt.NMR_spectrometer_probe_label  ? 
+    _NMR_spec_expt.Software_ID                   ? 
+    _NMR_spec_expt.Software_label                ? 
+    _NMR_spec_expt.Method_ID                     ? 
+    _NMR_spec_expt.Method_label                  ? 
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+
+
+save_600MHz_spectrometer
+    _NMR_spectrometer.Sf_category     NMR_spectrometer 
+    _NMR_spectrometer.Sf_framecode    600MHz_spectrometer
+    _NMR_spectrometer.Entry_ID        6583 
+    _NMR_spectrometer.ID              1 
+    _NMR_spectrometer.Manufacturer    Bruker
+    _NMR_spectrometer.Model           DMX
+    _NMR_spectrometer.Field_strength  600 
+save_

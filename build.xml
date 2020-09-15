@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+<project name="starch" default="help" basedir=".">
+
+  <description>
+    Build file for validator
+  </description>
+
+  <condition property="build-type" value="debug">
+    <istrue value="${debug}"/>
+  </condition>
+  <condition property="build-type" value="release">
+      <istrue value="${release}"/>
+  </condition>
+  <condition property="build-type" value="devel">
+      <and>
+          <not>
+              <istrue value="${debug}"/>
+          </not>
+          <not>
+              <istrue value="${release}"/>
+          </not>
+      </and>
+  </condition>
+
+<!-- internal paths -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="dist" location="dist"/>
+  <property name="javadoc" location="doc/api"/>
+  
+<!-- dependencies -->
+    <property name="getoptdir" location="getopt"/>
+    <property name="sansdir" location="sans"/>
+
+    <path id="starch.classpath">
+        <pathelement location="${getoptdir}"/>
+        <pathelement location="${sansdir}"/>
+    </path>
+
+  <target name="help"
+  description="top-level help message">
+    <echo>
+usage:
+  ant -help               Display ant help screen
+  ant -projecthelp        Display list of targets
+  ant &lt;ANYTHING ELSE&gt;     Run "ant -targets" for details
+    </echo>
+  </target>
+  
+  <target name="init">
+    <tstamp/>
+  <condition property="binjar-name" value="starchbin.${DSTAMP}.jar">
+      <istrue value="${release}"/>
+  </condition>
+  <condition property="binjar-name" value="starchbin.jar">
+      <not>
+          <istrue value="${release}"/>
+      </not>
+  </condition>
+    <mkdir dir="${build}"/>
+    <mkdir dir="${dist}"/>
+  </target>
+  
+  <target name="initdoc">
+    <mkdir dir="${javadoc}"/>
+  </target>
+
+  <target name="compile" depends="init"
+   description="compile class files">
+<!--    <echo>
+debug:   "${debug}"
+release: "${release}"
+bt:      "${build-type}"
+    </echo>
+-->
+    <antcall target="compile.${build-type}"/>
+  </target>
+
+  <target name="prep.debug">
+    <replace summary="yes" dir="${src}"
+             token="boolean DEBUG = false;"
+	     value="boolean DEBUG = true;">
+      <include name="**/*.java"/>
+    </replace>
+  </target>
+
+  <target name="compile.debug" depends="prep.debug">
+    <javac srcdir="${src}" destdir="${build}"
+           debug="on" deprecation="on">
+      <compilerarg line="-Xlint:all"/>
+      <classpath refid="starch.classpath"/>
+    </javac>
+  </target>
+
+  <target name="prep.release">
+    <replace summary="yes" dir="${src}"
+             token="boolean DEBUG = true;"
+	     value="boolean DEBUG = false;">
+      <include name="**/*.java"/>
+    </replace>
+  </target>
+
+  <target name="compile.release" depends="prep.release">
+    <javac srcdir="${src}" destdir="${build}"
+           debug="off" deprecation="off" optimize="on">
+      <compilerarg line="-g:none -nowarn"/>
+      <classpath refid="starch.classpath"/>
+    </javac>
+  </target>
+  
+  <target name="compile.devel">
+    <javac srcdir="${src}" destdir="${build}"
+           debug="on" deprecation="on">
+      <compilerarg line="-Xlint:all"/>
+      <classpath refid="starch.classpath"/>
+    </javac>
+  </target>
+
+  <target name="binjar" depends="compile"
+  description="create distribution jar">
+    <jar jarfile="${dist}/${binjar-name}">
+      <fileset dir="${sansdir}" includes="edu/bmrb/sans/**/*.class"/>
+      <fileset dir="${build}" includes="edu/bmrb/starch/**/*.class"/>
+      <fileset dir="${getoptdir}" includes="gnu/getopt/**/*.*"/>
+    </jar>
+  </target>
+
+    <target name="exporttar" depends="binjar"
+    description="create distribution tarball">
+	<delete dir="${dist}/tmp" failonerror="false"/>
+	<mkdir dir="${dist}/tmp"/>
+	<copy file="${dist}/${binjar-name}" tofile="${dist}/tmp/starchbin.jar"/>
+	<copy file="doc/README" todir="${dist}/tmp"/>
+	<copy file="starch.sh" todir="${dist}/tmp"/>
+	<tar destfile="${dist}/starch_exp.${DSTAMP}.tar">
+	    <tarfileset dir="${dist}/tmp" prefix="starch" includes="*"/>
+	</tar>
+	<gzip destfile="${dist}/starch_exp.${DSTAMP}.tar.gz" src="${dist}/starch_exp.${DSTAMP}.tar"/>
+        <delete file="${dist}/starch_exp.${DSTAMP}.tar"/>
+	<delete dir="${dist}/tmp"/>
+    </target>
+
+  <target name="javadoc" depends="initdoc"
+  description="generate javadoc">
+    <javadoc
+      destdir="${javadoc}"
+      verbose="yes"
+      author="true"
+      version="true"
+      use="false"
+      stylesheetfile="${javadoc}/stylesheet.css"
+      windowtitle="STARch API"
+      doctitle="STARch"
+      bottom="&lt;i&gt;Copyright &#169; 2006-2007 Board of Regents, University of Wisconsin. All Rights Reserved.&lt;/i&gt;">
+
+      <fileset dir="${src}" includes="EDU/**/*.java"/>
+
+    </javadoc>
+  </target>
+
+<!-- grrr... -->
+
+  <target name="clean" description="clean up">
+    <delete dir="${build}"/>
+    <delete>
+      <fileset dir="${basedir}" includes="edu/**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*~" defaultexcludes="no"/>
+      <fileset dir="${basedir}" includes="ERRS"/>
+    </delete>
+  </target>
+
+</project>

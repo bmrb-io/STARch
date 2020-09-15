@@ -1,0 +1,190 @@
+
+####################
+#  NMR parameters  #
+####################
+   
+       ########################
+       #  Coupling constants  #
+       ########################
+   
+save_3JCOHA
+   _Saveframe_category          coupling_constants
+   
+   loop_
+      _Sample_label
+   
+      $sample_1
+   
+   stop_
+   
+   
+   _Sample_conditions_label    $sample_conditions_1
+   _Spectrometer_frequency_1H   @
+   _Mol_system_component_name  "FDXN"
+   
+   
+    loop_
+       _Coupling_constant.ID
+       _Coupling_constant.Code
+       _Coupling_constant.Entity_assembly_ID_1
+       _Coupling_constant.Comp_index_ID_1
+       _Coupling_constant.Comp_ID_1
+       _Coupling_constant.Atom_ID_1
+       _Coupling_constant.Atom_type_1
+       _Coupling_constant.Atom_isotope_number_1
+       _Coupling_constant.Ambiguity_code_1
+       _Coupling_constant.Entity_assembly_ID_2
+       _Coupling_constant.Comp_index_ID_2
+       _Coupling_constant.Comp_ID_2
+       _Coupling_constant.Atom_ID_2
+       _Coupling_constant.Atom_type_2
+       _Coupling_constant.Atom_isotope_number_2
+       _Coupling_constant.Ambiguity_code_2
+       _Coupling_constant.Val
+       _Coupling_constant.Val_min
+       _Coupling_constant.Val_max
+       _Coupling_constant.Val_err
+       _Coupling_constant.Details
+   
+           1  3JCOHA    FDXN     3  Lys  C    C  13  1    FDXN     3  Lys  HA   H   1  1     3.10   .     .    0.35    "phi+120"
+           2  3JCOHA    FDXN     4  Ala  C    C  13  1    FDXN     4  Ala  HA   H   1  1     2.81   .     .    0.35    "phi+120"
+           3  3JCOHA    FDXN     5  Leu  C    C  13  1    FDXN     5  Leu  HA   H   1  1     2.56   .     .    0.35    "phi+120"
+           4  3JCOHA    FDXN     6  Ile  C    C  13  1    FDXN     6  Ile  HA   H   1  1     3.38   .     .    0.35    "phi+120"
+           5  3JCOHA    FDXN     7  Val  C    C  13  1    FDXN     7  Val  HA   H   1  1     2.89   .     .    0.35    "phi+120"
+           6  3JCOHA    FDXN     8  Tyr  C    C  13  1    FDXN     8  Tyr  HA   H   1  1     3.44   .     .    0.35    "phi+120"
+           7  3JCOHA    FDXN    10  Ser  C    C  13  1    FDXN    10  Ser  HA   H   1  1     2.83   .     .    0.35    "phi+120"
+           8  3JCOHA    FDXN    11  Thr  C    C  13  1    FDXN    11  Thr  HA   H   1  1     2.79   .     .    0.35    "phi+120"
+           9  3JCOHA    FDXN    12  Thr  C    C  13  1    FDXN    12  Thr  HA   H   1  1     3.00   .     .    0.35    "phi+120"
+          10  3JCOHA    FDXN    14  Asn  C    C  13  1    FDXN    14  Asn  HA   H   1  1     1.90   .     .    0.35    "phi+120"
+          11  3JCOHA    FDXN    15  Thr  C    C  13  1    FDXN    15  Thr  HA   H   1  1     1.71   .     .    0.35    "phi+120"
+          12  3JCOHA    FDXN    16  Glu  C    C  13  1    FDXN    16  Glu  HA   H   1  1     0.76   .     .    0.35    "phi+120"
+          13  3JCOHA    FDXN    17  Tyr  C    C  13  1    FDXN    17  Tyr  HA   H   1  1     0.90   .     .    0.35    "phi+120"
+          14  3JCOHA    FDXN    18  Thr  C    C  13  1    FDXN    18  Thr  HA   H   1  1     0.86   .     .    0.35    "phi+120"
+          15  3JCOHA    FDXN    19  Ala  C    C  13  1    FDXN    19  Ala  HA   H   1  1     0.68   .     .    0.35    "phi+120"
+          16  3JCOHA    FDXN    20  Glu  C    C  13  1    FDXN    20  Glu  HA   H   1  1     1.30   .     .    0.35    "phi+120"
+          17  3JCOHA    FDXN    21  Thr  C    C  13  1    FDXN    21  Thr  HA   H   1  1     1.45   .     .    0.35    "phi+120"
+          18  3JCOHA    FDXN    22  Ile  C    C  13  1    FDXN    22  Ile  HA   H   1  1     0.24   .     .    0.35    "phi+120"
+          19  3JCOHA    FDXN    23  Ala  C    C  13  1    FDXN    23  Ala  HA   H   1  1     1.53   .     .    0.35    "phi+120"
+          20  3JCOHA    FDXN    24  Arg  C    C  13  1    FDXN    24  Arg  HA   H   1  1     1.40   .     .    0.35    "phi+120"
+          21  3JCOHA    FDXN    25  Glu  C    C  13  1    FDXN    25  Glu  HA   H   1  1     1.50   .     .    0.35    "phi+120"
+          22  3JCOHA    FDXN    26  Leu  C    C  13  1    FDXN    26  Leu  HA   H   1  1     2.00   .     .    0.35    "phi+120"
+          23  3JCOHA    FDXN    27  Ala  C    C  13  1    FDXN    27  Ala  HA   H   1  1     1.76   .     .    0.35    "phi+120"
+          24  3JCOHA    FDXN    28  Asp  C    C  13  1    FDXN    28  Asp  HA   H   1  1     1.83   .     .    0.35    "phi+120"
+          25  3JCOHA    FDXN    29  Ala  C    C  13  1    FDXN    29  Ala  HA   H   1  1     2.48   .     .    0.35    "phi+120"
+          26  3JCOHA    FDXN    30  Gly  C    C  13  1    FDXN    30  Gly  HA2  H   1  1     2.42   .     .    0.35    "phi+120"
+          27  3JCOHA    FDXN    30  Gly  C    C  13  1    FDXN    30  Gly  HA3  H   1  1     4.36   .     .    0.35    "phi-120"
+          28  3JCOHA    FDXN    31  Tyr  C    C  13  1    FDXN    31  Tyr  HA   H   1  1     1.31   .     .    0.35    "phi+120"
+          29  3JCOHA    FDXN    32  Glu  C    C  13  1    FDXN    32  Glu  HA   H   1  1     2.55   .     .    0.35    "phi+120"
+          30  3JCOHA    FDXN    33  Val  C    C  13  1    FDXN    33  Val  HA   H   1  1     2.87   .     .    0.35    "phi+120"
+          31  3JCOHA    FDXN    34  Asp  C    C  13  1    FDXN    34  Asp  HA   H   1  1     2.82   .     .    0.35    "phi+120"
+          32  3JCOHA    FDXN    35  Ser  C    C  13  1    FDXN    35  Ser  HA   H   1  1     2.87   .     .    0.35    "phi+120"
+          33  3JCOHA    FDXN    36  Arg  C    C  13  1    FDXN    36  Arg  HA   H   1  1     3.28   .     .    0.35    "phi+120"
+          34  3JCOHA    FDXN    37  Asp  C    C  13  1    FDXN    37  Asp  HA   H   1  1     1.66   .     .    0.35    "phi+120"
+          35  3JCOHA    FDXN    38  Ala  C    C  13  1    FDXN    38  Ala  HA   H   1  1     1.12   .     .    0.35    "phi+120"
+          36  3JCOHA    FDXN    39  Ala  C    C  13  1    FDXN    39  Ala  HA   H   1  1     0.61   .     .    0.35    "phi+120"
+          37  3JCOHA    FDXN    40  Ser  C    C  13  1    FDXN    40  Ser  HA   H   1  1     2.83   .     .    0.35    "phi+120"
+          38  3JCOHA    FDXN    41  Val  C    C  13  1    FDXN    41  Val  HA   H   1  1     2.82   .     .    0.35    "phi+120"
+          39  3JCOHA    FDXN    42  Glu  C    C  13  1    FDXN    42  Glu  HA   H   1  1     2.59   .     .    0.35    "phi+120"
+          40  3JCOHA    FDXN    43  Ala  C    C  13  1    FDXN    43  Ala  HA   H   1  1     1.73   .     .    0.35    "phi+120"
+          41  3JCOHA    FDXN    44  Gly  C    C  13  1    FDXN    44  Gly  HA2  H   1  1     0.28   .     .    0.35    "phi+120"
+          42  3JCOHA    FDXN    44  Gly  C    C  13  1    FDXN    44  Gly  HA3  H   1  1     6.27   .     .    0.35    "phi-120"
+          43  3JCOHA    FDXN    46  Leu  C    C  13  1    FDXN    46  Leu  HA   H   1  1     1.29   .     .    0.35    "phi+120"
+          44  3JCOHA    FDXN    47  Phe  C    C  13  1    FDXN    47  Phe  HA   H   1  1     2.16   .     .    0.35    "phi+120"
+          45  3JCOHA    FDXN    48  Glu  C    C  13  1    FDXN    48  Glu  HA   H   1  1     1.40   .     .    0.35    "phi+120"
+          46  3JCOHA    FDXN    50  Phe  C    C  13  1    FDXN    50  Phe  HA   H   1  1     2.62   .     .    0.35    "phi+120"
+          47  3JCOHA    FDXN    51  Asp  C    C  13  1    FDXN    51  Asp  HA   H   1  1     2.23   .     .    0.35    "phi+120"
+          48  3JCOHA    FDXN    52  Leu  C    C  13  1    FDXN    52  Leu  HA   H   1  1     2.13   .     .    0.35    "phi+120"
+          49  3JCOHA    FDXN    53  Val  C    C  13  1    FDXN    53  Val  HA   H   1  1     3.66   .     .    0.35    "phi+120"
+          50  3JCOHA    FDXN    54  Leu  C    C  13  1    FDXN    54  Leu  HA   H   1  1     3.20   .     .    0.35    "phi+120"
+          51  3JCOHA    FDXN    55  Leu  C    C  13  1    FDXN    55  Leu  HA   H   1  1     2.67   .     .    0.35    "phi+120"
+          52  3JCOHA    FDXN    57  Cys  C    C  13  1    FDXN    57  Cys  HA   H   1  1     1.93   .     .    0.35    "phi+120"
+          53  3JCOHA    FDXN    58  Ser  C    C  13  1    FDXN    58  Ser  HA   H   1  1     2.31   .     .    0.35    "phi+120"
+          54  3JCOHA    FDXN    59  Thr  C    C  13  1    FDXN    59  Thr  HA   H   1  1     2.08   .     .    0.35    "phi+120"
+          55  3JCOHA    FDXN    60  Trp  C    C  13  1    FDXN    60  Trp  HA   H   1  1     3.58   .     .    0.35    "phi+120"
+          56  3JCOHA    FDXN    62  Asp  C    C  13  1    FDXN    62  Asp  HA   H   1  1     5.11   .     .    0.35    "phi+120"
+          57  3JCOHA    FDXN    64  Ser  C    C  13  1    FDXN    64  Ser  HA   H   1  1     2.49   .     .    0.35    "phi+120"
+          58  3JCOHA    FDXN    65  Ile  C    C  13  1    FDXN    65  Ile  HA   H   1  1     2.54   .     .    0.35    "phi+120"
+          59  3JCOHA    FDXN    66  Glu  C    C  13  1    FDXN    66  Glu  HA   H   1  1     3.28   .     .    0.35    "phi+120"
+          60  3JCOHA    FDXN    67  Leu  C    C  13  1    FDXN    67  Leu  HA   H   1  1     0.98   .     .    0.35    "phi+120"
+          61  3JCOHA    FDXN    68  Gln  C    C  13  1    FDXN    68  Gln  HA   H   1  1     0.87   .     .    0.35    "phi+120"
+          62  3JCOHA    FDXN    69  Asp  C    C  13  1    FDXN    69  Asp  HA   H   1  1     0.93   .     .    0.35    "phi+120"
+          63  3JCOHA    FDXN    70  Asp  C    C  13  1    FDXN    70  Asp  HA   H   1  1     1.55   .     .    0.35    "phi+120"
+          64  3JCOHA    FDXN    71  Phe  C    C  13  1    FDXN    71  Phe  HA   H   1  1     2.62   .     .    0.35    "phi+120"
+          65  3JCOHA    FDXN    72  Ile  C    C  13  1    FDXN    72  Ile  HA   H   1  1     0.69   .     .    0.35    "phi+120"
+          66  3JCOHA    FDXN    74  Leu  C    C  13  1    FDXN    74  Leu  HA   H   1  1     0.99   .     .    0.35    "phi+120"
+          67  3JCOHA    FDXN    75  Phe  C    C  13  1    FDXN    75  Phe  HA   H   1  1     0.48   .     .    0.35    "phi+120"
+          68  3JCOHA    FDXN    76  Asp  C    C  13  1    FDXN    76  Asp  HA   H   1  1     1.38   .     .    0.35    "phi+120"
+          69  3JCOHA    FDXN    78  Leu  C    C  13  1    FDXN    78  Leu  HA   H   1  1     1.54   .     .    0.35    "phi+120"
+          70  3JCOHA    FDXN    79  Glu  C    C  13  1    FDXN    79  Glu  HA   H   1  1     1.24   .     .    0.35    "phi+120"
+          71  3JCOHA    FDXN    80  Glu  C    C  13  1    FDXN    80  Glu  HA   H   1  1     2.61   .     .    0.35    "phi+120"
+          72  3JCOHA    FDXN    81  Thr  C    C  13  1    FDXN    81  Thr  HA   H   1  1     2.38   .     .    0.35    "phi+120"
+          73  3JCOHA    FDXN    82  Gly  C    C  13  1    FDXN    82  Gly  HA2  H   1  1     1.41   .     .    0.35    "phi+120"
+          74  3JCOHA    FDXN    82  Gly  C    C  13  1    FDXN    82  Gly  HA3  H   1  1     5.22   .     .    0.35    "phi-120"
+          75  3JCOHA    FDXN    83  Ala  C    C  13  1    FDXN    83  Ala  HA   H   1  1     2.51   .     .    0.35    "phi+120"
+          76  3JCOHA    FDXN    84  Gln  C    C  13  1    FDXN    84  Gln  HA   H   1  1     1.00   .     .    0.35    "phi+120"
+          77  3JCOHA    FDXN    85  Gly  C    C  13  1    FDXN    85  Gly  HA2  H   1  1     7.37   .     .    0.35    "phi+120"
+          78  3JCOHA    FDXN    85  Gly  C    C  13  1    FDXN    85  Gly  HA3  H   1  1     1.47   .     .    0.35    "phi-120"
+          79  3JCOHA    FDXN    86  Arg  C    C  13  1    FDXN    86  Arg  HA   H   1  1     2.20   .     .    0.35    "phi+120"
+          80  3JCOHA    FDXN    87  Lys  C    C  13  1    FDXN    87  Lys  HA   H   1  1     2.21   .     .    0.35    "phi+120"
+          81  3JCOHA    FDXN    88  Val  C    C  13  1    FDXN    88  Val  HA   H   1  1     2.96   .     .    0.35    "phi+120"
+          82  3JCOHA    FDXN    89  Ala  C    C  13  1    FDXN    89  Ala  HA   H   1  1     2.36   .     .    0.35    "phi+120"
+          83  3JCOHA    FDXN    90  Cys  C    C  13  1    FDXN    90  Cys  HA   H   1  1     3.30   .     .    0.35    "phi+120"
+          84  3JCOHA    FDXN    91  Phe  C    C  13  1    FDXN    91  Phe  HA   H   1  1     2.50   .     .    0.35    "phi+120"
+          85  3JCOHA    FDXN    93  Cys  C    C  13  1    FDXN    93  Cys  HA   H   1  1     3.32   .     .    0.35    "phi+120"
+          86  3JCOHA    FDXN    95  Asp  C    C  13  1    FDXN    95  Asp  HA   H   1  1     2.63   .     .    0.35    "phi+120"
+          87  3JCOHA    FDXN    96  Ser  C    C  13  1    FDXN    96  Ser  HA   H   1  1     2.31   .     .    0.35    "phi+120"
+          88  3JCOHA    FDXN    98  Tyr  C    C  13  1    FDXN    98  Tyr  HA   H   1  1     2.01   .     .    0.35    "phi+120"
+          89  3JCOHA    FDXN    99  Glu  C    C  13  1    FDXN    99  Glu  HA   H   1  1     1.77   .     .    0.35    "phi+120"
+          90  3JCOHA    FDXN   100  Tyr  C    C  13  1    FDXN   100  Tyr  HA   H   1  1     2.92   .     .    0.35    "phi+120"
+          91  3JCOHA    FDXN   101  Phe  C    C  13  1    FDXN   101  Phe  HA   H   1  1     1.51   .     .    0.35    "phi+120"
+          92  3JCOHA    FDXN   102  Cys  C    C  13  1    FDXN   102  Cys  HA   H   1  1     6.93   .     .    0.35    "phi+120"
+          93  3JCOHA    FDXN   103  Gly  C    C  13  1    FDXN   103  Gly  HA2  H   1  1     2.59   .     .    0.35    "phi+120"
+          94  3JCOHA    FDXN   103  Gly  C    C  13  1    FDXN   103  Gly  HA3  H   1  1     3.99   .     .    0.35    "phi-120"
+          95  3JCOHA    FDXN   104  Ala  C    C  13  1    FDXN   104  Ala  HA   H   1  1     0.75   .     .    0.35    "phi+120"
+          96  3JCOHA    FDXN   105  Val  C    C  13  1    FDXN   105  Val  HA   H   1  1     0.88   .     .    0.35    "phi+120"
+          97  3JCOHA    FDXN   106  Asp  C    C  13  1    FDXN   106  Asp  HA   H   1  1     0.88   .     .    0.35    "phi+120"
+          98  3JCOHA    FDXN   107  Ala  C    C  13  1    FDXN   107  Ala  HA   H   1  1     1.01   .     .    0.35    "phi+120"
+          99  3JCOHA    FDXN   108  Ile  C    C  13  1    FDXN   108  Ile  HA   H   1  1     1.46   .     .    0.35    "phi+120"
+         100  3JCOHA    FDXN   109  Glu  C    C  13  1    FDXN   109  Glu  HA   H   1  1     1.10   .     .    0.35    "phi+120"
+         101  3JCOHA    FDXN   110  Glu  C    C  13  1    FDXN   110  Glu  HA   H   1  1     1.01   .     .    0.35    "phi+120"
+         102  3JCOHA    FDXN   112  Leu  C    C  13  1    FDXN   112  Leu  HA   H   1  1     0.68   .     .    0.35    "phi+120"
+         103  3JCOHA    FDXN   113  Lys  C    C  13  1    FDXN   113  Lys  HA   H   1  1     1.33   .     .    0.35    "phi+120"
+         104  3JCOHA    FDXN   114  Asn  C    C  13  1    FDXN   114  Asn  HA   H   1  1     1.67   .     .    0.35    "phi+120"
+         105  3JCOHA    FDXN   115  Leu  C    C  13  1    FDXN   115  Leu  HA   H   1  1     2.39   .     .    0.35    "phi+120"
+         106  3JCOHA    FDXN   116  Gly  C    C  13  1    FDXN   116  Gly  HA2  H   1  1     3.32   .     .    0.35    "phi+120"
+         107  3JCOHA    FDXN   116  Gly  C    C  13  1    FDXN   116  Gly  HA3  H   1  1     5.08   .     .    0.35    "phi-120"
+         108  3JCOHA    FDXN   117  Ala  C    C  13  1    FDXN   117  Ala  HA   H   1  1     1.48   .     .    0.35    "phi+120"
+         109  3JCOHA    FDXN   118  Glu  C    C  13  1    FDXN   118  Glu  HA   H   1  1     2.93   .     .    0.35    "phi+120"
+         110  3JCOHA    FDXN   119  Ile  C    C  13  1    FDXN   119  Ile  HA   H   1  1     1.97   .     .    0.35    "phi+120"
+         111  3JCOHA    FDXN   120  Val  C    C  13  1    FDXN   120  Val  HA   H   1  1     2.49   .     .    0.35    "phi+120"
+         112  3JCOHA    FDXN   121  Gln  C    C  13  1    FDXN   121  Gln  HA   H   1  1     2.14   .     .    0.35    "phi+120"
+         113  3JCOHA    FDXN   122  Asp  C    C  13  1    FDXN   122  Asp  HA   H   1  1     0.69   .     .    0.35    "phi+120"
+         114  3JCOHA    FDXN   124  Leu  C    C  13  1    FDXN   124  Leu  HA   H   1  1     2.83   .     .    0.35    "phi+120"
+         115  3JCOHA    FDXN   126  Ile  C    C  13  1    FDXN   126  Ile  HA   H   1  1     2.64   .     .    0.35    "phi+120"
+         116  3JCOHA    FDXN   127  Asp  C    C  13  1    FDXN   127  Asp  HA   H   1  1     2.56   .     .    0.35    "phi+120"
+         117  3JCOHA    FDXN   128  Gly  C    C  13  1    FDXN   128  Gly  HA2  H   1  1     4.83   .     .    0.35    "phi+120"
+         118  3JCOHA    FDXN   128  Gly  C    C  13  1    FDXN   128  Gly  HA3  H   1  1     2.04   .     .    0.35    "phi-120"
+         119  3JCOHA    FDXN   129  Asp  C    C  13  1    FDXN   129  Asp  HA   H   1  1     2.05   .     .    0.35    "phi+120"
+         120  3JCOHA    FDXN   131  Arg  C    C  13  1    FDXN   131  Arg  HA   H   1  1     0.83   .     .    0.35    "phi+120"
+         121  3JCOHA    FDXN   132  Ala  C    C  13  1    FDXN   132  Ala  HA   H   1  1     1.93   .     .    0.35    "phi+120"
+         122  3JCOHA    FDXN   133  Ala  C    C  13  1    FDXN   133  Ala  HA   H   1  1     2.99   .     .    0.35    "phi+120"
+         123  3JCOHA    FDXN   134  Arg  C    C  13  1    FDXN   134  Arg  HA   H   1  1     1.29   .     .    0.35    "phi+120"
+         124  3JCOHA    FDXN   135  Asp  C    C  13  1    FDXN   135  Asp  HA   H   1  1     1.30   .     .    0.35    "phi+120"
+         125  3JCOHA    FDXN   137  Ile  C    C  13  1    FDXN   137  Ile  HA   H   1  1     1.34   .     .    0.35    "phi+120"
+         126  3JCOHA    FDXN   138  Val  C    C  13  1    FDXN   138  Val  HA   H   1  1     0.70   .     .    0.35    "phi+120"
+         127  3JCOHA    FDXN   139  Gly  C    C  13  1    FDXN   139  Gly  HA2  H   1  1     6.67   .     .    0.35    "phi+120"
+         128  3JCOHA    FDXN   139  Gly  C    C  13  1    FDXN   139  Gly  HA3  H   1  1     1.45   .     .    0.35    "phi-120"
+         129  3JCOHA    FDXN   140  Trp  C    C  13  1    FDXN   140  Trp  HA   H   1  1     0.97   .     .    0.35    "phi+120"
+         130  3JCOHA    FDXN   141  Ala  C    C  13  1    FDXN   141  Ala  HA   H   1  1     1.84   .     .    0.35    "phi+120"
+         131  3JCOHA    FDXN   142  His  C    C  13  1    FDXN   142  His  HA   H   1  1     1.41   .     .    0.35    "phi+120"
+         132  3JCOHA    FDXN   143  Asp  C    C  13  1    FDXN   143  Asp  HA   H   1  1     0.27   .     .    0.35    "phi+120"
+         133  3JCOHA    FDXN   144  Val  C    C  13  1    FDXN   144  Val  HA   H   1  1     1.34   .     .    0.35    "phi+120"
+         134  3JCOHA    FDXN   145  Arg  C    C  13  1    FDXN   145  Arg  HA   H   1  1     1.45   .     .    0.35    "phi+120"
+         135  3JCOHA    FDXN   146  Gly  C    C  13  1    FDXN   146  Gly  HA2  H   1  1     1.76   .     .    0.35    "phi+120"
+         136  3JCOHA    FDXN   146  Gly  C    C  13  1    FDXN   146  Gly  HA3  H   1  1     5.20   .     .    0.35    "phi-120"
+         137  3JCOHA    FDXN   147  Ala  C    C  13  1    FDXN   147  Ala  HA   H   1  1     2.41   .     .    0.35    "phi+120"
+         138  3JCOHA    FDXN   148  Ile  C    C  13  1    FDXN   148  Ile  HA   H   1  1     2.64   .     .    0.35    "phi+120"
+   
+   stop_
+
+save_

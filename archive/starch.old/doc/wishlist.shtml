@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="Wishlist">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <title>Wishlist</title>
+  </HEAD>
+<BODY>
+
+<!--
+Simple stupid way to allow users to submit comments:
+create a file writable by apache user in current directory ("wishes"),
+put its name in the #include directive below, 
+and its full path in "file" parameter on the form.
+
+Submitted comments show up as list items above the form.
+-->
+
+<BODY>
+<h1>Wishlist</h1>
+<h2><A name="top">Add a wish</A></h2>
+<P>
+<form method="post" action="/cgi-bin/wishlist.cgi">
+  <input type="hidden" name="file" value="/web/htdocs/software/starch/doc/wishes">
+  <textarea name="wish" rows="6" cols="50"></textarea>
+  <input type="submit">
+</form>
+<hr>
+
+<H2>Wishes</H2>
+<UL>
+<!--#include file="wishes" -->
+</UL>
+<P>
+<A href="#top">Top of the page</A>
+</body>
+</html>

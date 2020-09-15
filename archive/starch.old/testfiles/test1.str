@@ -1,0 +1,1451 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	PHE	HE	.	.	.	1	#  shift val=- unknown atom!
+2	1	PHE	HD	.	.	.	1	#  shift val=- unknown atom!
+3	1	PHE	HB+	.	3.14	.	1	#  unknown atom!
+4	1	PHE	HB-	.	3.06	.	1	#  unknown atom!
+5	1	PHE	CE	.	.	.	1	#  shift val=- unknown atom!
+6	1	PHE	CD	.	.	.	1	#  shift val=- unknown atom!
+7	1	PHE	H	H	.	.	1	#  shift val=-
+8	1	PHE	N	N	.	.	1	#  shift val=-
+9	1	PHE	CA	C	55.82	.	1	
+10	1	PHE	HA	H	4.75	.	1	
+11	1	PHE	C	C	.	.	1	
+12	1	PHE	CB	C	37.62	.	1	
+13	1	PHE	HB2	H	.	.	1	
+14	1	PHE	HB3	H	.	.	1	
+15	1	PHE	CG	C	.	.	1	#  shift val=-
+16	1	PHE	CD1	C	.	.	1	
+17	1	PHE	HD1	H	.	.	1	
+18	1	PHE	CD2	C	.	.	1	
+19	1	PHE	HD2	H	.	.	1	
+20	1	PHE	CE1	C	.	.	1	
+21	1	PHE	HE1	H	.	.	1	
+22	1	PHE	CE2	C	.	.	1	
+23	1	PHE	HE2	H	.	.	1	
+24	1	PHE	CZ	C	.	.	1	#  shift val=-
+25	1	PHE	HZ	H	.	.	1	#  shift val=-
+26	2	THR	H	H	8.32	.	1	
+27	2	THR	N	N	116.17	.	1	
+28	2	THR	CA	C	59.64	.	1	
+29	2	THR	HA	H	4.23	.	1	
+30	2	THR	C	C	.	.	1	
+31	2	THR	CB	C	67.66	.	1	
+32	2	THR	HB	H	4.05	.	1	
+33	2	THR	HG1	H	.	.	1	
+34	2	THR	CG2	C	19.48	.	1	
+35	2	THR	HG2	H	1.03	.	1	
+36	3	LYS	HB+	.	1.49	.	1	#  unknown atom!
+37	3	LYS	HB-	.	1.38	.	1	#  unknown atom!
+38	3	LYS	H	H	8.03	.	1	
+39	3	LYS	N	N	122.91	.	1	
+40	3	LYS	CA	C	54.37	.	1	
+41	3	LYS	HA	H	3.88	.	1	
+42	3	LYS	C	C	.	.	1	
+43	3	LYS	CB	C	30.35	.	1	
+44	3	LYS	HB2	H	.	.	1	
+45	3	LYS	HB3	H	.	.	1	
+46	3	LYS	CG	C	22.77	.	1	
+47	3	LYS	HG2	H	1.1	.	2	
+48	3	LYS	HG3	H	.	.	1	
+49	3	LYS	CD	C	27.31	.	1	
+50	3	LYS	HD2	H	1.55	.	2	
+51	3	LYS	HD3	H	.	.	1	
+52	3	LYS	CE	C	39.72	.	1	
+53	3	LYS	HE2	H	.	.	1	
+54	3	LYS	HE3	H	.	.	1	
+55	3	LYS	NZ	N	.	.	1	
+56	3	LYS	HZ	H	2.89	.	1	
+57	4	HIS	HE	.	.	.	1	#  shift val=- unknown atom!
+58	4	HIS	HD	.	6.74	.	1	#  unknown atom!
+59	4	HIS	CE	.	.	.	1	#  shift val=- unknown atom!
+60	4	HIS	CD	.	117.94	.	1	#  unknown atom!
+61	4	HIS	H	H	8.11	.	1	
+62	4	HIS	N	N	118.37	.	1	
+63	4	HIS	CA	C	53.95	.	1	
+64	4	HIS	HA	H	4.48	.	1	
+65	4	HIS	C	C	.	.	1	
+66	4	HIS	CB	C	29.26	.	1	
+67	4	HIS	HB2	H	2.6	.	2	
+68	4	HIS	HB3	H	.	.	1	
+69	4	HIS	CG	C	.	.	1	#  shift val=-
+70	4	HIS	ND1	N	.	.	1	
+71	4	HIS	HD1	H	.	.	1	
+72	4	HIS	CD2	C	.	.	1	
+73	4	HIS	HD2	H	.	.	1	
+74	4	HIS	CE1	C	.	.	1	
+75	4	HIS	HE1	H	.	.	1	
+76	4	HIS	NE2	N	.	.	1	
+77	4	HIS	HE2	H	.	.	1	
+78	5	ILE	MD1	.	0.78	.	1	#  unknown atom!
+79	5	ILE	HG1+	.	1.17	.	1	#  unknown atom!
+80	5	ILE	HG1-	.	1.01	.	1	#  unknown atom!
+81	5	ILE	MG2	.	0.78	.	1	#  unknown atom!
+82	5	ILE	H	H	8.04	.	1	
+83	5	ILE	N	N	119.55	.	1	
+84	5	ILE	CA	C	57.42	.	1	
+85	5	ILE	HA	H	4.5	.	1	
+86	5	ILE	C	C	.	.	1	
+87	5	ILE	CB	C	38.64	.	1	
+88	5	ILE	HB	H	1.68	.	1	
+89	5	ILE	CG2	C	15.91	.	1	
+90	5	ILE	HG2	H	.	.	1	
+91	5	ILE	CG1	C	23.96	.	1	
+92	5	ILE	HG12	H	.	.	1	
+93	5	ILE	HG13	H	.	.	1	
+94	5	ILE	CD1	C	10.97	.	1	
+95	5	ILE	HD1	H	.	.	1	
+96	6	CYS	HB-	.	2.56	.	1	#  unknown atom!
+97	6	CYS	HB+	.	3.24	.	1	#  unknown atom!
+98	6	CYS	H	H	9.53	.	1	
+99	6	CYS	N	N	124.13	.	1	
+100	6	CYS	CA	C	57.45	.	1	
+101	6	CYS	HA	H	4.06	.	1	
+102	6	CYS	C	C	.	.	1	
+103	6	CYS	CB	C	28.78	.	1	
+104	6	CYS	HB2	H	.	.	1	
+105	6	CYS	HB3	H	.	.	1	
+106	6	CYS	CG	C	.	.	1	
+107	6	CYS	HG	H	.	.	1	
+108	7	ALA	H	H	9.02	.	1	
+109	7	ALA	N	N	110.46	.	1	
+110	7	ALA	CA	C	52.31	.	1	
+111	7	ALA	HA	H	4.16	.	1	
+112	7	ALA	C	C	.	.	1	
+113	7	ALA	CB	C	17.44	.	1	
+114	7	ALA	HB	H	1.58	.	1	
+115	8	ILE	MD1	.	1.02	.	1	#  unknown atom!
+116	8	ILE	HG1+	.	1.36	.	1	#  unknown atom!
+117	8	ILE	HG1-	.	1.01	.	1	#  unknown atom!
+118	8	ILE	MG2	.	0.87	.	1	#  unknown atom!
+119	8	ILE	H	H	8.84	.	1	
+120	8	ILE	N	N	117.41	.	1	
+121	8	ILE	CA	C	62.19	.	1	
+122	8	ILE	HA	H	3.86	.	1	
+123	8	ILE	C	C	.	.	1	
+124	8	ILE	CB	C	35.86	.	1	
+125	8	ILE	HB	H	2.66	.	1	
+126	8	ILE	CG2	C	18.98	.	1	
+127	8	ILE	HG2	H	.	.	1	
+128	8	ILE	CG1	C	28.92	.	1	
+129	8	ILE	HG12	H	.	.	1	
+130	8	ILE	HG13	H	.	.	1	
+131	8	ILE	CD1	C	14.12	.	1	
+132	8	ILE	HD1	H	.	.	1	
+133	9	CYS	HB-	.	2.15	.	1	#  unknown atom!
+134	9	CYS	HB+	.	2.9	.	1	#  unknown atom!
+135	9	CYS	H	H	8.46	.	1	
+136	9	CYS	N	N	117.43	.	1	
+137	9	CYS	CA	C	56.79	.	1	
+138	9	CYS	HA	H	4.93	.	1	
+139	9	CYS	C	C	.	.	1	
+140	9	CYS	CB	C	32.27	.	1	
+141	9	CYS	HB2	H	.	.	1	
+142	9	CYS	HB3	H	.	.	1	
+143	9	CYS	CG	C	.	.	1	
+144	9	CYS	HG	H	.	.	1	
+145	10	GLY	HA-	.	3.83	.	1	#  unknown atom!
+146	10	GLY	HA+	.	4.33	.	1	#  unknown atom!
+147	10	GLY	H	H	7.9	.	1	
+148	10	GLY	N	N	110.46	.	1	
+149	10	GLY	CA	C	44.21	.	1	
+150	10	GLY	HA2	H	.	.	1	
+151	10	GLY	HA3	H	.	.	1	
+152	10	GLY	C	C	.	.	1	
+153	11	ASP	HB-	.	2.64	.	1	#  unknown atom!
+154	11	ASP	HB+	.	3.05	.	1	#  unknown atom!
+155	11	ASP	H	H	8.82	.	1	
+156	11	ASP	N	N	121.81	.	1	
+157	11	ASP	CA	C	51.38	.	1	
+158	11	ASP	HA	H	4.75	.	1	
+159	11	ASP	C	C	.	.	1	
+160	11	ASP	CB	C	40.1	.	1	
+161	11	ASP	HB2	H	.	.	1	
+162	11	ASP	HB3	H	.	.	1	
+163	11	ASP	CG	C	.	.	1	
+164	11	ASP	HD2	H	.	.	1	
+165	12	ARG	H	H	8.86	.	1	
+166	12	ARG	N	N	120.65	.	1	
+167	12	ARG	CA	C	55.6	.	1	
+168	12	ARG	HA	H	4.17	.	1	
+169	12	ARG	C	C	.	.	1	
+170	12	ARG	CB	C	28.57	.	1	
+171	12	ARG	HB2	H	1.81	.	2	
+172	12	ARG	HB3	H	.	.	1	
+173	12	ARG	CG	C	25.4	.	1	
+174	12	ARG	HG2	H	1.76	.	2	
+175	12	ARG	HG3	H	.	.	1	
+176	12	ARG	CD	C	41.15	.	1	
+177	12	ARG	HD2	H	3.25	.	2	
+178	12	ARG	HD3	H	.	.	1	
+179	12	ARG	NE	N	.	.	1	
+180	12	ARG	HE	H	.	.	1	
+181	12	ARG	CZ	C	.	.	1	
+182	12	ARG	NH1	N	.	.	1	
+183	12	ARG	HH11	H	.	.	1	
+184	12	ARG	HH12	H	.	.	1	
+185	12	ARG	NH2	N	.	.	1	
+186	12	ARG	HH21	H	.	.	1	
+187	12	ARG	HH22	H	.	.	1	
+188	13	SER	HB-	.	3.33	.	1	#  unknown atom!
+189	13	SER	HB+	.	3.65	.	1	#  unknown atom!
+190	13	SER	H	H	7.93	.	1	
+191	13	SER	N	N	116.95	.	1	
+192	13	SER	CA	C	55.35	.	1	
+193	13	SER	HA	H	4.22	.	1	
+194	13	SER	C	C	.	.	1	
+195	13	SER	CB	C	62.14	.	1	
+196	13	SER	HB2	H	.	.	1	
+197	13	SER	HB3	H	.	.	1	
+198	13	SER	HG	H	.	.	1	
+199	14	SER	HB-	.	3.97	.	1	#  unknown atom!
+200	14	SER	HB+	.	4.34	.	1	#  unknown atom!
+201	14	SER	H	H	9.13	.	1	
+202	14	SER	N	N	118.93	.	1	
+203	14	SER	CA	C	55.34	.	1	
+204	14	SER	HA	H	4.93	.	1	
+205	14	SER	C	C	.	.	1	
+206	14	SER	CB	C	62.27	.	1	
+207	14	SER	HB2	H	.	.	1	
+208	14	SER	HB3	H	.	.	1	
+209	14	SER	HG	H	.	.	1	
+210	15	GLY	HA-	.	3.7	.	1	#  unknown atom!
+211	15	GLY	HA+	.	3.99	.	1	#  unknown atom!
+212	15	GLY	H	H	8.13	.	1	
+213	15	GLY	N	N	110.87	.	1	
+214	15	GLY	CA	C	42.14	.	1	
+215	15	GLY	HA2	H	.	.	1	
+216	15	GLY	HA3	H	.	.	1	
+217	15	GLY	C	C	.	.	1	
+218	16	LYS	HD+	.	1.18	.	1	#  unknown atom!
+219	16	LYS	HD-	.	1.12	.	1	#  unknown atom!
+220	16	LYS	HG-	.	0.13	.	1	#  unknown atom!
+221	16	LYS	HG+	.	0.32	.	1	#  unknown atom!
+222	16	LYS	HB-	.	0.77	.	1	#  unknown atom!
+223	16	LYS	HB+	.	1.19	.	1	#  unknown atom!
+224	16	LYS	H	H	7.97	.	1	
+225	16	LYS	N	N	119.84	.	1	
+226	16	LYS	CA	C	53.4	.	1	
+227	16	LYS	HA	H	3.75	.	1	
+228	16	LYS	C	C	.	.	1	
+229	16	LYS	CB	C	30.13	.	1	
+230	16	LYS	HB2	H	.	.	1	
+231	16	LYS	HB3	H	.	.	1	
+232	16	LYS	CG	C	23.35	.	1	
+233	16	LYS	HG2	H	.	.	1	
+234	16	LYS	HG3	H	.	.	1	
+235	16	LYS	CD	C	27.39	.	1	
+236	16	LYS	HD2	H	.	.	1	
+237	16	LYS	HD3	H	.	.	1	
+238	16	LYS	CE	C	39.31	.	1	
+239	16	LYS	HE2	H	.	.	1	
+240	16	LYS	HE3	H	.	.	1	
+241	16	LYS	NZ	N	.	.	1	
+242	16	LYS	HZ	H	2.4	.	1	
+243	17	HIS	HE	.	.	.	1	#  shift val=- unknown atom!
+244	17	HIS	HD	.	7.01	.	1	#  unknown atom!
+245	17	HIS	HB-	.	1.95	.	1	#  unknown atom!
+246	17	HIS	HB+	.	2.65	.	1	#  unknown atom!
+247	17	HIS	CE	.	.	.	1	#  shift val=- unknown atom!
+248	17	HIS	CD	.	119.35	.	1	#  unknown atom!
+249	17	HIS	H	H	8.43	.	1	
+250	17	HIS	N	N	123.73	.	1	
+251	17	HIS	CA	C	52.49	.	1	
+252	17	HIS	HA	H	4.48	.	1	
+253	17	HIS	C	C	.	.	1	
+254	17	HIS	CB	C	29.72	.	1	
+255	17	HIS	HB2	H	.	.	1	
+256	17	HIS	HB3	H	.	.	1	
+257	17	HIS	CG	C	.	.	1	#  shift val=-
+258	17	HIS	ND1	N	.	.	1	
+259	17	HIS	HD1	H	.	.	1	
+260	17	HIS	CD2	C	.	.	1	
+261	17	HIS	HD2	H	.	.	1	
+262	17	HIS	CE1	C	.	.	1	
+263	17	HIS	HE1	H	.	.	1	
+264	17	HIS	NE2	N	.	.	1	
+265	17	HIS	HE2	H	.	.	1	
+266	18	TYR	HE	.	7.03	.	1	#  unknown atom!
+267	18	TYR	HD	.	7.02	.	1	#  unknown atom!
+268	18	TYR	HB-	.	3.12	.	1	#  unknown atom!
+269	18	TYR	HB+	.	3.37	.	1	#  unknown atom!
+270	18	TYR	CE	.	116.37	.	1	#  unknown atom!
+271	18	TYR	CD	.	131.27	.	1	#  unknown atom!
+272	18	TYR	H	H	9.01	.	1	
+273	18	TYR	N	N	120.1	.	1	
+274	18	TYR	CA	C	54.38	.	1	
+275	18	TYR	HA	H	4.18	.	1	
+276	18	TYR	C	C	.	.	1	
+277	18	TYR	CB	C	32.9	.	1	
+278	18	TYR	HB2	H	.	.	1	
+279	18	TYR	HB3	H	.	.	1	
+280	18	TYR	CG	C	.	.	1	#  shift val=-
+281	18	TYR	CD1	C	.	.	1	
+282	18	TYR	HD1	H	.	.	1	
+283	18	TYR	CD2	C	.	.	1	
+284	18	TYR	HD2	H	.	.	1	
+285	18	TYR	CE1	C	.	.	1	
+286	18	TYR	HE1	H	.	.	1	
+287	18	TYR	CE2	C	.	.	1	
+288	18	TYR	HE2	H	.	.	1	
+289	18	TYR	CZ	C	.	.	1	
+290	18	TYR	HH	H	.	.	1	
+291	19	GLY	HA-	.	3.36	.	1	#  unknown atom!
+292	19	GLY	HA+	.	4.52	.	1	#  unknown atom!
+293	19	GLY	H	H	8.21	.	1	
+294	19	GLY	N	N	129.71	.	1	
+295	19	GLY	CA	C	42.44	.	1	
+296	19	GLY	HA2	H	.	.	1	
+297	19	GLY	HA3	H	.	.	1	
+298	19	GLY	C	C	.	.	1	
+299	20	VAL	MGY	.	0.64	.	1	#  unknown atom!
+300	20	VAL	MGX	.	0.79	.	1	#  unknown atom!
+301	20	VAL	CGY	.	19.97	.	1	#  unknown atom!
+302	20	VAL	CGX	.	19.84	.	1	#  unknown atom!
+303	20	VAL	H	H	7.39	.	1	
+304	20	VAL	N	N	117.06	.	1	
+305	20	VAL	CA	C	58.02	.	1	
+306	20	VAL	HA	H	4.34	.	1	
+307	20	VAL	C	C	.	.	1	
+308	20	VAL	CB	C	34.63	.	1	
+309	20	VAL	HB	H	1.82	.	1	
+310	20	VAL	CG1	C	.	.	1	
+311	20	VAL	HG1	H	.	.	1	
+312	20	VAL	CG2	C	.	.	1	
+313	20	VAL	HG2	H	.	.	1	
+314	21	TYR	HE	.	6.51	.	1	#  unknown atom!
+315	21	TYR	HD	.	6.95	.	1	#  unknown atom!
+316	21	TYR	CE	.	116.06	.	1	#  unknown atom!
+317	21	TYR	CD	.	130.96	.	1	#  unknown atom!
+318	21	TYR	H	H	8.79	.	1	
+319	21	TYR	N	N	127.17	.	1	
+320	21	TYR	CA	C	59.31	.	1	
+321	21	TYR	HA	H	4.56	.	1	
+322	21	TYR	C	C	.	.	1	
+323	21	TYR	CB	C	35.18	.	1	
+324	21	TYR	HB2	H	2.85	.	2	
+325	21	TYR	HB3	H	.	.	1	
+326	21	TYR	CG	C	.	.	1	#  shift val=-
+327	21	TYR	CD1	C	.	.	1	
+328	21	TYR	HD1	H	.	.	1	
+329	21	TYR	CD2	C	.	.	1	
+330	21	TYR	HD2	H	.	.	1	
+331	21	TYR	CE1	C	.	.	1	
+332	21	TYR	HE1	H	.	.	1	
+333	21	TYR	CE2	C	.	.	1	
+334	21	TYR	HE2	H	.	.	1	
+335	21	TYR	CZ	C	.	.	1	
+336	21	TYR	HH	H	.	.	1	
+337	22	SER	HB-	.	3.75	.	1	#  unknown atom!
+338	22	SER	HB+	.	3.97	.	1	#  unknown atom!
+339	22	SER	H	H	8.48	.	1	
+340	22	SER	N	N	116.62	.	1	
+341	22	SER	CA	C	54.19	.	1	
+342	22	SER	HA	H	6.37	.	1	
+343	22	SER	C	C	.	.	1	
+344	22	SER	CB	C	65.07	.	1	
+345	22	SER	HB2	H	.	.	1	
+346	22	SER	HB3	H	.	.	1	
+347	22	SER	HG	H	.	.	1	
+348	23	CYS	HB-	.	2.93	.	1	#  unknown atom!
+349	23	CYS	HB+	.	3.6	.	1	#  unknown atom!
+350	23	CYS	H	H	9.35	.	1	
+351	23	CYS	N	N	120.56	.	1	
+352	23	CYS	CA	C	55.92	.	1	
+353	23	CYS	HA	H	5.24	.	1	
+354	23	CYS	C	C	.	.	1	
+355	23	CYS	CB	C	30.32	.	1	
+356	23	CYS	HB2	H	.	.	1	
+357	23	CYS	HB3	H	.	.	1	
+358	23	CYS	CG	C	.	.	1	
+359	23	CYS	HG	H	.	.	1	
+360	24	GLU	HG-	.	2.34	.	1	#  unknown atom!
+361	24	GLU	HG+	.	2.41	.	1	#  unknown atom!
+362	24	GLU	H	H	9.1	.	1	
+363	24	GLU	N	N	120.2	.	1	
+364	24	GLU	CA	C	57.19	.	1	
+365	24	GLU	HA	H	3.82	.	1	
+366	24	GLU	C	C	.	.	1	
+367	24	GLU	CB	C	28.16	.	1	
+368	24	GLU	HB2	H	2.06	.	2	
+369	24	GLU	HB3	H	.	.	1	
+370	24	GLU	CG	C	34.23	.	1	
+371	24	GLU	HG2	H	.	.	1	
+372	24	GLU	HG3	H	.	.	1	
+373	24	GLU	CD	C	.	.	1	
+374	24	GLU	HE2	H	.	.	1	
+375	25	GLY	H	H	8.71	.	1	
+376	25	GLY	N	N	111.71	.	1	
+377	25	GLY	CA	C	45.38	.	1	
+378	25	GLY	HA2	H	3.97	.	2	
+379	25	GLY	HA3	H	.	.	1	
+380	25	GLY	C	C	.	.	1	
+381	26	CYS	HB-	.	3.0	.	1	#  unknown atom!
+382	26	CYS	HB+	.	3.08	.	1	#  unknown atom!
+383	26	CYS	H	H	9.84	.	1	
+384	26	CYS	N	N	129.03	.	1	
+385	26	CYS	CA	C	63.24	.	1	
+386	26	CYS	HA	H	4.13	.	1	
+387	26	CYS	C	C	.	.	1	
+388	26	CYS	CB	C	27.67	.	1	
+389	26	CYS	HB2	H	.	.	1	
+390	26	CYS	HB3	H	.	.	1	
+391	26	CYS	CG	C	.	.	1	
+392	26	CYS	HG	H	.	.	1	
+393	27	LYS	HE-	.	2.57	.	1	#  unknown atom!
+394	27	LYS	HE+	.	2.67	.	1	#  unknown atom!
+395	27	LYS	HD-	.	0.43	.	1	#  unknown atom!
+396	27	LYS	HD+	.	0.95	.	1	#  unknown atom!
+397	27	LYS	HB-	.	1.56	.	1	#  unknown atom!
+398	27	LYS	HB+	.	1.64	.	1	#  unknown atom!
+399	27	LYS	H	H	8.04	.	1	
+400	27	LYS	N	N	120.83	.	1	
+401	27	LYS	CA	C	58.73	.	1	
+402	27	LYS	HA	H	3.95	.	1	
+403	27	LYS	C	C	.	.	1	
+404	27	LYS	CB	C	29.8	.	1	
+405	27	LYS	HB2	H	.	.	1	
+406	27	LYS	HB3	H	.	.	1	
+407	27	LYS	CG	C	23.08	.	1	
+408	27	LYS	HG2	H	1.1	.	2	
+409	27	LYS	HG3	H	.	.	1	
+410	27	LYS	CD	C	27.13	.	1	
+411	27	LYS	HD2	H	.	.	1	
+412	27	LYS	HD3	H	.	.	1	
+413	27	LYS	CE	C	39.59	.	1	
+414	27	LYS	HE2	H	.	.	1	
+415	27	LYS	HE3	H	.	.	1	
+416	27	LYS	NZ	N	.	.	1	
+417	27	LYS	HZ	H	.	.	1	
+418	28	GLY	HA-	.	3.87	.	1	#  unknown atom!
+419	28	GLY	HA+	.	4.06	.	1	#  unknown atom!
+420	28	GLY	H	H	8.4	.	1	
+421	28	GLY	N	N	129.41	.	1	
+422	28	GLY	CA	C	45.18	.	1	
+423	28	GLY	HA2	H	.	.	1	
+424	28	GLY	HA3	H	.	.	1	
+425	28	GLY	C	C	.	.	1	
+426	29	PHE	HE	.	7.07	.	1	#  unknown atom!
+427	29	PHE	HD	.	7.32	.	1	#  unknown atom!
+428	29	PHE	HB-	.	3.17	.	1	#  unknown atom!
+429	29	PHE	HB+	.	3.37	.	1	#  unknown atom!
+430	29	PHE	CE	.	129.08	.	1	#  unknown atom!
+431	29	PHE	CD	.	128.29	.	1	#  unknown atom!
+432	29	PHE	H	H	8.43	.	1	
+433	29	PHE	N	N	122.89	.	1	
+434	29	PHE	CA	C	58.76	.	1	
+435	29	PHE	HA	H	4.38	.	1	
+436	29	PHE	C	C	.	.	1	
+437	29	PHE	CB	C	37.31	.	1	
+438	29	PHE	HB2	H	.	.	1	
+439	29	PHE	HB3	H	.	.	1	
+440	29	PHE	CG	C	.	.	1	#  shift val=-
+441	29	PHE	CD1	C	.	.	1	
+442	29	PHE	HD1	H	.	.	1	
+443	29	PHE	CD2	C	.	.	1	
+444	29	PHE	HD2	H	.	.	1	
+445	29	PHE	CE1	C	.	.	1	
+446	29	PHE	HE1	H	.	.	1	
+447	29	PHE	CE2	C	.	.	1	
+448	29	PHE	HE2	H	.	.	1	
+449	29	PHE	CZ	C	129.08	.	1	
+450	29	PHE	HZ	H	7.66	.	1	
+451	30	PHE	HE	.	6.8	.	1	#  unknown atom!
+452	30	PHE	HD	.	6.88	.	1	#  unknown atom!
+453	30	PHE	HB-	.	3.24	.	1	#  unknown atom!
+454	30	PHE	HB+	.	3.31	.	1	#  unknown atom!
+455	30	PHE	CE	.	127.2	.	1	#  unknown atom!
+456	30	PHE	CD	.	.	.	1	#  shift val=- unknown atom!
+457	30	PHE	H	H	8.84	.	1	
+458	30	PHE	N	N	126.8	.	1	
+459	30	PHE	CA	C	61.31	.	1	
+460	30	PHE	HA	H	3.68	.	1	
+461	30	PHE	C	C	.	.	1	
+462	30	PHE	CB	C	38.96	.	1	
+463	30	PHE	HB2	H	.	.	1	
+464	30	PHE	HB3	H	.	.	1	
+465	30	PHE	CG	C	.	.	1	#  shift val=-
+466	30	PHE	CD1	C	.	.	1	
+467	30	PHE	HD1	H	.	.	1	
+468	30	PHE	CD2	C	.	.	1	
+469	30	PHE	HD2	H	.	.	1	
+470	30	PHE	CE1	C	.	.	1	
+471	30	PHE	HE1	H	.	.	1	
+472	30	PHE	CE2	C	.	.	1	
+473	30	PHE	HE2	H	.	.	1	
+474	30	PHE	CZ	C	.	.	1	#  shift val=-
+475	30	PHE	HZ	H	6.88	.	1	
+476	31	LYS	HD-	.	1.76	.	1	#  unknown atom!
+477	31	LYS	HD+	.	1.84	.	1	#  unknown atom!
+478	31	LYS	HG-	.	1.27	.	1	#  unknown atom!
+479	31	LYS	HG+	.	1.39	.	1	#  unknown atom!
+480	31	LYS	HB-	.	1.97	.	1	#  unknown atom!
+481	31	LYS	HB+	.	2.43	.	1	#  unknown atom!
+482	31	LYS	H	H	8.6	.	1	
+483	31	LYS	N	N	117.67	.	1	
+484	31	LYS	CA	C	58.31	.	1	
+485	31	LYS	HA	H	3.7	.	1	
+486	31	LYS	C	C	.	.	1	
+487	31	LYS	CB	C	30.38	.	1	
+488	31	LYS	HB2	H	.	.	1	
+489	31	LYS	HB3	H	.	.	1	
+490	31	LYS	CG	C	23.12	.	1	
+491	31	LYS	HG2	H	.	.	1	
+492	31	LYS	HG3	H	.	.	1	
+493	31	LYS	CD	C	28.12	.	1	
+494	31	LYS	HD2	H	.	.	1	
+495	31	LYS	HD3	H	.	.	1	
+496	31	LYS	CE	C	39.7	.	1	
+497	31	LYS	HE2	H	.	.	1	
+498	31	LYS	HE3	H	.	.	1	
+499	31	LYS	NZ	N	.	.	1	
+500	31	LYS	HZ	H	2.96	.	1	
+501	32	ARG	HB-	.	1.71	.	1	#  unknown atom!
+502	32	ARG	HB+	.	1.85	.	1	#  unknown atom!
+503	32	ARG	H	H	8.19	.	1	
+504	32	ARG	N	N	117.16	.	1	
+505	32	ARG	CA	C	57.49	.	1	
+506	32	ARG	HA	H	3.98	.	1	
+507	32	ARG	C	C	.	.	1	
+508	32	ARG	CB	C	28.34	.	1	
+509	32	ARG	HB2	H	.	.	1	
+510	32	ARG	HB3	H	.	.	1	
+511	32	ARG	CG	C	26.1	.	1	
+512	32	ARG	HG2	H	1.54	.	2	
+513	32	ARG	HG3	H	.	.	1	
+514	32	ARG	CD	C	41.56	.	1	
+515	32	ARG	HD2	H	3.22	.	2	
+516	32	ARG	HD3	H	.	.	1	
+517	32	ARG	NE	N	.	.	1	
+518	32	ARG	HE	H	.	.	1	
+519	32	ARG	CZ	C	.	.	1	
+520	32	ARG	NH1	N	.	.	1	
+521	32	ARG	HH11	H	.	.	1	
+522	32	ARG	HH12	H	.	.	1	
+523	32	ARG	NH2	N	.	.	1	
+524	32	ARG	HH21	H	.	.	1	
+525	32	ARG	HH22	H	.	.	1	
+526	33	THR	H	H	7.55	.	1	
+527	33	THR	N	N	114.39	.	1	
+528	33	THR	CA	C	65.35	.	1	
+529	33	THR	HA	H	3.32	.	1	
+530	33	THR	C	C	.	.	1	
+531	33	THR	CB	C	66.92	.	1	
+532	33	THR	HB	H	3.8	.	1	
+533	33	THR	HG1	H	.	.	1	
+534	33	THR	CG2	C	19.41	.	1	
+535	33	THR	HG2	H	0.38	.	1	
+536	34	VAL	MGY	.	0.34	.	1	#  unknown atom!
+537	34	VAL	MGX	.	0.73	.	1	#  unknown atom!
+538	34	VAL	CGY	.	20.89	.	1	#  unknown atom!
+539	34	VAL	CGX	.	19.01	.	1	#  unknown atom!
+540	34	VAL	H	H	7.6	.	1	
+541	34	VAL	N	N	118.56	.	1	
+542	34	VAL	CA	C	63.64	.	1	
+543	34	VAL	HA	H	3.42	.	1	
+544	34	VAL	C	C	.	.	1	
+545	34	VAL	CB	C	29.97	.	1	
+546	34	VAL	HB	H	1.67	.	1	
+547	34	VAL	CG1	C	.	.	1	
+548	34	VAL	HG1	H	.	.	1	
+549	34	VAL	CG2	C	.	.	1	
+550	34	VAL	HG2	H	.	.	1	
+551	35	ARG	HD-	.	3.09	.	1	#  unknown atom!
+552	35	ARG	HD+	.	3.13	.	1	#  unknown atom!
+553	35	ARG	HG-	.	1.48	.	1	#  unknown atom!
+554	35	ARG	HG+	.	1.73	.	1	#  unknown atom!
+555	35	ARG	HB-	.	1.74	.	1	#  unknown atom!
+556	35	ARG	HB+	.	1.85	.	1	#  unknown atom!
+557	35	ARG	H	H	8.78	.	1	
+558	35	ARG	N	N	118.74	.	1	
+559	35	ARG	CA	C	57.7	.	1	
+560	35	ARG	HA	H	3.89	.	1	
+561	35	ARG	C	C	.	.	1	
+562	35	ARG	CB	C	28.22	.	1	
+563	35	ARG	HB2	H	.	.	1	
+564	35	ARG	HB3	H	.	.	1	
+565	35	ARG	CG	C	26.39	.	1	
+566	35	ARG	HG2	H	.	.	1	
+567	35	ARG	HG3	H	.	.	1	
+568	35	ARG	CD	C	40.99	.	1	
+569	35	ARG	HD2	H	.	.	1	
+570	35	ARG	HD3	H	.	.	1	
+571	35	ARG	NE	N	.	.	1	
+572	35	ARG	HE	H	.	.	1	
+573	35	ARG	CZ	C	.	.	1	
+574	35	ARG	NH1	N	.	.	1	
+575	35	ARG	HH11	H	.	.	1	
+576	35	ARG	HH12	H	.	.	1	
+577	35	ARG	NH2	N	.	.	1	
+578	35	ARG	HH21	H	.	.	1	
+579	35	ARG	HH22	H	.	.	1	
+580	36	LYS	HB-	.	1.66	.	1	#  unknown atom!
+581	36	LYS	HB+	.	1.88	.	1	#  unknown atom!
+582	36	LYS	H	H	7.82	.	1	
+583	36	LYS	N	N	114.04	.	1	
+584	36	LYS	CA	C	53.4	.	1	
+585	36	LYS	HA	H	4.28	.	1	
+586	36	LYS	C	C	.	.	1	
+587	36	LYS	CB	C	29.26	.	1	
+588	36	LYS	HB2	H	.	.	1	
+589	36	LYS	HB3	H	.	.	1	
+590	36	LYS	CG	C	23.5	.	1	
+591	36	LYS	HG2	H	1.33	.	2	
+592	36	LYS	HG3	H	.	.	1	
+593	36	LYS	CD	C	26.74	.	1	
+594	36	LYS	HD2	H	1.59	.	2	
+595	36	LYS	HD3	H	.	.	1	
+596	36	LYS	CE	C	39.95	.	1	
+597	36	LYS	HE2	H	.	.	1	
+598	36	LYS	HE3	H	.	.	1	
+599	36	LYS	NZ	N	.	.	1	
+600	36	LYS	HZ	H	2.96	.	1	
+601	37	ASP	HB-	.	2.2	.	1	#  unknown atom!
+602	37	ASP	HB+	.	2.99	.	1	#  unknown atom!
+603	37	ASP	H	H	7.44	.	1	
+604	37	ASP	N	N	120.74	.	1	
+605	37	ASP	CA	C	52.78	.	1	
+606	37	ASP	HA	H	4.23	.	1	
+607	37	ASP	C	C	.	.	1	
+608	37	ASP	CB	C	37.16	.	1	
+609	37	ASP	HB2	H	.	.	1	
+610	37	ASP	HB3	H	.	.	1	
+611	37	ASP	CG	C	.	.	1	
+612	37	ASP	HD2	H	.	.	1	
+613	38	LEU	MDY	.	0.71	.	1	#  unknown atom!
+614	38	LEU	MDX	.	0.81	.	1	#  unknown atom!
+615	38	LEU	HB-	.	0.88	.	1	#  unknown atom!
+616	38	LEU	HB+	.	1.25	.	1	#  unknown atom!
+617	38	LEU	CDY	.	20.51	.	1	#  unknown atom!
+618	38	LEU	CDX	.	23.84	.	1	#  unknown atom!
+619	38	LEU	H	H	7.81	.	1	
+620	38	LEU	N	N	117.28	.	1	
+621	38	LEU	CA	C	52.88	.	1	
+622	38	LEU	HA	H	4.09	.	1	
+623	38	LEU	C	C	.	.	1	
+624	38	LEU	CB	C	40.43	.	1	
+625	38	LEU	HB2	H	.	.	1	
+626	38	LEU	HB3	H	.	.	1	
+627	38	LEU	CG	C	24.9	.	1	
+628	38	LEU	CD1	C	.	.	1	
+629	38	LEU	HD1	H	.	.	1	
+630	38	LEU	CD2	C	.	.	1	
+631	38	LEU	HD2	H	.	.	1	
+632	38	LEU	HG	H	1.38	.	1	
+633	39	THR	H	H	7.86	.	1	
+634	39	THR	N	N	114.69	.	1	
+635	39	THR	CA	C	58.86	.	1	
+636	39	THR	HA	H	3.93	.	1	
+637	39	THR	C	C	.	.	1	
+638	39	THR	CB	C	68.78	.	1	
+639	39	THR	HB	H	3.91	.	1	
+640	39	THR	HG1	H	.	.	1	
+641	39	THR	CG2	C	19.49	.	1	
+642	39	THR	HG2	H	1.08	.	1	
+643	40	TYR	HE	.	6.51	.	1	#  unknown atom!
+644	40	TYR	HD	.	7.0	.	1	#  unknown atom!
+645	40	TYR	HB-	.	2.6	.	1	#  unknown atom!
+646	40	TYR	HB+	.	3.55	.	1	#  unknown atom!
+647	40	TYR	CE	.	116.06	.	1	#  unknown atom!
+648	40	TYR	CD	.	131.27	.	1	#  unknown atom!
+649	40	TYR	H	H	8.65	.	1	
+650	40	TYR	N	N	124.42	.	1	
+651	40	TYR	CA	C	53.32	.	1	
+652	40	TYR	HA	H	5.28	.	1	
+653	40	TYR	C	C	.	.	1	
+654	40	TYR	CB	C	40.08	.	1	
+655	40	TYR	HB2	H	.	.	1	
+656	40	TYR	HB3	H	.	.	1	
+657	40	TYR	CG	C	.	.	1	#  shift val=-
+658	40	TYR	CD1	C	.	.	1	
+659	40	TYR	HD1	H	.	.	1	
+660	40	TYR	CD2	C	.	.	1	
+661	40	TYR	HD2	H	.	.	1	
+662	40	TYR	CE1	C	.	.	1	
+663	40	TYR	HE1	H	.	.	1	
+664	40	TYR	CE2	C	.	.	1	
+665	40	TYR	HE2	H	.	.	1	
+666	40	TYR	CZ	C	.	.	1	
+667	40	TYR	HH	H	.	.	1	
+668	41	THR	H	H	8.64	.	1	
+669	41	THR	N	N	113.44	.	1	
+670	41	THR	CA	C	59.16	.	1	
+671	41	THR	HA	H	4.47	.	1	
+672	41	THR	C	C	.	.	1	
+673	41	THR	CB	C	69.63	.	1	
+674	41	THR	HB	H	3.9	.	1	
+675	41	THR	HG1	H	.	.	1	
+676	41	THR	CG2	C	19.49	.	1	
+677	41	THR	HG2	H	1.08	.	1	
+678	42	CYS	HB-	.	2.37	.	1	#  unknown atom!
+679	42	CYS	HB+	.	2.62	.	1	#  unknown atom!
+680	42	CYS	H	H	8.74	.	1	
+681	42	CYS	N	N	130.01	.	1	
+682	42	CYS	CA	C	57.73	.	1	
+683	42	CYS	HA	H	4.49	.	1	
+684	42	CYS	C	C	.	.	1	
+685	42	CYS	CB	C	28.33	.	1	
+686	42	CYS	HB2	H	.	.	1	
+687	42	CYS	HB3	H	.	.	1	
+688	42	CYS	CG	C	.	.	1	
+689	42	CYS	HG	H	.	.	1	
+690	43	ARG	HB-	.	1.8	.	1	#  unknown atom!
+691	43	ARG	HB+	.	2.0	.	1	#  unknown atom!
+692	43	ARG	H	H	9.23	.	1	
+693	43	ARG	N	N	130.56	.	1	
+694	43	ARG	CA	C	55.33	.	1	
+695	43	ARG	HA	H	4.28	.	1	
+696	43	ARG	C	C	.	.	1	
+697	43	ARG	CB	C	28.77	.	1	
+698	43	ARG	HB2	H	.	.	1	
+699	43	ARG	HB3	H	.	.	1	
+700	43	ARG	CG	C	25.61	.	1	
+701	43	ARG	HG2	H	1.76	.	2	
+702	43	ARG	HG3	H	.	.	1	
+703	43	ARG	CD	C	41.15	.	1	
+704	43	ARG	HD2	H	3.25	.	2	
+705	43	ARG	HD3	H	.	.	1	
+706	43	ARG	NE	N	.	.	1	
+707	43	ARG	HE	H	.	.	1	
+708	43	ARG	CZ	C	.	.	1	
+709	43	ARG	NH1	N	.	.	1	
+710	43	ARG	HH11	H	.	.	1	
+711	43	ARG	HH12	H	.	.	1	
+712	43	ARG	NH2	N	.	.	1	
+713	43	ARG	HH21	H	.	.	1	
+714	43	ARG	HH22	H	.	.	1	
+715	44	ASP	HB-	.	2.41	.	1	#  unknown atom!
+716	44	ASP	HB+	.	2.76	.	1	#  unknown atom!
+717	44	ASP	H	H	9.45	.	1	
+718	44	ASP	N	N	126.39	.	1	
+719	44	ASP	CA	C	51.92	.	1	
+720	44	ASP	HA	H	4.91	.	1	
+721	44	ASP	C	C	.	.	1	
+722	44	ASP	CB	C	40.49	.	1	
+723	44	ASP	HB2	H	.	.	1	
+724	44	ASP	HB3	H	.	.	1	
+725	44	ASP	CG	C	.	.	1	
+726	44	ASP	HD2	H	.	.	1	
+727	45	ASN	HD2-	.	6.79	.	1	#  unknown atom!
+728	45	ASN	HD2+	.	7.66	.	1	#  unknown atom!
+729	45	ASN	HB-	.	2.44	.	1	#  unknown atom!
+730	45	ASN	HB+	.	2.88	.	1	#  unknown atom!
+731	45	ASN	H	H	8.79	.	1	
+732	45	ASN	N	N	123.12	.	1	
+733	45	ASN	CA	C	50.93	.	1	
+734	45	ASN	HA	H	5.07	.	1	
+735	45	ASN	C	C	.	.	1	
+736	45	ASN	CB	C	37.76	.	1	
+737	45	ASN	HB2	H	.	.	1	
+738	45	ASN	HB3	H	.	.	1	
+739	45	ASN	CG	C	.	.	1	
+740	45	ASN	ND2	N	113.36	.	1	
+741	45	ASN	HD21	H	.	.	1	
+742	45	ASN	HD22	H	.	.	1	
+743	46	LYS	HE-	.	.	.	1	#  shift val=- unknown atom!
+744	46	LYS	HE+	.	.	.	1	#  shift val=- unknown atom!
+745	46	LYS	HD-	.	.	.	1	#  shift val=- unknown atom!
+746	46	LYS	HD+	.	.	.	1	#  shift val=- unknown atom!
+747	46	LYS	HG-	.	.	.	1	#  shift val=- unknown atom!
+748	46	LYS	HG+	.	.	.	1	#  shift val=- unknown atom!
+749	46	LYS	HB-	.	2.12	.	1	#  unknown atom!
+750	46	LYS	HB+	.	2.18	.	1	#  unknown atom!
+751	46	LYS	H	H	9.43	.	1	
+752	46	LYS	N	N	119.38	.	1	
+753	46	LYS	CA	C	55.83	.	1	
+754	46	LYS	HA	H	4.06	.	1	
+755	46	LYS	C	C	.	.	1	
+756	46	LYS	CB	C	27.33	.	1	
+757	46	LYS	HB2	H	.	.	1	
+758	46	LYS	HB3	H	.	.	1	
+759	46	LYS	CG	C	.	.	1	#  shift val=-
+760	46	LYS	HG2	H	.	.	2	#  shift val=-
+761	46	LYS	HG3	H	.	.	1	
+762	46	LYS	CD	C	.	.	1	#  shift val=-
+763	46	LYS	HD2	H	.	.	2	#  shift val=-
+764	46	LYS	HD3	H	.	.	1	
+765	46	LYS	CE	C	.	.	1	#  shift val=-
+766	46	LYS	HE2	H	.	.	1	
+767	46	LYS	HE3	H	.	.	1	
+768	46	LYS	NZ	N	.	.	1	
+769	46	LYS	HZ	H	.	.	1	#  shift val=-
+770	47	ASP	HB+	.	2.64	.	1	#  unknown atom!
+771	47	ASP	HB-	.	2.43	.	1	#  unknown atom!
+772	47	ASP	H	H	8.34	.	1	
+773	47	ASP	N	N	119.81	.	1	
+774	47	ASP	CA	C	50.96	.	1	
+775	47	ASP	HA	H	4.91	.	1	
+776	47	ASP	C	C	.	.	1	
+777	47	ASP	CB	C	38.6	.	1	
+778	47	ASP	HB2	H	.	.	1	
+779	47	ASP	HB3	H	.	.	1	
+780	47	ASP	CG	C	.	.	1	
+781	47	ASP	HD2	H	.	.	1	
+782	48	CYS	HB-	.	2.63	.	1	#  unknown atom!
+783	48	CYS	HB+	.	2.95	.	1	#  unknown atom!
+784	48	CYS	H	H	9.41	.	1	
+785	48	CYS	N	N	124.66	.	1	
+786	48	CYS	CA	C	59.76	.	1	
+787	48	CYS	HA	H	3.9	.	1	
+788	48	CYS	C	C	.	.	1	
+789	48	CYS	CB	C	28.37	.	1	
+790	48	CYS	HB2	H	.	.	1	
+791	48	CYS	HB3	H	.	.	1	
+792	48	CYS	CG	C	.	.	1	
+793	48	CYS	HG	H	.	.	1	
+794	49	LEU	MDY	.	0.83	.	1	#  unknown atom!
+795	49	LEU	MDX	.	0.88	.	1	#  unknown atom!
+796	49	LEU	HB+	.	1.55	.	1	#  unknown atom!
+797	49	LEU	HB-	.	1.53	.	1	#  unknown atom!
+798	49	LEU	CDY	.	22.39	.	1	#  unknown atom!
+799	49	LEU	CDX	.	22.39	.	1	#  unknown atom!
+800	49	LEU	H	H	8.31	.	1	
+801	49	LEU	N	N	123.16	.	1	
+802	49	LEU	CA	C	53.31	.	1	
+803	49	LEU	HA	H	4.2	.	1	
+804	49	LEU	C	C	.	.	1	
+805	49	LEU	CB	C	39.76	.	1	
+806	49	LEU	HB2	H	.	.	1	
+807	49	LEU	HB3	H	.	.	1	
+808	49	LEU	CG	C	25.48	.	1	
+809	49	LEU	CD1	C	.	.	1	
+810	49	LEU	HD1	H	.	.	1	
+811	49	LEU	CD2	C	.	.	1	
+812	49	LEU	HD2	H	.	.	1	
+813	49	LEU	HG	H	1.49	.	1	
+814	50	ILE	MD1	.	0.59	.	1	#  unknown atom!
+815	50	ILE	HG1+	.	1.56	.	1	#  unknown atom!
+816	50	ILE	HG1-	.	0.97	.	1	#  unknown atom!
+817	50	ILE	MG2	.	0.66	.	1	#  unknown atom!
+818	50	ILE	H	H	8.5	.	1	
+819	50	ILE	N	N	125.15	.	1	
+820	50	ILE	CA	C	56.79	.	1	
+821	50	ILE	HA	H	4.17	.	1	
+822	50	ILE	C	C	.	.	1	
+823	50	ILE	CB	C	33.89	.	1	
+824	50	ILE	HB	H	2.06	.	1	
+825	50	ILE	CG2	C	16.15	.	1	
+826	50	ILE	HG2	H	.	.	1	
+827	50	ILE	CG1	C	24.37	.	1	
+828	50	ILE	HG12	H	.	.	1	
+829	50	ILE	HG13	H	.	.	1	
+830	50	ILE	CD1	C	8.65	.	1	
+831	50	ILE	HD1	H	.	.	1	
+832	51	ASP	HB-	.	2.53	.	1	#  unknown atom!
+833	51	ASP	HB+	.	2.87	.	1	#  unknown atom!
+834	51	ASP	H	H	7.68	.	1	
+835	51	ASP	N	N	124.66	.	1	
+836	51	ASP	CA	C	50.82	.	1	
+837	51	ASP	HA	H	4.88	.	1	
+838	51	ASP	C	C	.	.	1	
+839	51	ASP	CB	C	41.23	.	1	
+840	51	ASP	HB2	H	.	.	1	
+841	51	ASP	HB3	H	.	.	1	
+842	51	ASP	CG	C	.	.	1	
+843	51	ASP	HD2	H	.	.	1	
+844	52	LYS	HG-	.	1.27	.	1	#  unknown atom!
+845	52	LYS	HG+	.	1.46	.	1	#  unknown atom!
+846	52	LYS	H	H	8.17	.	1	
+847	52	LYS	N	N	119.35	.	1	
+848	52	LYS	CA	C	56.99	.	1	
+849	52	LYS	HA	H	4.03	.	1	
+850	52	LYS	C	C	.	.	1	
+851	52	LYS	CB	C	30.23	.	1	
+852	52	LYS	HB2	H	1.85	.	2	
+853	52	LYS	HB3	H	.	.	1	
+854	52	LYS	CG	C	22.33	.	1	
+855	52	LYS	HG2	H	.	.	1	
+856	52	LYS	HG3	H	.	.	1	
+857	52	LYS	CD	C	27.95	.	1	
+858	52	LYS	HD2	H	1.57	.	2	
+859	52	LYS	HD3	H	.	.	1	
+860	52	LYS	CE	C	39.68	.	1	
+861	52	LYS	HE2	H	.	.	1	
+862	52	LYS	HE3	H	.	.	1	
+863	52	LYS	NZ	N	.	.	1	
+864	52	LYS	HZ	H	2.97	.	1	
+865	53	ARG	H	H	8.27	.	1	
+866	53	ARG	N	N	119.41	.	1	
+867	53	ARG	CA	C	55.68	.	1	
+868	53	ARG	HA	H	4.19	.	1	
+869	53	ARG	C	C	.	.	1	
+870	53	ARG	CB	C	28.62	.	1	
+871	53	ARG	HB2	H	1.88	.	2	
+872	53	ARG	HB3	H	.	.	1	
+873	53	ARG	CG	C	25.73	.	1	
+874	53	ARG	HG2	H	1.64	.	2	
+875	53	ARG	HG3	H	.	.	1	
+876	53	ARG	CD	C	41.32	.	1	
+877	53	ARG	HD2	H	3.2	.	2	
+878	53	ARG	HD3	H	.	.	1	
+879	53	ARG	NE	N	.	.	1	
+880	53	ARG	HE	H	.	.	1	
+881	53	ARG	CZ	C	.	.	1	
+882	53	ARG	NH1	N	.	.	1	
+883	53	ARG	HH11	H	.	.	1	
+884	53	ARG	HH12	H	.	.	1	
+885	53	ARG	NH2	N	.	.	1	
+886	53	ARG	HH21	H	.	.	1	
+887	53	ARG	HH22	H	.	.	1	
+888	54	GLN	HE2-	.	6.83	.	1	#  unknown atom!
+889	54	GLN	HE2+	.	7.7	.	1	#  unknown atom!
+890	54	GLN	HG-	.	2.3	.	1	#  unknown atom!
+891	54	GLN	HG+	.	2.35	.	1	#  unknown atom!
+892	54	GLN	HB-	.	1.9	.	1	#  unknown atom!
+893	54	GLN	HB+	.	2.19	.	1	#  unknown atom!
+894	54	GLN	H	H	8.03	.	1	
+895	54	GLN	N	N	118.18	.	1	
+896	54	GLN	CA	C	53.27	.	1	
+897	54	GLN	HA	H	4.46	.	1	
+898	54	GLN	C	C	.	.	1	
+899	54	GLN	CB	C	27.28	.	1	
+900	54	GLN	HB2	H	.	.	1	
+901	54	GLN	HB3	H	.	.	1	
+902	54	GLN	CG	C	31.38	.	1	
+903	54	GLN	HG2	H	.	.	1	
+904	54	GLN	HG3	H	.	.	1	
+905	54	GLN	CD	C	.	.	1	
+906	54	GLN	NE2	N	112.45	.	1	
+907	54	GLN	HE21	H	.	.	1	
+908	54	GLN	HE22	H	.	.	1	
+909	55	ARG	HD-	.	.	.	1	#  shift val=- unknown atom!
+910	55	ARG	HD+	.	.	.	1	#  shift val=- unknown atom!
+911	55	ARG	HG-	.	.	.	1	#  shift val=- unknown atom!
+912	55	ARG	HG+	.	.	.	1	#  shift val=- unknown atom!
+913	55	ARG	HB-	.	.	.	1	#  shift val=- unknown atom!
+914	55	ARG	HB+	.	.	.	1	#  shift val=- unknown atom!
+915	55	ARG	H	H	.	.	1	#  shift val=-
+916	55	ARG	N	N	.	.	1	#  shift val=-
+917	55	ARG	CA	C	.	.	1	#  shift val=-
+918	55	ARG	HA	H	.	.	1	#  shift val=-
+919	55	ARG	C	C	.	.	1	
+920	55	ARG	CB	C	.	.	1	#  shift val=-
+921	55	ARG	HB2	H	.	.	2	#  shift val=-
+922	55	ARG	HB3	H	.	.	1	
+923	55	ARG	CG	C	.	.	1	#  shift val=-
+924	55	ARG	HG2	H	.	.	2	#  shift val=-
+925	55	ARG	HG3	H	.	.	1	
+926	55	ARG	CD	C	.	.	1	#  shift val=-
+927	55	ARG	HD2	H	.	.	2	#  shift val=-
+928	55	ARG	HD3	H	.	.	1	
+929	55	ARG	NE	N	.	.	1	
+930	55	ARG	HE	H	.	.	1	
+931	55	ARG	CZ	C	.	.	1	
+932	55	ARG	NH1	N	.	.	1	
+933	55	ARG	HH11	H	.	.	1	
+934	55	ARG	HH12	H	.	.	1	
+935	55	ARG	NH2	N	.	.	1	
+936	55	ARG	HH21	H	.	.	1	
+937	55	ARG	HH22	H	.	.	1	
+938	56	ASN	HD2-	.	6.88	.	1	#  unknown atom!
+939	56	ASN	HD2+	.	7.57	.	1	#  unknown atom!
+940	56	ASN	HB-	.	2.61	.	1	#  unknown atom!
+941	56	ASN	HB+	.	2.75	.	1	#  unknown atom!
+942	56	ASN	H	H	.	.	1	#  shift val=-
+943	56	ASN	N	N	.	.	1	#  shift val=-
+944	56	ASN	CA	C	50.49	.	1	
+945	56	ASN	HA	H	4.62	.	1	
+946	56	ASN	C	C	.	.	1	
+947	56	ASN	CB	C	36.65	.	1	
+948	56	ASN	HB2	H	.	.	1	
+949	56	ASN	HB3	H	.	.	1	
+950	56	ASN	CG	C	.	.	1	
+951	56	ASN	ND2	N	113.19	.	1	
+952	56	ASN	HD21	H	.	.	1	
+953	56	ASN	HD22	H	.	.	1	
+954	57	ARG	HD-	.	.	.	1	#  shift val=- unknown atom!
+955	57	ARG	HD+	.	.	.	1	#  shift val=- unknown atom!
+956	57	ARG	HG-	.	.	.	1	#  shift val=- unknown atom!
+957	57	ARG	HG+	.	.	.	1	#  shift val=- unknown atom!
+958	57	ARG	HB-	.	.	.	1	#  shift val=- unknown atom!
+959	57	ARG	HB+	.	.	.	1	#  shift val=- unknown atom!
+960	57	ARG	H	H	.	.	1	#  shift val=-
+961	57	ARG	N	N	.	.	1	#  shift val=-
+962	57	ARG	CA	C	.	.	1	#  shift val=-
+963	57	ARG	HA	H	.	.	1	#  shift val=-
+964	57	ARG	C	C	.	.	1	
+965	57	ARG	CB	C	.	.	1	#  shift val=-
+966	57	ARG	HB2	H	.	.	2	#  shift val=-
+967	57	ARG	HB3	H	.	.	1	
+968	57	ARG	CG	C	.	.	1	#  shift val=-
+969	57	ARG	HG2	H	.	.	2	#  shift val=-
+970	57	ARG	HG3	H	.	.	1	
+971	57	ARG	CD	C	.	.	1	#  shift val=-
+972	57	ARG	HD2	H	.	.	2	#  shift val=-
+973	57	ARG	HD3	H	.	.	1	
+974	57	ARG	NE	N	.	.	1	
+975	57	ARG	HE	H	.	.	1	
+976	57	ARG	CZ	C	.	.	1	
+977	57	ARG	NH1	N	.	.	1	
+978	57	ARG	HH11	H	.	.	1	
+979	57	ARG	HH12	H	.	.	1	
+980	57	ARG	NH2	N	.	.	1	
+981	57	ARG	HH21	H	.	.	1	
+982	57	ARG	HH22	H	.	.	1	
+983	58	CYS	HB-	.	2.72	.	1	#  unknown atom!
+984	58	CYS	HB+	.	3.02	.	1	#  unknown atom!
+985	58	CYS	H	H	7.92	.	1	
+986	58	CYS	N	N	121.9	.	1	
+987	58	CYS	CA	C	57.59	.	1	
+988	58	CYS	HA	H	4.43	.	1	
+989	58	CYS	C	C	.	.	1	
+990	58	CYS	CB	C	29.26	.	1	
+991	58	CYS	HB2	H	.	.	1	
+992	58	CYS	HB3	H	.	.	1	
+993	58	CYS	CG	C	.	.	1	
+994	58	CYS	HG	H	.	.	1	
+995	59	GLN	HE2-	.	6.78	.	1	#  unknown atom!
+996	59	GLN	HE2+	.	7.4	.	1	#  unknown atom!
+997	59	GLN	HG-	.	2.12	.	1	#  unknown atom!
+998	59	GLN	HG+	.	2.35	.	1	#  unknown atom!
+999	59	GLN	HB-	.	0.56	.	1	#  unknown atom!
+1000	59	GLN	HB+	.	1.48	.	1	#  unknown atom!
+1001	59	GLN	H	H	8.69	.	1	
+1002	59	GLN	N	N	129.71	.	1	
+1003	59	GLN	CA	C	57.67	.	1	
+1004	59	GLN	HA	H	3.69	.	1	
+1005	59	GLN	C	C	.	.	1	
+1006	59	GLN	CB	C	25.91	.	1	
+1007	59	GLN	HB2	H	.	.	1	
+1008	59	GLN	HB3	H	.	.	1	
+1009	59	GLN	CG	C	32.62	.	1	
+1010	59	GLN	HG2	H	.	.	1	
+1011	59	GLN	HG3	H	.	.	1	
+1012	59	GLN	CD	C	.	.	1	
+1013	59	GLN	NE2	N	112.14	.	1	
+1014	59	GLN	HE21	H	.	.	1	
+1015	59	GLN	HE22	H	.	.	1	
+1016	60	TYR	HE	.	6.94	.	1	#  unknown atom!
+1017	60	TYR	HD	.	7.72	.	1	#  unknown atom!
+1018	60	TYR	HB-	.	2.73	.	1	#  unknown atom!
+1019	60	TYR	HB+	.	2.95	.	1	#  unknown atom!
+1020	60	TYR	CE	.	116.37	.	1	#  unknown atom!
+1021	60	TYR	CD	.	133.31	.	1	#  unknown atom!
+1022	60	TYR	H	H	8.46	.	1	
+1023	60	TYR	N	N	120.27	.	1	
+1024	60	TYR	CA	C	60.74	.	1	
+1025	60	TYR	HA	H	4.16	.	1	
+1026	60	TYR	C	C	.	.	1	
+1027	60	TYR	CB	C	37.33	.	1	
+1028	60	TYR	HB2	H	.	.	1	
+1029	60	TYR	HB3	H	.	.	1	
+1030	60	TYR	CG	C	.	.	1	#  shift val=-
+1031	60	TYR	CD1	C	.	.	1	
+1032	60	TYR	HD1	H	.	.	1	
+1033	60	TYR	CD2	C	.	.	1	
+1034	60	TYR	HD2	H	.	.	1	
+1035	60	TYR	CE1	C	.	.	1	
+1036	60	TYR	HE1	H	.	.	1	
+1037	60	TYR	CE2	C	.	.	1	
+1038	60	TYR	HE2	H	.	.	1	
+1039	60	TYR	CZ	C	.	.	1	
+1040	60	TYR	HH	H	.	.	1	
+1041	61	CYS	HB-	.	2.67	.	1	#  unknown atom!
+1042	61	CYS	HB+	.	3.07	.	1	#  unknown atom!
+1043	61	CYS	H	H	9.65	.	1	
+1044	61	CYS	N	N	123.88	.	1	
+1045	61	CYS	CA	C	62.89	.	1	
+1046	61	CYS	HA	H	4.06	.	1	
+1047	61	CYS	C	C	.	.	1	
+1048	61	CYS	CB	C	28.38	.	1	
+1049	61	CYS	HB2	H	.	.	1	
+1050	61	CYS	HB3	H	.	.	1	
+1051	61	CYS	CG	C	.	.	1	
+1052	61	CYS	HG	H	.	.	1	
+1053	62	ARG	HD-	.	.	.	1	#  shift val=- unknown atom!
+1054	62	ARG	HD+	.	.	.	1	#  shift val=- unknown atom!
+1055	62	ARG	HG-	.	.	.	1	#  shift val=- unknown atom!
+1056	62	ARG	HG+	.	.	.	1	#  shift val=- unknown atom!
+1057	62	ARG	HB+	.	1.66	.	1	#  unknown atom!
+1058	62	ARG	HB-	.	1.58	.	1	#  unknown atom!
+1059	62	ARG	H	H	8.23	.	1	
+1060	62	ARG	N	N	123.22	.	1	
+1061	62	ARG	CA	C	58.31	.	1	
+1062	62	ARG	HA	H	3.76	.	1	
+1063	62	ARG	C	C	.	.	1	
+1064	62	ARG	CB	C	29.26	.	1	
+1065	62	ARG	HB2	H	.	.	1	
+1066	62	ARG	HB3	H	.	.	1	
+1067	62	ARG	CG	C	24.76	.	1	
+1068	62	ARG	HG2	H	.	.	2	#  shift val=-
+1069	62	ARG	HG3	H	.	.	1	
+1070	62	ARG	CD	C	41.64	.	1	
+1071	62	ARG	HD2	H	.	.	2	#  shift val=-
+1072	62	ARG	HD3	H	.	.	1	
+1073	62	ARG	NE	N	.	.	1	
+1074	62	ARG	HE	H	.	.	1	
+1075	62	ARG	CZ	C	.	.	1	
+1076	62	ARG	NH1	N	.	.	1	
+1077	62	ARG	HH11	H	.	.	1	
+1078	62	ARG	HH12	H	.	.	1	
+1079	62	ARG	NH2	N	.	.	1	
+1080	62	ARG	HH21	H	.	.	1	
+1081	62	ARG	HH22	H	.	.	1	
+1082	63	TYR	HE	.	6.57	.	1	#  unknown atom!
+1083	63	TYR	HD	.	7.15	.	1	#  unknown atom!
+1084	63	TYR	CE	.	117.16	.	1	#  unknown atom!
+1085	63	TYR	CD	.	130.65	.	1	#  unknown atom!
+1086	63	TYR	H	H	8.54	.	1	
+1087	63	TYR	N	N	119.69	.	1	
+1088	63	TYR	CA	C	60.3	.	1	
+1089	63	TYR	HA	H	4.58	.	1	
+1090	63	TYR	C	C	.	.	1	
+1091	63	TYR	CB	C	36.09	.	1	
+1092	63	TYR	HB2	H	3.56	.	2	
+1093	63	TYR	HB3	H	.	.	1	
+1094	63	TYR	CG	C	.	.	1	#  shift val=-
+1095	63	TYR	CD1	C	.	.	1	
+1096	63	TYR	HD1	H	.	.	1	
+1097	63	TYR	CD2	C	.	.	1	
+1098	63	TYR	HD2	H	.	.	1	
+1099	63	TYR	CE1	C	.	.	1	
+1100	63	TYR	HE1	H	.	.	1	
+1101	63	TYR	CE2	C	.	.	1	
+1102	63	TYR	HE2	H	.	.	1	
+1103	63	TYR	CZ	C	.	.	1	
+1104	63	TYR	HH	H	.	.	1	
+1105	64	GLN	QE2	.	7.05	.	1	#  unknown atom!
+1106	64	GLN	HG-	.	2.03	.	1	#  unknown atom!
+1107	64	GLN	HG+	.	2.19	.	1	#  unknown atom!
+1108	64	GLN	HB-	.	1.89	.	1	#  unknown atom!
+1109	64	GLN	HB+	.	2.12	.	1	#  unknown atom!
+1110	64	GLN	H	H	8.53	.	1	
+1111	64	GLN	N	N	115.84	.	1	
+1112	64	GLN	CA	C	56.32	.	1	
+1113	64	GLN	HA	H	3.73	.	1	
+1114	64	GLN	C	C	.	.	1	
+1115	64	GLN	CB	C	26.37	.	1	
+1116	64	GLN	HB2	H	.	.	1	
+1117	64	GLN	HB3	H	.	.	1	
+1118	64	GLN	CG	C	31.45	.	1	
+1119	64	GLN	HG2	H	.	.	1	
+1120	64	GLN	HG3	H	.	.	1	
+1121	64	GLN	CD	C	.	.	1	
+1122	64	GLN	NE2	N	112.29	.	1	
+1123	64	GLN	HE21	H	.	.	1	
+1124	64	GLN	HE22	H	.	.	1	
+1125	65	LYS	HG-	.	1.46	.	1	#  unknown atom!
+1126	65	LYS	HG+	.	1.5	.	1	#  unknown atom!
+1127	65	LYS	HB-	.	1.95	.	1	#  unknown atom!
+1128	65	LYS	HB+	.	2.04	.	1	#  unknown atom!
+1129	65	LYS	H	H	8.16	.	1	
+1130	65	LYS	N	N	121.26	.	1	
+1131	65	LYS	CA	C	57.32	.	1	
+1132	65	LYS	HA	H	4.24	.	1	
+1133	65	LYS	C	C	.	.	1	
+1134	65	LYS	CB	C	30.24	.	1	
+1135	65	LYS	HB2	H	.	.	1	
+1136	65	LYS	HB3	H	.	.	1	
+1137	65	LYS	CG	C	24.59	.	1	
+1138	65	LYS	HG2	H	.	.	1	
+1139	65	LYS	HG3	H	.	.	1	
+1140	65	LYS	CD	C	28.16	.	1	
+1141	65	LYS	HD2	H	1.84	.	2	
+1142	65	LYS	HD3	H	.	.	1	
+1143	65	LYS	CE	C	.	.	1	#  shift val=-
+1144	65	LYS	HE2	H	.	.	1	
+1145	65	LYS	HE3	H	.	.	1	
+1146	65	LYS	NZ	N	.	.	1	
+1147	65	LYS	HZ	H	3.19	.	1	
+1148	66	ALA	H	H	8.18	.	1	
+1149	66	ALA	N	N	122.47	.	1	
+1150	66	ALA	CA	C	54.26	.	1	
+1151	66	ALA	HA	H	3.77	.	1	
+1152	66	ALA	C	C	.	.	1	
+1153	66	ALA	CB	C	16.08	.	1	
+1154	66	ALA	HB	H	1.67	.	1	
+1155	67	LEU	MDY	.	0.66	.	1	#  unknown atom!
+1156	67	LEU	MDX	.	0.92	.	1	#  unknown atom!
+1157	67	LEU	HB-	.	1.37	.	1	#  unknown atom!
+1158	67	LEU	HB+	.	1.79	.	1	#  unknown atom!
+1159	67	LEU	CDY	.	23.99	.	1	#  unknown atom!
+1160	67	LEU	CDX	.	20.43	.	1	#  unknown atom!
+1161	67	LEU	H	H	7.9	.	1	
+1162	67	LEU	N	N	115.99	.	1	
+1163	67	LEU	CA	C	55.35	.	1	
+1164	67	LEU	HA	H	4.22	.	1	
+1165	67	LEU	C	C	.	.	1	
+1166	67	LEU	CB	C	39.92	.	1	
+1167	67	LEU	HB2	H	.	.	1	
+1168	67	LEU	HB3	H	.	.	1	
+1169	67	LEU	CG	C	24.49	.	1	
+1170	67	LEU	CD1	C	.	.	1	
+1171	67	LEU	HD1	H	.	.	1	
+1172	67	LEU	CD2	C	.	.	1	
+1173	67	LEU	HD2	H	.	.	1	
+1174	67	LEU	HG	H	1.33	.	1	
+1175	68	ALA	H	H	8.46	.	1	
+1176	68	ALA	N	N	124.46	.	1	
+1177	68	ALA	CA	C	53.16	.	1	
+1178	68	ALA	HA	H	4.08	.	1	
+1179	68	ALA	C	C	.	.	1	
+1180	68	ALA	CB	C	16.07	.	1	
+1181	68	ALA	HB	H	1.56	.	1	
+1182	69	MET	HG-	.	2.63	.	1	#  unknown atom!
+1183	69	MET	HG+	.	2.85	.	1	#  unknown atom!
+1184	69	MET	H	H	8.28	.	1	
+1185	69	MET	N	N	113.7	.	1	
+1186	69	MET	CA	C	52.3	.	1	
+1187	69	MET	HA	H	4.66	.	1	
+1188	69	MET	C	C	.	.	1	
+1189	69	MET	CB	C	30.12	.	1	
+1190	69	MET	HB2	H	2.01	.	2	
+1191	69	MET	HB3	H	.	.	1	
+1192	69	MET	CG	C	30.23	.	1	
+1193	69	MET	HG2	H	.	.	1	
+1194	69	MET	HG3	H	.	.	1	
+1195	69	MET	CE	C	48.07	.	1	
+1196	69	MET	HE	H	2.15	.	1	
+1197	70	GLY	HA-	.	3.59	.	1	#  unknown atom!
+1198	70	GLY	HA+	.	4.35	.	1	#  unknown atom!
+1199	70	GLY	H	H	7.55	.	1	
+1200	70	GLY	N	N	128.52	.	1	
+1201	70	GLY	CA	C	42.63	.	1	
+1202	70	GLY	HA2	H	.	.	1	
+1203	70	GLY	HA3	H	.	.	1	
+1204	70	GLY	C	C	.	.	1	
+1205	71	MET	HG-	.	1.87	.	1	#  unknown atom!
+1206	71	MET	HG+	.	2.27	.	1	#  unknown atom!
+1207	71	MET	HB-	.	0.63	.	1	#  unknown atom!
+1208	71	MET	HB+	.	0.91	.	1	#  unknown atom!
+1209	71	MET	H	H	8.11	.	1	
+1210	71	MET	N	N	122.22	.	1	
+1211	71	MET	CA	C	56.71	.	1	
+1212	71	MET	HA	H	4.32	.	1	
+1213	71	MET	C	C	.	.	1	
+1214	71	MET	CB	C	30.2	.	1	
+1215	71	MET	HB2	H	.	.	1	
+1216	71	MET	HB3	H	.	.	1	
+1217	71	MET	CG	C	33.1	.	1	
+1218	71	MET	HG2	H	.	.	1	
+1219	71	MET	HG3	H	.	.	1	
+1220	71	MET	CE	C	48.46	.	1	
+1221	71	MET	HE	H	2.01	.	1	
+1222	72	LYS	HG-	.	1.56	.	1	#  unknown atom!
+1223	72	LYS	HG+	.	1.61	.	1	#  unknown atom!
+1224	72	LYS	HB-	.	1.75	.	1	#  unknown atom!
+1225	72	LYS	HB+	.	1.84	.	1	#  unknown atom!
+1226	72	LYS	H	H	8.01	.	1	
+1227	72	LYS	N	N	122.16	.	1	
+1228	72	LYS	CA	C	52.41	.	1	
+1229	72	LYS	HA	H	4.71	.	1	
+1230	72	LYS	C	C	.	.	1	
+1231	72	LYS	CB	C	31.55	.	1	
+1232	72	LYS	HB2	H	.	.	1	
+1233	72	LYS	HB3	H	.	.	1	
+1234	72	LYS	CG	C	.	.	1	#  shift val=-
+1235	72	LYS	HG2	H	.	.	1	
+1236	72	LYS	HG3	H	.	.	1	
+1237	72	LYS	CD	C	27.55	.	1	
+1238	72	LYS	HD2	H	1.64	.	2	
+1239	72	LYS	HD3	H	.	.	1	
+1240	72	LYS	CE	C	.	.	1	#  shift val=-
+1241	72	LYS	HE2	H	.	.	1	
+1242	72	LYS	HE3	H	.	.	1	
+1243	72	LYS	NZ	N	.	.	1	
+1244	72	LYS	HZ	H	2.35	.	1	
+1245	73	ARG	HD-	.	3.24	.	1	#  unknown atom!
+1246	73	ARG	HD+	.	3.4	.	1	#  unknown atom!
+1247	73	ARG	HG-	.	1.52	.	1	#  unknown atom!
+1248	73	ARG	HG+	.	1.84	.	1	#  unknown atom!
+1249	73	ARG	HB-	.	1.76	.	1	#  unknown atom!
+1250	73	ARG	HB+	.	1.84	.	1	#  unknown atom!
+1251	73	ARG	H	H	9.31	.	1	
+1252	73	ARG	N	N	126.48	.	1	
+1253	73	ARG	CA	C	58.21	.	1	
+1254	73	ARG	HA	H	3.93	.	1	
+1255	73	ARG	C	C	.	.	1	
+1256	73	ARG	CB	C	28.71	.	1	
+1257	73	ARG	HB2	H	.	.	1	
+1258	73	ARG	HB3	H	.	.	1	
+1259	73	ARG	CG	C	26.34	.	1	
+1260	73	ARG	HG2	H	.	.	1	
+1261	73	ARG	HG3	H	.	.	1	
+1262	73	ARG	CD	C	41.12	.	1	
+1263	73	ARG	HD2	H	.	.	1	
+1264	73	ARG	HD3	H	.	.	1	
+1265	73	ARG	NE	N	.	.	1	
+1266	73	ARG	HE	H	.	.	1	
+1267	73	ARG	CZ	C	.	.	1	
+1268	73	ARG	NH1	N	.	.	1	
+1269	73	ARG	HH11	H	.	.	1	
+1270	73	ARG	HH12	H	.	.	1	
+1271	73	ARG	NH2	N	.	.	1	
+1272	73	ARG	HH21	H	.	.	1	
+1273	73	ARG	HH22	H	.	.	1	
+1274	74	GLU	HG-	.	2.34	.	1	#  unknown atom!
+1275	74	GLU	HG+	.	2.4	.	1	#  unknown atom!
+1276	74	GLU	H	H	9.97	.	1	
+1277	74	GLU	N	N	117.3	.	1	
+1278	74	GLU	CA	C	57.34	.	1	
+1279	74	GLU	HA	H	4.06	.	1	
+1280	74	GLU	C	C	.	.	1	
+1281	74	GLU	CB	C	26.67	.	1	
+1282	74	GLU	HB2	H	2.03	.	2	
+1283	74	GLU	HB3	H	.	.	1	
+1284	74	GLU	CG	C	34.23	.	1	
+1285	74	GLU	HG2	H	.	.	1	
+1286	74	GLU	HG3	H	.	.	1	
+1287	74	GLU	CD	C	.	.	1	
+1288	74	GLU	HE2	H	.	.	1	
+1289	75	ALA	H	H	7.32	.	1	
+1290	75	ALA	N	N	120.33	.	1	
+1291	75	ALA	CA	C	51.52	.	1	
+1292	75	ALA	HA	H	4.39	.	1	
+1293	75	ALA	C	C	.	.	1	
+1294	75	ALA	CB	C	17.4	.	1	
+1295	75	ALA	HB	H	1.73	.	1	
+1296	76	VAL	MGY	.	0.36	.	1	#  unknown atom!
+1297	76	VAL	MGX	.	0.85	.	1	#  unknown atom!
+1298	76	VAL	CGY	.	19.51	.	1	#  unknown atom!
+1299	76	VAL	CGX	.	20.42	.	1	#  unknown atom!
+1300	76	VAL	H	H	7.22	.	1	
+1301	76	VAL	N	N	118.93	.	1	
+1302	76	VAL	CA	C	62.22	.	1	
+1303	76	VAL	HA	H	3.65	.	1	
+1304	76	VAL	C	C	.	.	1	
+1305	76	VAL	CB	C	29.26	.	1	
+1306	76	VAL	HB	H	2.08	.	1	
+1307	76	VAL	CG1	C	.	.	1	
+1308	76	VAL	HG1	H	.	.	1	
+1309	76	VAL	CG2	C	.	.	1	
+1310	76	VAL	HG2	H	.	.	1	
+1311	77	GLN	HB-	.	2.05	.	1	#  unknown atom!
+1312	77	GLN	HB+	.	2.12	.	1	#  unknown atom!
+1313	77	GLN	H	H	7.62	.	1	
+1314	77	GLN	N	N	120.11	.	1	
+1315	77	GLN	CA	C	54.96	.	1	
+1316	77	GLN	HA	H	4.29	.	1	
+1317	77	GLN	C	C	.	.	1	
+1318	77	GLN	CB	C	27.38	.	1	
+1319	77	GLN	HB2	H	.	.	1	
+1320	77	GLN	HB3	H	.	.	1	
+1321	77	GLN	CG	C	31.11	.	1	
+1322	77	GLN	HG2	H	2.34	.	2	
+1323	77	GLN	HG3	H	.	.	1	
+1324	77	GLN	CD	C	.	.	1	
+1325	77	GLN	NE2	N	.	.	1	
+1326	77	GLN	HE21	H	.	.	1	
+1327	77	GLN	HE22	H	.	.	1	
+1328	78	GLU	HB-	.	2.01	.	1	#  unknown atom!
+1329	78	GLU	HB+	.	2.09	.	1	#  unknown atom!
+1330	78	GLU	H	H	8.07	.	1	
+1331	78	GLU	N	N	119.64	.	1	
+1332	78	GLU	CA	C	55.51	.	1	
+1333	78	GLU	HA	H	4.19	.	1	
+1334	78	GLU	C	C	.	.	1	
+1335	78	GLU	CB	C	28.38	.	1	
+1336	78	GLU	HB2	H	.	.	1	
+1337	78	GLU	HB3	H	.	.	1	
+1338	78	GLU	CG	C	34.27	.	1	
+1339	78	GLU	HG2	H	2.36	.	2	
+1340	78	GLU	HG3	H	.	.	1	
+1341	78	GLU	CD	C	.	.	1	
+1342	78	GLU	HE2	H	.	.	1	
+1343	79	GLU	HG-	.	2.29	.	1	#  unknown atom!
+1344	79	GLU	HG+	.	2.37	.	1	#  unknown atom!
+1345	79	GLU	H	H	7.88	.	1	
+1346	79	GLU	N	N	120.87	.	1	
+1347	79	GLU	CA	C	55.53	.	1	
+1348	79	GLU	HA	H	4.22	.	1	
+1349	79	GLU	C	C	.	.	1	
+1350	79	GLU	CB	C	28.58	.	1	
+1351	79	GLU	HB2	H	2.17	.	2	
+1352	79	GLU	HB3	H	.	.	1	
+1353	79	GLU	CG	C	34.41	.	1	
+1354	79	GLU	HG2	H	.	.	1	
+1355	79	GLU	HG3	H	.	.	1	
+1356	79	GLU	CD	C	.	.	1	
+1357	79	GLU	HE2	H	.	.	1	
+1358	80	ARG	HB-	.	1.8	.	1	#  unknown atom!
+1359	80	ARG	HB+	.	1.92	.	1	#  unknown atom!
+1360	80	ARG	H	H	8.17	.	1	
+1361	80	ARG	N	N	121.91	.	1	
+1362	80	ARG	CA	C	54.77	.	1	
+1363	80	ARG	HA	H	4.3	.	1	
+1364	80	ARG	C	C	.	.	1	
+1365	80	ARG	CB	C	28.88	.	1	
+1366	80	ARG	HB2	H	.	.	1	
+1367	80	ARG	HB3	H	.	.	1	
+1368	80	ARG	CG	C	25.37	.	1	
+1369	80	ARG	HG2	H	1.66	.	2	
+1370	80	ARG	HG3	H	.	.	1	
+1371	80	ARG	CD	C	41.32	.	1	
+1372	80	ARG	HD2	H	3.2	.	2	
+1373	80	ARG	HD3	H	.	.	1	
+1374	80	ARG	NE	N	.	.	1	
+1375	80	ARG	HE	H	.	.	1	
+1376	80	ARG	CZ	C	.	.	1	
+1377	80	ARG	NH1	N	.	.	1	
+1378	80	ARG	HH11	H	.	.	1	
+1379	80	ARG	HH12	H	.	.	1	
+1380	80	ARG	NH2	N	.	.	1	
+1381	80	ARG	HH21	H	.	.	1	
+1382	80	ARG	HH22	H	.	.	1	
+1383	81	GLN	HB-	.	2.04	.	1	#  unknown atom!
+1384	81	GLN	HB+	.	2.14	.	1	#  unknown atom!
+1385	81	GLN	H	H	8.32	.	1	
+1386	81	GLN	N	N	120.75	.	1	
+1387	81	GLN	CA	C	54.49	.	1	
+1388	81	GLN	HA	H	4.29	.	1	
+1389	81	GLN	C	C	.	.	1	
+1390	81	GLN	CB	C	27.37	.	1	
+1391	81	GLN	HB2	H	.	.	1	
+1392	81	GLN	HB3	H	.	.	1	
+1393	81	GLN	CG	C	31.69	.	1	
+1394	81	GLN	HG2	H	2.4	.	2	
+1395	81	GLN	HG3	H	.	.	1	
+1396	81	GLN	CD	C	.	.	1	
+1397	81	GLN	NE2	N	.	.	1	
+1398	81	GLN	HE21	H	.	.	1	
+1399	81	GLN	HE22	H	.	.	1	
+1400	82	ARG	HB-	.	1.81	.	1	#  unknown atom!
+1401	82	ARG	HB+	.	1.92	.	1	#  unknown atom!
+1402	82	ARG	H	H	8.26	.	1	
+1403	82	ARG	N	N	121.79	.	1	
+1404	82	ARG	CA	C	54.41	.	1	
+1405	82	ARG	HA	H	4.36	.	1	
+1406	82	ARG	C	C	.	.	1	
+1407	82	ARG	CB	C	29.26	.	1	
+1408	82	ARG	HB2	H	.	.	1	
+1409	82	ARG	HB3	H	.	.	1	
+1410	82	ARG	CG	C	25.36	.	1	
+1411	82	ARG	HG2	H	1.66	.	2	
+1412	82	ARG	HG3	H	.	.	1	
+1413	82	ARG	CD	C	41.32	.	1	
+1414	82	ARG	HD2	H	3.2	.	2	
+1415	82	ARG	HD3	H	.	.	1	
+1416	82	ARG	NE	N	.	.	1	
+1417	82	ARG	HE	H	.	.	1	
+1418	82	ARG	CZ	C	.	.	1	
+1419	82	ARG	NH1	N	.	.	1	
+1420	82	ARG	HH11	H	.	.	1	
+1421	82	ARG	HH12	H	.	.	1	
+1422	82	ARG	NH2	N	.	.	1	
+1423	82	ARG	HH21	H	.	.	1	
+1424	82	ARG	HH22	H	.	.	1	
+1425	83	GLY	HA-	.	.	.	1	#  shift val=- unknown atom!
+1426	83	GLY	HA+	.	.	.	1	#  shift val=- unknown atom!
+1427	83	GLY	H	H	7.97	.	1	
+1428	83	GLY	N	N	115.86	.	1	
+1429	83	GLY	CA	C	36.96	.	1	
+1430	83	GLY	HA2	H	.	.	2	#  shift val=-
+1431	83	GLY	HA3	H	.	.	1	
+1432	83	GLY	C	C	.	.	1	
+1433	84	UKR	HD	.	1.81	.	1	#  unknown atom!
+1434	84	UKR	HG-	.	1.47	.	1	#  unknown atom!
+1435	84	UKR	HG+	.	1.56	.	1	#  unknown atom!
+1436	84	UKR	HB-	.	3.07	.	1	#  unknown atom!
+1437	84	UKR	HB+	.	3.28	.	1	#  unknown atom!
+1438	84	UKR	CD	.	59.26	.	1	#  unknown atom!
+1439	84	UKR	CG	.	55.33	.	1	#  unknown atom!
+1440	84	UKR	CB	.	42.05	.	1	#  unknown atom!
+	stop_

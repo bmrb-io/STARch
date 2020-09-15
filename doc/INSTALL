@@ -1,0 +1,25 @@
+
+Installing script files on BMRB webserver is simple:
+
+ * Copy all files except globals.txt from project's src directory to
+   $DocumentRoot/software/starch on master website. After copying help
+   subdirectory, rm -r $DocumentRoot/software/starch/help/.svn. Also,
+   create $DocumentRoot/software/starch/tmp subdirectory.
+ * Make sure php_includes/Globals.inc file in $DocumentRoot has the settings
+   in globals.txt.
+ * Add all new files and directories to CVS.
+
+Everything should be mirrored to public webservers automatically.
+
+The hard part: Chem. Comp. database must be installed on each webserver.
+On the master:
+
+ * Create PostgreSQL web user and chem_comp database (if needed)
+ * Create tables, use schema.psql in project's sql directory
+ * Load starch, datumtypes and tagmap tables from CSV file in sql directory
+
+ You can use pg_dump to dump the entire database to a file, copy it to other servers,
+ and use pg_restore to re-create it there.
+
+ NOTE: other web applications use chem_comp database. Make sure you don't delete any
+ of the other tables in chem_comp DB in the process.

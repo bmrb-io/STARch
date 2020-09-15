@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch comand line tools">
+<!--    <LINK type="text/css" rel="stylesheet" href="doc/starch.css"> -->
+<!-- drop-down lists don't work in Mozilla if stylesheet is applied -->
+    <title>STARch: STAR conversion handling tool</title>
+  </HEAD>
+<BODY>
+
+<BODY bgcolor="#ffffcc" text="#660000" link="#660000" vlink="#330000" alink="#330000">
+
+<a name="top"><h1>STARch command line tools</h1></a>
+
+<H2>CLASSPATH</H2>
+<P>
+ Must include
+ <UL>
+   <LI>/bmrb/javaclasses/starch-min.jar</LI>
+   <LI>/bmrb/javaclasses/ojdbc14.jar</LI>
+   <LI>/bmrb/javaclasses</LI>
+ </UL>
+<P>
+ Important: /bmrb/javaclasses must be the last one in CLASSPATH.
+
+<H2>Inserting residue labels</H2>
+<P>
+ <CODE>EDU.bmrb.starch.InsertLabels</CODE>
+<P>
+ Requirements:
+ <OL>
+   <LI>Data file: space or tab-delimited table</LI>
+   <LI>Residue file in XEASY format: either single column of residue labels
+       (sequence number is the line number), or two columns: labels in the
+       first column, sequence numbers in the second column</LI>
+ </OL>
+<P>
+ Parameters:
+ <OL>
+   <LI>-d data_file: name of data table</LI>
+   <LI>-l residue_file: name of residue file</LI>
+   <LI>-r NUM: number of residue sequence column in the data table (counting from 1)</LI>
+   <LI>-c NUM: insert labels into column NUM (counting from 1). This argument is
+       optional, by default labels are added in the last column</LI>
+   <LI>-o output_file: name of output file. This argument is optional, by default
+       the output is printed to screen (standard out)</LI>
+ </OL>
+<P>
+ Example (unix):
+<PRE>
+java -cp "/bmrb/javaclasses/starch-min.jar:/bmrb/javaclasses" \
+EDU.bmrb.starch.InsertLabels -i data.txt -l res.txt -r 2 -c 3 -o data.new
+</PRE>
+<P>
+ (residue sequence number in the second column in data.txt, labels are inserted
+ in 3rd column -- next to sequence numbers).
+<P>
+ Note that this program doesn't care what you're inserting, as long as there is
+ a numerical mapping (sequence number) between rows.
+<P>
+ The program won't work on a STAR loop, but it will work on loop body: you can
+ remove loop_, tag names, and final stop_, run the program, then paste the tags
+ back in.
+
+<H2>Converting space-delimited table to NMR-STAR 3.0</H2>
+<P>
+ <CODE>EDU.bmrb.starch.TableToLoop</CODE>
+<P>
+ Requirements:
+ <OL>
+   <LI>Validator database with NMR-STAR dictionary. Oracle driver 
+       (/bmrb/javaclasses/ojdbc14.jar) must be in the CLASSPATH</LI>
+   <LI>Data file: space or tab-delimited table. First row must contain column
+       names, column names must be NMR-STAR 3 tags.</LI>
+ </OL>
+<P>
+ The program reads tag category (part before dot) from the first tag name in the
+ data file. It fetches all required tags in the same category (i.e. all loop 
+ tags except .Sf_ID) from validation dictionary, in dictionary order. It then
+ prints out the NMR-STAR loop with correct tag ordering and question marks for
+ missing values.
+<P>
+ Parameters:
+ <OL>
+   <LI>-i data_file: name of data table (input file). Optional, default is standard
+       in.</LI>
+   <LI>-o output_file: name of output file. Optional, default is standard out</LI>
+   <LI>-c config_file: configuration (properties) file. Optional, default is
+       validator.properties in user's home directory</LI>
+ </OL>
+<P>
+ Example (unix):
+<PRE>
+java -cp "/bmrb/javaclasses/starch-min.jar:/bmrb/javaclasses/ojdbc14.jar:/bmrb/javaclasses" \
+EDU.bmrb.starch.TableToLoop -i data.txt -o data.new
+</PRE>
+
+</body>
+</html>

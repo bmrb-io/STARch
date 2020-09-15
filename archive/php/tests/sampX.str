@@ -1,0 +1,63 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	GLN	H	H	.	.	.
+2	1	GLN	N	N	.	.	.
+3	1	GLN	CA	C	54.44	0.05	.
+4	1	GLN	HA	H	.	.	.
+5	1	GLN	C	C	175.75	0.05	.
+6	1	GLN	CB	C	.	.	.
+7	1	GLN	HB2	H	.	.	.
+8	1	GLN	HB3	H	.	.	.
+9	1	GLN	CG	C	.	.	.
+10	1	GLN	HG2	H	.	.	.
+11	1	GLN	HG3	H	.	.	.
+12	1	GLN	CD	C	.	.	.
+13	1	GLN	NE2	N	.	.	.
+14	1	GLN	HE21	H	.	.	.
+15	1	GLN	HE22	H	.	.	.
+16	2	LEU	H	H	8.24	0.05	.
+17	2	LEU	N	N	122.88	0.05	.
+18	2	LEU	CA	C	54.44	0.05	.
+19	2	LEU	HA	H	4.70	0.05	.
+20	2	LEU	C	C	177.70	0.05	.
+21	2	LEU	CB	C	43.70	0.05	.
+22	2	LEU	HB2	H	1.75	0.05	.
+23	2	LEU	HB3	H	1.55	0.05	.
+24	2	LEU	CG	C	.	.	.
+25	2	LEU	CD1	C	26.95	0.05	.
+26	2	LEU	HD1	H	0.68	0.05	?
+27	2	LEU	CD2	C	23.67	0.05	.
+28	2	LEU	HD2	H	0.93	0.05	?
+29	2	LEU	HG	H	0.92	0.05	.
+30	3	THR	H	H	8.66	0.05	.
+31	3	THR	N	N	112.76	0.05	.
+32	3	THR	CA	C	60.36	0.05	.
+33	3	THR	HA	H	4.54	0.05	.
+34	3	THR	C	C	175.60	0.05	.
+35	3	THR	CB	C	70.24	0.05	.
+36	3	THR	HB	H	.	.	.
+37	3	THR	HG1	H	.	.	.
+38	3	THR	CG2	C	21.87	0.05	.
+39	3	THR	HG2	H	1.35	0.05	?
+40	4	GLU	H	H	9.03	0.05	.
+41	4	GLU	N	N	120.39	0.05	.
+42	4	GLU	CA	C	60.09	0.05	.
+43	4	GLU	HA	H	4.03	0.05	.
+44	4	GLU	C	C	179.59	0.05	.
+45	4	GLU	CB	C	29.23	0.05	.
+46	4	GLU	HB2	H	2.11	0.05	?
+47	4	GLU	HB3	H	.	.	.
+48	4	GLU	CG	C	36.72	0.05	.
+49	4	GLU	HG2	H	2.41	0.05	?
+50	4	GLU	HG3	H	.	.	.
+51	4	GLU	CD	C	.	.	.
+52	4	GLU	HE2	H	.	.	.
+stop_

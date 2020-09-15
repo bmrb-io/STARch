@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <TITLE>STARch Tab/comma delimited input format, one atom per line</TITLE>
+  </HEAD>
+<BODY>
+<CENTER>
+  <!--#include virtual="/includes/xmenu.html" -->
+
+  <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+  <!-- This is a two column table. It displays a side column menu and the main page -->
+    <TR><TD class="sidemenuCol">
+       <!--#include virtual="/includes/deposit_menu.html" -->
+    </TD>
+
+    <TD VALIGN="TOP">
+      <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+        <TR class="titleAndIcon"><TD class="topContentTitle">
+          <H1 class="center">Delimited file format, one atom per line</H1>        
+        </TD></TR>
+        <TR><TD>
+          Generic input formats where each line contains data for one atom and values are separated by either 
+          whitespace (spaces and/or tabs: <STRONG>tab-delimited</STRONG>) or commas (<STRONG>CSV: comma-separated
+          values</STRONG>). Spreadsheet programs and many database engines can export data in either or both of
+          these formats.
+        <P>
+          Each input line should contain at least residue sequence number, residue label, atom name, and value.
+          Because these are "free-form" formats, the software will not attempt to guess NMR-STAR tags, you
+          will have to select NMR-STAR tag for each column from drop-down lists later on.
+        <P>
+          If upload file contains column headers in the first lines, use <EM>Skip first X lines</EM> option to
+          strip those lines off.
+        <P>
+          <STRONG>Tab-delimited format note:</STRONG> because the software treats consecutive whitespace characters
+          as one you will have to put a non-whitespace marker in place of missing values (e.g. "<STRONG>?</STRONG>"
+          or "<STRONG>n/a</STRONG>"). Otherwise subsequent column(s) will be shifted to the left.
+        <P>
+          Comma-separated files do not have this problem because they use an explicit field delimiter: comma.
+       </TD></TR>
+      </TABLE>   <!-- END  content table -->
+    </TD></TR>
+    <!--#include virtual="/includes/footer.html" -->
+  </TABLE>  <!-- END  layout table -->
+</CENTER>
+</BODY>
+</HTML>

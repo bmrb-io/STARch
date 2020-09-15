@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch garret input format</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STARch garret input format</H1>
+<P>
+ Some software programs (e.g. <A href="http://www.pence.ca/software/camra/">CAMRA</A>)
+ generate files in this format.
+<P>
+ Shift values 999.99 and -999.99 (more accurately, those matching
+ regular expression [-]?9{3,}\.9{2,}) are considered invalid.
+
+<H3>Example</H3>
+  <PRE>
+#
+# Comment
+#
+1 ALA
+N        999.999  # predicted
+HN       999.999  # predicted
+HA         4.130
+HB#        1.550
+CA        51.760
+CB        19.522
+C        180.000
+; 0.0
+2 SER
+N        999.999  # predicted
+HN       999.999  # predicted
+HA         4.510
+HB#        3.875
+CB        63.899
+CA        58.314
+C        180.000
+; 0.0
+  </PRE>
+  <HR>
+  STARch output (with residue type set to other):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	ALA	HA	.	4.130	.	.
+2	1	ALA	HB#	.	1.550	.	.
+3	1	ALA	CA	.	51.760	.	.
+4	1	ALA	CB	.	19.522	.	.
+5	1	ALA	C	.	180.000	.	.
+6	2	SER	HA	.	4.510	.	.
+7	2	SER	HB#	.	3.875	.	.
+8	2	SER	CB	.	63.899	.	.
+9	2	SER	CA	.	58.314	.	.
+10	2	SER	C	.	180.000	.	.
+stop_
+ERR:1:1:?:Invalid value 999.999
+ERR:1:1:?:Invalid value 999.999
+ERR:7:2:?:Invalid value 999.999
+ERR:7:2:?:Invalid value 999.999
+  </PRE>
+  <HR>
+  STARch output (with residue type set to 20 common amino acids):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	ALA	H	H	.	.	.
+2	1	ALA	N	N	.	.	.
+3	1	ALA	CA	C	51.760	.	.
+4	1	ALA	HA	H	4.130	.	.
+5	1	ALA	C	C	180.000	.	.
+6	1	ALA	CB	C	19.522	.	.
+7	1	ALA	HB	H	.	.	.
+8	1	ALA	HB#	.	1.550	.	.	#  Invalid atom
+9	2	SER	H	H	.	.	.
+10	2	SER	N	N	.	.	.
+11	2	SER	CA	C	58.314	.	.
+12	2	SER	HA	H	4.510	.	.
+13	2	SER	C	C	180.000	.	.
+14	2	SER	CB	C	63.899	.	.
+15	2	SER	HB2	H	.	.	.
+16	2	SER	HB3	H	.	.	.
+17	2	SER	HG	H	.	.	.
+18	2	SER	HB#	.	3.875	.	.	#  Invalid atom
+stop_
+ERR:1:1:?:Invalid value 999.999
+ERR:1:1:?:Invalid value 999.999
+ERR:7:2:?:Invalid value 999.999
+ERR:7:2:?:Invalid value 999.999
+ </PRE>
+<HR>
+<P class="datestamp">
+ Last updated: Thu 26 Aug 2004 01:06:59 PM CDT
+</P>
+</BODY>
+</HTML>

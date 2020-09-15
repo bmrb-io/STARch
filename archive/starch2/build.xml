@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+
+<project name="valdb" default="help" basedir=".">
+
+  <description>
+    Build file for STARch
+  </description>
+
+  <property name="src" location="${basedir}/EDU/bmrb/starch"/>
+  <property name="build" location="build"/>
+  <property name="dist" location="dist"/>
+  <property name="javadoc" location="doc/javadoc"/>
+  <property name="globalclasses" location="/bmrb/javaclasses"/>
+  <property name="ftpdir" location="/bmrb/ftp/pub/software/bmrb"/>
+  <property name="instdir" location="/bmrb/javaclasses/EDU/bmrb/starch"/>
+
+  <target name="help"
+  description="top-level help message">
+    <echo>
+usage:
+  ant -help               Display ant help screen
+  ant -projecthelp        Display list of targets
+  ant &lt;ANYTHING ELSE&gt;     Run "ant -targets" for details
+    </echo>
+  </target>
+  
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${build}"/>
+    <mkdir dir="${dist}"/>
+  </target>
+  
+  <target name="initdoc">
+    <mkdir dir="${javadoc}"/>
+  </target>
+
+  <target name="compile" depends="init"
+  description="compile the source">
+    <javac srcdir="${src}" destdir="${build}" debug="true" target="1.4"/>
+  </target>
+
+  <target name="minjar" depends="compile"
+  description="create jar with class files only (no debugging info)">
+    <jar jarfile="${dist}/starch-min.${DSTAMP}.jar" basedir="${build}"/>
+  </target>
+
+  <target name="jar" depends="compile,javadoc"
+  description="create jar with class (no debugging info), source, and javadoc files">
+    <jar destfile="${dist}/starch.${DSTAMP}.jar">
+      <fileset dir="${basedir}" includes="build.xml"/> 
+      <fileset dir="${build}" includes="**/*.class"/> 
+      <fileset dir="${globalclasses}" includes="org/hsqldb/**/*.class"/> 
+      <fileset dir="${globalclasses}" includes="EDU/bmrb/sansj/*.class"/> 
+      <fileset dir="${globalclasses}" includes="EDU/bmrb/nmrstar/utils/QuoteString.class"/> 
+      <fileset dir="${basedir}" includes="EDU/**/*.java"/>
+      <fileset dir="${basedir}" includes="doc/**/*" defaultexcludes="yes"/>
+      <fileset dir="${basedir}" includes="testfiles/**/*" defaultexcludes="yes"/>
+    </jar>
+  </target>
+
+  <target name="javadoc" depends="initdoc"
+  description="generate javadoc">
+    <javadoc
+      destdir="${javadoc}"
+      verbose="yes"
+      author="true"
+      version="true"
+      use="false"
+      stylesheetfile="${javadoc}/stylesheet.css"
+      windowtitle="STARch API"
+      doctitle="STARch"
+      bottom="&lt;i&gt;Copyright &#169; 2004 Board of Regents, University of Wisconsin. All Rights Reserved.&lt;/i&gt;">
+
+      <fileset dir="${basedir}" includes="EDU/**/*.java"/>
+
+    </javadoc>
+  </target>
+
+  <target name="install-classes" depends="compile"
+  description="install classes in /bmrb/javaclasses">
+    <delete>
+      <fileset dir="${instdir}" includes="*.class"/>
+    </delete>
+    <copy todir="${instdir}" verbose="true">
+      <fileset dir="${build}/EDU/bmrb/starch" includes="*.class"/>
+    </copy>
+  </target>
+
+  <target name="install-jars"
+  description="install jar in /bmrb/ftp/pub/software">
+    <copy todir="${ftpdir}" verbose="true">
+      <fileset dir="${dist}" includes="*.jar"/>
+    </copy>
+  </target>
+
+  <target name="clean" description="clean up">
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+    <delete>
+      <fileset dir="${basedir}" includes="EDU/**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*~" defaultexcludes="no"/>
+      <fileset dir="${basedir}" includes="ERRS"/>
+      <fileset dir="${basedir}" includes="*.cgi"/>
+    </delete>
+  </target>
+
+  <target name="run" depends="init,compile"
+  description="run program">
+    <java classpath="./build:/bmrb/javaclasses/ojdbc14.jar:/bmrb/javaclasses" 
+          classname="EDU.bmrb.starch.gui.Main"
+	  fork="true" spawn="true">
+          
+<!--      <arg value="${basedir}"/> -->
+    </java>
+  </target>
+
+</project>

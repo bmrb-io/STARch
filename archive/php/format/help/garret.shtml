@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <TITLE>STARch Garret input format</TITLE>
+  </HEAD>
+<BODY>
+<CENTER>
+  <!--#include virtual="/includes/xmenu.html" -->
+
+  <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+  <!-- This is a two column table. It displays a side column menu and the main page -->
+    <TR><TD class="sidemenuCol">
+       <!--#include virtual="/includes/deposit_menu.html" -->
+    </TD>
+
+    <TD VALIGN="TOP">
+      <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+        <TR class="titleAndIcon"><TD class="topContentTitle">
+          <H1 class="center">
+            <A href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=9835047&dopt=Abstract">CAMRA</A>
+            Garret file format</H1>        
+       </TD></TR>
+       <TR><TD>
+         Upload file example:  
+<PRE>
+#
+# Comment
+#
+1 ALA
+N        999.999  # predicted
+HN       999.999  # predicted
+HA         4.130
+HB#        1.550
+CA        51.760
+CB        19.522
+C        180.000
+; 0.0
+2 SER
+N        999.999  # predicted
+HN       999.999  # predicted
+HA         4.510
+HB#        3.875
+CB        63.899
+CA        58.314
+C        180.000
+; 0.0
+</PRE>
+       </TD></TR>
+      </TABLE>   <!-- END  content table -->
+    </TD></TR>
+    <!--#include virtual="/includes/footer.html" -->
+  </TABLE>  <!-- END  layout table -->
+</CENTER>
+</BODY>
+</HTML>

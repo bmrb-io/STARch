@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1 Fri May 31 18:05:49 CDT 2002
+
+  Copyright 2002 Board of Regents, University of Wisconsin,
+  Madison, Wisconsin, U.S.A. All Rights Reserved.
+
+-->
+</head>
+<body bgcolor="white">
+
+<P>
+  Provides classes for converting chemical shift data from a variety of formats 
+  to NMR-STAR.
+
+<h2>Documentation</h2>
+
+<ul>
+  <li>Running STARch:
+    <ul>
+      <li><a href="../../../../help.html">short help</a>.
+      <li><a href="../../../../index.html">overview</a>.
+    </ul>
+  <li><a href="../../../../formats.html">Supported input formats</a>
+      <ul>
+         <li><a href="../../../../format1.html">Format1</a>
+         <li><a href="../../../../format2.html">Format2</a>
+         <li><a href="../../../../format3.html">Format3</a>
+         <li><a href="../../../../pipp.html">PIPP</a>
+         <li><a href="../../../../xeasy.html">XEASY</a>
+         <li><a href="../../../../star2.html">NMR-STAR 2.1</a>
+      </ul>
+  <li><a href="../../../../output.html">Output formats</a>
+  <li><a href="../../../../nomenmap.html">Nomenclature mapper</a>
+  <li><a href="../../../../problems.html">Known problems</a>
+  <li><a href="#design">Package design</a>
+</ul>
+
+<h2><a name="design">Design overview</a></h2>
+<p>
+  <a href="Starch.html">Starch</a> is a Vector of converter classes. Its main 
+  method is <code>read( file )</code> -- it will run an appropriate converter 
+  on the file.
+<p>
+  <a href="Converter.html">Converter</a> is a parent class for all converters,
+  each converter class knows how to parse a particular input format.
+  Available converters are <a href="Format1.html">Format1</a>,
+  <a href="Format2.html">Format2</a>, <a href="Format3.html">Format3</a>
+  (aka NucleicAcid), <a href="Star2.html">Star2</a>, <a href="Pipp.html">Pipp</a>,
+  and <a href="Xeasy.html">Xeasy</a>.
+<p>
+  <a href="ErrorList.html">ErrorList</a> is a Vector of error and warning
+  messages (formatted strings). Each converter adds messages to the list;
+  messages can be printed out, retrieved individually or as one multi-line string.
+<p>
+  <a href="Data.html">Data</a> is a Vector of residues. Converters add residues
+  and add atoms to residues, as they parse the input. Residues can be printed
+  out or returned as ulti-line string in one of the available output formats.
+<p>
+  <a href="Residue.html">Residue</a> is data structure that holds one residue.
+  It contains residue label, type, sequence code (number), and a Vector of
+  atoms.
+<p>
+  <a href="Atom.html">Atom</a> is data structure that holds one atom.
+<p>
+  <a href="Nomenap.html">Nomenmap</a> is a nomenclature mapper class. Its
+  methods operate on residues; the mapper can convert residue labels, expand
+  pseudo-atoms, supply atom types, etc.
+<p>
+  <a href="Utils.html">Utils</a> class contains a few generally useful static
+  methods.
+<p>
+  <a href="Messages.html">Messages</a> class contains error and warning messages
+  (as public string constants).
+<p>
+  Finally, <a href="Main.html">Main</a> is the command-line interface to Starch.
+  Main is a good example of how to use Starch package in your code.
+
+</body>
+</html>

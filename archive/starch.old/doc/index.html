@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch documentation</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STAR conversion helper tool</H1>
+<P>
+  STARch converts chemical shift tables in various formats to
+  NMR-STAR.
+<P>
+  <DIV class="box">
+    <UL>
+      <LI><A href="#usage">Running STARch</A></LI>
+        <UL>
+	  <LI><A href="#nomenmap">nomenclature conversions</A></LI>
+	  <LI><A href="#input">input data</A></LI>
+	  <LI><A href="#informat">input formats</A></LI>
+	  <LI><A href="#outformat">output formats</A></LI>
+	  <LI><A href="#warn">errors and warnings</A></LI>
+	  <LI><A href="#outfile">output files</A></LI>
+	</UL>
+      <LI><A href="#cli">command-line interface</A></LI>      
+      <LI><A href="problems.html">Known problems</A></LI>
+      <LI><A href="design.html">Package design</A></LI>
+      <LI><A href="javadoc/">Javadoc documentation</A><P>&nbsp;</P></LI>
+      <LI><A href="wishlist.shtml">Submit a comment</A>
+    </UL>
+  </DIV>
+
+<H2><A name="usage">Running STARch</A></H2>
+<P>
+  Command-line interface: 
+  <SAMP class="command">java EDU.bmrb.starch.Main <EM class="command">parameters</EM></SAMP>.
+  <BR>
+  Web interface: parameters are set via drop-down lists, check boxes, etc.
+
+<H3><A name="nomenmap">Nomenclature conversions</A></H3>
+<P>
+  Nomenclature conversions can be turned on with command-line
+  parameter <SAMP class="command">-r <EM class="command">NUM</EM></SAMP>,
+  where <EM class="command">NUM</EM> is residue type. To see list of
+  known residue types, run STARch with <SAMP class="command">-hresidues</SAMP>
+  argument.
+  <BR>
+  Web interface has radio buttons for known residue types.
+  <BR>
+  To turn nomenclature conversions off, omit the <SAMP class="command">-r</SAMP>
+  parameter (select "other" residue type in web interface).
+<P>
+  Conversions:
+  <UL>
+    <LI>if residue type is nucleic acids, a warning message is printed if atom type
+        (1<SUP>st</SUP> character of atom name) is not one of N, C, H, or P. No 
+	nomenclature conversions are carried out.
+    <LI>if residue type is 20 common amino-acids, STARch will 
+        <UL>
+          <LI>convert 1-letter residue labels to 3-letter ones,
+	  <LI>add atom types if not present in input,
+	  <LI>add chemical shift ambiguity codes if not present in input,
+	      and atom has chemical shift value,
+	  <LI>add blank records for atoms that are not present in input.
+	</UL>
+  </UL>
+ 
+<H3><A name="input">Input data</A></H3>
+<P>
+  Input file(s) must contain at least residue sequence codes (numbers) and residue
+  labels, and the {residue code, residue label} pairs must be unique. If either is 
+  missing from input file (or input file contains duplicate labels/codes) STARch will 
+  generate an error message and stop.
+<UL>
+  <LH>Supported input formats:
+  <LI><A href="xeasy.html">XEASY</A>
+  <LI><A href="pipp.html">PIPP</A>
+  <LI><A href="format1.html">"Format1"</A> (space-delimited table, one atom per line)
+  <LI><A href="format4.html">"Format4"</A> (space-delimited table, one residue per line)
+  <LI><A href="format2.html">"Format2"</A> (each residue occupies one or two lines,
+      field lengths and starting columns are specified at the top of the file)
+  <LI><A href="format3.html">"NucleicAcid"</A> (a less restrictive variant of Format2 
+      above)
+  <LI><A href="star2.html">NMR-STAR 2.1</A>
+</UL>
+<P>
+  Command-line parameter:  <SAMP class="command">-i <EM class="command">FILENAME</EM></SAMP>.
+  If input format is XEASY, STARch will read input from <EM class="command">FILENAME.seq</EM>
+  and <EM class="command">FILENAME.prot</EM> (it will also try <EM class="command">FILENAME.xeasy</EM>
+  if <EM class="command">FILENAME.prot</EM> doesn't exist). For all other formats, read 
+  input from <EM class="command">FILENAME.seq</EM>. In other words, <STRONG>do not</STRONG>
+  include filename extension if you're converting XEASY data, but <STRONG>do</STRONG>
+  include it for all other formats.
+
+<H3><A name="informat">Input formats</A></H3>
+<P>
+  Command-line parameter:  <SAMP class="command">-f <EM class="command">FORMAT</EM></SAMP>,
+  where <EM class="command">FORMAT</EM> is format name. To see list of
+  known input formats, run STARch with <SAMP class="command">-hformats</SAMP>
+  argument.
+  <BR>
+  Web interface has a drop-down list of input formats.
+<UL>
+  <LH>Supported input formats:
+  <LI><A href="xeasy.html">XEASY</A>
+  <LI><A href="pipp.html">PIPP</A>
+  <LI><A href="format1.html">"Format1"</A> (space-delimited table, one atom per line)
+  <LI><A href="format2.html">"Format2"</A> (each residue occupies one or two lines,
+      field lengths and starting columns are specified at the top of the file)
+  <LI><A href="format3.html">"NucleicAcid"</A> (a less restrictive variant of Format2 
+      above)
+  <LI><A href="star2.html">NMR-STAR 2.1</A>
+</UL>
+
+<H3><A name="outfile">STARch output</A></H3>
+<P>
+  STARch will add chemical shift ambiguity code to atoms that have
+  chemical shift value and no ambiguity code. If nomenclature conversions
+  are on, STARch will add ambiguity code &gt;1 to pseudo-atoms that expand
+  to more than one atom; in all other cases it will set ambiguity code to 1.
+<P>
+  If nomenclature conversons are turned on, STARch will add atom types if
+  they aren't present in input. Atom type defaults to the 1<SUP>st</SUP>
+  character of atom name.
+<P>
+  STARch will preserve trailing zeroes in chemical shift value (and error):
+  they are assumed to be significant.
+<P>
+  In addition, STARch prints some of its warnings as NMR-STAR comments. For
+  example, if chemical shift value for the atom is "n/a" STARch will add the
+  comment "shift value = n/a" (the value is supposed to be a floating-point
+  number).
+<P>
+  Command-line parameters:  <SAMP class="command">-o <EM class="command">FILENAME</EM></SAMP> 
+  sets output filename, <SAMP class="command">-e <EM class="command">FILENAME</EM></SAMP> 
+  sets filename to write error and warning messages to. If output filename is omitted,
+  output goes to stdout. If error filename is omitted, messages go to stderr.
+  If output and error filename is the same, error messages will be printed at
+  the end of output file.
+  
+<H3><A name="outformat">Output formats</A></H3>
+<P>
+  Command-line parameters:  <SAMP class="command">-c</SAMP> for CSV output,
+  <SAMP class="command">-3</SAMP> for NMR-STAR 3.0 output. Default is
+  NMR-STAR 2.1.
+<P>
+  <A href="output.html">Details of STARch output formats</A>.
+
+<H3><A name="warn">Errors and warnings</A></H3>
+<P>
+  Command-line parameter:  <SAMP class="command">-v</SAMP> for verbose
+  error reporting (this is default for in web interface, but not in 
+  command-line interface).
+<HR>
+
+<H2><A name="cli">Command line interface</A></H2>
+<PRE class="command">
+dmaziuk@odyssey:~/share/starch% java EDU.bmrb.starch.Main
+Usage: java EDU.bmrb.starch.Main -f &lt;input format&gt; [-r &lt;residue type&gt;] [-i &lt;input filename&gt;] 
+       [-o &lt;output filename&gt;] [-e &lt;error filename&gt;] [-c] [-v] [-h ] [-hformats] [-hresidues]
+ -h: print usage summary
+ -hformats: list known input formats
+ input format: one of formats from the above list
+ -hresidues: list known residue types
+ residue type: one of the types from the above list
+   (if omitted, do not try nomenclature conversions)
+ input filename: input file in specified format
+   (if omitted, read from standard input)
+ output filename: if missing, write to standard out
+ -c: CSV (comma-separated values) output (default is NMR-STAR)
+ -3: NMR-STAR 3.0 output
+   (default is NMR-STAR 2.1)
+ -v: verbose output: print conversion warnings
+ error filename: file for error/warning messages
+   (if omitted, write to standard error, if same as
+   output filename, print messages before data loop
+   in output file)
+</PRE>
+<P>
+  Converters for each input format are written as separate Java classes.
+  These classes can be run directly, e.g.
+<PRE class="command">
+dmaziuk@odyssey:~/share/starch% java EDU.bmrb.starch.Xeasy input_filename
+</PRE>
+  All converter classes assume that 1<SUP>st</SUP> command-line parameter
+  is input filename, and ignore any other parameters. In addition, all
+  converters except Xeasy will read input from stdin if there are no
+  command-line parameters (Xeasy is different because it requires two
+  input files). Output goes to stdout, error messages -- to stderr.
+  When converter classes are run directly, they do not attempt any 
+  nomenclature conversions.
+<P>
+  See <A href="javadoc/">Javadoc documentation</A> for details on 
+  available converter classes.
+
+<P class="datestamp">
+  Last updated: Fri Jan  3 17:21:30 CST 2003
+</P>
+</BODY>
+</HTML>
+

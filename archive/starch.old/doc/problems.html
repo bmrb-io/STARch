@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch bugs</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">Known problems</H1>
+<P>  
+  A very common problem with Format 2 and Nucleic Acid is using TABs
+  instead of spaces in input file. The problem is that these formats
+  specify starting column for each field. A TAB is a single character
+  that occupies one column. However, it is usually rendered as 8 
+  (or any number of -- this setting is user-definable) spaces on the 
+  screen. So for example, if a field is supposed to be in column 8,
+  but there is a TAB instead of 8 spaces before it, the field looks like
+  it starts in column 8 but it actually starts in column 2. When STARch 
+  tries to read the field, it will read the value in column 8, not 2. 
+  Since it's perfectly OK to omit some values, this may not cause an error.
+  <BR>
+  In other words, if STARch runs into this problem, do not expect to 
+  see any meaningful error messages and/or output.
+<P>
+  Space-delimited formats (Format 1 and Format 4) use standard Java 
+  string tokenizer to split input line into fields (tokens). The
+  tokenizer treats consecutive whitespace characters as one big
+  whitespace. That means you must put something (e.g. "n/a" or a dash)
+  in place of missing value, except when missing value is the last one 
+  on the line. Otherwise chemical shift values will be assigned to wrong
+  atoms.
+<P>
+  STARch cannot identify input format from the input file. If you
+  specify an incorrect input format, the error message you are most
+  likely to get is about invalid field name.
+<P>
+  With nomenclature conversions turned on, STARch will attempt to convert 
+  residue labels, atom names, and supply atom types for each residue and
+  atom. If you specify an incorrect residue type, STARch will convert
+  them incorrectly.
+  <BR>
+  Also, residue type applies to the whole input file, so if the input 
+  contains a mix of different residue types, some may get incorrectly
+  converted.
+<HR>
+<P class="datestamp">
+  Last updated: Fri Jan  3 17:55:33 CST 2003
+</P>
+</BODY>
+</HTML>
+

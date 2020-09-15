@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <TITLE>STARch PIPP input format</TITLE>
+  </HEAD>
+<BODY>
+<CENTER>
+  <!--#include virtual="/includes/xmenu.html" -->
+
+  <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+  <!-- This is a two column table. It displays a side column menu and the main page -->
+    <TR><TD class="sidemenuCol">
+       <!--#include virtual="/includes/deposit_menu.html" -->
+    </TD>
+
+    <TD VALIGN="TOP">
+      <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+        <TR class="titleAndIcon"><TD class="topContentTitle">
+          <H1 class="center">PIPP file format</H1>        
+       </TD></TR>
+       <TR><TD>
+         Upload file example:  
+<PRE>
+#
+#
+#
+SHIFT_FL_FRMT		RES_SIAD
+FIRST_RES_IN_SEQ		1
+
+
+EXP_PEAK_PICK_TBL
+	Label	Exp Par Fl	Peak-Pick Fl	#-Cross-Ref
+          b	cbcaconh	ft/B		iii
+          a	hncacb	        ft/C		iii
+          c     hbhaconh        ft/B            iii
+          d     hnco            ft/A            iii
+          e	cconh		ft/C		iii
+          f	hcconh		ft/C		iii
+          t	hcch-tocsy	ft/B            iii
+
+
+
+RES_ID		8
+RES_TYPE	HIS
+SPIN_SYSTEM_ID	8
+HETEROGENEITY	100
+    C        174.6470 ( d.18 )
+    CA        56.1576 ( b.188 a.423 e.78 t.888 )
+    CB        30.0005 ( b.187 a.318 e.79 t.887 t.886 )
+    HA         4.5816 ( c.279 t.888 t.888 t.886 )
+    HB#        3.1022 ( c.278 f.186 t.887 t.887 t.886 )
+END_RES_DEF
+
+RES_ID		9
+RES_TYPE	LEU
+SPIN_SYSTEM_ID	9
+HETEROGENEITY	100
+    CA        55.1854 ( b.200 a.422 e.91 t.890 t.889 t.891 t.892 )
+    CB        42.2793 ( b.199 a.319 a.336 e.92 t.904 t.906 t.907 t.908 t.905 )
+    CD1|CD2|CG       24.8033 ( e.94 t.901 t.903 t.899 t.902 t.900 )
+    CD2|CD1|CG       23.4863 ( e.95 t.898 t.897 t.894 t.895 t.893 )
+    CG|CD1|CD2        26.8035 ( e.93 t.910 t.909 t.911 )
+    HA         4.2778 ( c.244 f.191 t.890 t.889 t.891 t.892 t.904 t.911 t.903 t.893 )
+    HB#        1.5474 ( c.240 f.190 t.889 t.904 t.906 t.907 t.908 t.905 t.905 t.902 t.894 )
+    HD1#|HD2#|HG       0.8663 ( t.891 t.907 t.909 t.901 t.903 t.899 t.902 t.900 t.900 t.898 )
+    HD2#|HD1#|HG       0.8252 ( f.213 t.892 t.908 t.899 t.898 t.897 t.897 t.894 t.895 t.893 )
+    HG|HD1#|HD2#         1.4198 ( f.214 t.890 t.906 t.910 t.910 t.909 t.911 t.901 t.895 )
+    HN         8.2726 ( b.187 b.188 a.422 a.423 a.319 a.318 c.279 c.278 d.18 e.78 e.79 f.186 )
+    N        123.6330 ( b.187 b.188 a.422 a.423 a.319 a.318 c.279 c.278 d.18 e.78 e.79 f.186 )
+END_RES_DEF
+</PRE>
+       </TD></TR>
+      </TABLE>   <!-- END  content table -->
+    </TD></TR>
+    <!--#include virtual="/includes/footer.html" -->
+  </TABLE>  <!-- END  layout table -->
+</CENTER>
+</BODY>
+</HTML>

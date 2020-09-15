@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+<!--    <LINK type="text/css" rel="stylesheet" href="docstyle.css"> -->
+    <TITLE>STARch documentation</TITLE>
+    <STYLE type="text/css">
+      LI { margin-bottom: 3%; }
+    </STYLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center"><A name="top">STARch GUI</A></H1>
+<P>
+ Requirements:
+ <OL>
+  <LI>validator database with the latest reference data
+      (<CODE>refdb.20050124.str</CODE> or newer)</LI>
+  <LI>working <CODE>~/validator.properties</CODE> file</LI>
+ </OL>
+
+<P>
+ Usage:
+ <OL>
+  <LI>Run
+<PRE>
+java -cp "/bmrb/javaclasses/ojdbc14.jar:/bmrb/javaclasses/starch.20050131.jar" EDU.bmrb.starch.gui.Main
+</PRE>
+      (or run <CODE>/bmrb/bin/runstarch.sh</CODE>).
+      
+  <LI>Load input file: File - Read file. <STRONG>Note</STRONG> as of this moment, only
+      NMR-STAR 2.1, 3.0, Garret, and PPM formats are supported.<BR>
+      The interface displays chemical shifts loop as a table. Column headers are
+      NMR-STAR 3.0 tag names without tag category part (part before dot). Some
+      missing values are highlighed: red background.
+  </LI>
+      
+  <LI>Select residue type from Options - Residue type menu.</LI>
+  
+  <LI>Edit - Convert residues. It will ask if Author_comp_code column contains
+      3-letter labels or 1-letter codes. If you answer "yes" known (i.e. recorded
+      in reference database) 3-letter labels will be copied from Author_comp_code
+      to Comp_ID column. On "no" the program will convert 1-letter codes in
+      Author_comp_code column to 3-letter labels and put those in Comp_ID column.<BR>
+      Error messages, if any, will show up in the bottom part of the window. Clicking
+      on error message will move cursor to table row where error occured.<BR>
+      <STRONG>Note:</STRONG> at the moment there's only one nomenclature available:
+      BMRB. If you select another nomenclature from Options - Atom nomenclature
+      menu conversion will fail (for both residues and atoms, below).
+  </LI>
+  
+  <LI>Edit - Convert atoms. This will read atom names from Author_atom_code
+      column, convert them to BMRB nomenclature, and fill in Atom_ID column.<BR>
+      Nomenclature conversions: curently it will expand methyl and methylene
+      pseudo-atoms in "BMRB" nomenclature (e.g. Ile HG2 -> HG21, HG22, HG23).
+      See also note in the residues section above.
+  </LI>
+  
+  <LI>Edit - Add atom types. This will fill in Atom_type column for all known
+      atoms. Missing values (unknown atoms) will be highlighted in red, you can
+      manually edit them (click on the Atom_ID cell, use backspace to delete
+      original atom name, type in the new one). Pseudoatom expansion works for
+      manual editing, too, e.g if you replace Ile QG2 with HG2, the program will
+      expand it as described above.<BR>
+      Once you've fixed all atoms (no red cells in Atom_type column), add extra
+      data, sort and renumber rows, and save the table.
+  </LI>
+  
+  <LI>Delete - Empty rows will remove rows where Chem_shif_val is missing.</LI>
+  
+  <LI>Edit - Reindex resdues, Sort atoms, and Reindex atoms: renumbers residues,
+      sorts atoms within residue in protons-carbons-nitrogents-other "Greek-alphabetical"
+      order, renumbers rows.
+  </LI>
+
+  <LI>Insert - Atom isotopes. Fills in Atom_isotope column. You must have data
+      in Atom_type column for this to work. For atoms with more than one isotope
+      you'll need to select which isotope to use.
+  </LI>
+      
+  <LI>Insert - Chemical shift error. Inserts value in Chem_shift_val_err
+      column, on per-isotope basis. You'll need to have data in Atom_type
+      and Atom_isotope columns. This does <STRONG>not</STRONG> overwrite any
+       existing values.
+  </LI>
+      
+  <LI>Oher options in insert menu: options to insert additional NMR-STAR 3.0
+      information. Each menu shows a dialog box where you can enter the information,
+      label shows where in NMR-STAR 3.0 header file to look for it. (You don't need
+      to insert saverame IDs since they are not used during annotation.)
+  </LI>
+  
+  <LI>Finally, File - Save file. At the moment, supported output formats are
+      NMR-STAR 2.1, 3.0, Xeasy, Garret, and PPM.
+  </LI>
+ </OL>
+<P>
+ Other options:
+ <UL>
+  <LI>Edit - Copy author data copies residue and atom names from Author_ columns
+      without converting them.
+  </LI>
+  
+  <LI>If Author_comp_code column contains a mix of 3-letter residue labels and
+      1-letter codes you can run Convert residues twice: first answer "no"
+      when asked for code->label conversion, this will process residues that
+      have 3-letter labels. Then run Convert residues again and answer "yes",
+      this will convert 1-letter codes to labels and add those residues
+      (i.e. it does not overwrite residues you've converted before).
+  </LI>
+      
+  <LI>If you set Options - Atom nomenclature to IUPAC, atom conversion will
+      fail for BMRB atoms but work for IUPAC pseudo-atoms (currently the 
+      database only has MG1, MG2, and QG for Val). As with residue labels,
+      you can run the conversion again, this time with nomenclature set to
+      BMRB. This will convert BMRB atoms.
+  </LI>
+ </UL>
+   
+<HR>
+<P class="datestamp">
+  Last updated: Mon 31 Jan 2005 02:57:20 PM CST
+</P>
+</BODY>
+</HTML>
+

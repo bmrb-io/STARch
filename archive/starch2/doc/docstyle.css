@@ -1,0 +1,175 @@
+/*****************************************************/
+/* File: docstyle.css                                */
+/*                                                   */
+/* Cascading Style Sheet for code documentation      */
+/*****************************************************/
+/* body properties */
+body { 
+    color: black;
+    background: white;
+    margin-left: 5%; 
+    margin-right: 5%; 
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, Times, serif; 
+    font-size: large;
+}
+/* 
+ * :link { color: #660000; }
+ * :visited { color: #330000; }
+ * :active { color: #330000; }
+*/
+
+p {
+    font-family: Arial, Helvetica, Times, serif; 
+    font-size: large;
+}
+
+table {
+    background: rgb(255, 255, 204);
+    color: rgb(102, 0, 0);
+    font-family: Arial, Helvetica, Times, serif; 
+    font-size: large;
+}
+
+/* general classes */
+/* alignment */
+/* horizontal */
+.center {
+    text-align: center;
+}
+/* indented -- note the un-indent them by body.margin-left */
+.indent1 {
+    margin-left: 5%;
+    text-indent: -5%;
+}
+.indent2 {
+    margin-left: 7%;
+    text-indent: -5%;
+}
+/* vertical */
+.padded {
+    padding-bottom: 0.3em;
+}
+
+/* decoration */
+/* colour */
+.bmrb {
+    background: rgb(255, 255, 204);
+    color: rgb(102, 0, 0);
+}
+
+.bggrey {
+    background: rgb(225, 225, 225);
+}
+.bgltgrey {
+    background: rgb(240, 240, 240);
+}
+.bgsteel {
+    background: rgb(245, 245, 255);
+}
+/* font */
+.mono {
+    font-family: monospace;
+}
+
+/* command line */
+.command {
+    font-family: monospace;
+    background: rgb(225, 225, 225);
+}
+/* hostnames */
+.hostname {
+    font-family: monospace;
+    font-variant: small-caps;
+    text-decoration: underline;
+    color: rgb( 100, 100, 100 );
+}
+/* filenames */
+.filename {
+    font-family: monospace;
+    color: teal;
+}
+/* usernames */
+.username {
+    font-family: monospace;
+    background: rgb( 200, 240, 240 );
+}
+/* html */
+.html {
+    font-family: monospace;
+    background: rgb( 240, 240, 240 );
+}
+/* date */
+.datestamp {
+    font-family: serif;
+    font-size: x-small;
+    font-style: italic;
+}
+/* headers */
+h1 {
+    margin-left: -3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+}
+h2 {
+    margin-left: -3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+}
+h3 {
+    margin-left: -3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+/* pre */
+pre {
+    font-family: monospace;
+    margin-left: -3%;
+}
+
+/* tables */
+td.grey {
+    background: rgb(225, 225, 225);
+    padding: 0.5em;
+    border: solid;
+    border-width: thin;
+}
+
+/* boxes */
+div.box {
+    padding: 0.5em;
+    border: solid;
+    border-width: thin;
+}
+div.colorbox {
+    background: rgb(224, 224, 255);
+    padding: 0.5em;
+    border: none;
+    border-width: thin;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+div.greybox {
+    background: rgb(225, 225, 225);
+    padding: 0.5em;
+    border: none;
+    border-width: thin;
+    margin-left: -4%;
+}
+div.vline {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-left: solid;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-left-width: thin;
+    border-right-width: thin;
+    border-top-width: thin;
+
+    margin-left: -4%;
+}
+

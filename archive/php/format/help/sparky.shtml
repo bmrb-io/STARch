@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <TITLE>STARch SPARKY input format</TITLE>
+  </HEAD>
+<BODY>
+<CENTER>
+  <!--#include virtual="/includes/xmenu.html" -->
+
+  <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+  <!-- This is a two column table. It displays a side column menu and the main page -->
+    <TR><TD class="sidemenuCol">
+       <!--#include virtual="/includes/deposit_menu.html" -->
+    </TD>
+
+    <TD VALIGN="TOP">
+      <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+        <TR class="titleAndIcon"><TD class="topContentTitle">
+          <H1 class="center"><A href="http://www.cgl.ucsf.edu/home/sparky/manual/index.html">Sparky</A> file format</H1>        
+       </TD></TR>
+       <TR><TD>
+         <A href="http://www.cgl.ucsf.edu/home/sparky/manual/peaks.html#ResonanceList">Resonance List</A> file example:  
+<PRE>
+ R2 CA  13C 56.539  0.003 3
+ R2 CB  13C 30.808  0.009 3
+ R2 CD  13C 43.363  0.000 1
+ R2 CG  13C 27.114  0.005 2
+ R2 CO  13C 176.552 0.000 1
+ R2 HA  1H  4.373   0.007 2
+ R2 HB# 1H  1.828   0.000 2
+ R2 HD# 1H  3.172   0.000 1
+ R2 HD  1H  3.171   0.000 1
+ R2 HG# 1H  1.647   0.002 2
+ G3 CA  13C 45.191  0.022 5
+ G3 CO  13C 174.024 0.000 1
+ G3 HA# 1H  3.985   0.003 3
+ G3 HN  1H  8.659   0.002 17
+ G3 N   15N 111.115 0.009 17
+ S4 CA  13C 58.312  0.000 1
+ S4 CB  13C 63.882  0.000 1
+ S4 HN  1H  8.251   0.002 9
+ S4 N   15N 115.445 0.027 9
+ H9 CA  13C 55.976  0.016 2
+</PRE>
+         <P>
+         <STRONG>Common errors:</STRONG> mis-labeled peaks, e.g. <EM>R2 HD#</EM> and <EM>R2 HD</EM> in the example
+         above. This will delay the processing: BMRB annotators will have to contact the depositors to verify if
+         they are indeed reporting two different shifts for the same methylene group.
+         <P>
+         <STRONG>Note (5th and 6th columns):</STRONG> <EM>SDev</EM> column is roughly equivalent to NMR-STAR assignment
+         error (<EM>Val_err</EM>) column, if there's more than one assignment. <EM>Assignments</EM> column has no direct
+         NMR-STAR equivalent, however, higher number of assignments may indicate a better <EM>Figure of merit</EM> in NMR-STAR.
+       </TD></TR>
+      </TABLE>   <!-- END  content table -->
+    </TD></TR>
+    <!--#include virtual="/includes/footer.html" -->
+  </TABLE>  <!-- END  layout table -->
+</CENTER>
+</BODY>
+</HTML>

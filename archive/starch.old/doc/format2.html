@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch input format2</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STARch input Format2</H1>
+<P>
+ Table formatted for printout, with each residue occupying one
+ or two lines:
+<PRE>
+Ala1                   51.5 (4.04)    19.1 (1.47)
+Glu2         (8.68)    57.1 (4.19)    29.3 (1.90, 1.98) CG 35.3 (2.24)
+Gly3   112.6 (8.47)    44.6 (3.81)
+                       44.6 (3.94)
+</PRE>
+<P>
+ For this format you must specify atom names, starting column (offset),
+ and number of columns (length) for each value in file header. When
+ specifying starting columns, keep in mind that TAB is a single character
+ that occupies only one column, whereas 8 consecutive spaces take up 8
+ columns.
+
+<H3>Description</H3>
+<P>
+  <STRONG>First line</STRONG> may contain number of fields (columns) in the
+  file. This number was required by old version of STARch. Current version
+  does not  use this number, but it is supported for backwards compatibility.
+<P>
+  <STRONG>Second line</STRONG> (or the first, if the column count is omitted) 
+  must contain space-separated list of field names. Field name must be one of
+  the following:
+  <TABLE>
+  <TR>
+    <TD class="mono">id</TD>
+    <TD>residue sequence code</TD>
+  </TR>
+  <TR>
+    <TD class="mono">lab</TD>
+    <TD>Residue label.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">n</TD>
+    <TD>Nitrogen.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">nh</TD>
+    <TD>Nitrogen proton.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">co</TD>
+    <TD>Carbon.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">ca</TD>
+    <TD>Alpha carbon.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">cb</TD>
+    <TD>Beta carbon.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">ha1</TD>
+    <TD>ca proton 1.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">ha2</TD>
+    <TD>ca proton 2 if it is stored on the same line as ha1.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">+ha2</TD>
+    <TD>ca proton 2 if it is stored on line below ha1.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">hb1</TD>
+    <TD>cb proton 1.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">hb2</TD>
+    <TD>cb proton 2 if it is stored on the same line as hb1.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">+hb2</TD>
+    <TD>cb proton 2 if it is stored on line below hb1.</TD>
+  </TR>
+  <TR>
+    <TD class="mono">other</TD>
+    <TD>Other atoms.</TD>
+  </TR>
+  </TABLE>
+  Field names are case-insensitive.
+  <BR>
+  <CODE>Other</CODE> field is written out as NMR-STAR comment.
+<P>
+  <STRONG>Third line</STRONG> contains field offsets (starting columns), counting
+  from one.
+<P>
+  <STRONG>Fourth line</STRONG> contains field lengths. Length of zero means "everything 
+  to the end of the line".
+<P>
+  <STRONG>Following lines</STRONG> contain values.
+<P>
+  <STRONG>Notes:</STRONG>
+<P>
+  Do not use <CODE class="bggrey">TAB</CODE> as a separator. Although it is usually
+  displayed as 8 spaces on the screen, <CODE class="bggrey">TAB</CODE> is in fact a
+  single character that occupies only one column. If you put <CODE class="bggrey">TAB</CODE>s
+  in the file, column counts will be wrong and STARch will not find the values where
+  it expects them to be. (Unfortunately, <SAMP class="bggrey">TAB</SAMP> is not always
+  8 spaces: this setting is user-configurable and many editors use e.g. 4 spaces instead
+  of 8 by default. So STARch cannot replace <SAMP class="bggrey">TAB</SAMP>s with the
+  right number of spaces because it doesn't know what the right number was when the
+  file was created.)
+<P>
+  Example of Format2:
+  <PRE>
+11
+lab id n nh ca ha1 +ha2 cb hb1 hb2 other
+1   4  8 15 24 30  30   39 45  51  57
+3   3  5 4  4  4   4    4  4   4   0
+Ala1                   51.5 (4.04)    19.1 (1.47)
+Glu2         (8.68)    57.1 (4.19)    29.3 (1.90, 1.98) CG 35.3 (2.24)
+Gly3   112.6 (8.47)    44.6 (3.81)
+                       44.6 (3.94)
+  </PRE>
+  <HR>
+  STARch output (with residue type set to 20 common amino acids):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	ALA	H	H	.	.	.
+2	1	ALA	N	N	.	.	.
+3	1	ALA	CA	C	51.5	.	.
+4	1	ALA	HA	H	.	.	.
+5	1	ALA	C	C	.	.	.
+6	1	ALA	CB	C	19.1	.	.
+7	1	ALA	HB	H	.	.	.
+8	1	ALA	HA1	.	4.04	.	.	#  Invalid atom
+9	1	ALA	HB1	.	1.47	.	.	#  Invalid atom
+10	2	GLU	H	H	8.68	.	.
+11	2	GLU	N	N	.	.	.
+12	2	GLU	CA	C	57.1	.	.
+13	2	GLU	HA	H	.	.	.
+14	2	GLU	C	C	.	.	.
+15	2	GLU	CB	C	29.3	.	.
+16	2	GLU	HB2	H	1.98	.	.	# CG 35.3 (2.24)
+17	2	GLU	HB3	H	.	.	.
+18	2	GLU	CG	C	.	.	.
+19	2	GLU	HG2	H	.	.	.
+20	2	GLU	HG3	H	.	.	.
+21	2	GLU	CD	C	.	.	.
+22	2	GLU	HE2	H	.	.	.
+23	2	GLU	HA1	.	4.19	.	.	#  Invalid atom
+24	2	GLU	HB1	.	1.90	.	.	#  Invalid atom
+25	3	GLY	H	H	8.47	.	.
+26	3	GLY	N	N	112.6	.	.
+27	3	GLY	CA	C	44.6	.	.
+28	3	GLY	HA2	H	3.94	.	.
+29	3	GLY	HA3	H	.	.	.
+30	3	GLY	C	C	.	.	.
+31	3	GLY	HA1	.	3.81	.	.	#  Invalid atom
+stop_
+  </PRE>
+<HR>
+<P class="datestamp">
+  Last updated: Fri 02 Jul 2004 05:17:45 PM CDT
+</P>
+</BODY>
+</HTML>

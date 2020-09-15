@@ -1,0 +1,72 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	409	SER	H	H	999.000	0.000	.
+2	409	SER	N	N	999.000	0.000	.
+3	409	SER	CA	C	999.000	0.000	.
+4	409	SER	HA	H	999.000	0.000	.
+5	409	SER	C	C	170.539	0.000	.
+6	409	SER	CB	C	999.000	0.000	.
+7	409	SER	HB2	H	999.000	0.000	.
+8	409	SER	HB3	H	999.000	0.000	.
+9	409	SER	HG	H	999.000	0.000	.
+10	409	SER	HB2	.	999.000	0.000	?	#  Duplicate atom name
+11	409	SER	HB3	.	.	.	.	#  Duplicate atom name
+12	410	ALA	H	H	8.670	0.000	.
+13	410	ALA	N	N	124.206	0.000	.
+14	410	ALA	CA	C	52.618	0.000	.
+15	410	ALA	HA	H	4.351	0.000	.
+16	410	ALA	C	C	177.138	0.000	.
+17	410	ALA	CB	C	19.252	0.000	.
+18	410	ALA	HB	H	1.380	0.000	?
+19	410	ALA	HB1	.	999.000	0.000	.	#  Invalid atom
+20	410	ALA	HB2	.	999.000	0.000	.	#  Invalid atom
+21	410	ALA	HB3	.	999.000	0.000	.	#  Invalid atom
+22	411	GLN	H	H	8.349	0.000	.
+23	411	GLN	N	N	119.210	0.000	.
+24	411	GLN	CA	C	55.746	0.000	.
+25	411	GLN	HA	H	4.261	0.000	.
+26	411	GLN	C	C	175.403	0.000	.
+27	411	GLN	CB	C	29.496	0.000	.
+28	411	GLN	HB2	H	2.026	0.000	.
+29	411	GLN	HB3	H	1.939	0.000	.
+30	411	GLN	CG	C	33.737	0.000	.
+31	411	GLN	HG2	H	2.341	0.000	.
+32	411	GLN	HG3	H	2.341	0.000	.
+33	411	GLN	CD	C	999.000	0.000	.
+34	411	GLN	NE2	N	111.985	0.000	.
+35	411	GLN	HE21	H	6.822	0.000	.
+36	411	GLN	HE22	H	7.497	0.000	.
+37	411	GLN	HB2	.	999.000	0.000	?	#  Duplicate atom name
+38	411	GLN	HB3	.	.	.	.	#  Duplicate atom name
+39	411	GLN	HG2	.	999.000	0.000	?	#  Duplicate atom name
+40	411	GLN	HG3	.	.	.	.	#  Duplicate atom name
+41	411	GLN	QE2	.	999.000	0.000	.	#  Invalid atom
+42	412	ASP	H	H	8.335	0.000	.
+43	412	ASP	N	N	121.153	0.000	.
+44	412	ASP	CA	C	54.746	0.000	.
+45	412	ASP	HA	H	4.649	0.000	.
+46	412	ASP	C	C	175.243	0.000	.
+47	412	ASP	CB	C	43.715	0.000	.
+48	412	ASP	HB2	H	2.675	0.000	.
+49	412	ASP	HB3	H	2.375	0.000	.
+50	412	ASP	CG	C	999.000	0.000	.
+51	412	ASP	HD2	H	999.000	0.000	.
+52	412	ASP	HB2	.	999.000	0.000	?	#  Duplicate atom name
+53	412	ASP	HB3	.	.	.	.	#  Duplicate atom name
+stop_
+ERR::409:SER:Duplicate atom name HB2
+ERR::409:SER:Duplicate atom name HB3
+ERR::411:GLN:Duplicate atom name HB2
+ERR::411:GLN:Duplicate atom name HB3
+ERR::411:GLN:Duplicate atom name HG2
+ERR::411:GLN:Duplicate atom name HG3
+ERR::412:ASP:Duplicate atom name HB2
+ERR::412:ASP:Duplicate atom name HB3

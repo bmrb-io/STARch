@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch input format3</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STARch input Format3: Nucleic Acid</H1>
+<P>
+ Table formatted for printout, with each residue occupying one line:
+<PRE>
+ G1   8.20  n.a.  5.95  4.93  4.71  4.58   12.18 
+ C5   7.84  5.67  5.51  4.31  4.45  4.10   8.41   7.00
+ A8   7.60  7.64  5.90  4.63  4.55  4.48  
+</PRE>
+<P>
+ This format is very similar to <A href="format2.html">Format 2</A>,
+ except that
+ <UL>
+  <LI>with this format you can specify any atom names (Format2 is limited
+      to amino acids),</LI>
+  <LI>and all values for one residue must be on one line (in Format2
+      CA and CB protons may be on the line below).</LI>
+ </UL>
+<P>
+ For this format you must specify atom names, starting column (offset),
+ and number of columns (length) for each value in file header. When
+ specifying starting columns, keep in mind that TAB is a single character
+ that occupies only one column, whereas 8 consecutive spaces take up 8
+ columns.
+
+<H3>Description</H3>
+<P>
+  <STRONG>First line</STRONG> may contain number of fields (columns) in the
+  file. This number was required by old version of STARch. Current version 
+  does not use this number, but it is supported for backwards compatibility.
+<P>
+  <STRONG>Second line</STRONG> must contain space-separated list of field
+  names. Two field names must be present:
+  <TABLE>
+    <TR>
+      <TD class="mono">seq_code</TD>
+      <TD>residue sequence code</TD>
+    </TR>
+    <TR>
+      <TD class="mono">label</TD>
+      <TD>Residue label.</TD>
+    </TR>
+  </TABLE>
+  The rest are atom names.
+  <BR>
+  Field names are case-insensitive, atom names will be converted to upper case.
+<P>
+  <STRONG>Third line</STRONG> contains field offsets (starting columns), counting
+  from one.
+<P>
+  <STRONG>Fourth line</STRONG> contains field lengths. Length of zero means "everything 
+  to the end of the line".
+<P>
+  <STRONG>Following lines</STRONG> contain values.
+<P>
+  <STRONG>Note:</STRONG>
+<P>
+  Do not use <SAMP class="bggrey">TAB</SAMP> as a separator. Although it is usually
+  displayed as 8 spaces on the screen, <SAMP class="bggrey">TAB</SAMP> is in fact a
+  single character that occupies only one column.  If you put <CODE class="bggrey">TAB</CODE>s
+  in the file, column counts will be wrong and STARch will not find the values where
+  it expects them to be. (Unfortunately, <SAMP class="bggrey">TAB</SAMP> is not always
+  8 spaces: this setting is user-configurable and many editors use e.g. 4 spaces instead
+  of 8 by default. So STARch cannot replace <SAMP class="bggrey">TAB</SAMP>s with the
+  right number of spaces because it doesn't know what the right number was when the
+  file was created.)
+  
+<H3>Example</H3>
+  <PRE>
+10
+label seq_code   H8   H2     H1'   H2'   H3'   H4'    im     am
+2     3          7    13     19    25    31    37     44     51 
+1     3          4    4       4     4    4     4      5      4 
+ G1   8.20  n.a.  5.95  4.93  4.71  4.58   12.18 
+ C5   7.84  5.67  5.51  4.31  4.45  4.10   8.41   7.00
+ A8   7.60  7.64  5.90  4.63  4.55  4.48  
+  </PRE>
+  <HR>
+  STARch output  (with residue type set to nucleic acid):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	G	H8	H	8.20	.	1
+2	1	G	H2	H	.	.	.	# shift value=n.a.
+3	1	G	"H1'"	H	5.95	.	1
+4	1	G	"H2'"	H	4.93	.	1
+5	1	G	"H3'"	H	4.71	.	1
+6	1	G	"H4'"	H	4.58	.	1
+7	1	G	IM	I	12.18	.	1
+8	1	G	AM	A	.	.	.	# shift value=null
+9	5	C	H8	H	7.84	.	1
+10	5	C	H2	H	5.67	.	1
+11	5	C	"H1'"	H	5.51	.	1
+12	5	C	"H2'"	H	4.31	.	1
+13	5	C	"H3'"	H	4.45	.	1
+14	5	C	"H4'"	H	4.10	.	1
+15	5	C	IM	I	8.41	.	1
+16	5	C	AM	A	7.00	.	1
+17	8	A	H8	H	7.60	.	1
+18	8	A	H2	H	7.64	.	1
+19	8	A	"H1'"	H	5.90	.	1
+20	8	A	"H2'"	H	4.63	.	1
+21	8	A	"H3'"	H	4.55	.	1
+22	8	A	"H4'"	H	4.48	.	1
+23	8	A	IM	I	.	.	.	# shift value=null
+24	8	A	AM	A	.	.	.	# shift value=null
+stop_
+WARN::1:G:Check atom type: I
+WARN::1:G:Check atom type: A
+WARN::5:C:Check atom type: I
+WARN::5:C:Check atom type: A
+WARN::8:A:Check atom type: I
+WARN::8:A:Check atom type: A
+  </PRE>
+<HR>
+<P class="datestamp">
+  Last updated: Tue Apr 15 16:09:47 CDT 2003
+</P>
+</BODY>
+</HTML>
