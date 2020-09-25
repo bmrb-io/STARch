@@ -1,0 +1,53 @@
+
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	8	HIS	H	H	.	.	.
+2	8	HIS	N	N	.	.	.
+3	8	HIS	CA	C	56.1576	.	?
+4	8	HIS	HA	H	4.5816	.	?
+5	8	HIS	C	C	174.6470	.	?
+6	8	HIS	CB	C	30.0005	.	?
+7	8	HIS	HB2	H	.	.	.
+8	8	HIS	HB3	H	.	.	.
+9	8	HIS	CG	C	.	.	.
+10	8	HIS	ND1	N	.	.	.
+11	8	HIS	HD1	H	.	.	.
+12	8	HIS	CD2	C	.	.	.
+13	8	HIS	HD2	H	.	.	.
+14	8	HIS	CE1	C	.	.	.
+15	8	HIS	HE1	H	.	.	.
+16	8	HIS	NE2	N	.	.	.
+17	8	HIS	HE2	H	.	.	.
+18	8	HIS	HB	.	3.1022	.	?	#  Invalid atom
+19	9	LEU	H	H	8.2726	.	?
+20	9	LEU	N	N	123.6330	.	?
+21	9	LEU	CA	C	55.1854	.	?
+22	9	LEU	HA	H	4.2778	.	?
+23	9	LEU	C	C	.	.	.
+24	9	LEU	CB	C	42.2793	.	?
+25	9	LEU	HB2	H	.	.	.
+26	9	LEU	HB3	H	.	.	.
+27	9	LEU	CG	C	26.8035	.	?
+28	9	LEU	CD1	C	24.8033	.	?
+29	9	LEU	HD1	H	0.8663	.	?
+30	9	LEU	CD2	C	23.4863	.	?
+31	9	LEU	HD2	H	0.8252	.	?
+32	9	LEU	HG	H	1.4198	.	?
+33	9	LEU	HB	.	1.5474	.	?	#  Invalid atom
+stop_
+WARN::8:HIS:Replacing HB# with HB, ambiguity code ?
+WARN::9:LEU:Replacing CD1|CD2|CG with CD1, ambiguity code ?
+WARN::9:LEU:Replacing CD2|CD1|CG with CD2, ambiguity code ?
+WARN::9:LEU:Replacing CG|CD1|CD2 with CG, ambiguity code ?
+WARN::9:LEU:Replacing HB# with HB, ambiguity code ?
+WARN::9:LEU:Replacing HD1#|HD2#|HG with HD1, ambiguity code ?
+WARN::9:LEU:Replacing HD2#|HD1#|HG with HD2, ambiguity code ?
+WARN::9:LEU:Replacing HG|HD1#|HD2# with HG, ambiguity code ?

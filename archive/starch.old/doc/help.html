@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch help</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STARch help</H1>
+<P>
+  STARch converts chemical shift data from several formats to NMR-STAR format.
+
+<H2>Input data</H2>
+<P>
+  Input file(s) must contain at least residue sequence codes (numbers) and residue
+  labels, and the {residue code, residue label} pairs must be unique. If either is 
+  missing from input file (or input file contains duplicate labels/codes) STARch will 
+  generate an error message and stop.
+<UL>
+  <LH>Supported input formats:
+  <LI><A href="xeasy.html">XEASY</A>
+  <LI><A href="pipp.html">PIPP</A>
+  <LI><A href="format1.html">"Format1"</A> (space-delimited table, one atom per line)
+  <LI><A href="format4.html">"Format4"</A> (space-delimited table, one residue per line)
+  <LI><A href="format2.html">"Format2"</A> (each residue occupies one or two lines,
+      field lengths and starting columns are specified at the top of the file)
+  <LI><A href="format3.html">"NucleicAcid"</A> (a less restrictive variant of Format2 
+      above)
+  <LI><A href="star2.html">NMR-STAR 2.1</A>
+</UL>
+
+<H2>STARch output</H2>
+<P>
+  By default STARch prints out an NMR-STAR 2.1 loop (table) of chemical shifts;
+  there is an option to print out a comma-separated file instead. If STARch is 
+  running in verbose mode (default for web-based version), it will also print 
+  out warning messages, if any. If STARch is unable to convert the input, it 
+  will print out error message(s); no other output is generated.
+<P>
+  Some input files may contain extra values or comments. These are written out
+  as NMR-STAR comments. (NMR-STAR comments start with '#' and continue to the end 
+  of the line.) In some cases STARch will output comments in a separate row that
+  contains only residue sequence code, residue label, and the comment.
+<P>
+  In addition, STARch prints some of its warnings as NMR-STAR comments. For
+  example, if chemical shift value for the atom is "n/a" STARch will add the
+  comment "shift value = n/a" (the value is supposed to be a floating-point
+  number).
+<!--
+<P>
+  STARch will add chemical shift ambiguity code to atoms that have
+  chemical shift value and no ambiguity code. If nomenclature conversions
+  are on, STARch will add ambiguity code &gt;1 to pseudo-atoms that expand
+  to more than one atom; in all other cases it will set ambiguity code to 1.
+-->
+<P>
+  If nomenclature conversons are turned on, STARch will add atom types if
+  they aren't present in input. Atom type defaults to the 1<SUP>st</SUP>
+  character of atom name.
+<P>
+  STARch will preserve trailing zeroes in chemical shift value (and error):
+  they are assumed to be significant.
+<P>
+  <A href="output.html">Details of STARch output formats</A>.
+  
+
+<H2>Errors and warnings</H2>
+<P>
+  STARch error/warning messages are printed below the data loop. General format of
+  the message is
+  <PRE class="bggrey">
+[ERR|WARN]:line_number:residue_sequence_code residue_label atom_name message_text 
+  </PRE>
+  Line numbers, sequence codes, lables and/or atom names may be omitted. Also, since
+  some formats may contain continuation lines or optional extra lines (e.g. field
+  count), line numbers in STARch messages may be off by one or two.
+<P>
+  Error messages begin with <CODE class="bggrey">ERR</CODE>. They are generated
+  when STARch cannot convert the data, e.g. when input file is in a wrong format. 
+  There will be no output other than the error message.
+<P>
+  Warning messages begin with <CODE class="bggrey">WARN</CODE>. These are generated
+  when STARch encounters a non-critical (i.e. processing can continue) error, or
+  when the input contains an incorrect value.
+
+<HR>
+<P class="datestamp">
+  Last updated: Fri Jan  3 15:23:17 CST 2003
+</P>
+</BODY>
+</HTML>
+

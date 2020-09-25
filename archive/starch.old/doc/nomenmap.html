@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch documentation</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">Selecting residue type</H1>
+<P>
+ Selecting residue type turns on or off nomenclature conversion and error
+ checking code in STARch.
+<P>
+ Web interface has radio buttons for residue types STARch knows about.
+<P>
+ When using command line interface, run STARch with <SAMP class="command">-hresidues</SAMP>
+ argument to see the list of known residue types (numbers). To specify residue
+ type on command line, use 
+ <SAMP class="command">-r <EM class="command">NUM</EM></SAMP> (where
+ <EM class="command">NUM</EM> is residue type number) parameter.
+
+<H3><A name="types">Residue types and atom nomenclature conversions</A></H3>
+<DL>
+ <DT>20 common amino-acids</DT>
+ <DD>
+    <UL>
+      <LH>For this residue type, STARch will attempt to</LH>
+      <LI>convert 1-letter residue labels to 3-letter ones,
+      <LI>add atom types if not present in input,
+      <LI>add chemical shift ambiguity codes if not present in input,
+          and atom has chemical shift value,
+      <LI>add records for all atoms in the residue, not just for those present in input,
+      <LI>flag invalid atoms.
+    </UL>
+ </DD>
+ <DT>nucleic acid</DT>
+ <DD>a warning message is printed if atom type (1<SUP>st</SUP> character of
+     atom name) is not one of N, C, H, or P.</DD>
+ <DT>other</DT>
+ <DD>Turns off all atom name checks/conversions. Command-line equivalent: omit
+     the <SAMP class="command">-r</SAMP> parameter.</DD>
+</DL>
+<P>
+  <STRONG>Example of nomenclature conversions</STRONG> (20 common amino-acids)<BR>
+  Input records:
+  <PRE>
+3	LYS	HB+	1.49
+3	LYS	QG	1.10
+3	LYS	QD	1.55
+3	LYS	QE	2.89
+4	HIS	CA	53.95
+  </PRE>
+  Output without conversions:
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	3	LYS	HB+	.	1.49	.	1
+2	3	LYS	QG	.	1.10	.	1
+3	3	LYS	QD	.	1.55	.	1
+4	3	LYS	QE	.	2.89	.	1
+5	4	HIS	CA	.	53.95	.	1
+stop_
+  </PRE>
+  Output with conversions:
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	3	LYS	H	H	.	.	.
+2	3	LYS	N	N	.	.	.
+3	3	LYS	CA	C	.	.	.
+4	3	LYS	HA	H	.	.	.
+5	3	LYS	C	C	.	.	.
+6	3	LYS	CB	C	.	.	.
+7	3	LYS	HB2	H	.	.	.
+8	3	LYS	HB3	H	.	.	.
+9	3	LYS	CG	C	.	.	.
+10	3	LYS	HG2	H	1.10	.	2
+11	3	LYS	HG3	H	.	.	.
+12	3	LYS	CD	C	.	.	.
+13	3	LYS	HD2	H	1.55	.	2
+14	3	LYS	HD3	H	.	.	.
+15	3	LYS	CE	C	.	.	.
+16	3	LYS	HE2	H	.	.	.
+17	3	LYS	HE3	H	.	.	.
+18	3	LYS	NZ	N	.	.	.
+19	3	LYS	HZ	H	2.89	.	1
+20	3	LYS	HB+	.	1.49	.	1	# Invalid atom
+21	4	HIS	H	H	.	.	.
+22	4	HIS	N	N	.	.	.
+23	4	HIS	CA	C	53.95	.	1
+24	4	HIS	HA	H	.	.	.
+25	4	HIS	C	C	.	.	.
+26	4	HIS	CB	C	.	.	.
+27	4	HIS	HB2	H	.	.	.
+28	4	HIS	HB3	H	.	.	.
+29	4	HIS	CG	C	.	.	.
+30	4	HIS	ND1	N	.	.	.
+31	4	HIS	HD1	H	.	.	.
+32	4	HIS	CD2	C	.	.	.
+33	4	HIS	HD2	H	.	.	.
+34	4	HIS	CE1	C	.	.	.
+35	4	HIS	HE1	H	.	.	.
+36	4	HIS	NE2	N	.	.	.
+37	4	HIS	HE2	H	.	.	.
+stop_
+  </PRE>
+<P class="datestamp">
+  Last updated: Fri Jan  3 15:00:23 CST 2003
+</P>
+</BODY>
+</HTML>

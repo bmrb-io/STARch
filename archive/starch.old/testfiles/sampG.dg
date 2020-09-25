@@ -1,0 +1,23 @@
+#
+# Comment
+#
+1 ALA
+N        999.999  # predicted
+HN       999.999  # predicted
+HA         4.130
+HB#        1.550
+CA        51.760
+CB        19.522
+C        180.000
+; 0.0
+2 SER
+N        999.999  # predicted
+HN       999.999  # predicted
+HA         4.510
+HB#        3.875
+CB        63.899
+CA        58.314
+C        180.000
+; 0.0
+
+

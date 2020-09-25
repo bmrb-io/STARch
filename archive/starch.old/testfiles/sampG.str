@@ -1,0 +1,25 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	ALA	HA	.	4.130	.	.
+2	1	ALA	HB#	.	1.550	.	.
+3	1	ALA	CA	.	51.760	.	.
+4	1	ALA	CB	.	19.522	.	.
+5	1	ALA	C	.	180.000	.	.
+6	2	SER	HA	.	4.510	.	.
+7	2	SER	HB#	.	3.875	.	.
+8	2	SER	CB	.	63.899	.	.
+9	2	SER	CA	.	58.314	.	.
+10	2	SER	C	.	180.000	.	.
+stop_
+ERR:1:1:?:Invalid value 999.999
+ERR:1:1:?:Invalid value 999.999
+ERR:7:2:?:Invalid value 999.999
+ERR:7:2:?:Invalid value 999.999

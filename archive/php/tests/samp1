@@ -1,0 +1,10 @@
+seq_code label  name value value_error	nothing
+1	GLU	NN	120.20	.01	XYZ
+1	GLU	CA	57.19	.
+1	GLU	CB	28.16
+1	GLU	CG	34.23
+1	GLU	HN	n/a
+1	GLU	HA	3.82
+1	GLU	QB	2.06
+1	GLU	HG+	2.41	n/a	comment
+1	GLU	HG-	2.34

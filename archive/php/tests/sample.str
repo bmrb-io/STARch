@@ -1,0 +1,59 @@
+data_example
+
+save_chemical_shift_assignment_peppy
+  _Saveframe_category        assigned_chemical_shifts
+   
+  _Sample_conditions_label            $sample_conditions_set_1                                  
+  _Chem_shift_reference_set_label     $chem_shift_reference_par_set_one
+  _Mol_system_component_name          peppy
+  
+  loop_
+    _Atom_shift_assign_ID             
+    _Residue_seq_code                 
+    _Residue_label                    
+    _Atom_name                        
+    _Atom_type                        
+    _Chem_shift_value                 
+    _Chem_shift_value_error           
+    _Chem_shift_ambiguity_code        
+
+
+1      1      GLN    C      C    175.75    0.05     1
+2      1      GLN    CA     C     54.44    0.05     1
+3      2      LEU    H      H      8.24    0.05     1
+4      2      LEU    HA     H      4.70    0.05     1
+5      2      LEU    HB2    H      1.75    0.05     1
+6      2      LEU    HB3    H      1.55    0.05     1
+7      2      LEU    HG     H      0.92    0.05     1
+8      2      LEU    HD1    H      0.68    0.05     1
+9      2      LEU    HD2    H      0.93    0.05     1
+10     2      LEU    C      C    177.70    0.05     1
+11     2      LEU    CA     C     54.44    0.05     1
+12     2      LEU    CB     C     43.70    0.05     1
+13     2      LEU    CD1    C     26.95    0.05     1
+14     2      LEU    CD2    C     23.67    0.05     1
+15     2      LEU    N      N    122.88    0.05     1
+16     3      THR    H      H      8.66    0.05     1
+17     3      THR    HA     H      4.54    0.05     1
+18     3      THR    HG2    H      1.35    0.05     1
+19     3      THR    C      C    175.60    0.05     1
+20     3      THR    CA     C     60.36    0.05     1
+21     3      THR    CB     C     70.24    0.05     1
+22     3      THR    CG2    C     21.87    0.05     1
+23     3      THR    N      N    112.76    0.05     1
+24     4      GLU    H      H      9.03    0.05     1
+25     4      GLU    HA     H      4.03    0.05     1
+26     4      GLU    HB2    H      2.11    0.05     1
+27     4      GLU    HB3    H      2.11    0.05     1
+28     4      GLU    HG2    H      2.41    0.05     1
+29     4      GLU    HG3    H      2.41    0.05     1
+30     4      GLU    C      C    179.59    0.05     1
+31     4      GLU    CA     C     60.09    0.05     1
+32     4      GLU    CB     C     29.23    0.05     1
+33     4      GLU    CG     C     36.72    0.05     1
+34     4      GLU    N      N    120.39    0.05     1
+
+ stop_
+
+save_
+

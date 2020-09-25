@@ -1,0 +1,174 @@
+
+####################
+#  NMR parameters  #
+####################
+   
+       ########################
+       #  Coupling constants  #
+       ########################
+   
+save_3JHNCB
+   _Saveframe_category          coupling_constants
+   
+   loop_
+      _Sample_label
+   
+      $sample_1
+   
+   stop_
+   
+   
+   _Sample_conditions_label    $sample_conditions_1
+   _Spectrometer_frequency_1H   @
+   _Mol_system_component_name  "FDXN"
+   
+   
+    loop_
+       _Coupling_constant.ID
+       _Coupling_constant.Code
+       _Coupling_constant.Entity_assembly_ID_1
+       _Coupling_constant.Comp_index_ID_1
+       _Coupling_constant.Comp_ID_1
+       _Coupling_constant.Atom_ID_1
+       _Coupling_constant.Atom_type_1
+       _Coupling_constant.Atom_isotope_number_1
+       _Coupling_constant.Ambiguity_code_1
+       _Coupling_constant.Entity_assembly_ID_2
+       _Coupling_constant.Comp_index_ID_2
+       _Coupling_constant.Comp_ID_2
+       _Coupling_constant.Atom_ID_2
+       _Coupling_constant.Atom_type_2
+       _Coupling_constant.Atom_isotope_number_2
+       _Coupling_constant.Ambiguity_code_2
+       _Coupling_constant.Val
+       _Coupling_constant.Val_min
+       _Coupling_constant.Val_max
+       _Coupling_constant.Val_err
+       _Coupling_constant.Details
+   
+           1  3JHNCB    FDXN     3  Lys  HN   H   1  1    FDXN     3  Lys  CB   C  13  1     0.85   .     .    0.35    "phi+60"
+           2  3JHNCB    FDXN     4  Ala  HN   H   1  1    FDXN     4  Ala  CB   C  13  1     0.53   .     .    0.35    "phi+60"
+           3  3JHNCB    FDXN     5  Leu  HN   H   1  1    FDXN     5  Leu  CB   C  13  1     1.05   .     .    0.35    "phi+60"
+           4  3JHNCB    FDXN     6  Ile  HN   H   1  1    FDXN     6  Ile  CB   C  13  1     0.33   .     .    0.35    "phi+60"
+           5  3JHNCB    FDXN     7  Val  HN   H   1  1    FDXN     7  Val  CB   C  13  1     0.85   .     .    0.35    "phi+60"
+           6  3JHNCB    FDXN     8  Tyr  HN   H   1  1    FDXN     8  Tyr  CB   C  13  1     0.14   .     .    0.35    "phi+60"
+           7  3JHNCB    FDXN    10  Ser  HN   H   1  1    FDXN    10  Ser  CB   C  13  1     0.18   .     .    0.35    "phi+60"
+           8  3JHNCB    FDXN    11  Thr  HN   H   1  1    FDXN    11  Thr  CB   C  13  1     1.83   .     .    0.35    "phi+60"
+           9  3JHNCB    FDXN    12  Thr  HN   H   1  1    FDXN    12  Thr  CB   C  13  1     0.89   .     .    0.35    "phi+60"
+          10  3JHNCB    FDXN    14  Asn  HN   H   1  1    FDXN    14  Asn  CB   C  13  1     2.40   .     .    0.35    "phi+60"
+          11  3JHNCB    FDXN    16  Glu  HN   H   1  1    FDXN    16  Glu  CB   C  13  1     2.24   .     .    0.35    "phi+60"
+          12  3JHNCB    FDXN    17  Tyr  HN   H   1  1    FDXN    17  Tyr  CB   C  13  1     2.45   .     .    0.35    "phi+60"
+          13  3JHNCB    FDXN    19  Ala  HN   H   1  1    FDXN    19  Ala  CB   C  13  1     2.89   .     .    0.35    "phi+60"
+          14  3JHNCB    FDXN    20  Glu  HN   H   1  1    FDXN    20  Glu  CB   C  13  1     2.38   .     .    0.35    "phi+60"
+          15  3JHNCB    FDXN    21  Thr  HN   H   1  1    FDXN    21  Thr  CB   C  13  1     2.58   .     .    0.35    "phi+60"
+          16  3JHNCB    FDXN    22  Ile  HN   H   1  1    FDXN    22  Ile  CB   C  13  1     2.48   .     .    0.35    "phi+60"
+          17  3JHNCB    FDXN    23  Ala  HN   H   1  1    FDXN    23  Ala  CB   C  13  1     2.87   .     .    0.35    "phi+60"
+          18  3JHNCB    FDXN    24  Arg  HN   H   1  1    FDXN    24  Arg  CB   C  13  1     2.47   .     .    0.35    "phi+60"
+          19  3JHNCB    FDXN    25  Glu  HN   H   1  1    FDXN    25  Glu  CB   C  13  1     2.16   .     .    0.35    "phi+60"
+          20  3JHNCB    FDXN    26  Leu  HN   H   1  1    FDXN    26  Leu  CB   C  13  1     2.16   .     .    0.35    "phi+60"
+          21  3JHNCB    FDXN    27  Ala  HN   H   1  1    FDXN    27  Ala  CB   C  13  1     2.67   .     .    0.35    "phi+60"
+          22  3JHNCB    FDXN    28  Asp  HN   H   1  1    FDXN    28  Asp  CB   C  13  1     2.30   .     .    0.35    "phi+60"
+          23  3JHNCB    FDXN    29  Ala  HN   H   1  1    FDXN    29  Ala  CB   C  13  1     1.87   .     .    0.35    "phi+60"
+          24  3JHNCB    FDXN    31  Tyr  HN   H   1  1    FDXN    31  Tyr  CB   C  13  1     2.10   .     .    0.35    "phi+60"
+          25  3JHNCB    FDXN    32  Glu  HN   H   1  1    FDXN    32  Glu  CB   C  13  1     1.35   .     .    0.35    "phi+60"
+          26  3JHNCB    FDXN    33  Val  HN   H   1  1    FDXN    33  Val  CB   C  13  1     1.07   .     .    0.35    "phi+60"
+          27  3JHNCB    FDXN    34  Asp  HN   H   1  1    FDXN    34  Asp  CB   C  13  1     0.78   .     .    0.35    "phi+60"
+          28  3JHNCB    FDXN    35  Ser  HN   H   1  1    FDXN    35  Ser  CB   C  13  1     0.81   .     .    0.35    "phi+60"
+          29  3JHNCB    FDXN    36  Arg  HN   H   1  1    FDXN    36  Arg  CB   C  13  1     0.28   .     .    0.35    "phi+60"
+          30  3JHNCB    FDXN    37  Asp  HN   H   1  1    FDXN    37  Asp  CB   C  13  1     2.46   .     .    0.35    "phi+60"
+          31  3JHNCB    FDXN    38  Ala  HN   H   1  1    FDXN    38  Ala  CB   C  13  1     2.78   .     .    0.35    "phi+60"
+          32  3JHNCB    FDXN    39  Ala  HN   H   1  1    FDXN    39  Ala  CB   C  13  1     2.71   .     .    0.35    "phi+60"
+          33  3JHNCB    FDXN    40  Ser  HN   H   1  1    FDXN    40  Ser  CB   C  13  1     1.51   .     .    0.35    "phi+60"
+          34  3JHNCB    FDXN    41  Val  HN   H   1  1    FDXN    41  Val  CB   C  13  1     1.32   .     .    0.35    "phi+60"
+          35  3JHNCB    FDXN    42  Glu  HN   H   1  1    FDXN    42  Glu  CB   C  13  1     0.85   .     .    0.35    "phi+60"
+          36  3JHNCB    FDXN    43  Ala  HN   H   1  1    FDXN    43  Ala  CB   C  13  1     2.64   .     .    0.35    "phi+60"
+          37  3JHNCB    FDXN    46  Leu  HN   H   1  1    FDXN    46  Leu  CB   C  13  1     2.35   .     .    0.35    "phi+60"
+          38  3JHNCB    FDXN    47  Phe  HN   H   1  1    FDXN    47  Phe  CB   C  13  1     1.49   .     .    0.35    "phi+60"
+          39  3JHNCB    FDXN    48  Glu  HN   H   1  1    FDXN    48  Glu  CB   C  13  1     2.36   .     .    0.35    "phi+60"
+          40  3JHNCB    FDXN    50  Phe  HN   H   1  1    FDXN    50  Phe  CB   C  13  1     1.30   .     .    0.35    "phi+60"
+          41  3JHNCB    FDXN    51  Asp  HN   H   1  1    FDXN    51  Asp  CB   C  13  1     1.61   .     .    0.35    "phi+60"
+          42  3JHNCB    FDXN    52  Leu  HN   H   1  1    FDXN    52  Leu  CB   C  13  1    -0.28   .     .    0.35    "phi+60"
+          43  3JHNCB    FDXN    53  Val  HN   H   1  1    FDXN    53  Val  CB   C  13  1     0.77   .     .    0.35    "phi+60"
+          44  3JHNCB    FDXN    54  Leu  HN   H   1  1    FDXN    54  Leu  CB   C  13  1     0.93   .     .    0.35    "phi+60"
+          45  3JHNCB    FDXN    55  Leu  HN   H   1  1    FDXN    55  Leu  CB   C  13  1     0.60   .     .    0.35    "phi+60"
+          46  3JHNCB    FDXN    57  Cys  HN   H   1  1    FDXN    57  Cys  CB   C  13  1     0.04   .     .    0.35    "phi+60"
+          47  3JHNCB    FDXN    58  Ser  HN   H   1  1    FDXN    58  Ser  CB   C  13  1     2.35   .     .    0.35    "phi+60"
+          48  3JHNCB    FDXN    60  Trp  HN   H   1  1    FDXN    60  Trp  CB   C  13  1     0.31   .     .    0.35    "phi+60"
+          49  3JHNCB    FDXN    62  Asp  HN   H   1  1    FDXN    62  Asp  CB   C  13  1     2.07   .     .    0.35    "phi+60"
+          50  3JHNCB    FDXN    64  Ser  HN   H   1  1    FDXN    64  Ser  CB   C  13  1     0.15   .     .    0.35    "phi+60"
+          51  3JHNCB    FDXN    65  Ile  HN   H   1  1    FDXN    65  Ile  CB   C  13  1     1.96   .     .    0.35    "phi+60"
+          52  3JHNCB    FDXN    66  Glu  HN   H   1  1    FDXN    66  Glu  CB   C  13  1     0.17   .     .    0.35    "phi+60"
+          53  3JHNCB    FDXN    67  Leu  HN   H   1  1    FDXN    67  Leu  CB   C  13  1     2.02   .     .    0.35    "phi+60"
+          54  3JHNCB    FDXN    68  Gln  HN   H   1  1    FDXN    68  Gln  CB   C  13  1     2.75   .     .    0.35    "phi+60"
+          55  3JHNCB    FDXN    69  Asp  HN   H   1  1    FDXN    69  Asp  CB   C  13  1     2.28   .     .    0.35    "phi+60"
+          56  3JHNCB    FDXN    70  Asp  HN   H   1  1    FDXN    70  Asp  CB   C  13  1     2.08   .     .    0.35    "phi+60"
+          57  3JHNCB    FDXN    71  Phe  HN   H   1  1    FDXN    71  Phe  CB   C  13  1     1.99   .     .    0.35    "phi+60"
+          58  3JHNCB    FDXN    72  Ile  HN   H   1  1    FDXN    72  Ile  CB   C  13  1     2.46   .     .    0.35    "phi+60"
+          59  3JHNCB    FDXN    74  Leu  HN   H   1  1    FDXN    74  Leu  CB   C  13  1     2.31   .     .    0.35    "phi+60"
+          60  3JHNCB    FDXN    75  Phe  HN   H   1  1    FDXN    75  Phe  CB   C  13  1     2.85   .     .    0.35    "phi+60"
+          61  3JHNCB    FDXN    76  Asp  HN   H   1  1    FDXN    76  Asp  CB   C  13  1     2.48   .     .    0.35    "phi+60"
+          62  3JHNCB    FDXN    77  Ser  HN   H   1  1    FDXN    77  Ser  CB   C  13  1     1.44   .     .    0.35    "phi+60"
+          63  3JHNCB    FDXN    78  Leu  HN   H   1  1    FDXN    78  Leu  CB   C  13  1     2.15   .     .    0.35    "phi+60"
+          64  3JHNCB    FDXN    79  Glu  HN   H   1  1    FDXN    79  Glu  CB   C  13  1     2.47   .     .    0.35    "phi+60"
+          65  3JHNCB    FDXN    80  Glu  HN   H   1  1    FDXN    80  Glu  CB   C  13  1     1.55   .     .    0.35    "phi+60"
+          66  3JHNCB    FDXN    81  Thr  HN   H   1  1    FDXN    81  Thr  CB   C  13  1     2.37   .     .    0.35    "phi+60"
+          67  3JHNCB    FDXN    83  Ala  HN   H   1  1    FDXN    83  Ala  CB   C  13  1     2.70   .     .    0.35    "phi+60"
+          68  3JHNCB    FDXN    84  Gln  HN   H   1  1    FDXN    84  Gln  CB   C  13  1     2.36   .     .    0.35    "phi+60"
+          69  3JHNCB    FDXN    86  Arg  HN   H   1  1    FDXN    86  Arg  CB   C  13  1     2.07   .     .    0.35    "phi+60"
+          70  3JHNCB    FDXN    87  Lys  HN   H   1  1    FDXN    87  Lys  CB   C  13  1     2.03   .     .    0.35    "phi+60"
+          71  3JHNCB    FDXN    88  Val  HN   H   1  1    FDXN    88  Val  CB   C  13  1     0.40   .     .    0.35    "phi+60"
+          72  3JHNCB    FDXN    89  Ala  HN   H   1  1    FDXN    89  Ala  CB   C  13  1     0.06   .     .    0.35    "phi+60"
+          73  3JHNCB    FDXN    90  Cys  HN   H   1  1    FDXN    90  Cys  CB   C  13  1     0.88   .     .    0.35    "phi+60"
+          74  3JHNCB    FDXN    91  Phe  HN   H   1  1    FDXN    91  Phe  CB   C  13  1     0.11   .     .    0.35    "phi+60"
+          75  3JHNCB    FDXN    93  Cys  HN   H   1  1    FDXN    93  Cys  CB   C  13  1     1.55   .     .    0.35    "phi+60"
+          76  3JHNCB    FDXN    95  Asp  HN   H   1  1    FDXN    95  Asp  CB   C  13  1     0.17   .     .    0.35    "phi+60"
+          77  3JHNCB    FDXN    96  Ser  HN   H   1  1    FDXN    96  Ser  CB   C  13  1     2.86   .     .    0.35    "phi+60"
+          78  3JHNCB    FDXN    97  Ser  HN   H   1  1    FDXN    97  Ser  CB   C  13  1     2.10   .     .    0.35    "phi+60"
+          79  3JHNCB    FDXN    98  Tyr  HN   H   1  1    FDXN    98  Tyr  CB   C  13  1     2.16   .     .    0.35    "phi+60"
+          80  3JHNCB    FDXN    99  Glu  HN   H   1  1    FDXN    99  Glu  CB   C  13  1     2.39   .     .    0.35    "phi+60"
+          81  3JHNCB    FDXN   100  Tyr  HN   H   1  1    FDXN   100  Tyr  CB   C  13  1     1.45   .     .    0.35    "phi+60"
+          82  3JHNCB    FDXN   101  Phe  HN   H   1  1    FDXN   101  Phe  CB   C  13  1     3.01   .     .    0.35    "phi+60"
+          83  3JHNCB    FDXN   102  Cys  HN   H   1  1    FDXN   102  Cys  CB   C  13  1     0.71   .     .    0.35    "phi+60"
+          84  3JHNCB    FDXN   104  Ala  HN   H   1  1    FDXN   104  Ala  CB   C  13  1     2.43   .     .    0.35    "phi+60"
+          85  3JHNCB    FDXN   105  Val  HN   H   1  1    FDXN   105  Val  CB   C  13  1     2.19   .     .    0.35    "phi+60"
+          86  3JHNCB    FDXN   106  Asp  HN   H   1  1    FDXN   106  Asp  CB   C  13  1     2.15   .     .    0.35    "phi+60"
+          87  3JHNCB    FDXN   107  Ala  HN   H   1  1    FDXN   107  Ala  CB   C  13  1     2.83   .     .    0.35    "phi+60"
+          88  3JHNCB    FDXN   108  Ile  HN   H   1  1    FDXN   108  Ile  CB   C  13  1     2.61   .     .    0.35    "phi+60"
+          89  3JHNCB    FDXN   109  Glu  HN   H   1  1    FDXN   109  Glu  CB   C  13  1     2.46   .     .    0.35    "phi+60"
+          90  3JHNCB    FDXN   110  Glu  HN   H   1  1    FDXN   110  Glu  CB   C  13  1     2.39   .     .    0.35    "phi+60"
+          91  3JHNCB    FDXN   111  Lys  HN   H   1  1    FDXN   111  Lys  CB   C  13  1     2.23   .     .    0.35    "phi+60"
+          92  3JHNCB    FDXN   112  Leu  HN   H   1  1    FDXN   112  Leu  CB   C  13  1     2.46   .     .    0.35    "phi+60"
+          93  3JHNCB    FDXN   113  Lys  HN   H   1  1    FDXN   113  Lys  CB   C  13  1     2.28   .     .    0.35    "phi+60"
+          94  3JHNCB    FDXN   114  Asn  HN   H   1  1    FDXN   114  Asn  CB   C  13  1     2.18   .     .    0.35    "phi+60"
+          95  3JHNCB    FDXN   115  Leu  HN   H   1  1    FDXN   115  Leu  CB   C  13  1     1.70   .     .    0.35    "phi+60"
+          96  3JHNCB    FDXN   117  Ala  HN   H   1  1    FDXN   117  Ala  CB   C  13  1     2.30   .     .    0.35    "phi+60"
+          97  3JHNCB    FDXN   118  Glu  HN   H   1  1    FDXN   118  Glu  CB   C  13  1     0.96   .     .    0.35    "phi+60"
+          98  3JHNCB    FDXN   119  Ile  HN   H   1  1    FDXN   119  Ile  CB   C  13  1     1.42   .     .    0.35    "phi+60"
+          99  3JHNCB    FDXN   120  Val  HN   H   1  1    FDXN   120  Val  CB   C  13  1     2.20   .     .    0.35    "phi+60"
+         100  3JHNCB    FDXN   121  Gln  HN   H   1  1    FDXN   121  Gln  CB   C  13  1     0.27   .     .    0.35    "phi+60"
+         101  3JHNCB    FDXN   122  Asp  HN   H   1  1    FDXN   122  Asp  CB   C  13  1     2.30   .     .    0.35    "phi+60"
+         102  3JHNCB    FDXN   124  Leu  HN   H   1  1    FDXN   124  Leu  CB   C  13  1     1.87   .     .    0.35    "phi+60"
+         103  3JHNCB    FDXN   125  Arg  HN   H   1  1    FDXN   125  Arg  CB   C  13  1     1.35   .     .    0.35    "phi+60"
+         104  3JHNCB    FDXN   126  Ile  HN   H   1  1    FDXN   126  Ile  CB   C  13  1     1.11   .     .    0.35    "phi+60"
+         105  3JHNCB    FDXN   127  Asp  HN   H   1  1    FDXN   127  Asp  CB   C  13  1     0.97   .     .    0.35    "phi+60"
+         106  3JHNCB    FDXN   129  Asp  HN   H   1  1    FDXN   129  Asp  CB   C  13  1     2.43   .     .    0.35    "phi+60"
+         107  3JHNCB    FDXN   131  Arg  HN   H   1  1    FDXN   131  Arg  CB   C  13  1     1.79   .     .    0.35    "phi+60"
+         108  3JHNCB    FDXN   132  Ala  HN   H   1  1    FDXN   132  Ala  CB   C  13  1     2.12   .     .    0.35    "phi+60"
+         109  3JHNCB    FDXN   133  Ala  HN   H   1  1    FDXN   133  Ala  CB   C  13  1     1.02   .     .    0.35    "phi+60"
+         110  3JHNCB    FDXN   134  Arg  HN   H   1  1    FDXN   134  Arg  CB   C  13  1     2.21   .     .    0.35    "phi+60"
+         111  3JHNCB    FDXN   135  Asp  HN   H   1  1    FDXN   135  Asp  CB   C  13  1     2.21   .     .    0.35    "phi+60"
+         112  3JHNCB    FDXN   136  Asp  HN   H   1  1    FDXN   136  Asp  CB   C  13  1     2.13   .     .    0.35    "phi+60"
+         113  3JHNCB    FDXN   137  Ile  HN   H   1  1    FDXN   137  Ile  CB   C  13  1     2.37   .     .    0.35    "phi+60"
+         114  3JHNCB    FDXN   138  Val  HN   H   1  1    FDXN   138  Val  CB   C  13  1     2.31   .     .    0.35    "phi+60"
+         115  3JHNCB    FDXN   140  Trp  HN   H   1  1    FDXN   140  Trp  CB   C  13  1     2.82   .     .    0.35    "phi+60"
+         116  3JHNCB    FDXN   141  Ala  HN   H   1  1    FDXN   141  Ala  CB   C  13  1     2.72   .     .    0.35    "phi+60"
+         117  3JHNCB    FDXN   142  His  HN   H   1  1    FDXN   142  His  CB   C  13  1     2.52   .     .    0.35    "phi+60"
+         118  3JHNCB    FDXN   143  Asp  HN   H   1  1    FDXN   143  Asp  CB   C  13  1     2.28   .     .    0.35    "phi+60"
+         119  3JHNCB    FDXN   144  Val  HN   H   1  1    FDXN   144  Val  CB   C  13  1     2.31   .     .    0.35    "phi+60"
+         120  3JHNCB    FDXN   145  Arg  HN   H   1  1    FDXN   145  Arg  CB   C  13  1     2.36   .     .    0.35    "phi+60"
+         121  3JHNCB    FDXN   147  Ala  HN   H   1  1    FDXN   147  Ala  CB   C  13  1     2.14   .     .    0.35    "phi+60"
+         122  3JHNCB    FDXN   148  Ile  HN   H   1  1    FDXN   148  Ile  CB   C  13  1     1.20   .     .    0.35    "phi+60"
+   
+   stop_
+
+save_

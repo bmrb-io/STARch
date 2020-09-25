@@ -1,0 +1,26 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	GLU	H	H	.	.	.	# shift val. = n/a shift err. = null
+2	1	GLU	N	N	120.20	.01	.	#  XYZ
+3	1	GLU	CA	C	57.19	.	.	# shift err. = .
+4	1	GLU	HA	H	3.82	.	.	# shift err. = null
+5	1	GLU	C	C	.	.	.
+6	1	GLU	CB	C	28.16	.	.	# shift err. = null
+7	1	GLU	HB2	H	2.06	.	?	# shift err. = null
+8	1	GLU	HB3	H	.	.	.
+9	1	GLU	CG	C	34.23	.	.	# shift err. = null
+10	1	GLU	HG2	H	.	.	.
+11	1	GLU	HG3	H	.	.	.
+12	1	GLU	CD	C	.	.	.
+13	1	GLU	HE2	H	.	.	.
+14	1	GLU	HG+	.	2.41	.	.	# shift err. = n/a  comment  Invalid atom
+15	1	GLU	HG-	.	2.34	.	.	# shift err. = null  Invalid atom
+stop_

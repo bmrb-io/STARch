@@ -1,0 +1,195 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	G	AM	.	.	.	.	#  shift value=null Check atom type!
+2	1	G	IM	.	12.18	.	.	#  Check atom type!
+3	1	G	H4'	.	4.58	.	.	
+4	1	G	H3'	.	4.71	.	.	
+5	1	G	H2'	.	4.93	.	.	
+6	1	G	H1'	.	5.95	.	.	
+7	1	G	H2	.	.	.	.	#  shift value=n.a.
+8	1	G	H8	.	8.2	.	.	
+9	2	G	AM	.	.	.	.	#  shift value=null Check atom type!
+10	2	G	IM	.	13.24	.	.	#  Check atom type!
+11	2	G	H4'	.	4.55	.	.	
+12	2	G	H3'	.	4.18	.	.	
+13	2	G	H2'	.	4.54	.	.	
+14	2	G	H1'	.	5.83	.	.	
+15	2	G	H2	.	.	.	.	#  shift value=n.a.
+16	2	G	H8	.	7.42	.	.	
+17	3	U	AM	.	.	.	.	#  shift value=null Check atom type!
+18	3	U	IM	.	14.41	.	.	#  Check atom type!
+19	3	U	H4'	.	4.11	.	.	
+20	3	U	H3'	.	4.48	.	.	
+21	3	U	H2'	.	4.53	.	.	
+22	3	U	H1'	.	5.6	.	.	
+23	3	U	H2	.	5.13	.	.	
+24	3	U	H8	.	7.79	.	.	
+25	4	U	AM	.	.	.	.	#  shift value=null Check atom type!
+26	4	U	IM	.	13.89	.	.	#  Check atom type!
+27	4	U	H4'	.	4.45	.	.	
+28	4	U	H3'	.	4.49	.	.	
+29	4	U	H2'	.	4.53	.	.	
+30	4	U	H1'	.	5.67	.	.	
+31	4	U	H2	.	5.62	.	.	
+32	4	U	H8	.	8.0	.	.	
+33	5	C	AM	.	7.0	.	.	#  Check atom type!
+34	5	C	IM	.	8.41	.	.	#  Check atom type!
+35	5	C	H4'	.	4.1	.	.	
+36	5	C	H3'	.	4.45	.	.	
+37	5	C	H2'	.	4.31	.	.	
+38	5	C	H1'	.	5.51	.	.	
+39	5	C	H2	.	5.67	.	.	
+40	5	C	H8	.	7.84	.	.	
+41	6	C	AM	.	6.74	.	.	#  Check atom type!
+42	6	C	IM	.	8.29	.	.	#  Check atom type!
+43	6	C	H4'	.	4.37	.	.	
+44	6	C	H3'	.	4.4	.	.	
+45	6	C	H2'	.	4.5	.	.	
+46	6	C	H1'	.	5.41	.	.	
+47	6	C	H2	.	5.46	.	.	
+48	6	C	H8	.	7.7	.	.	
+49	7	G	AM	.	.	.	.	#  shift value=null Check atom type!
+50	7	G	IM	.	11.89	.	.	#  Check atom type!
+51	7	G	H4'	.	4.46	.	.	
+52	7	G	H3'	.	4.47	.	.	
+53	7	G	H2'	.	4.6	.	.	
+54	7	G	H1'	.	5.65	.	.	
+55	7	G	H2	.	.	.	.	#  shift value=n.a.
+56	7	G	H8	.	7.51	.	.	
+57	8	A	AM	.	.	.	.	#  shift value=null Check atom type!
+58	8	A	IM	.	.	.	.	#  shift value=null Check atom type!
+59	8	A	H4'	.	4.48	.	.	
+60	8	A	H3'	.	4.55	.	.	
+61	8	A	H2'	.	4.63	.	.	
+62	8	A	H1'	.	5.9	.	.	
+63	8	A	H2	.	7.64	.	.	
+64	8	A	H8	.	7.6	.	.	
+65	9	G	AM	.	6.64	.	.	#  Check atom type!
+66	9	G	IM	.	11.15	.	.	#  Check atom type!
+67	9	G	H4'	.	4.36	.	.	
+68	9	G	H3'	.	4.38	.	.	
+69	9	G	H2'	.	4.41	.	.	
+70	9	G	H1'	.	5.23	.	.	
+71	9	G	H2	.	.	.	.	#  shift value=n.a.
+72	9	G	H8	.	7.09	.	.	
+73	10	G	AM	.	.	.	.	#  shift value=null Check atom type!
+74	10	G	IM	.	10.59	.	.	#  Check atom type!
+75	10	G	H4'	.	4.12	.	.	
+76	10	G	H3'	.	4.5	.	.	
+77	10	G	H2'	.	4.38	.	.	
+78	10	G	H1'	.	5.22	.	.	
+79	10	G	H2	.	.	.	.	#  shift value=n.a.
+80	10	G	H8	.	7.38	.	.	
+81	11	G	AM	.	.	.	.	#  shift value=null Check atom type!
+82	11	G	IM	.	.	.	.	#  shift value=null Check atom type!
+83	11	G	H4'	.	4.38	.	.	
+84	11	G	H3'	.	4.66	.	.	
+85	11	G	H2'	.	4.83	.	.	
+86	11	G	H1'	.	5.65	.	.	
+87	11	G	H2	.	.	.	.	#  shift value=n.a.
+88	11	G	H8	.	7.76	.	.	
+89	12	U	AM	.	.	.	.	#  shift value=null Check atom type!
+90	12	U	IM	.	.	.	.	#  shift value=null Check atom type!
+91	12	U	H4'	.	.	.	.	#  shift value=null
+92	12	U	H3'	.	4.61	.	.	
+93	12	U	H2'	.	4.38	.	.	
+94	12	U	H1'	.	5.92	.	.	
+95	12	U	H2	.	5.8	.	.	
+96	12	U	H8	.	7.78	.	.	
+97	13	C	AM	.	.	.	.	#  shift value=null Check atom type!
+98	13	C	IM	.	.	.	.	#  shift value=null Check atom type!
+99	13	C	H4'	.	.	.	.	#  shift value=null
+100	13	C	H3'	.	4.61	.	.	
+101	13	C	H2'	.	4.41	.	.	
+102	13	C	H1'	.	5.92	.	.	
+103	13	C	H2	.	5.99	.	.	
+104	13	C	H8	.	7.76	.	.	
+105	14	A	AM	.	.	.	.	#  shift value=null Check atom type!
+106	14	A	IM	.	.	.	.	#  shift value=null Check atom type!
+107	14	A	H4'	.	4.67	.	.	
+108	14	A	H3'	.	4.8	.	.	
+109	14	A	H2'	.	4.85	.	.	
+110	14	A	H1'	.	6.17	.	.	
+111	14	A	H2	.	8.33	.	.	
+112	14	A	H8	.	8.4	.	.	
+113	15	U	AM	.	.	.	.	#  shift value=null Check atom type!
+114	15	U	IM	.	14.15	.	.	#  Check atom type!
+115	15	U	H4'	.	4.44	.	.	
+116	15	U	H3'	.	4.05	.	.	
+117	15	U	H2'	.	4.51	.	.	
+118	15	U	H1'	.	5.35	.	.	
+119	15	U	H2	.	5.81	.	.	
+120	15	U	H8	.	7.96	.	.	
+121	16	C	AM	.	6.85	.	.	#  Check atom type!
+122	16	C	IM	.	8.25	.	.	#  Check atom type!
+123	16	C	H4'	.	4.46	.	.	
+124	16	C	H3'	.	4.44	.	.	
+125	16	C	H2'	.	4.56	.	.	
+126	16	C	H1'	.	5.61	.	.	
+127	16	C	H2	.	5.7	.	.	
+128	16	C	H8	.	7.86	.	.	
+129	17	G	AM	.	.	.	.	#  shift value=null Check atom type!
+130	17	G	IM	.	12.16	.	.	#  Check atom type!
+131	17	G	H4'	.	.	.	.	#  shift value=null
+132	17	G	H3'	.	4.53	.	.	
+133	17	G	H2'	.	4.61	.	.	
+134	17	G	H1'	.	5.67	.	.	
+135	17	G	H2	.	.	.	.	#  shift value=n.a.
+136	17	G	H8	.	7.51	.	.	
+137	18	G	AM	.	.	.	.	#  shift value=null Check atom type!
+138	18	G	IM	.	12.39	.	.	#  Check atom type!
+139	18	G	H4'	.	4.47	.	.	
+140	18	G	H3'	.	4.51	.	.	
+141	18	G	H2'	.	4.56	.	.	
+142	18	G	H1'	.	5.67	.	.	
+143	18	G	H2	.	.	.	.	#  shift value=n.a.
+144	18	G	H8	.	7.17	.	.	
+145	19	A	AM	.	.	.	.	#  shift value=null Check atom type!
+146	19	A	IM	.	.	.	.	#  shift value=null Check atom type!
+147	19	A	H4'	.	4.5	.	.	
+148	19	A	H3'	.	4.66	.	.	
+149	19	A	H2'	.	4.56	.	.	
+150	19	A	H1'	.	5.88	.	.	
+151	19	A	H2	.	7.1	.	.	
+152	19	A	H8	.	7.68	.	.	
+153	20	A	AM	.	.	.	.	#  shift value=null Check atom type!
+154	20	A	IM	.	.	.	.	#  shift value=null Check atom type!
+155	20	A	H4'	.	4.41	.	.	
+156	20	A	H3'	.	4.59	.	.	
+157	20	A	H2'	.	4.46	.	.	
+158	20	A	H1'	.	5.92	.	.	
+159	20	A	H2	.	7.8	.	.	
+160	20	A	H8	.	7.82	.	.	
+161	21	C	AM	.	7.0	.	.	#  Check atom type!
+162	21	C	IM	.	8.4	.	.	#  Check atom type!
+163	21	C	H4'	.	4.36	.	.	
+164	21	C	H3'	.	4.34	.	.	
+165	21	C	H2'	.	4.22	.	.	
+166	21	C	H1'	.	5.39	.	.	
+167	21	C	H2	.	5.16	.	.	
+168	21	C	H8	.	7.47	.	.	
+169	22	C	AM	.	6.92	.	.	#  Check atom type!
+170	22	C	IM	.	8.21	.	.	#  Check atom type!
+171	22	C	H4'	.	4.47	.	.	
+172	22	C	H3'	.	4.38	.	.	
+173	22	C	H2'	.	4.41	.	.	
+174	22	C	H1'	.	5.49	.	.	
+175	22	C	H2	.	5.4	.	.	
+176	22	C	H8	.	7.6	.	.	
+177	23	A	AM	.	.	.	.	#  shift value=null Check atom type!
+178	23	A	IM	.	.	.	.	#  shift value=null Check atom type!
+179	23	A	H4'	.	4.25	.	.	
+180	23	A	H3'	.	4.3	.	.	
+181	23	A	H2'	.	4.05	.	.	
+182	23	A	H1'	.	5.98	.	.	
+183	23	A	H2	.	7.36	.	.	
+184	23	A	H8	.	8.03	.	.	
+	stop_

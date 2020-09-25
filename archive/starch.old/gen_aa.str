@@ -1,0 +1,272 @@
+#
+# The original sequence entered was:
+# GIVEQCCTATTGA
+#
+
+
+# Expressed in NMR-STAR 3.0, this sequence is:
+
+_Entity.Polymer_seq_one_letter_code
+;
+GIVEQCCTATTGA
+;
+
+loop_
+	_Entity_comp_index.ID
+	_Entity_comp_index.Auth_seq_ID
+	_Entity_comp_index.Comp_ID
+
+1	@ 	GLY
+2	@ 	ILE
+3	@ 	VAL
+4	@ 	GLU
+5	@ 	GLN
+6	@ 	CYS
+7	@ 	CYS
+8	@ 	THR
+9	@ 	ALA
+10	@ 	THR
+11	@ 	THR
+12	@ 	GLY
+13	@ 	ALA
+
+
+stop_
+
+###################################################################
+#      Chemical Shift Ambiguity Code Definitions                  #
+#                                                                 #
+#    Codes            Definition                                  #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+
+# INSTRUCTIONS
+# 1) Replace the @-signs with appropriate values.
+# 2) Text comments concerning the assignments can be
+#    supplied in the full deposition.
+# 3) Feel free to add or delete rows to the table as needed.
+#    The row numbers (_Atom_chem_shift.ID values)
+#    will be re-assigned to sequential values by BMRB
+#
+
+# The atom table chosen for this sequence is:
+
+loop_
+     _Atom_chem_shift.ID
+     _Atom_chem_shift.Comp_index_ID
+     _Atom_chem_shift.Comp_ID
+     _Atom_chem_shift.Atom_ID
+     _Atom_chem_shift.Atom_type
+     _Atom_chem_shift.Chem_shift_val
+     _Atom_chem_shift.Chem_shift_val_err
+     _Atom_chem_shift.Chem_shift_ambiguity_code
+     _Atom_chem_shift.Chem_shift_occupancy
+     _Atom_chem_shift.Auth_seq_ID
+
+#
+#	Comp				Chem	C.S.	C.S.	Chem	Auth
+#	index	Comp	Atom	Atom	shift	val	ambig	shift	seq
+#ID	ID	ID	ID	type	val	err	code	occup	ID
+#-------------------------------------------------------
+#
+
+ 1	 1	GLY	H 	H	@ 	@ 	@ 	@ 	 1 
+ 2	 1	GLY	HA2 	H	@ 	@ 	@ 	@ 	 1 
+ 3	 1	GLY	HA3 	H	@ 	@ 	@ 	@ 	 1 
+ 4	 1	GLY	C 	C	@ 	@ 	@ 	@ 	 1 
+ 5	 1	GLY	CA 	C	@ 	@ 	@ 	@ 	 1 
+ 6	 1	GLY	N 	N	@ 	@ 	@ 	@ 	 1 
+ 7	 1	GLY	O 	O	@ 	@ 	@ 	@ 	 1 
+ 8	 2	ILE	H 	H	@ 	@ 	@ 	@ 	 2 
+ 9	 2	ILE	HA 	H	@ 	@ 	@ 	@ 	 2 
+ 10	 2	ILE	HB 	H	@ 	@ 	@ 	@ 	 2 
+ 11	 2	ILE	HG12 	H	@ 	@ 	@ 	@ 	 2 
+ 12	 2	ILE	HG13 	H	@ 	@ 	@ 	@ 	 2 
+ 13	 2	ILE	HG21 	H	@ 	@ 	@ 	@ 	 2 
+ 14	 2	ILE	HG22 	H	@ 	@ 	@ 	@ 	 2 
+ 15	 2	ILE	HG23 	H	@ 	@ 	@ 	@ 	 2 
+ 16	 2	ILE	HD11 	H	@ 	@ 	@ 	@ 	 2 
+ 17	 2	ILE	HD12 	H	@ 	@ 	@ 	@ 	 2 
+ 18	 2	ILE	HD13 	H	@ 	@ 	@ 	@ 	 2 
+ 19	 2	ILE	C 	C	@ 	@ 	@ 	@ 	 2 
+ 20	 2	ILE	CA 	C	@ 	@ 	@ 	@ 	 2 
+ 21	 2	ILE	CB 	C	@ 	@ 	@ 	@ 	 2 
+ 22	 2	ILE	CG1 	C	@ 	@ 	@ 	@ 	 2 
+ 23	 2	ILE	CG2 	C	@ 	@ 	@ 	@ 	 2 
+ 24	 2	ILE	CD1 	C	@ 	@ 	@ 	@ 	 2 
+ 25	 2	ILE	N 	N	@ 	@ 	@ 	@ 	 2 
+ 26	 2	ILE	O 	O	@ 	@ 	@ 	@ 	 2 
+ 27	 3	VAL	H 	H	@ 	@ 	@ 	@ 	 3 
+ 28	 3	VAL	HA 	H	@ 	@ 	@ 	@ 	 3 
+ 29	 3	VAL	HB 	H	@ 	@ 	@ 	@ 	 3 
+ 30	 3	VAL	HG11 	H	@ 	@ 	@ 	@ 	 3 
+ 31	 3	VAL	HG12 	H	@ 	@ 	@ 	@ 	 3 
+ 32	 3	VAL	HG13 	H	@ 	@ 	@ 	@ 	 3 
+ 33	 3	VAL	HG21 	H	@ 	@ 	@ 	@ 	 3 
+ 34	 3	VAL	HG22 	H	@ 	@ 	@ 	@ 	 3 
+ 35	 3	VAL	HG23 	H	@ 	@ 	@ 	@ 	 3 
+ 36	 3	VAL	C 	C	@ 	@ 	@ 	@ 	 3 
+ 37	 3	VAL	CA 	C	@ 	@ 	@ 	@ 	 3 
+ 38	 3	VAL	CB 	C	@ 	@ 	@ 	@ 	 3 
+ 39	 3	VAL	CG1 	C	@ 	@ 	@ 	@ 	 3 
+ 40	 3	VAL	CG2 	C	@ 	@ 	@ 	@ 	 3 
+ 41	 3	VAL	N 	N	@ 	@ 	@ 	@ 	 3 
+ 42	 3	VAL	O 	O	@ 	@ 	@ 	@ 	 3 
+ 43	 4	GLU	H 	H	@ 	@ 	@ 	@ 	 4 
+ 44	 4	GLU	HA 	H	@ 	@ 	@ 	@ 	 4 
+ 45	 4	GLU	HB2 	H	@ 	@ 	@ 	@ 	 4 
+ 46	 4	GLU	HB3 	H	@ 	@ 	@ 	@ 	 4 
+ 47	 4	GLU	HG2 	H	@ 	@ 	@ 	@ 	 4 
+ 48	 4	GLU	HG3 	H	@ 	@ 	@ 	@ 	 4 
+ 49	 4	GLU	HE2 	H	@ 	@ 	@ 	@ 	 4 
+ 50	 4	GLU	C 	C	@ 	@ 	@ 	@ 	 4 
+ 51	 4	GLU	CA 	C	@ 	@ 	@ 	@ 	 4 
+ 52	 4	GLU	CB 	C	@ 	@ 	@ 	@ 	 4 
+ 53	 4	GLU	CG 	C	@ 	@ 	@ 	@ 	 4 
+ 54	 4	GLU	CD 	C	@ 	@ 	@ 	@ 	 4 
+ 55	 4	GLU	N 	N	@ 	@ 	@ 	@ 	 4 
+ 56	 4	GLU	O 	O	@ 	@ 	@ 	@ 	 4 
+ 57	 4	GLU	OE1 	O	@ 	@ 	@ 	@ 	 4 
+ 58	 4	GLU	OE2 	O	@ 	@ 	@ 	@ 	 4 
+ 59	 5	GLN	H 	H	@ 	@ 	@ 	@ 	 5 
+ 60	 5	GLN	HA 	H	@ 	@ 	@ 	@ 	 5 
+ 61	 5	GLN	HB2 	H	@ 	@ 	@ 	@ 	 5 
+ 62	 5	GLN	HB3 	H	@ 	@ 	@ 	@ 	 5 
+ 63	 5	GLN	HG2 	H	@ 	@ 	@ 	@ 	 5 
+ 64	 5	GLN	HG3 	H	@ 	@ 	@ 	@ 	 5 
+ 65	 5	GLN	HE21 	H	@ 	@ 	@ 	@ 	 5 
+ 66	 5	GLN	HE22 	H	@ 	@ 	@ 	@ 	 5 
+ 67	 5	GLN	C 	C	@ 	@ 	@ 	@ 	 5 
+ 68	 5	GLN	CA 	C	@ 	@ 	@ 	@ 	 5 
+ 69	 5	GLN	CB 	C	@ 	@ 	@ 	@ 	 5 
+ 70	 5	GLN	CG 	C	@ 	@ 	@ 	@ 	 5 
+ 71	 5	GLN	CD 	C	@ 	@ 	@ 	@ 	 5 
+ 72	 5	GLN	N 	N	@ 	@ 	@ 	@ 	 5 
+ 73	 5	GLN	NE2 	N	@ 	@ 	@ 	@ 	 5 
+ 74	 5	GLN	O 	O	@ 	@ 	@ 	@ 	 5 
+ 75	 5	GLN	OE1 	O	@ 	@ 	@ 	@ 	 5 
+ 76	 6	CYS	H 	H	@ 	@ 	@ 	@ 	 6 
+ 77	 6	CYS	HA 	H	@ 	@ 	@ 	@ 	 6 
+ 78	 6	CYS	HB2 	H	@ 	@ 	@ 	@ 	 6 
+ 79	 6	CYS	HB3 	H	@ 	@ 	@ 	@ 	 6 
+ 80	 6	CYS	HG 	H	@ 	@ 	@ 	@ 	 6 
+ 81	 6	CYS	C 	C	@ 	@ 	@ 	@ 	 6 
+ 82	 6	CYS	CA 	C	@ 	@ 	@ 	@ 	 6 
+ 83	 6	CYS	CB 	C	@ 	@ 	@ 	@ 	 6 
+ 84	 6	CYS	N 	N	@ 	@ 	@ 	@ 	 6 
+ 85	 6	CYS	O 	O	@ 	@ 	@ 	@ 	 6 
+ 86	 6	CYS	SG 	S	@ 	@ 	@ 	@ 	 6 
+ 87	 7	CYS	H 	H	@ 	@ 	@ 	@ 	 7 
+ 88	 7	CYS	HA 	H	@ 	@ 	@ 	@ 	 7 
+ 89	 7	CYS	HB2 	H	@ 	@ 	@ 	@ 	 7 
+ 90	 7	CYS	HB3 	H	@ 	@ 	@ 	@ 	 7 
+ 91	 7	CYS	HG 	H	@ 	@ 	@ 	@ 	 7 
+ 92	 7	CYS	C 	C	@ 	@ 	@ 	@ 	 7 
+ 93	 7	CYS	CA 	C	@ 	@ 	@ 	@ 	 7 
+ 94	 7	CYS	CB 	C	@ 	@ 	@ 	@ 	 7 
+ 95	 7	CYS	N 	N	@ 	@ 	@ 	@ 	 7 
+ 96	 7	CYS	O 	O	@ 	@ 	@ 	@ 	 7 
+ 97	 7	CYS	SG 	S	@ 	@ 	@ 	@ 	 7 
+ 98	 8	THR	H 	H	@ 	@ 	@ 	@ 	 8 
+ 99	 8	THR	HA 	H	@ 	@ 	@ 	@ 	 8 
+ 100	 8	THR	HB 	H	@ 	@ 	@ 	@ 	 8 
+ 101	 8	THR	HG1 	H	@ 	@ 	@ 	@ 	 8 
+ 102	 8	THR	HG21 	H	@ 	@ 	@ 	@ 	 8 
+ 103	 8	THR	HG22 	H	@ 	@ 	@ 	@ 	 8 
+ 104	 8	THR	HG23 	H	@ 	@ 	@ 	@ 	 8 
+ 105	 8	THR	C 	C	@ 	@ 	@ 	@ 	 8 
+ 106	 8	THR	CA 	C	@ 	@ 	@ 	@ 	 8 
+ 107	 8	THR	CB 	C	@ 	@ 	@ 	@ 	 8 
+ 108	 8	THR	CG2 	C	@ 	@ 	@ 	@ 	 8 
+ 109	 8	THR	N 	N	@ 	@ 	@ 	@ 	 8 
+ 110	 8	THR	O 	O	@ 	@ 	@ 	@ 	 8 
+ 111	 8	THR	OG1 	O	@ 	@ 	@ 	@ 	 8 
+ 112	 9	ALA	H 	H	@ 	@ 	@ 	@ 	 9 
+ 113	 9	ALA	HA 	H	@ 	@ 	@ 	@ 	 9 
+ 114	 9	ALA	HB1 	H	@ 	@ 	@ 	@ 	 9 
+ 115	 9	ALA	HB2 	H	@ 	@ 	@ 	@ 	 9 
+ 116	 9	ALA	HB3 	H	@ 	@ 	@ 	@ 	 9 
+ 117	 9	ALA	C 	C	@ 	@ 	@ 	@ 	 9 
+ 118	 9	ALA	CA 	C	@ 	@ 	@ 	@ 	 9 
+ 119	 9	ALA	CB 	C	@ 	@ 	@ 	@ 	 9 
+ 120	 9	ALA	N 	N	@ 	@ 	@ 	@ 	 9 
+ 121	 9	ALA	O 	O	@ 	@ 	@ 	@ 	 9 
+ 122	 10	THR	H 	H	@ 	@ 	@ 	@ 	 10 
+ 123	 10	THR	HA 	H	@ 	@ 	@ 	@ 	 10 
+ 124	 10	THR	HB 	H	@ 	@ 	@ 	@ 	 10 
+ 125	 10	THR	HG1 	H	@ 	@ 	@ 	@ 	 10 
+ 126	 10	THR	HG21 	H	@ 	@ 	@ 	@ 	 10 
+ 127	 10	THR	HG22 	H	@ 	@ 	@ 	@ 	 10 
+ 128	 10	THR	HG23 	H	@ 	@ 	@ 	@ 	 10 
+ 129	 10	THR	C 	C	@ 	@ 	@ 	@ 	 10 
+ 130	 10	THR	CA 	C	@ 	@ 	@ 	@ 	 10 
+ 131	 10	THR	CB 	C	@ 	@ 	@ 	@ 	 10 
+ 132	 10	THR	CG2 	C	@ 	@ 	@ 	@ 	 10 
+ 133	 10	THR	N 	N	@ 	@ 	@ 	@ 	 10 
+ 134	 10	THR	O 	O	@ 	@ 	@ 	@ 	 10 
+ 135	 10	THR	OG1 	O	@ 	@ 	@ 	@ 	 10 
+ 136	 11	THR	H 	H	@ 	@ 	@ 	@ 	 11 
+ 137	 11	THR	HA 	H	@ 	@ 	@ 	@ 	 11 
+ 138	 11	THR	HB 	H	@ 	@ 	@ 	@ 	 11 
+ 139	 11	THR	HG1 	H	@ 	@ 	@ 	@ 	 11 
+ 140	 11	THR	HG21 	H	@ 	@ 	@ 	@ 	 11 
+ 141	 11	THR	HG22 	H	@ 	@ 	@ 	@ 	 11 
+ 142	 11	THR	HG23 	H	@ 	@ 	@ 	@ 	 11 
+ 143	 11	THR	C 	C	@ 	@ 	@ 	@ 	 11 
+ 144	 11	THR	CA 	C	@ 	@ 	@ 	@ 	 11 
+ 145	 11	THR	CB 	C	@ 	@ 	@ 	@ 	 11 
+ 146	 11	THR	CG2 	C	@ 	@ 	@ 	@ 	 11 
+ 147	 11	THR	N 	N	@ 	@ 	@ 	@ 	 11 
+ 148	 11	THR	O 	O	@ 	@ 	@ 	@ 	 11 
+ 149	 11	THR	OG1 	O	@ 	@ 	@ 	@ 	 11 
+ 150	 12	GLY	H 	H	@ 	@ 	@ 	@ 	 12 
+ 151	 12	GLY	HA2 	H	@ 	@ 	@ 	@ 	 12 
+ 152	 12	GLY	HA3 	H	@ 	@ 	@ 	@ 	 12 
+ 153	 12	GLY	C 	C	@ 	@ 	@ 	@ 	 12 
+ 154	 12	GLY	CA 	C	@ 	@ 	@ 	@ 	 12 
+ 155	 12	GLY	N 	N	@ 	@ 	@ 	@ 	 12 
+ 156	 12	GLY	O 	O	@ 	@ 	@ 	@ 	 12 
+ 157	 13	ALA	H 	H	@ 	@ 	@ 	@ 	 13 
+ 158	 13	ALA	HA 	H	@ 	@ 	@ 	@ 	 13 
+ 159	 13	ALA	HB1 	H	@ 	@ 	@ 	@ 	 13 
+ 160	 13	ALA	HB2 	H	@ 	@ 	@ 	@ 	 13 
+ 161	 13	ALA	HB3 	H	@ 	@ 	@ 	@ 	 13 
+ 162	 13	ALA	C 	C	@ 	@ 	@ 	@ 	 13 
+ 163	 13	ALA	CA 	C	@ 	@ 	@ 	@ 	 13 
+ 164	 13	ALA	CB 	C	@ 	@ 	@ 	@ 	 13 
+ 165	 13	ALA	N 	N	@ 	@ 	@ 	@ 	 13 
+ 166	 13	ALA	O 	O	@ 	@ 	@ 	@ 	 13 
+
+stop_
+
+# The following loop is used to define sets of Atom-shift assignment IDs that
+# represent related ambiguous assignments taken from the above list of
+# assigned chemical shifts.  Each element in the set should be separated by a
+# comma, as shown in the example below, and is the assignment ID for a chemical
+# shift assignment that has been given as ambiguity code of 4 or 5.  Each set
+# indicates that the observed chemical shifts are related to the defined 
+# atoms, but have not been assigned uniquely to a specific atom in the set.
+
+loop_
+  _Atom_chem_shift.Atom_shift_assign_ID_ambiguity
+
+#
+#    Sets of Atom-shift Assignment Ambiguities
+               #              
+#    ------------------------------------------
+# Example:    5,4,7
+#
+                @
+stop_
+

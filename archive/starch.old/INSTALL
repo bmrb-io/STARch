@@ -1,0 +1,42 @@
+
+STARch needs the following class libraries in your
+$CLASSPATH:
+
+  GNUgetopt
+  JFlex
+  csvparser
+  sansj
+  stringpool
+
+The last three can be downloaded from BMRB CVS repository.
+GNUgetopt and JFlex can be downloaded from BMRB CVS repository
+or from their authors: GNU project and http://jflex.de, resp.
+
+
+Assuming you have STARch source in /bmrb/starch,
+
+1. Edit /bmrb/starch/Makefile. If necessary, change   
+   PERL_PATH (run `which perl`)
+   GLOBALCLASSES
+   DOCUMENTROOT
+
+2. Make sure gnu/getopt Java package is in your CLASSPATH.
+
+3. Run "make install".
+
+Testing
+-------
+
+Files in testfiles subdirectory can be used to test STARch.
+
+Filename         format          residue type
+---------------------------------------------
+samp1            Format1         20 common amino-acids
+samp2            Format2         20 common amino-acids
+samp3            NucleicAcid     nucleic acids
+sampP            PIPP            20 common amino-acids
+sampX.seq
+sampX.xeasy      XEASY           20 common amino-acids
+
+Compare conversion result with corresp. .str and .csv files --
+you should see the same atoms in your output.

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch NMR-STAR 2.1 format</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">NMR-STAR 2.1 format</H1>
+<P>
+  NMR-STAR chemical shifts loop begins with <CODE class="bggrey">loop_</CODE>,
+  followed by list of column names (loop tags), followed by data rows
+  (table of space-separated values, one atom per line), and ends with
+  <CODE class="bggrey">stop_</CODE>. Empty data values are denoted
+  by a dot. Comments start with '#' (hash) and continue to end of line.
+<P>
+  NMR-STAR 2.1 tags for chemical shifts loop are
+  <TABLE noborder>
+  <TR>
+    <TD class="mono">_Atom_shift_assign_ID
+    <TD>row number
+  </TR>
+  <TR>
+    <TD class="mono">_Residue_seq_code
+    <TD>residue sequence code
+  </TR>
+  <TR>
+    <TD class="mono">_Residue_label
+    <TD>residue label
+  </TR>
+  <TR>
+    <TD class="mono">_Atom_name
+    <TD>atom name
+  </TR>
+  <TR>
+    <TD class="mono">_Atom_type
+    <TD>atom type
+  </TR>
+  <TR>
+    <TD class="mono">_Chem_shift_value
+    <TD>chemical shift value
+  </TR>
+  <TR>
+    <TD class="mono">_Chem_shift_value_error
+    <TD>chemical shift value error
+  </TR>
+  <TR>
+    <TD class="mono">_Chem_shift_ambiguity_code
+    <TD>chemical shift ambiguity code
+  </TR>
+</TABLE>
+
+<P>
+  <STRONG>STARch will not read an entire NMR-STAR file</STRONG>. The input 
+  must be chemical shifts loop only, starting with <CODE class="bggrey">loop_</CODE>
+  and ending with <CODE class="bggrey">stop_</CODE>.
+<P>
+  Lines starting with '#' (NMR-STAR comments) are ignored. Inline comments
+  are ignored in the header (tags) section, inline comments in loop rows
+  are copied to the output.
+<P>
+  <STRONG>Check tag names</STRONG>. 
+  NMR-STAR syntax allows any kind of whitespace (not necessarily newline) 
+  between loop identifier, tags, and first data row. This makes parsing 
+  the input somewhat difficult as there is no clear indication where tags 
+  end and data rows start.
+<P>
+  STARch assumes that first token that is not a loop tag is the start of
+  first data row. This means that STARch cannot reliably identify invalid 
+  tags: a mis-typed tag, for example, will be assumed to be a data value; 
+  this will cause an error later on, but error message will be incorrect.
+
+<HR>
+<P class="datestamp">
+  Last updated: Fri Aug 23 17:18:50 CDT 2002
+</P>
+</BODY>
+</HTML>
+

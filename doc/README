@@ -1,0 +1,59 @@
+
+Requirements
+------------
+Java 1.5
+NMR-STAR 3.1 validator
+
+Installation
+------------
+Unpack the tarball
+Edit starch.sh script, replace "CHANGE_PATH_TO" with paths
+ to PostgreSQL JDBC driver jar and starchbin.jar (included in tarball).
+Put starch.sh in users' PATH
+
+Running
+-------
+
+1. Validate metadata file (open it in validator and run some validation function(s)).
+2. Run 
+ starch.sh <path to upload dir>
+3. In STARch interface,
+  3.1 Open file
+  3.2 Precheck
+  3.3 Convert
+  3.4 Save file
+
+Input file must be in NMR-STAR 3.1 format, with author-provided residue sequence, label and
+atom names in "regular" columns (e.g. residue label in _Atom_chem_shift.Comp_ID, not in
+_Atom_chem_shift.Author_comp_code). Input file may not have all the columns, generally only
+sequence number, label, atom name, and value columns are required.
+
+Precheck will ask for entry ID (BMRB accession number) and ask you to select entity name
+from the list. Entity names are read from the metadata, check for entry ID is there to make
+sure you have the right metadata in validator database. This is why step 1 is required.
+Entity names are needed to determine entity's polymer type: amino acid or nucleic acid.
+
+If precheck reports critical errors, they need to be fixed before you can run Convert.
+At the moment you'll have to fix the errors in a text editor, outside of STARch, and then
+repeat steps 3.1 and 3.2. Critical errors include:
+ unknown residue/atom -- software does not know how to convert these,
+ duplicate atom -- e.g. if GLN has both HG2 and HG*: when pseudo-atom HG* is expanded
+  into HG2 and HG3, that results in two HG2's.
+
+EXCEPTION: ligands/non-standard residues will produce "Unknown residue" and "Unknown atom"
+critical errors if the ligand is not in validator database. In that case, use
+ Options - Clear Errors
+then run Convert. This will copy residue and atom name "as is", without any conversion.
+Make sure all critical errors are from ligands/non-standard residues before doing this:
+it will also ignore any genuine errors (e.g. mis-typed atom name). 
+
+After conversion, atom name may be edited by clicking on the cell. Also, ambiguity code
+cell is editable.
+
+Bugs
+----
+Not tested on tables other than chemical shifts. There is an open bug report for crash
+when converting heteronuclear NOE data.
+
+Ambiguity code fix-up is not implemented yet.
+

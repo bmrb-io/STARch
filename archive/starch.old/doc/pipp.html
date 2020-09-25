@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch PIPP input format</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STARch PIPP input format</H1>
+<P>
+ <STRONG>Notes:</STRONG>
+ <UL>
+  <LI>Atom names like HB1|HB2 are replaced with HB1,
+      HB2|HB1 -- with HB2. If both protons as HB1|HB2 in your file,
+      second value will silently overwrite the first one.</LI>
+ </UL>
+  
+<H3>Example</H3>
+  <PRE>
+
+#
+#
+#
+SHIFT_FL_FRMT		RES_SIAD
+FIRST_RES_IN_SEQ		1
+
+
+EXP_PEAK_PICK_TBL
+	Label	Exp Par Fl	Peak-Pick Fl	#-Cross-Ref
+          b	cbcaconh	ft/B		iii
+          a	hncacb	        ft/C		iii
+          c     hbhaconh        ft/B            iii
+          d     hnco            ft/A            iii
+          e	cconh		ft/C		iii
+          f	hcconh		ft/C		iii
+          t	hcch-tocsy	ft/B            iii
+
+
+
+RES_ID		8
+RES_TYPE	HIS
+SPIN_SYSTEM_ID	8
+HETEROGENEITY	100
+    C        174.6470 ( d.18 )
+    CA        56.1576 ( b.188 a.423 e.78 t.888 )
+    CB        30.0005 ( b.187 a.318 e.79 t.887 t.886 )
+    HA         4.5816 ( c.279 t.888 t.888 t.886 )
+    HB#        3.1022 ( c.278 f.186 t.887 t.887 t.886 )
+END_RES_DEF
+
+RES_ID		9
+RES_TYPE	LEU
+SPIN_SYSTEM_ID	9
+HETEROGENEITY	100
+    CA        55.1854 ( b.200 a.422 e.91 t.890 t.889 t.891 t.892 )
+    CB        42.2793 ( b.199 a.319 a.336 e.92 t.904 t.906 t.907 t.908 t.905 )
+    CD1|CD2|CG       24.8033 ( e.94 t.901 t.903 t.899 t.902 t.900 )
+    CD2|CD1|CG       23.4863 ( e.95 t.898 t.897 t.894 t.895 t.893 )
+    CG|CD1|CD2        26.8035 ( e.93 t.910 t.909 t.911 )
+    HA         4.2778 ( c.244 f.191 t.890 t.889 t.891 t.892 t.904 t.911 t.903 t.893 )
+    HB#        1.5474 ( c.240 f.190 t.889 t.904 t.906 t.907 t.908 t.905 t.905 t.902 t.894 )
+    HD1#|HD2#|HG       0.8663 ( t.891 t.907 t.909 t.901 t.903 t.899 t.902 t.900 t.900 t.898 )
+    HD2#|HD1#|HG       0.8252 ( f.213 t.892 t.908 t.899 t.898 t.897 t.897 t.894 t.895 t.893 )
+    HG|HD1#|HD2#         1.4198 ( f.214 t.890 t.906 t.910 t.910 t.909 t.911 t.901 t.895 )
+    HN         8.2726 ( b.187 b.188 a.422 a.423 a.319 a.318 c.279 c.278 d.18 e.78 e.79 f.186 )
+    N        123.6330 ( b.187 b.188 a.422 a.423 a.319 a.318 c.279 c.278 d.18 e.78 e.79 f.186 )
+END_RES_DEF
+
+  </PRE>
+  <HR>
+  STARch output (with residue type set to other):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	8	HIS	C	.	174.6470	.	?
+2	8	HIS	CA	.	56.1576	.	?
+3	8	HIS	CB	.	30.0005	.	?
+4	8	HIS	HA	.	4.5816	.	?
+5	8	HIS	HB#	.	3.1022	.	?
+6	9	LEU	CA	.	55.1854	.	?
+7	9	LEU	CB	.	42.2793	.	?
+8	9	LEU	CD1|CD2|CG	.	24.8033	.	?
+9	9	LEU	CD2|CD1|CG	.	23.4863	.	?
+10	9	LEU	CG|CD1|CD2	.	26.8035	.	?
+11	9	LEU	HA	.	4.2778	.	?
+12	9	LEU	HB#	.	1.5474	.	?
+13	9	LEU	HD1#|HD2#|HG	.	0.8663	.	?
+14	9	LEU	HD2#|HD1#|HG	.	0.8252	.	?
+15	9	LEU	HG|HD1#|HD2#	.	1.4198	.	?
+16	9	LEU	HN	.	8.2726	.	?
+17	9	LEU	N	.	123.6330	.	?
+stop_
+
+  </PRE>
+  <HR>
+  STARch output (with residue type set to 20 common amino acids):
+  <PRE>
+
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	8	HIS	H	H	.	.	.
+2	8	HIS	N	N	.	.	.
+3	8	HIS	CA	C	56.1576	.	?
+4	8	HIS	HA	H	4.5816	.	?
+5	8	HIS	C	C	174.6470	.	?
+6	8	HIS	CB	C	30.0005	.	?
+7	8	HIS	HB2	H	.	.	.
+8	8	HIS	HB3	H	.	.	.
+9	8	HIS	CG	C	.	.	.
+10	8	HIS	ND1	N	.	.	.
+11	8	HIS	HD1	H	.	.	.
+12	8	HIS	CD2	C	.	.	.
+13	8	HIS	HD2	H	.	.	.
+14	8	HIS	CE1	C	.	.	.
+15	8	HIS	HE1	H	.	.	.
+16	8	HIS	NE2	N	.	.	.
+17	8	HIS	HE2	H	.	.	.
+18	8	HIS	HB	.	3.1022	.	?	#  Invalid atom
+19	9	LEU	H	H	8.2726	.	?
+20	9	LEU	N	N	123.6330	.	?
+21	9	LEU	CA	C	55.1854	.	?
+22	9	LEU	HA	H	4.2778	.	?
+23	9	LEU	C	C	.	.	.
+24	9	LEU	CB	C	42.2793	.	?
+25	9	LEU	HB2	H	.	.	.
+26	9	LEU	HB3	H	.	.	.
+27	9	LEU	CG	C	26.8035	.	?
+28	9	LEU	CD1	C	24.8033	.	?
+29	9	LEU	HD1	H	0.8663	.	?
+30	9	LEU	CD2	C	23.4863	.	?
+31	9	LEU	HD2	H	0.8252	.	?
+32	9	LEU	HG	H	1.4198	.	?
+33	9	LEU	HB	.	1.5474	.	?	#  Invalid atom
+stop_
+WARN::8:HIS:Replacing HB# with HB, ambiguity code ?
+WARN::9:LEU:Replacing CD1|CD2|CG with CD1, ambiguity code ?
+WARN::9:LEU:Replacing CD2|CD1|CG with CD2, ambiguity code ?
+WARN::9:LEU:Replacing CG|CD1|CD2 with CG, ambiguity code ?
+WARN::9:LEU:Replacing HB# with HB, ambiguity code ?
+WARN::9:LEU:Replacing HD1#|HD2#|HG with HD1, ambiguity code ?
+WARN::9:LEU:Replacing HD2#|HD1#|HG with HD2, ambiguity code ?
+WARN::9:LEU:Replacing HG|HD1#|HD2# with HG, ambiguity code ?
+
+ </PRE>
+<HR>
+<P class="datestamp">
+  Last updated: Fri 02 Jul 2004 05:02:37 PM CDT
+</P>
+</BODY>
+</HTML>
+
+
+

@@ -1,0 +1,116 @@
+#
+# starch.properties
+#
+#
+# initial working directory (use forward slashes!)
+#
+start.directory = 
+#
+# Open file
+#
+action.openfile.label = Read file
+action.openfile.tip   =
+action.openfile.icon  =
+#
+# Save file
+#
+action.savefile.label = Save file
+action.savefile.tip   =
+action.savefile.icon  =
+#
+# convert author data
+#
+action.convertdata.label = Convert author data
+action.convertdata.tip   =
+action.convertdata.icon  =
+#
+# copy author data
+#
+action.copydata.label = Copy author data
+action.copydata.tip   =
+action.copydata.icon  =
+#
+# convert residues
+#
+action.convertres.label = Convert residues
+action.convertres.tip   =
+action.convertres.icon  =
+#
+# convert atom names
+#
+action.convertatoms.label = Convert atom names
+action.convertatoms.tip   =
+action.convertatoms.icon  =
+#
+# add atom types
+#
+action.addtypes.label = Add atom types
+action.addtypes.tip   =
+action.addtypes.icon  =
+#
+# reindex residues
+#
+action.reidxres.label = Reindex residues
+action.reidxres.tip   =
+action.reidxres.icon  =
+#
+# sort atoms
+#
+action.sortatoms.label = Sort atoms
+action.sortatoms.tip   =
+action.sortatoms.icon  =
+#
+# reindex atoms
+#
+action.reidxatoms.label = Reindex atoms
+action.reidxatoms.tip   =
+action.reidxatoms.icon  =
+#
+# add isotopes
+#
+action.addisotopes.label = Atom isotopes
+action.addisotopes.tip   =
+action.addisotopes.icon  =
+#
+# add shift error
+#
+action.adderror.label = Chemical shift error
+action.adderror.tip   =
+action.adderror.icon  =
+#
+# add accession number
+#
+action.addaccno.label = BMRB accession number
+action.addaccno.tip   =
+action.addaccno.icon  =
+#
+# add entity ID
+#
+action.addentityid.label = Entity ID
+action.addentityid.tip   =
+action.addentityid.icon  =
+#
+# add assembly ID
+#
+action.addassyid.label = Entity assembly ID
+action.addassyid.tip   = 
+action.addassyid.icon  =
+#
+# add chemical shift list ID
+#
+action.addlistid.label = Chemical shift list ID
+action.addlistid.tip   =
+action.addlistid.icon  =
+#
+# add saveframe ID
+#
+action.addsfid.label = Saveframe ID
+action.addsfid.tip   =
+action.addsfid.icon  =
+#
+# delete empty rows
+#
+action.delempty.label = Rows without shift value
+action.delempty.tip   =
+action.delempty.icon  =
+

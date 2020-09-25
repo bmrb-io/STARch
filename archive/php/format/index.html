@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+    <HEAD>
+        <TITLE>Data converter</TITLE>
+        <link REL="stylesheet" TYPE="text/css" HREF="/stylesheets/main.css" TITLE="main stylesheet">
+    </HEAD>
+	
+    <BODY>
+        <CENTER>
+            <!--#include virtual="/includes/xmenu.html" -->
+	
+	    <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+	    <!-- This is a two column table. It displays a side column menu and the main page -->
+	        <TR><TD class="sidemenuCol">
+		    <!--#include virtual="/includes/deposit_menu.html" -->
+		</TD>
+								      
+		<TD VALIGN="TOP">
+		    <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+		        <TR class="titleAndIcon"><TD class="topContentTitle">
+                            <H1>Convert data file</H1>
+                        </TD></TR>
+			<TR><TD><STRONG>1</STRONG> Select data type from the drop-down list and click <STRONG>Continue</STRONG>.</TD></TR>
+			
+                        <!--#include virtual="datasel.php" -->
+                        
+			<TR><TD><STRONG>Notes:</STRONG>
+			  <OL>
+			    <LI>Many software packages can export NMR-STAR (e.g. NMRView, CCPN). Please use that, if available,
+			        instead of STARch to avoid potential loss of information during conversion.</LI>
+			    <LI>STARch only converts file format to NMR-STAR, it does not convert atom nomenclature.
+			        Please use IUPAC nomenclature in your tables, this will speed up the processing of your deposition.</LI>
+			</TD></TR>
+			
+                    </TABLE>   <!-- END  content table -->
+	        </TD></TR>
+		<!--#include virtual="/includes/footer.html" -->
+	    </TABLE>  <!-- END  layout table -->
+	</CENTER>
+    </BODY>
+</HTML>

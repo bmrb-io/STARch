@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<!--
+ * Created on Dec 18, 2008
+ *
+ * To change the template for this generated file go to
+ * Window - Preferences - PHPeclipse - PHP - Code Templates
+-->
+ <head>
+  <title>STARch</title>
+  <style type="text/css">
+  	.line { font-size: 1px; border-bottom: thin solid; }
+  	.timestamp { font-family: arial, helvetica, sans-serif; font-size: 75%; }
+  	tt { font-family: arial, helvetica, sans-serif; font-size: 100%; font-variant: small-caps; }
+  </style>
+ </head>
+ <body>
+   <h1>STAR Conversion Handler</h1>
+   <p>
+     Web-based program for converting data files to NMR-STAR 3.1.
+   <p>
+   <em>Project location:</em> <strong>svn:///file/svn/websoft/starch</strong>
+   <br>
+   <a href="INSTALL">website installation instructions</a>
+ 
+   <h2>Requirements</h2>
+   <p>
+     This is a pre-deposition tool for authors to convert their data to NMR-STAR 3.1 format for
+     faster processing. It is also used by BMRB annotators if the authors didn't bother to do the
+     conversion themselves. 
+   <p>
+     Main requirement is extensibility: it must be easy to add new input formats as they come
+     along. Also, the program should not need to be rewritten every time NMR-STAR dictionary is
+     updated.
+   <p>
+     Main limitation is nomenclature checking/conversion: in the previous version of STARch most
+     users seemed to ignore warning messages about invalid atom names, and in a few cases the 
+     nomenclature conversions that were done automatically actually made things worse. Because of
+     that, this version of STARch does not do anything with residue and atom names.
+   <div class="line">&nbsp;</div>
+
+   <h2>Interface</h2>
+   <p>
+     Similar to file import wizard in office programs: user clicks through a series of screens
+     selecting data type and input file type. Final screen shows top 10 rows of converted table
+     with column headers as drop-down lists: user can verify that data was placed in the right
+     columns and change the headers if necessary. The end result is an NMR-STAR 3.1 loop.
+  <p>
+     <strong>See also</strong>
+     <ul>
+       <li><a href="starch_dfd.vsd">data flow diagram</a> (Visio)</li>
+     </ul>
+  <div class="line">&nbsp;</div>
+
+<h1>TODO</H1>
+<P>
+  Most of this should be rewritten to use new chem_comp/curated DB.
+   
+   <h2>Implementation</h2>
+
+   <h3>Dictionary database</h3>
+   <p>
+     <strong>TODO:</strong> add to chem_comp and get that installed on mirrors.
+   <p>
+     <tt>datumtypes</tt> table: maps tag category to human-readable description of data type, e.g.
+     "chemical shifts". Used to populate the drop-down list of data types.
+   <p>
+     <tt>starch</tt> table lists all data tags (in categories in the above table) with the following
+     flags:
+     <ul>
+       <li><tt>displseq</tt>: number for sorting tags on display (e.g. in STARch). There in case sorting by
+           dictionary sequence number doesn't work.</li>
+       <li><tt>displname</tt>: text shown in the column header drop-down box.</li>
+       <li>flags that mark <em>Comp_ID</em>, <em>Seq_ID</em>, etc. tags, this way we don't have to base
+           column selections on tag name (esp. in tables with several "value" columns that arent called <em>.Val</em>).
+     </ul>
+   <p>
+     <strong>TODO</strong>: Dictionary tables reside in <tt>validict</tt> schema in chem_comp DB.
+
+   <h3>Files</h3>
+   <p>
+     <strong>TODO</strong>: needs clean-up.
+   <p>
+     <tt>index.html</tt> + data type selector.
+   <p>
+     <tt>filesel.php</tt>: lists input formats for selected data types.
+   <p>
+     <tt>fileupl.php</tt>: file upload form. Runs appropriate converter for selected input format and data type.
+   <p>
+     Every converter is a separate PHP script that reads uploaded file and writes out a tab-delimited
+     file in temp. directory w/ residue sequence number, residue label, atom name, shift value columns
+     (usually in that order), and any other columns parsed out of input file. It returns array of NMR-STAR 3.1 tags
+     in the same order as temp. file columns (where known).  
+   <p>
+     <tt>markcols.php</tt>: last input form. Displays first 10 rows of temp. file with column headers as drop-down
+     lists. The lists are populated from <tt>starch</tt> table of validation dictionary database and include all
+     "user-visible" tags for the table.
+   <p>
+     <tt>showstar.php</tt>: prints out NMR-STAR 3.1 table.
+     
+   <div class="line">&nbsp;</div>
+   <p class="timestamp">
+     Last updated: 2008-12-23
+ </body>
+</html>

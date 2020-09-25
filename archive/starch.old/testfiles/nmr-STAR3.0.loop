@@ -1,0 +1,25 @@
+
+  loop_
+     _Atom_chem_shift.Entry_ID                                
+     _Atom_chem_shift.Assigned_chemical_shifts_ID             
+     _Atom_chem_shift.ID                                      
+     _Atom_chem_shift.Entry_atom_ID                           
+     _Atom_chem_shift.Mol_sys_comp_ID                         
+     _Atom_chem_shift.Entity_ID                               
+     _Atom_chem_shift.Chem_comp_index_ID                      
+     _Atom_chem_shift.Chem_comp_seq_num                       
+     _Atom_chem_shift.Comp_ID                                 
+     _Atom_chem_shift.Atom_ID                                 
+     _Atom_chem_shift.Atom_type                               
+     _Atom_chem_shift.Atom_isotope                            
+     _Atom_chem_shift.Chem_shift_val                          
+     _Atom_chem_shift.Chem_shift_val_err                      
+     _Atom_chem_shift.Chem_shift_assign_fig_of_merit          
+     _Atom_chem_shift.Chem_shift_ambiguity_code               
+     _Atom_chem_shift.Chem_shift_occupancy_ID                 
+     _Atom_chem_shift.Chem_shift_derivation_ID                
+
+    1  1  1  1  1    1  1  2  1  1    "Short string value"  "Short string value"  110.234  110.234  110.234    "Tiny string value"  1  1  
+
+  stop_
+

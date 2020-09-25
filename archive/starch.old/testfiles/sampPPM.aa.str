@@ -1,0 +1,34 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	ALA	H	H	.	.	.
+2	1	ALA	N	N	.	.	.
+3	1	ALA	CA	C	51.90	.	.
+4	1	ALA	HA	H	4.15	.	.
+5	1	ALA	C	C	174.00	.	.
+6	1	ALA	CB	C	18.80	.	.
+7	1	ALA	HB	H	.	.	.
+8	1	ALA	HB#	.	1.57	.	.	#  Invalid atom
+9	2	ASP	H	H	.	.	.
+10	2	ASP	N	N	120.50	.	.
+11	2	ASP	CA	C	54.70	.	.
+12	2	ASP	HA	H	4.67	.	.
+13	2	ASP	C	C	175.80	.	.
+14	2	ASP	CB	C	41.20	.	.
+15	2	ASP	HB2	H	2.60	.	.
+16	2	ASP	HB3	H	.	.	.
+17	2	ASP	CG	C	.	.	.
+18	2	ASP	HD2	H	.	.	.
+19	2	ASP	HB1	.	2.72	.	.	#  Invalid atom
+stop_
+ERR:1:1:?:Invalid value ***.**
+ERR:5:1:?:Invalid value 999.99
+ERR:12:2:?:Invalid value -999.99
+ERR:16:2:?:Invalid value **.**

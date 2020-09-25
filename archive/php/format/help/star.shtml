@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <TITLE>STARch STAR input format</TITLE>
+  </HEAD>
+<BODY>
+<CENTER>
+  <!--#include virtual="/includes/xmenu.html" -->
+
+  <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+  <!-- This is a two column table. It displays a side column menu and the main page -->
+    <TR><TD class="sidemenuCol">
+       <!--#include virtual="/includes/deposit_menu.html" -->
+    </TD>
+
+    <TD VALIGN="TOP">
+      <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+        <TR class="titleAndIcon"><TD class="topContentTitle">
+          <H1 class="center"><A href="/formats.html">NMR-STAR</A> file format</H1>        
+       </TD></TR>
+       <TR><TD>
+         For input files with more than one table (loop), such as output of BMRB table generators,
+         you can select which table to convert (<EM>Convert loop #</EM> text box). Tables are counted
+         from 1.<BR>
+         By default the program will convert the first table in uploaded file.
+         <P>
+         <STRONG>Notes:</STRONG>
+         <OL>
+           <LI>The program cannot not parse nested loops (allowed in generic STAR format).</LI>
+           <LI>If uploaded table contains unknown tags, you will have to manually select column
+               names from the drop-down lists later on.</LI>
+         </OL>
+         <P>
+         NMR-STAR v. 2.1 chemical shift table example:  
+<PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	157	TYR	H	H	9.163	.	.
+2	157	TYR	N	N	128.376	.	.
+3	157	TYR	CA	C	53.236	.	.
+4	158	PRO	C	C	179.933	.	.
+5	158	PRO	CB	C	29.883	.	.
+
+stop_
+</PRE>
+       </TD></TR>
+      </TABLE>   <!-- END  content table -->
+    </TD></TR>
+    <!--#include virtual="/includes/footer.html" -->
+  </TABLE>  <!-- END  layout table -->
+</CENTER>
+</BODY>
+</HTML>

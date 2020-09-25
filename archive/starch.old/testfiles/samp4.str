@@ -1,0 +1,81 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	157	TYR	H	H	9.163	.	.
+2	157	TYR	N	N	128.376	.	.
+3	157	TYR	CA	C	53.236	.	.
+4	157	TYR	HA	H	.	.	.
+5	157	TYR	C	C	175.04	.	.
+6	157	TYR	CB	C	39.168	.	.
+7	157	TYR	HB2	H	.	.	.
+8	157	TYR	HB3	H	.	.	.
+9	157	TYR	CG	C	.	.	.
+10	157	TYR	CD1	C	.	.	.
+11	157	TYR	HD1	H	.	.	.
+12	157	TYR	CD2	C	.	.	.
+13	157	TYR	HD2	H	.	.	.
+14	157	TYR	CE1	C	.	.	.
+15	157	TYR	HE1	H	.	.	.
+16	157	TYR	CE2	C	.	.	.
+17	157	TYR	HE2	H	.	.	.
+18	157	TYR	CZ	C	.	.	.
+19	157	TYR	HH	H	.	.	.
+20	158	PRO	N	N	.	.	.	# shift.val = n/a
+21	158	PRO	CA	C	49.472	.	.
+22	158	PRO	HA	H	.	.	.
+23	158	PRO	C	C	179.933	.	.
+24	158	PRO	CB	C	29.883	.	.
+25	158	PRO	HB2	H	.	.	.
+26	158	PRO	HB3	H	.	.	.
+27	158	PRO	CG	C	.	.	.
+28	158	PRO	HG2	H	.	.	.
+29	158	PRO	HG3	H	.	.	.
+30	158	PRO	CD	C	.	.	.
+31	158	PRO	HD2	H	.	.	.
+32	158	PRO	HD3	H	.	.	.
+33	158	PRO	H	.	.	.	.	# shift.val = n/a  Invalid atom
+34	159	TRP	H	H	9.08	.	.
+35	159	TRP	N	N	124.828	.	.
+36	159	TRP	CA	C	56.268	.	.
+37	159	TRP	HA	H	.	.	.
+38	159	TRP	C	C	173.979	.	.
+39	159	TRP	CB	C	26.557	.	.
+40	159	TRP	HB2	H	.	.	.
+41	159	TRP	HB3	H	.	.	.
+42	159	TRP	CG	C	.	.	.
+43	159	TRP	CD1	C	.	.	.
+44	159	TRP	HD1	H	.	.	.
+45	159	TRP	CD2	C	.	.	.
+46	159	TRP	NE1	N	.	.	.
+47	159	TRP	HE1	H	.	.	.
+48	159	TRP	CE2	C	.	.	.
+49	159	TRP	CE3	C	.	.	.
+50	159	TRP	HE3	H	.	.	.
+51	159	TRP	CZ2	C	.	.	.
+52	159	TRP	HZ2	H	.	.	.
+53	159	TRP	CZ3	C	.	.	.
+54	159	TRP	HZ3	H	.	.	.
+55	159	TRP	CH2	C	.	.	.
+56	159	TRP	HH2	H	.	.	.
+57	173	LEU	H	H	7.241	.	.
+58	173	LEU	N	N	120.238	.	.
+59	173	LEU	CA	C	50.63	.	.
+60	173	LEU	HA	H	.	.	.
+61	173	LEU	C	C	177.6	.	.
+62	173	LEU	CB	C	40.693	.	.
+63	173	LEU	HB2	H	.	.	.
+64	173	LEU	HB3	H	.	.	.
+65	173	LEU	CG	C	.	.	.
+66	173	LEU	CD1	C	.	.	.
+67	173	LEU	HD1	H	.	.	.
+68	173	LEU	CD2	C	.	.	.
+69	173	LEU	HD2	H	.	.	.
+70	173	LEU	HG	H	.	.	.
+stop_

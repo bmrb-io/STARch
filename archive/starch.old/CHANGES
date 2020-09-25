@@ -1,0 +1,40 @@
+Mon 16 Jun 2003 05:53:45 PM CDT
+
+Fix handling of seqCode_label field in Format1. It must contain
+residue label and sequence code as one string, e.g. A1. STARch 
+was trying to parse that as sequence code + residue label (the 
+other way around).
+
+Wed 30 Apr 2003 08:26:22 PM CDT
+
+Documentation fixes.
+Wrote custom method to validate floating-point numbers. It is 2 times
+faster and understands scientific notation. Formats 1 and 4 are using 
+it, more to follow.
+
+Tue 15 Apr 2003 04:23:02 PM CDT
+
+Fixed bugs in formats 1 and 2 -- they were losing comments during conversion.
+Added another tab-delimited format: format 4.
+
+Fri 07 Feb 2003 04:54:28 PM CST
+
+Input line with whitespace only crashed PIPP converter. Fixed.
+
+Fri 03 Jan 2003 01:41:30 PM CST
+
+This version
+
+ -- does not rename atoms from e.g. HB1, HB2 to HB2, HB3 in GLN.
+    It leaves them as is instead, and marks HB1 as invalid atom.
+
+ -- accepts residue type command-line parameter. That turns 
+    nomenclature conversions on (they're now off by default).
+
+ -- does not add chemical shift ambiguity code to atoms that have
+    no chemical shift value.
+
+ -- does not strip trailing zeroes from chemical shift value and
+    error.
+
+ -- quotes atom names properly.

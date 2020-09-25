@@ -1,0 +1,173 @@
+
+####################
+#  NMR parameters  #
+####################
+   
+       ########################
+       #  Coupling constants  #
+       ########################
+   
+save_3JCOCO
+   _Saveframe_category          coupling_constants
+   
+   loop_
+      _Sample_label
+   
+      $sample_1
+   
+   stop_
+   
+   
+   _Sample_conditions_label    $sample_conditions_1
+   _Spectrometer_frequency_1H   @
+   _Mol_system_component_name  "FDXN"
+   
+   
+    loop_
+       _Coupling_constant.ID
+       _Coupling_constant.Code
+       _Coupling_constant.Entity_assembly_ID_1
+       _Coupling_constant.Comp_index_ID_1
+       _Coupling_constant.Comp_ID_1
+       _Coupling_constant.Atom_ID_1
+       _Coupling_constant.Atom_type_1
+       _Coupling_constant.Atom_isotope_number_1
+       _Coupling_constant.Ambiguity_code_1
+       _Coupling_constant.Entity_assembly_ID_2
+       _Coupling_constant.Comp_index_ID_2
+       _Coupling_constant.Comp_ID_2
+       _Coupling_constant.Atom_ID_2
+       _Coupling_constant.Atom_type_2
+       _Coupling_constant.Atom_isotope_number_2
+       _Coupling_constant.Ambiguity_code_2
+       _Coupling_constant.Val
+       _Coupling_constant.Val_min
+       _Coupling_constant.Val_max
+       _Coupling_constant.Val_err
+       _Coupling_constant.Details
+   
+           1  3JCOCO    FDXN     3  Lys  C    C  13  1    FDXN     3  Lys  C    C  13  1     0.74   .     .    0.35    "phi±0"
+           2  3JCOCO    FDXN     4  Ala  C    C  13  1    FDXN     4  Ala  C    C  13  1     1.41   .     .    0.35    "phi±0"
+           3  3JCOCO    FDXN     5  Leu  C    C  13  1    FDXN     5  Leu  C    C  13  1     1.78   .     .    0.35    "phi±0"
+           4  3JCOCO    FDXN     6  Ile  C    C  13  1    FDXN     6  Ile  C    C  13  1     2.11   .     .    0.35    "phi±0"
+           5  3JCOCO    FDXN     8  Tyr  C    C  13  1    FDXN     8  Tyr  C    C  13  1     1.55   .     .    0.35    "phi±0"
+           6  3JCOCO    FDXN    10  Ser  C    C  13  1    FDXN    10  Ser  C    C  13  1     2.04   .     .    0.35    "phi±0"
+           7  3JCOCO    FDXN    12  Thr  C    C  13  1    FDXN    12  Thr  C    C  13  1     0.64   .     .    0.35    "phi±0"
+           8  3JCOCO    FDXN    13  Gly  C    C  13  1    FDXN    13  Gly  C    C  13  1     0.04   .     .    0.35    "phi±0"
+           9  3JCOCO    FDXN    16  Glu  C    C  13  1    FDXN    16  Glu  C    C  13  1     0.05   .     .    0.35    "phi±0"
+          10  3JCOCO    FDXN    17  Tyr  C    C  13  1    FDXN    17  Tyr  C    C  13  1     0.25   .     .    0.35    "phi±0"
+          11  3JCOCO    FDXN    18  Thr  C    C  13  1    FDXN    18  Thr  C    C  13  1     0.73   .     .    0.35    "phi±0"
+          12  3JCOCO    FDXN    19  Ala  C    C  13  1    FDXN    19  Ala  C    C  13  1     0.64   .     .    0.35    "phi±0"
+          13  3JCOCO    FDXN    20  Glu  C    C  13  1    FDXN    20  Glu  C    C  13  1     0.53   .     .    0.35    "phi±0"
+          14  3JCOCO    FDXN    21  Thr  C    C  13  1    FDXN    21  Thr  C    C  13  1     0.56   .     .    0.35    "phi±0"
+          15  3JCOCO    FDXN    22  Ile  C    C  13  1    FDXN    22  Ile  C    C  13  1     0.02   .     .    0.35    "phi±0"
+          16  3JCOCO    FDXN    23  Ala  C    C  13  1    FDXN    23  Ala  C    C  13  1     0.82   .     .    0.35    "phi±0"
+          17  3JCOCO    FDXN    24  Arg  C    C  13  1    FDXN    24  Arg  C    C  13  1     0.55   .     .    0.35    "phi±0"
+          18  3JCOCO    FDXN    26  Leu  C    C  13  1    FDXN    26  Leu  C    C  13  1     0.50   .     .    0.35    "phi±0"
+          19  3JCOCO    FDXN    27  Ala  C    C  13  1    FDXN    27  Ala  C    C  13  1     0.77   .     .    0.35    "phi±0"
+          20  3JCOCO    FDXN    28  Asp  C    C  13  1    FDXN    28  Asp  C    C  13  1     0.17   .     .    0.35    "phi±0"
+          21  3JCOCO    FDXN    29  Ala  C    C  13  1    FDXN    29  Ala  C    C  13  1     0.95   .     .    0.35    "phi±0"
+          22  3JCOCO    FDXN    30  Gly  C    C  13  1    FDXN    30  Gly  C    C  13  1     0.42   .     .    0.35    "phi±0"
+          23  3JCOCO    FDXN    31  Tyr  C    C  13  1    FDXN    31  Tyr  C    C  13  1     0.77   .     .    0.35    "phi±0"
+          24  3JCOCO    FDXN    32  Glu  C    C  13  1    FDXN    32  Glu  C    C  13  1     0.83   .     .    0.35    "phi±0"
+          25  3JCOCO    FDXN    33  Val  C    C  13  1    FDXN    33  Val  C    C  13  1     1.67   .     .    0.35    "phi±0"
+          26  3JCOCO    FDXN    34  Asp  C    C  13  1    FDXN    34  Asp  C    C  13  1     1.51   .     .    0.35    "phi±0"
+          27  3JCOCO    FDXN    35  Ser  C    C  13  1    FDXN    35  Ser  C    C  13  1     1.33   .     .    0.35    "phi±0"
+          28  3JCOCO    FDXN    36  Arg  C    C  13  1    FDXN    36  Arg  C    C  13  1     2.40   .     .    0.35    "phi±0"
+          29  3JCOCO    FDXN    37  Asp  C    C  13  1    FDXN    37  Asp  C    C  13  1    -0.19   .     .    0.35    "phi±0"
+          30  3JCOCO    FDXN    38  Ala  C    C  13  1    FDXN    38  Ala  C    C  13  1    -0.11   .     .    0.35    "phi±0"
+          31  3JCOCO    FDXN    40  Ser  C    C  13  1    FDXN    40  Ser  C    C  13  1     1.13   .     .    0.35    "phi±0"
+          32  3JCOCO    FDXN    41  Val  C    C  13  1    FDXN    41  Val  C    C  13  1     0.74   .     .    0.35    "phi±0"
+          33  3JCOCO    FDXN    42  Glu  C    C  13  1    FDXN    42  Glu  C    C  13  1     1.24   .     .    0.35    "phi±0"
+          34  3JCOCO    FDXN    43  Ala  C    C  13  1    FDXN    43  Ala  C    C  13  1     0.43   .     .    0.35    "phi±0"
+          35  3JCOCO    FDXN    44  Gly  C    C  13  1    FDXN    44  Gly  C    C  13  1    -0.17   .     .    0.35    "phi±0"
+          36  3JCOCO    FDXN    45  Gly  C    C  13  1    FDXN    45  Gly  C    C  13  1     0.35   .     .    0.35    "phi±0"
+          37  3JCOCO    FDXN    46  Leu  C    C  13  1    FDXN    46  Leu  C    C  13  1     0.06   .     .    0.35    "phi±0"
+          38  3JCOCO    FDXN    47  Phe  C    C  13  1    FDXN    47  Phe  C    C  13  1    -0.36   .     .    0.35    "phi±0"
+          39  3JCOCO    FDXN    48  Glu  C    C  13  1    FDXN    48  Glu  C    C  13  1     0.25   .     .    0.35    "phi±0"
+          40  3JCOCO    FDXN    49  Gly  C    C  13  1    FDXN    49  Gly  C    C  13  1     0.48   .     .    0.35    "phi±0"
+          41  3JCOCO    FDXN    50  Phe  C    C  13  1    FDXN    50  Phe  C    C  13  1     0.43   .     .    0.35    "phi±0"
+          42  3JCOCO    FDXN    51  Asp  C    C  13  1    FDXN    51  Asp  C    C  13  1     0.05   .     .    0.35    "phi±0"
+          43  3JCOCO    FDXN    52  Leu  C    C  13  1    FDXN    52  Leu  C    C  13  1     2.24   .     .    0.35    "phi±0"
+          44  3JCOCO    FDXN    53  Val  C    C  13  1    FDXN    53  Val  C    C  13  1     1.78   .     .    0.35    "phi±0"
+          45  3JCOCO    FDXN    54  Leu  C    C  13  1    FDXN    54  Leu  C    C  13  1     1.34   .     .    0.35    "phi±0"
+          46  3JCOCO    FDXN    58  Ser  C    C  13  1    FDXN    58  Ser  C    C  13  1     0.31   .     .    0.35    "phi±0"
+          47  3JCOCO    FDXN    59  Thr  C    C  13  1    FDXN    59  Thr  C    C  13  1     0.70   .     .    0.35    "phi±0"
+          48  3JCOCO    FDXN    60  Trp  C    C  13  1    FDXN    60  Trp  C    C  13  1     2.34   .     .    0.35    "phi±0"
+          49  3JCOCO    FDXN    62  Asp  C    C  13  1    FDXN    62  Asp  C    C  13  1    -0.02   .     .    0.35    "phi±0"
+          50  3JCOCO    FDXN    64  Ser  C    C  13  1    FDXN    64  Ser  C    C  13  1     2.32   .     .    0.35    "phi±0"
+          51  3JCOCO    FDXN    65  Ile  C    C  13  1    FDXN    65  Ile  C    C  13  1     0.58   .     .    0.35    "phi±0"
+          52  3JCOCO    FDXN    66  Glu  C    C  13  1    FDXN    66  Glu  C    C  13  1     1.58   .     .    0.35    "phi±0"
+          53  3JCOCO    FDXN    68  Gln  C    C  13  1    FDXN    68  Gln  C    C  13  1     0.71   .     .    0.35    "phi±0"
+          54  3JCOCO    FDXN    70  Asp  C    C  13  1    FDXN    70  Asp  C    C  13  1     0.25   .     .    0.35    "phi±0"
+          55  3JCOCO    FDXN    71  Phe  C    C  13  1    FDXN    71  Phe  C    C  13  1     1.02   .     .    0.35    "phi±0"
+          56  3JCOCO    FDXN    72  Ile  C    C  13  1    FDXN    72  Ile  C    C  13  1     0.30   .     .    0.35    "phi±0"
+          57  3JCOCO    FDXN    74  Leu  C    C  13  1    FDXN    74  Leu  C    C  13  1     0.73   .     .    0.35    "phi±0"
+          58  3JCOCO    FDXN    75  Phe  C    C  13  1    FDXN    75  Phe  C    C  13  1     0.67   .     .    0.35    "phi±0"
+          59  3JCOCO    FDXN    76  Asp  C    C  13  1    FDXN    76  Asp  C    C  13  1     0.40   .     .    0.35    "phi±0"
+          60  3JCOCO    FDXN    79  Glu  C    C  13  1    FDXN    79  Glu  C    C  13  1     0.07   .     .    0.35    "phi±0"
+          61  3JCOCO    FDXN    80  Glu  C    C  13  1    FDXN    80  Glu  C    C  13  1     0.42   .     .    0.35    "phi±0"
+          62  3JCOCO    FDXN    81  Thr  C    C  13  1    FDXN    81  Thr  C    C  13  1     0.27   .     .    0.35    "phi±0"
+          63  3JCOCO    FDXN    82  Gly  C    C  13  1    FDXN    82  Gly  C    C  13  1     0.55   .     .    0.35    "phi±0"
+          64  3JCOCO    FDXN    83  Ala  C    C  13  1    FDXN    83  Ala  C    C  13  1     0.30   .     .    0.35    "phi±0"
+          65  3JCOCO    FDXN    84  Gln  C    C  13  1    FDXN    84  Gln  C    C  13  1    -0.02   .     .    0.35    "phi±0"
+          66  3JCOCO    FDXN    85  Gly  C    C  13  1    FDXN    85  Gly  C    C  13  1     0.26   .     .    0.35    "phi±0"
+          67  3JCOCO    FDXN    86  Arg  C    C  13  1    FDXN    86  Arg  C    C  13  1     0.75   .     .    0.35    "phi±0"
+          68  3JCOCO    FDXN    87  Lys  C    C  13  1    FDXN    87  Lys  C    C  13  1    -0.02   .     .    0.35    "phi±0"
+          69  3JCOCO    FDXN    88  Val  C    C  13  1    FDXN    88  Val  C    C  13  1     2.02   .     .    0.35    "phi±0"
+          70  3JCOCO    FDXN    89  Ala  C    C  13  1    FDXN    89  Ala  C    C  13  1     2.74   .     .    0.35    "phi±0"
+          71  3JCOCO    FDXN    90  Cys  C    C  13  1    FDXN    90  Cys  C    C  13  1     1.69   .     .    0.35    "phi±0"
+          72  3JCOCO    FDXN    91  Phe  C    C  13  1    FDXN    91  Phe  C    C  13  1     2.21   .     .    0.35    "phi±0"
+          73  3JCOCO    FDXN    92  Gly  C    C  13  1    FDXN    92  Gly  C    C  13  1     3.03   .     .    0.35    "phi±0"
+          74  3JCOCO    FDXN    94  Gly  C    C  13  1    FDXN    94  Gly  C    C  13  1     2.83   .     .    0.35    "phi±0"
+          75  3JCOCO    FDXN    95  Asp  C    C  13  1    FDXN    95  Asp  C    C  13  1     2.67   .     .    0.35    "phi±0"
+          76  3JCOCO    FDXN    96  Ser  C    C  13  1    FDXN    96  Ser  C    C  13  1    -0.21   .     .    0.35    "phi±0"
+          77  3JCOCO    FDXN    98  Tyr  C    C  13  1    FDXN    98  Tyr  C    C  13  1     0.73   .     .    0.35    "phi±0"
+          78  3JCOCO    FDXN   100  Tyr  C    C  13  1    FDXN   100  Tyr  C    C  13  1     0.38   .     .    0.35    "phi±0"
+          79  3JCOCO    FDXN   101  Phe  C    C  13  1    FDXN   101  Phe  C    C  13  1     0.62   .     .    0.35    "phi±0"
+          80  3JCOCO    FDXN   103  Gly  C    C  13  1    FDXN   103  Gly  C    C  13  1     0.50   .     .    0.35    "phi±0"
+          81  3JCOCO    FDXN   105  Val  C    C  13  1    FDXN   105  Val  C    C  13  1     0.47   .     .    0.35    "phi±0"
+          82  3JCOCO    FDXN   106  Asp  C    C  13  1    FDXN   106  Asp  C    C  13  1     0.29   .     .    0.35    "phi±0"
+          83  3JCOCO    FDXN   107  Ala  C    C  13  1    FDXN   107  Ala  C    C  13  1     0.40   .     .    0.35    "phi±0"
+          84  3JCOCO    FDXN   108  Ile  C    C  13  1    FDXN   108  Ile  C    C  13  1     0.75   .     .    0.35    "phi±0"
+          85  3JCOCO    FDXN   109  Glu  C    C  13  1    FDXN   109  Glu  C    C  13  1     0.40   .     .    0.35    "phi±0"
+          86  3JCOCO    FDXN   110  Glu  C    C  13  1    FDXN   110  Glu  C    C  13  1     0.47   .     .    0.35    "phi±0"
+          87  3JCOCO    FDXN   111  Lys  C    C  13  1    FDXN   111  Lys  C    C  13  1    -0.12   .     .    0.35    "phi±0"
+          88  3JCOCO    FDXN   112  Leu  C    C  13  1    FDXN   112  Leu  C    C  13  1     1.01   .     .    0.35    "phi±0"
+          89  3JCOCO    FDXN   113  Lys  C    C  13  1    FDXN   113  Lys  C    C  13  1     0.20   .     .    0.35    "phi±0"
+          90  3JCOCO    FDXN   114  Asn  C    C  13  1    FDXN   114  Asn  C    C  13  1    -0.05   .     .    0.35    "phi±0"
+          91  3JCOCO    FDXN   115  Leu  C    C  13  1    FDXN   115  Leu  C    C  13  1     0.07   .     .    0.35    "phi±0"
+          92  3JCOCO    FDXN   116  Gly  C    C  13  1    FDXN   116  Gly  C    C  13  1    -0.12   .     .    0.35    "phi±0"
+          93  3JCOCO    FDXN   117  Ala  C    C  13  1    FDXN   117  Ala  C    C  13  1     0.37   .     .    0.35    "phi±0"
+          94  3JCOCO    FDXN   118  Glu  C    C  13  1    FDXN   118  Glu  C    C  13  1     0.30   .     .    0.35    "phi±0"
+          95  3JCOCO    FDXN   119  Ile  C    C  13  1    FDXN   119  Ile  C    C  13  1     0.40   .     .    0.35    "phi±0"
+          96  3JCOCO    FDXN   120  Val  C    C  13  1    FDXN   120  Val  C    C  13  1     0.28   .     .    0.35    "phi±0"
+          97  3JCOCO    FDXN   121  Gln  C    C  13  1    FDXN   121  Gln  C    C  13  1     2.76   .     .    0.35    "phi±0"
+          98  3JCOCO    FDXN   122  Asp  C    C  13  1    FDXN   122  Asp  C    C  13  1     0.44   .     .    0.35    "phi±0"
+          99  3JCOCO    FDXN   124  Leu  C    C  13  1    FDXN   124  Leu  C    C  13  1     0.20   .     .    0.35    "phi±0"
+         100  3JCOCO    FDXN   126  Ile  C    C  13  1    FDXN   126  Ile  C    C  13  1     1.14   .     .    0.35    "phi±0"
+         101  3JCOCO    FDXN   127  Asp  C    C  13  1    FDXN   127  Asp  C    C  13  1     0.69   .     .    0.35    "phi±0"
+         102  3JCOCO    FDXN   128  Gly  C    C  13  1    FDXN   128  Gly  C    C  13  1     0.52   .     .    0.35    "phi±0"
+         103  3JCOCO    FDXN   129  Asp  C    C  13  1    FDXN   129  Asp  C    C  13  1     0.47   .     .    0.35    "phi±0"
+         104  3JCOCO    FDXN   131  Arg  C    C  13  1    FDXN   131  Arg  C    C  13  1     0.81   .     .    0.35    "phi±0"
+         105  3JCOCO    FDXN   132  Ala  C    C  13  1    FDXN   132  Ala  C    C  13  1     0.69   .     .    0.35    "phi±0"
+         106  3JCOCO    FDXN   133  Ala  C    C  13  1    FDXN   133  Ala  C    C  13  1     1.27   .     .    0.35    "phi±0"
+         107  3JCOCO    FDXN   134  Arg  C    C  13  1    FDXN   134  Arg  C    C  13  1     0.49   .     .    0.35    "phi±0"
+         108  3JCOCO    FDXN   135  Asp  C    C  13  1    FDXN   135  Asp  C    C  13  1     0.69   .     .    0.35    "phi±0"
+         109  3JCOCO    FDXN   136  Asp  C    C  13  1    FDXN   136  Asp  C    C  13  1     0.53   .     .    0.35    "phi±0"
+         110  3JCOCO    FDXN   137  Ile  C    C  13  1    FDXN   137  Ile  C    C  13  1    -0.31   .     .    0.35    "phi±0"
+         111  3JCOCO    FDXN   138  Val  C    C  13  1    FDXN   138  Val  C    C  13  1     0.38   .     .    0.35    "phi±0"
+         112  3JCOCO    FDXN   139  Gly  C    C  13  1    FDXN   139  Gly  C    C  13  1    -0.10   .     .    0.35    "phi±0"
+         113  3JCOCO    FDXN   140  Trp  C    C  13  1    FDXN   140  Trp  C    C  13  1     0.87   .     .    0.35    "phi±0"
+         114  3JCOCO    FDXN   141  Ala  C    C  13  1    FDXN   141  Ala  C    C  13  1     0.36   .     .    0.35    "phi±0"
+         115  3JCOCO    FDXN   142  His  C    C  13  1    FDXN   142  His  C    C  13  1     0.39   .     .    0.35    "phi±0"
+         116  3JCOCO    FDXN   143  Asp  C    C  13  1    FDXN   143  Asp  C    C  13  1    -0.06   .     .    0.35    "phi±0"
+         117  3JCOCO    FDXN   144  Val  C    C  13  1    FDXN   144  Val  C    C  13  1     0.01   .     .    0.35    "phi±0"
+         118  3JCOCO    FDXN   145  Arg  C    C  13  1    FDXN   145  Arg  C    C  13  1     0.02   .     .    0.35    "phi±0"
+         119  3JCOCO    FDXN   146  Gly  C    C  13  1    FDXN   146  Gly  C    C  13  1     0.68   .     .    0.35    "phi±0"
+         120  3JCOCO    FDXN   147  Ala  C    C  13  1    FDXN   147  Ala  C    C  13  1     0.73   .     .    0.35    "phi±0"
+         121  3JCOCO    FDXN   148  Ile  C    C  13  1    FDXN   148  Ile  C    C  13  1     0.92   .     .    0.35    "phi±0"
+   
+   stop_
+
+save_

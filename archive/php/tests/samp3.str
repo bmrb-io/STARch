@@ -1,0 +1,41 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	G	H8	H	8.20	.	1
+2	1	G	H2	H	.	.	.	# shift value=n.a.
+3	1	G	"H1'"	H	5.95	.	1
+4	1	G	"H2'"	H	4.93	.	1
+5	1	G	"H3'"	H	4.71	.	1
+6	1	G	"H4'"	H	4.58	.	1
+7	1	G	IM	I	12.18	.	1
+8	1	G	AM	A	.	.	.	# shift value=null
+9	5	C	H8	H	7.84	.	1
+10	5	C	H2	H	5.67	.	1
+11	5	C	"H1'"	H	5.51	.	1
+12	5	C	"H2'"	H	4.31	.	1
+13	5	C	"H3'"	H	4.45	.	1
+14	5	C	"H4'"	H	4.10	.	1
+15	5	C	IM	I	8.41	.	1
+16	5	C	AM	A	7.00	.	1
+17	8	A	H8	H	7.60	.	1
+18	8	A	H2	H	7.64	.	1
+19	8	A	"H1'"	H	5.90	.	1
+20	8	A	"H2'"	H	4.63	.	1
+21	8	A	"H3'"	H	4.55	.	1
+22	8	A	"H4'"	H	4.48	.	1
+23	8	A	IM	I	.	.	.	# shift value=null
+24	8	A	AM	A	.	.	.	# shift value=null
+stop_
+WARN::1:G:Check atom type: I
+WARN::1:G:Check atom type: A
+WARN::5:C:Check atom type: I
+WARN::5:C:Check atom type: A
+WARN::8:A:Check atom type: I
+WARN::8:A:Check atom type: A

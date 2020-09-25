@@ -1,0 +1,42 @@
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	ALA	H	H	.	.	.
+2	1	ALA	N	N	.	.	.
+3	1	ALA	CA	C	51.5	.	.
+4	1	ALA	HA	H	.	.	.
+5	1	ALA	C	C	.	.	.
+6	1	ALA	CB	C	19.1	.	.
+7	1	ALA	HB	H	.	.	.
+8	1	ALA	HA1	.	4.04	.	.	#  Invalid atom
+9	1	ALA	HB1	.	1.47	.	.	#  Invalid atom
+10	2	GLU	H	H	8.68	.	.
+11	2	GLU	N	N	.	.	.
+12	2	GLU	CA	C	57.1	.	.
+13	2	GLU	HA	H	.	.	.
+14	2	GLU	C	C	.	.	.
+15	2	GLU	CB	C	29.3	.	.
+16	2	GLU	HB2	H	1.98	.	.	# CG 35.3 (2.24)
+17	2	GLU	HB3	H	.	.	.
+18	2	GLU	CG	C	.	.	.
+19	2	GLU	HG2	H	.	.	.
+20	2	GLU	HG3	H	.	.	.
+21	2	GLU	CD	C	.	.	.
+22	2	GLU	HE2	H	.	.	.
+23	2	GLU	HA1	.	4.19	.	.	#  Invalid atom
+24	2	GLU	HB1	.	1.90	.	.	#  Invalid atom
+25	3	GLY	H	H	8.47	.	.
+26	3	GLY	N	N	112.6	.	.
+27	3	GLY	CA	C	44.6	.	.
+28	3	GLY	HA2	H	3.94	.	.
+29	3	GLY	HA3	H	.	.	.
+30	3	GLY	C	C	.	.	.
+31	3	GLY	HA1	.	3.81	.	.	#  Invalid atom
+stop_

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en-US">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <META name="Author" content="dmaziuk@bmrb.wisc.edu (Dimitri Maziuk)">
+    <META name="Description" content="STARch documentation">
+    <LINK type="text/css" rel="stylesheet" href="starch.css">
+    <TITLE>STARch input format1</TITLE>
+  </HEAD>
+<BODY>
+
+<H1 class="center">STARch input Format1</H1>
+<P>
+  This is a generic input format, where each line contains data for one atom 
+  and values are separated by whitespace (spaces and/or tabs). Many spreadsheet
+  programs, such as Microsoft Excel, can export data in this format (often called 
+  "tab-delimited" file). Other applications produce files very similar to this
+  format: Sparky output, for example, can be converted using this format.
+<P>
+  Each line contains following values: chemical shift id, residue sequence 
+  number, residue label, atom name, type, chemical shift value, chem. shift
+  value error, chem. shift ambiguity code. Residue label and sequence must 
+  be present, the rest is optional. Residue label and sequence code may be
+  stored in one column, e.g. <CODE>C11</CODE>.
+<P>
+  To convert this format, you will need to add column headers in the first
+  line of the file. You may have to rename the columns (if headers are already
+  present), and delete columns that have no corresponding fields in NMR-STAR
+  (such as standard deviation in Sparky output). Also, make sure to put
+  non-blank character(s) (e.g. a dash, or "n/a") in place of missing values.
+
+<H3>Description</H3>
+<P>
+  <STRONG>First line</STRONG> may contain the number of fields (columns) 
+  in the file. This number was required by old version of STARch. Current version
+  does not need this number, but it is supported for backwards compatibility.
+<P>
+  <STRONG>Second line</STRONG> (or first, if column count is omitted) must
+  contain space/tab-separated list of field names. Field name must be one of
+  the following:
+  <TABLE>
+    <TR>
+      <TD class="mono">shift_id</TD>
+      <TD>Chemical shift id</TD>
+    </TR>
+    <TR>
+      <TD class="mono">seq_code</TD>
+      <TD>Residue sequence code</TD>
+    </TR>
+    <TR>
+      <TD class="mono">seqCode_label</TD>
+      <TD>Residue label and sequence code together, e.g. <CODE>C11</CODE>.
+          <STRONG>You must use 1-letter residue label in this field, and
+	  it must be the first character in the string</STRONG></TD>
+    </TR>
+    <TR>
+      <TD class="mono">label</TD>
+      <TD>Residue label.</TD>
+    </TR>
+    <TR>
+      <TD class="mono">name</TD>
+      <TD>Atom name.</TD>
+    </TR>
+    <TR>
+      <TD class="mono">type</TD>
+      <TD>Atom type.</TD>
+    </TR>
+    <TR>
+      <TD class="mono">value</TD>
+      <TD>Chemical shift value.</TD>
+    </TR>
+    <TR>
+      <TD class="mono">value_error</TD>
+      <TD>Error in chemical shift value.</TD>
+    </TR>
+    <TR>
+      <TD class="mono">ambiguity_code</TD>
+      <TD>Chemical shift ambiguity code.</TD>
+    </TR>
+    <TR>
+      <TD class="mono">nothing</TD>
+      <TD>Comment or other extra information.</TD>
+    </TR>
+  </TABLE>
+  Field names are case-insensitive.
+  <BR>
+  <CODE>Nothing</CODE> field will be printed out as NMR-STAR comment.
+  <BR>
+  <CODE>Shift_id</CODE> column is ignored, STARch re-numbers table rows
+  on output.
+  <BR>
+  If input file contains both <CODE>seqCode_label</CODE> and <CODE>label</CODE>
+  (or <CODE>seq_code</CODE>), STARch will complain about duplicate residue
+  labels/numbers and refuse to convert the file.
+
+<P>
+  <STRONG>Third and following lines</STRONG> contain space-separated field 
+  values, one record (atom) per line.
+<P>
+  <STRONG>Note</STRONG> that you must put something (e.g. a dash or
+  "n/a") in place of missing values, unless it's in the last (rightmost)
+  column.
+
+<H3>Example</H3>
+  <PRE>
+seq_code label  name value value_error	nothing
+1	GLU	NN	120.20	.01	XYZ
+1	GLU	CA	57.19	.
+1	GLU	CB	28.16
+1	GLU	CG	34.23
+1	GLU	HN	n/a
+1	GLU	HA	3.82
+1	GLU	QB	2.06
+1	GLU	HG+	2.41	n/a	comment
+1	GLU	HG-	2.34
+</PRE>
+<P>
+<HR>
+  STARch output (with residue type set to other):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	GLU	NN	.	120.20	.01	.	#  XYZ
+2	1	GLU	CA	.	57.19	.	.	# shift err. = .
+3	1	GLU	CB	.	28.16	.	.	# shift err. = null
+4	1	GLU	CG	.	34.23	.	.	# shift err. = null
+5	1	GLU	HN	.	.	.	.	# shift val. = n/a shift err. = null
+6	1	GLU	HA	.	3.82	.	.	# shift err. = null
+7	1	GLU	QB	.	2.06	.	.	# shift err. = null
+8	1	GLU	HG+	.	2.41	.	.	# shift err. = n/a  comment
+9	1	GLU	HG-	.	2.34	.	.	# shift err. = null
+stop_
+</PRE>
+<P>
+<HR>
+  STARch output (with residue type set to 20 amino acids):
+  <PRE>
+loop_
+	_Atom_shift_assign_ID
+	_Residue_seq_code
+	_Residue_label
+	_Atom_name
+	_Atom_type
+	_Chem_shift_value
+	_Chem_shift_value_error
+	_Chem_shift_ambiguity_code
+
+1	1	GLU	H	H	.	.	.	# shift val. = n/a shift err. = null
+2	1	GLU	N	N	120.20	.01	.	#  XYZ
+3	1	GLU	CA	C	57.19	.	.	# shift err. = .
+4	1	GLU	HA	H	3.82	.	.	# shift err. = null
+5	1	GLU	C	C	.	.	.
+6	1	GLU	CB	C	28.16	.	.	# shift err. = null
+7	1	GLU	HB2	H	2.06	.	?	# shift err. = null
+8	1	GLU	HB3	H	.	.	.
+9	1	GLU	CG	C	34.23	.	.	# shift err. = null
+10	1	GLU	HG2	H	.	.	.
+11	1	GLU	HG3	H	.	.	.
+12	1	GLU	CD	C	.	.	.
+13	1	GLU	HE2	H	.	.	.
+14	1	GLU	HG+	.	2.41	.	.	# shift err. = n/a  comment  Invalid atom
+15	1	GLU	HG-	.	2.34	.	.	# shift err. = null  Invalid atom
+stop_
+  </PRE>
+<HR>
+<P class="datestamp">
+  Last updated: Fri 02 Jul 2004 05:16:53 PM CDT
+</P>
+</BODY>
+</HTML>
